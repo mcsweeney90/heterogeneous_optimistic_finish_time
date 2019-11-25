@@ -1,0 +1,57 @@
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Multiple_GPU
+28 CPUs, 4 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0138
+Number of tasks: 1002
+Maximum number of task predecessors: 152
+Average number of task predecessors: 64.379
+Number of edges: 64403
+Edge density: 0.1284204817138949
+Mean task CPU time: 2085.7406490316775, standard deviation: 2536.322992403501
+Mean task GPU time: 49.560878243512974, standard deviation: 28.20195181640158
+Mean task acceleration ratio: 41.54179625091939, standard deviation: 39.69684440339158
+Mean task execution time: 1831.2181776831571
+Computation-to-communication ratio: 63.28312389821098
+Minimal serial time: 49660
+--------------------------------------------------------
+HEFT with M weighting makespan: 12009.945803439874
+HEFT-MM makespan: 12072.485946684075
+Reduction: -0.5207362653234355
+
+HEFT with WM-I weighting makespan: 11834.372398079586
+HEFT-MM makespan: 11791.958299909747
+Reduction: 0.35839752834480976
+
+HEFT with OFT-VI weighting makespan: 11919.060601185456
+HEFT-MM makespan: 11922.016644082898
+Reduction: -0.024800972126513443
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+SUMMARY
+--------------------------------------------------------
+Weighting: M.
+Mean reduction: -0.5207362653234355.
+Best reduction: -0.5207362653234355
+Worst reduction: -0.5207362653234355
+
+Weighting: WM-I.
+Mean reduction: 0.35839752834480976.
+Best reduction: 0.35839752834480976
+Worst reduction: 0.35839752834480976
+
+Weighting: OFT-VI.
+Mean reduction: -0.024800972126513443.
+Best reduction: -0.024800972126513443
+Worst reduction: -0.024800972126513443
+

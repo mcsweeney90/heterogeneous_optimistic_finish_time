@@ -1,0 +1,229 @@
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Multiple_GPU
+28 CPUs, 4 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 35
+Maximum number of task predecessors: 3
+Average number of task predecessors: 1.7142857142857142
+Number of edges: 60
+Edge density: 0.10084033613445378
+--------------------------------------------------------
+Minimal serial time: 1296.9830400000003
+
+HEFT makespan: 1073.248552
+
+HEFT-WM makespan: 1073.248552
+Speedup (%) over HEFT: 0.0
+
+HOFT makespan: 1093.2258560000002
+Speedup (%) over HEFT: -1.8613865318311014
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 220
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.25
+Number of edges: 495
+Edge density: 0.02054794520547945
+--------------------------------------------------------
+Minimal serial time: 5625.082880000006
+
+HEFT makespan: 2345.070104
+
+HEFT-WM makespan: 2345.070104
+Speedup (%) over HEFT: 0.0
+
+HOFT makespan: 2393.9468560000005
+Speedup (%) over HEFT: -2.084234152174446
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 680
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.4705882352941178
+Number of edges: 1680
+Edge density: 0.0072771376591873865
+--------------------------------------------------------
+Minimal serial time: 14398.955519999921
+
+HEFT makespan: 3527.269095999999
+
+HEFT-WM makespan: 3504.0457839999985
+Speedup (%) over HEFT: 0.6583935437853796
+
+HOFT makespan: 3638.7480240000004
+Speedup (%) over HEFT: -3.160488325838841
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 1540
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.590909090909091
+Number of edges: 3990
+Edge density: 0.003367003367003367
+--------------------------------------------------------
+Minimal serial time: 29033.25695999953
+
+HEFT makespan: 4820.382848
+
+HEFT-WM makespan: 4819.191736
+Speedup (%) over HEFT: 0.024709904535797023
+
+HOFT makespan: 5207.09972
+Speedup (%) over HEFT: -8.022534396006549
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 2925
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.6666666666666665
+Number of edges: 7800
+Edge density: 0.001823985408116735
+--------------------------------------------------------
+Minimal serial time: 50942.64319999917
+
+HEFT makespan: 7438.174768000005
+
+HEFT-WM makespan: 7213.442896000006
+Speedup (%) over HEFT: 3.0213308911055066
+
+HOFT makespan: 7071.200784000004
+Speedup (%) over HEFT: 4.933656380040588
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 4960
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.71875
+Number of edges: 13485
+Edge density: 0.0010964912280701754
+--------------------------------------------------------
+Minimal serial time: 81541.77024000113
+
+HEFT makespan: 10577.106176000012
+
+HEFT-WM makespan: 10651.172991999998
+Speedup (%) over HEFT: -0.7002559562846074
+
+HOFT makespan: 10134.224600000025
+Speedup (%) over HEFT: 4.18717150637012
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 7770
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7567567567567566
+Number of edges: 21420
+Edge density: 0.0007096812348453487
+--------------------------------------------------------
+Minimal serial time: 122245.2940800123
+
+HEFT makespan: 14735.733703999871
+
+HEFT-WM makespan: 14943.585575999892
+Speedup (%) over HEFT: -1.4105295072182287
+
+HOFT makespan: 14252.873951999927
+Speedup (%) over HEFT: 3.2767947745206243
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 11480
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7857142857142856
+Number of edges: 31980
+Edge density: 0.0004853583562530335
+--------------------------------------------------------
+Minimal serial time: 174467.87072003438
+
+HEFT makespan: 20103.15029599957
+
+HEFT-WM makespan: 20251.711375999585
+Speedup (%) over HEFT: -0.7389940273668287
+
+HOFT makespan: 19824.3495839996
+Speedup (%) over HEFT: 1.3868508561837274
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 16215
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.8085106382978724
+Number of edges: 45540
+Edge density: 0.0003464303242010451
+--------------------------------------------------------
+Minimal serial time: 239624.1561600624
+
+HEFT makespan: 27088.388023999196
+
+HEFT-WM makespan: 27290.75679199917
+Speedup (%) over HEFT: -0.7470683298713965
+
+HOFT makespan: 26745.037711999223
+Speedup (%) over HEFT: 1.2675184351899418
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 22100
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.826923076923077
+Number of edges: 62475
+Edge density: 0.0002558417192563534
+--------------------------------------------------------
+Minimal serial time: 319128.8064001091
+
+HEFT makespan: 36183.07405599877
+
+HEFT-WM makespan: 36062.504855998784
+Speedup (%) over HEFT: 0.3332198911938349
+
+HOFT makespan: 35517.5731679988
+Speedup (%) over HEFT: 1.839260221422876
+
+--------------------------------------------------------
+

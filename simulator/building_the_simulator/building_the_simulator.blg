@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/dev/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: building_the_simulator.aux
+The style file: splncs04.bst
+Database file #1: references.bib
+Warning--string name "june" is undefined
+--line 8 of file references.bib
+Warning--empty year in stanisic15
+Warning--empty year in Tobita2002
+You've used 10 entries,
+            2850 wiz_defined-function locations,
+            674 strings with 6979 characters,
+and the built_in function-call counts, 6598 in all, are:
+= -- 560
+> -- 200
+< -- 16
++ -- 84
+- -- 72
+* -- 447
+:= -- 825
+add.period$ -- 23
+call.type$ -- 10
+change.case$ -- 70
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 571
+empty$ -- 558
+format.name$ -- 81
+if$ -- 1442
+int.to.chr$ -- 0
+int.to.str$ -- 10
+missing$ -- 112
+newline$ -- 36
+num.names$ -- 20
+pop$ -- 186
+preamble$ -- 1
+purify$ -- 56
+quote$ -- 0
+skip$ -- 189
+stack$ -- 0
+substring$ -- 407
+swap$ -- 365
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 40
+warning$ -- 2
+while$ -- 52
+width$ -- 12
+write$ -- 123
+(There were 3 warnings)

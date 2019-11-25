@@ -1,0 +1,237 @@
+@article{tdb10,
+	title     = {{Towards dense linear algebra for hybrid GPU accelerated manycore systems}},
+	author    = {Stanimire Tomov and Jack Dongarra and Marc Baboulin},
+	booktitle = {Parallel Matrix Algorithms and Applications},
+	doi       = {10.1016/j.parco.2009.12.005},
+	issn      = {0167-8191},
+	journal   = {Parallel Computing},
+	month     = june,
+	number    = {5-6},
+	pages     = {232--240},
+	posted-at = {2010-12-17 09:48:58},
+	priority  = {2},
+	volume    = {36},
+	year      = {2010}
+}
+
+@article{dongarra1988extended,
+	title={An extended set of {FORTRAN} {B}asic {L}inear {A}lgebra {S}ubprograms},
+	author={Dongarra, Jack and Du Croz, Jeremy and Hammarling, Sven and Hanson, Richard J.},
+	journal={ACM Transactions on Mathematical Software (TOMS)},
+	volume={14},
+	number={1},
+	pages={1--17},
+	year={1988},
+	publisher={ACM},
+	doi={10.1145/42288.42291}
+}
+
+@INPROCEEDINGS{agullo2016,
+	author={E. {Agullo} and O. {Beaumont} and L. {Eyraud-Dubois} and S. {Kumar}},
+	booktitle={2016 IEEE International Parallel and Distributed Processing Symposium (IPDPS)},
+	title={Are Static Schedules so Bad? {A} Case Study on {C}holesky Factorization},
+	year={2016},
+	volume={},
+	number={},
+	pages={1021-1030},
+	keywords={graphics processing units;microprocessor chips;optimisation;performance evaluation;scheduling;static schedules;Cholesky factorization;dynamic strategies;task graph scheduling;GPU;CPU;static scheduling strategies;NP-Complete;parallelism;processing nodes;dynamic task-graph based runtime schedulers;StarPU;StarSs;QUARK;PaRSEC;dynamic schedulers;scheduling decisions;dense matrices;performance estimations;Kernel;Dynamic scheduling;Runtime;Heuristic algorithms;Optimal scheduling;Schedules;Acceleration;Runtime Systems;Scheduling;Accelerators;Cholesky Factorization;Heterogeneous Systems;Unrelated Machines},
+	doi={10.1109/IPDPS.2016.90},
+	ISSN={1530-2075},
+	month={May},
+}
+
+@article{ZHENG20131673,
+	title = "Stochastic {DAG} scheduling using a {M}onte {C}arlo approach",
+	journal = "Journal of Parallel and Distributed Computing",
+	volume = "73",
+	number = "12",
+	pages = "1673 - 1689",
+	year = "2013",
+	issn = "0743-7315",
+	doi = "10.1016/j.jpdc.2013.07.019",
+	author = "Wei Zheng and Rizos Sakellariou",
+	keywords = "Directed acyclic graphs, Heterogeneous computing, DAG scheduling, Monte Carlo methods",
+	abstract = "In heterogeneous computing systems, there is a need for solutions that can cope with the unavoidable uncertainty in individual task execution times, when scheduling DAGs. When such uncertainties occur, static DAG scheduling approaches may suffer, and some rescheduling may be necessary. Assuming that the uncertainty in task execution times is modelled in a stochastic manner, we may be able to use this information to improve static DAG scheduling considerably. In this paper, a novel DAG scheduling approach is proposed to solve this stochastic scheduling problem, based on a Monte Carlo method. The approach is built on the top of a classic static DAG scheduling heuristic and evaluated through extensive simulation. Empirical results show that a significant improvement of average application performance can be achieved by the proposed approach at a reasonable execution time cost."
+}
+
+@phdthesis{kumar:tel-01538516,
+	TITLE = {{Scheduling of Dense Linear Algebra Kernels on Heterogeneous Resources}},
+	AUTHOR = {Kumar, Suraj},
+	NUMBER = {2017BORD0572},
+	SCHOOL = {{University of Bordeaux}},
+	YEAR = {2017},
+	MONTH = Apr,
+	KEYWORDS = {Runtime Systems ; Heterogeneous Platforms ; Task-based Scheduling ; Dynamic Schedulers ; Dense Linear Algebra ; Syst{\`e}mes d'ordonnancement dynamiques ; Plates-formes h{\'e}t{\'e}rog{\`e}nes ; Alg{\`e}bre lin{\'e}aire dense ; Ordonnancement dynamique ; Ordonnancement {\`a} base de graphe de t{\^a}ches},
+	TYPE = {Ph{D} Thesis},
+	PDF = {https://tel.archives-ouvertes.fr/tel-01538516/file/KUMAR_SURAL_2017.pdf},
+	HAL_ID = {tel-01538516},
+	HAL_VERSION = {v1},
+}
+
+@article{BRAUN2001810,
+	title = "A Comparison of Eleven Static Heuristics for Mapping a Class of Independent Tasks onto Heterogeneous Distributed Computing Systems",
+	journal = "Journal of Parallel and Distributed Computing",
+	volume = "61",
+	number = "6",
+	pages = "810 - 837",
+	year = "2001",
+	issn = "0743-7315",
+	doi = "10.1006/jpdc.2000.1714",
+	author = "Tracy D. Braun and Howard Jay Siegel and Noah Beck and Ladislau L. B{\"o}l{\"o}ni and Muthucumaru Maheswaran and Albert I. Reuther and James P. Robertson and Mitchell D. Theys and Bin Yao and Debra Hensgen and Richard F. Freund",
+	keywords = "A*, Genetic Algorithm, heterogeneous computing, mapping heuristics, metatasks, simulated annealing, static matching, Tabu search",
+	abstract = "Mixed-machine heterogeneous computing (HC) environments utilize a distributed suite of different high-performance machines, interconnected with high-speed links, to perform different computationally intensive applications that have diverse computational requirements. HC environments are well suited to meet the computational demands of large, diverse groups of tasks. The problem of optimally mapping (defined as matching and scheduling) these tasks onto the machines of a distributed HC environment has been shown, in general, to be NP-complete, requiring the development of heuristic techniques. Selecting the best heuristic to use in a given environment, however, remains a difficult problem, because comparisons are often clouded by different underlying assumptions in the original study of each heuristic. Therefore, a collection of 11 heuristics from the literature has been selected, adapted, implemented, and analyzed under one set of common assumptions. It is assumed that the heuristics derive a mapping statically (i.e., off-line). It is also assumed that a metatask (i.e., a set of independent, noncommunicating tasks) is being mapped and that the goal is to minimize the total execution time of the metatask. The 11 heuristics examined are Opportunistic Load Balancing, Minimum Execution Time, Minimum Completion Time, Min–min, Max–min, Duplex, Genetic Algorithm, Simulated Annealing, Genetic Simulated Annealing, Tabu, and A*. This study provides one even basis for comparison and insights into circumstances where one technique will out-perform another. The evaluation procedure is specified, the heuristics are defined, and then comparison results are discussed. It is shown that for the cases studied here, the relatively simple Min–min heuristic performs well in comparison to the other techniques."
+}
+
+@article{topcuoglu2002performance,
+	title={Performance-effective and low-complexity task scheduling for heterogeneous computing},
+	author={Topcuoglu, Haluk and Hariri, Salim and Wu, Min-{Y}ou},
+	journal={IEEE transactions on parallel and distributed systems},
+	volume={13},
+	number={3},
+	pages={260--274},
+	year={2002},
+	publisher={IEEE},
+	doi={10.1109/71.993206}
+}
+
+@ARTICLE{duplication,
+	author={ {Ishfaq Ahmad} and {Yu-Kwong Kwok}},
+	journal={IEEE Transactions on Parallel and Distributed Systems},
+	title={On exploiting task duplication in parallel program scheduling},
+	year={1998},
+	volume={9},
+	number={9},
+	pages={872-892},
+	keywords={processor scheduling;multiprocessing systems;message passing;parallel program scheduling;task duplication;message-passing;multicomputer systems;communication overhead;task graphs;Processor scheduling;Costs;Scheduling algorithm;Computational efficiency;Algorithm design and analysis;Workstations;Delay;Bandwidth;Timing;Concurrent computing},
+	doi={10.1109/71.722221},
+	ISSN={1045-9219},
+	month={Sep.},
+}
+
+@article{stanisic15,
+	author="Stanisic, Luka
+	and Thibault, Samuel
+	and Legrand, Arnaud
+	and Videau, Brice
+	and M{\'e}haut, Jean{-}Fran{\c{c}}ois",
+	title = {Faithful performance prediction of a dynamic task‐based runtime system for heterogeneous multi‐core architectures},
+	journal = {Concurrency and Computation: Practice and Experience},
+	volume = {27},
+	number = {16},
+	pages = {4075-4090},
+	keywords = {HPC, runtimes, simulations},
+	doi = {10.1002/cpe.3555},
+	eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.3555},
+	abstract = {Summary Multi‐core architectures comprising several graphics processing units (GPUs) have become mainstream in the field of high‐performance computing. However, obtaining the maximum performance of such heterogeneous machines is challenging as it requires to carefully off‐load computations and manage data movements between the different processing units. The most promising and successful approaches so far build on task‐based runtimes that abstract the machine and rely on opportunistic scheduling algorithms. As a consequence, the problem gets shifted to choosing the task granularity, task graph structure, and optimizing the scheduling strategies. Trying different combinations of these different alternatives is also itself a challenge. Indeed, obtaining accurate measurements requires reserving the target system for the whole duration of experiments. Furthermore, observations are limited to the few available systems at hand and may be difficult to generalize. In this article, we show how we crafted a coarse‐grain hybrid simulation/emulation of StarPU, a dynamic runtime for hybrid architectures, over SimGrid, a versatile simulator of distributed systems. This approach allows to obtain performance predictions of classical dense linear algebra kernels accurate within a few percents and in a matter of seconds, which allows both runtime and application designers to quickly decide which optimization to enable or whether it is worth investing in higher‐end graphics processing units or not. Additionally, it allows to conduct robust and extensive scheduling studies in a controlled environment whose characteristics are very close to real platforms while having reproducible behavior. Copyright © 2015 John Wiley \& Sons, Ltd.}
+}
+
+@INPROCEEDINGS{hcpfd,
+	author={T. {Hagras} and J. {J}ane\v{c}ek},
+	booktitle={18th International Parallel and Distributed Processing Symposium, 2004. Proceedings.},
+	title={A high performance, low complexity algorithm for compile-time task scheduling in heterogeneous systems},
+	year={2004},
+	volume={},
+	number={},
+	pages={107-115},
+	keywords={scheduling;multiprocessing systems;computational complexity;parallel machines;heterogeneous computing environment;parallel architecture;heterogeneous systems;list-scheduling;task-duplication;heterogeneous critical parents;fast duplicator;HCPFD;low complexity algorithm;compile-time task scheduling;Scheduling algorithm;Processor scheduling;Concurrent computing;Costs;Distributed computing;Computer science;Parallel architectures;Parallel processing;Algorithm design and analysis;Computational efficiency},
+	doi={10.1109/IPDPS.2004.1303056},
+	ISSN={},
+	month={April},
+}
+
+@inproceedings{stanisic2014modeling,
+	title={Modeling and simulation of a dynamic task-based runtime system for heterogeneous multi-core architectures},
+	author={Stanisic, Luka and Thibault, Samuel and Legrand, Arnaud and Videau, Brice and M{\'e}haut, Jean-Fran{\c{c}}ois},
+	booktitle={European Conference on Parallel Processing},
+	pages={50--62},
+	year={2014},
+	organization={Springer},
+	doi={10.1007/978-3-319-09873-9\_5}
+}
+
+@Article{simgrid,
+	hal_id = {hal-01017319},
+	title = {Versatile, Scalable, and Accurate Simulation of Distributed Applications and Platforms},
+	author = {Casanova, Henri and Giersch, Arnaud and Legrand, Arnaud and Quinson, Martin and Suter, Fr{\'e}d{\'e}ric},
+	publisher = {Elsevier},
+	pages = {2899-2917},
+	journal = {Journal of Parallel and Distributed Computing},
+	volume = {74},
+	number = {10},
+	year = {2014},
+	month = {June},
+	doi = {10.1016/j.jpdc.2014.06.008}
+}
+
+@article{augonnet2011starpu,
+	title={Star{PU}: a unified platform for task scheduling on heterogeneous multicore architectures},
+	author={Augonnet, C{\'e}dric and Thibault, Samuel and Namyst, Raymond and Wacrenier, Pierre-Andr{\'e}},
+	journal={Concurrency and Computation: Practice and Experience},
+	volume={23},
+	number={2},
+	pages={187--198},
+	year={2011},
+	publisher={Wiley Online Library},
+	doi = {10.1002/cpe.1631}
+}
+
+
+@phdthesis{thibault:tel-01959127,
+	TITLE = {{On Runtime Systems for Task-based Programming on Heterogeneous Platforms}},
+	AUTHOR = {Thibault, Samuel},
+	SCHOOL = {{University of Bordeaux}},
+	YEAR = {2018},
+	MONTH = Dec,
+	KEYWORDS = {Runtime Systems ; Task graphs ; Task graph scheduling ; Distributed Computing ; Support Ex{\'e}cutif ; Graphe de t{\^a}ches ; Ordonnancement de graphe de t{\^a}ches ; Calcul Distribu{\'e}},
+	TYPE = {Habilitation {\`a} diriger des recherches},
+	PDF = {https://hal.inria.fr/tel-01959127/file/hdr.pdf},
+	HAL_ID = {tel-01959127},
+	HAL_VERSION = {v1},
+}
+
+@article{Tobita2002,
+	author = {Tobita, Takao and Kasahara, Hironori},
+	title = {A standard task graph set for fair evaluation of multiprocessor scheduling algorithms},
+	journal = {Journal of Scheduling},
+	volume = {5},
+	number = {5},
+	pages = {379-394},
+	keywords = {multiprocessor scheduling, task graph, performance evaluation, benchmark, optimization},
+	doi = {10.1002/jos.116},
+	eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/jos.116},
+	abstract = {Abstract A ‘standard task graph set’ is proposed for fair evaluation of multiprocessor scheduling algorithms. Developers of multiprocessor scheduling algorithms usually evaluate them using randomly generated task graphs. This makes it difficult to compare the performance of algorithms developed in different research groups. To make it possible to evaluate algorithms under the same conditions so that their performances can be compared fairly, this paper proposes a standard task graph set covering many of the proposed task graph generation methods. This paper also evaluates as examples two heuristic algorithms (CP and CP/MISF), a practical sequential optimization algorithm (DF/IHS), and a practical parallel optimization algorithm (PDF/IHS) using the proposed standard task graph set. This set is available at http://www.kasahara.elec.waseda.ac.jp/schedule/. Copyright © 2002 John Wiley \& Sons, Ltd.}
+}
+
+@inproceedings{canon2018,
+	title={Online scheduling of task graphs on hybrid platforms},
+	author={Canon, Louis-Claude and Marchal, Loris and Simon, Bertrand and Vivien, Fr{\'e}d{\'e}ric},
+	booktitle={European Conference on Parallel Processing},
+	pages={192--204},
+	year={2018},
+	organization={Springer},
+	doi={10.1007/978-3-319-96983-1\_14}
+}
+
+@Inbook{dongarra2011,
+	author="Dongarra, Jack
+	and Luszczek, Piotr",
+	editor="Padua, David",
+	title="TOP500",
+	bookTitle="Encyclopedia of Parallel Computing",
+	year="2011",
+	publisher="Springer US",
+	address="Boston, MA",
+	pages="2055--2057",
+	isbn="978-0-387-09766-4",
+	doi="10.1007/978-0-387-09766-4\_157"
+}
+
+@inproceedings{canon2008comparative,
+	title={Comparative evaluation of the robustness of {DAG} scheduling heuristics},
+	author={Canon, Louis-Claude and Jeannot, Emmanuel and Sakellariou, Rizos and Zheng, Wei},
+	booktitle={Grid Computing},
+	pages={73--84},
+	year={2008},
+	organization={Springer},
+	doi={10.1007/978-0-387-09457-1\_7}
+}
