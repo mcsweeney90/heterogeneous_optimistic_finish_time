@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/dev/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: optimization_of_HEFT_for_multicore_and_gpu.aux
+The style file: splncs04.bst
+Database file #1: references.bib
+You're missing a field name---line 272 of file references.bib
+ :  abstract = {Abstract Computational complexity results for two PERT problems are presented. A project is specified by precedence relations among tasks. Task durations are independent random variables with discrete, finite ranges. The following results are obtained: (1) computing a value of the cumulative distribution function of project duration is \#P-complete, (2) computing the mean of the distribution is at least as hard, and (3) neither of the problems in (1) and (2) can be computed in time polynomial in the number of points in the range of the project duration unless P = NP.},
+ :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ,
+I'm skipping whatever remains of this entry
+Warning--empty year in hagstrom88
+Warning--empty year in Tobita2002
+You've used 17 entries,
+            2850 wiz_defined-function locations,
+            731 strings with 8555 characters,
+and the built_in function-call counts, 11598 in all, are:
+= -- 992
+> -- 349
+< -- 27
++ -- 146
+- -- 126
+* -- 783
+:= -- 1444
+add.period$ -- 40
+call.type$ -- 17
+change.case$ -- 124
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 1004
+empty$ -- 990
+format.name$ -- 141
+if$ -- 2556
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 192
+newline$ -- 57
+num.names$ -- 34
+pop$ -- 323
+preamble$ -- 1
+purify$ -- 97
+quote$ -- 0
+skip$ -- 335
+stack$ -- 0
+substring$ -- 741
+swap$ -- 631
+text.length$ -- 27
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 68
+warning$ -- 2
+while$ -- 89
+width$ -- 19
+write$ -- 207
+(There was 1 error message)

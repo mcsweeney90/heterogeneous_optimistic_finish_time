@@ -1,0 +1,99 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{agullo2016}
+{Agullo}, E., {Beaumont}, O., {Eyraud-Dubois}, L., {Kumar}, S.: Are static
+  schedules so bad? {A} case study on {C}holesky factorization. In: 2016 IEEE
+  International Parallel and Distributed Processing Symposium (IPDPS). pp.
+  1021--1030 (May 2016). \doi{10.1109/IPDPS.2016.90}
+
+\bibitem{arabnejad14}
+{Arabnejad}, H., {Barbosa}, J.G.: List scheduling algorithm for heterogeneous
+  systems by an optimistic cost table. IEEE Transactions on Parallel and
+  Distributed Systems  \textbf{25}(3),  682--694 (March 2014).
+  \doi{10.1109/TPDS.2013.57}
+
+\bibitem{augonnet2011starpu}
+Augonnet, C., Thibault, S., Namyst, R., Wacrenier, P.A.: Star{PU}: a unified
+  platform for task scheduling on heterogeneous multicore architectures.
+  Concurrency and Computation: Practice and Experience  \textbf{23}(2),
+  187--198 (2011). \doi{10.1002/cpe.1631}
+
+\bibitem{bittencourt10}
+Bittencourt, L.F., Sakellariou, R., Madeira, E.R.M.: D{AG} scheduling using a
+  lookahead variant of the {H}eterogeneous {E}arliest {F}inish {T}ime
+  algorithm. In: 2010 18th Euromicro Conference on Parallel, Distributed and
+  Network-based Processing. pp. 27--34 (Feb 2010). \doi{10.1109/PDP.2010.56}
+
+\bibitem{bosilca2013parsec}
+Bosilca, G., Bouteiller, A., Danalis, A., Faverge, M., H{\'e}rault, T.,
+  Dongarra, J.J.: Pa{RSEC}: Exploiting heterogeneity to enhance scalability.
+  Computing in Science \& Engineering  \textbf{15}(6),  36--45 (2013).
+  \doi{10.1109/MCSE.2013.98}
+
+\bibitem{BRAUN2001810}
+Braun, T.D., Siegel, H.J., Beck, N., B{\"o}l{\"o}ni, L.L., Maheswaran, M.,
+  Reuther, A.I., Robertson, J.P., Theys, M.D., Yao, B., Hensgen, D., Freund,
+  R.F.: A comparison of eleven static heuristics for mapping a class of
+  independent tasks onto heterogeneous distributed computing systems. Journal
+  of Parallel and Distributed Computing  \textbf{61}(6),  810 -- 837 (2001).
+  \doi{10.1006/jpdc.2000.1714}
+
+\bibitem{canon2008comparative}
+Canon, L.C., Jeannot, E., Sakellariou, R., Zheng, W.: Comparative evaluation of
+  the robustness of {DAG} scheduling heuristics. In: Grid Computing. pp.
+  73--84. Springer (2008). \doi{10.1007/978-0-387-09457-1\_7}
+
+\bibitem{canon2018}
+Canon, L.C., Marchal, L., Simon, B., Vivien, F.: Online scheduling of task
+  graphs on hybrid platforms. In: European Conference on Parallel Processing.
+  pp. 192--204. Springer (2018). \doi{10.1007/978-3-319-96983-1\_14}
+
+\bibitem{Dongarra:1990:SLB:77626.79170}
+Dongarra, J.J., Du~Croz, J., Hammarling, S., Duff, I.S.: A set of {L}evel 3
+  {B}asic {L}inear {A}lgebra {S}ubprograms. ACM Trans. Math. Softw.
+  \textbf{16}(1),  1--17 (Mar 1990). \doi{10.1145/77626.79170}
+
+\bibitem{duran2011ompss}
+Duran, A., Ayguad{\'e}, E., Badia, R.M., Labarta, J., Martinell, L., Martorell,
+  X., Planas, J.: Omp{S}s: a proposal for programming heterogeneous multi-core
+  architectures. Parallel processing letters  \textbf{21}(02),  173--193
+  (2011). \doi{10.1142/S0129626411000151}
+
+\bibitem{hagstrom88}
+Hagstrom, J.N.: Computational complexity of {PERT} problems. Networks
+  \textbf{18}(2),  139--147. \doi{10.1002/net.3230180206}
+
+\bibitem{duplication}
+{Ishfaq Ahmad}, {Yu-Kwong Kwok}: On exploiting task duplication in parallel
+  program scheduling. IEEE Transactions on Parallel and Distributed Systems
+  \textbf{9}(9),  872--892 (Sep 1998). \doi{10.1109/71.722221}
+
+\bibitem{kumar:tel-01538516}
+Kumar, S.: {Scheduling of Dense Linear Algebra Kernels on Heterogeneous
+  Resources}. Ph{D} thesis, {University of Bordeaux} (Apr 2017)
+
+\bibitem{shetti2013optimization}
+Shetti, K.R., Fahmy, S.A., Bretschneider, T.: Optimization of the {HEFT}
+  algorithm for a {CPU}-{GPU} environment. In: PDCAT. pp. 212--218 (2013).
+  \doi{10.1109/PDCAT.2013.40}
+
+\bibitem{Tobita2002}
+Tobita, T., Kasahara, H.: A standard task graph set for fair evaluation of
+  multiprocessor scheduling algorithms. Journal of Scheduling  \textbf{5}(5),
+  379--394. \doi{10.1002/jos.116}
+
+\bibitem{topcuoglu2002performance}
+Topcuoglu, H., Hariri, S., Wu, M.Y.: Performance-effective and low-complexity
+  task scheduling for heterogeneous computing. IEEE transactions on parallel
+  and distributed systems  \textbf{13}(3),  260--274 (2002).
+  \doi{10.1109/71.993206}
+
+\bibitem{ZHENG20131673}
+Zheng, W., Sakellariou, R.: Stochastic {DAG} scheduling using a {M}onte {C}arlo
+  approach. Journal of Parallel and Distributed Computing  \textbf{73}(12),
+  1673 -- 1689 (2013). \doi{10.1016/j.jpdc.2013.07.019}
+
+\end{thebibliography}
