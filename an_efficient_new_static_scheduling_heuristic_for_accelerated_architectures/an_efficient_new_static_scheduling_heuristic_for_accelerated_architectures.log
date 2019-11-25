@@ -1,9 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.8.6)  21 NOV 2019 16:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.8.6)  25 NOV 2019 10:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**optimization_of_HEFT_for_multicore_and_gpu.tex
-(./optimization_of_HEFT_for_multicore_and_gpu.tex
+**an_efficient_new_static_scheduling_heuristic_for_accelerated_architectures.te
+x
+
+(./an_efficient_new_static_scheduling_heuristic_for_accelerated_architectures.t
+ex
 LaTeX2e <2018-12-01>
 (./llncs.cls
 Document Class: llncs 2018/03/10 v2.20 
@@ -476,8 +479,10 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@lastruleclass=\count160
 \@thisrulewidth=\dimen175
 )
-(./optimization_of_HEFT_for_multicore_and_gpu.aux)
-\openout1 = `optimization_of_HEFT_for_multicore_and_gpu.aux'.
+(./an_efficient_new_static_scheduling_heuristic_for_accelerated_architectures.a
+ux)
+\openout1 = `an_efficient_new_static_scheduling_heuristic_for_accelerated_archi
+tectures.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
@@ -493,8 +498,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count161
 \scratchdimen=\dimen176
@@ -539,10 +543,13 @@ LaTeX Info: Redefining \ref on input line 25.
 LaTeX Info: Redefining \pageref on input line 25.
 LaTeX Info: Redefining \nameref on input line 25.
 
-(./optimization_of_HEFT_for_multicore_and_gpu.out)
-(./optimization_of_HEFT_for_multicore_and_gpu.out)
+(./an_efficient_new_static_scheduling_heuristic_for_accelerated_architectures.o
+ut)
+(./an_efficient_new_static_scheduling_heuristic_for_accelerated_architectures.o
+ut)
 \@outlinefile=\write3
-\openout3 = `optimization_of_HEFT_for_multicore_and_gpu.out'.
+\openout3 = `an_efficient_new_static_scheduling_heuristic_for_accelerated_archi
+tectures.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -599,7 +606,9 @@ Overfull \hbox (2.89093pt too wide) in paragraph at lines 317--318
  []
 
 [11] [12 <./images/hoft_speedup_cholesky_nb128.png> <./images/hoft_speedup_chol
-esky_nb1024.png>] (./optimization_of_HEFT_for_multicore_and_gpu.bbl [13]
+esky_nb1024.png>]
+(./an_efficient_new_static_scheduling_heuristic_for_accelerated_architectures.b
+bl [13]
 Underfull \hbox (badness 2591) in paragraph at lines 60--64
 []\OT1/cmr/m/n/9 Duran, A., Ayguad^^Se, E., Ba-dia, R.M., Labarta, J., Mar-tine
 ll, L., Mar-
@@ -639,22 +648,24 @@ Underfull \hbox (badness 1496) in paragraph at lines 84--87
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 344.
  [14]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 344.
- (./optimization_of_HEFT_for_multicore_and_gpu.aux)
+
+(./an_efficient_new_static_scheduling_heuristic_for_accelerated_architectures.a
+ux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 344.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 344.
-Package rerunfilecheck Info: File `optimization_of_HEFT_for_multicore_and_gpu.o
-ut' has not changed.
+Package rerunfilecheck Info: File `an_efficient_new_static_scheduling_heuristic
+_for_accelerated_architectures.out' has not changed.
 (rerunfilecheck)             Checksum: 466D740438D67E4CFA52E0B15E8426B7;109.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 344.
  ) 
 Here is how much of TeX's memory you used:
  9017 strings out of 494485
- 137937 string characters out of 6175793
+ 138417 string characters out of 6175793
  258188 words of memory out of 5000000
  12484 multiletter control sequences out of 15000+600000
  12507 words of font info for 45 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 44i,17n,49p,1423b,588s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,17n,49p,1455b,588s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texli
@@ -678,8 +689,8 @@ amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.p
 fb>
-Output written on optimization_of_HEFT_for_multicore_and_gpu.pdf (14 pages, 845
-650 bytes).
+Output written on an_efficient_new_static_scheduling_heuristic_for_accelerated_
+architectures.pdf (14 pages, 844268 bytes).
 PDF statistics:
  396 PDF objects out of 1000 (max. 8388607)
  318 compressed objects within 4 object streams
