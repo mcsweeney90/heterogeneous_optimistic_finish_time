@@ -1,0 +1,42 @@
+Tile size: 32
+DGEMM mean: 29.409151999999995, standard deviation: 1.1361620522161442
+DPOTRF mean: 166.368064, standard deviation: 43.40490193878917
+DSYRK mean: 31.136759999999992, standard deviation: 3.773349696807863
+DTRSM mean: 29.677463999999993, standard deviation: 3.8197215773802156
+
+
+Tile size: 64
+DGEMM mean: 106.458112, standard deviation: 3.677795986111247
+DPOTRF mean: 199.95751200000004, standard deviation: 48.58050166115883
+DSYRK mean: 35.56831999999999, standard deviation: 1.544025127256678
+DTRSM mean: 37.146759999999986, standard deviation: 7.988783777171593
+
+
+Tile size: 128
+DGEMM mean: 139.89275199999997, standard deviation: 7.345699050362464
+DPOTRF mean: 268.746248, standard deviation: 56.638103256398836
+DSYRK mean: 130.78031200000004, standard deviation: 2.514900700754604
+DTRSM mean: 110.803008, standard deviation: 4.3031499578722565
+
+
+Tile size: 256
+DGEMM mean: 245.73475200000004, standard deviation: 7.808122128815352
+DPOTRF mean: 453.6725839999999, standard deviation: 51.5211429883591
+DSYRK mean: 209.85879200000002, standard deviation: 31.928333576006377
+DTRSM mean: 229.73700799999997, standard deviation: 5.693030192782754
+
+
+Tile size: 512
+DGEMM mean: 860.755, standard deviation: 54.531047399807015
+DPOTRF mean: 1016.773304, standard deviation: 58.30009023742231
+DSYRK mean: 863.5809040000001, standard deviation: 29.724205078803774
+DTRSM mean: 894.252264, standard deviation: 21.383918923768487
+
+
+Tile size: 1024
+DGEMM mean: 3043.597976, standard deviation: 104.5457846162313
+DPOTRF mean: 3233.7161200000005, standard deviation: 117.00619482636634
+DSYRK mean: 3034.2521840000004, standard deviation: 49.12026467907256
+DTRSM mean: 3068.835904, standard deviation: 70.0465354939899
+
+

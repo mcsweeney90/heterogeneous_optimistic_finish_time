@@ -1,0 +1,42 @@
+Tile size: 32
+DGEMM acceleration ratio: 0.669841694662038
+DPOTRF acceleration ratio: 0.5233578501255366
+DSYRK acceleration ratio: 0.38779001749681624
+DTRSM acceleration ratio: 0.725193260506208
+
+
+Tile size: 64
+DGEMM acceleration ratio: 2.489948830409356
+DPOTRF acceleration ratio: 0.5938972364392998
+DSYRK acceleration ratio: 0.7769361671744097
+DTRSM acceleration ratio: 0.9756793639933364
+
+
+Tile size: 128
+DGEMM acceleration ratio: 7.939562692272891
+DPOTRF acceleration ratio: 1.663397584306292
+DSYRK acceleration ratio: 2.265473079117381
+DTRSM acceleration ratio: 1.7044906416103802
+
+
+Tile size: 256
+DGEMM acceleration ratio: 34.99010491033155
+DPOTRF acceleration ratio: 1.6701641935488714
+DSYRK acceleration ratio: 8.632594824339284
+DTRSM acceleration ratio: 4.241315271573623
+
+
+Tile size: 512
+DGEMM acceleration ratio: 64.62695986022347
+DPOTRF acceleration ratio: 4.97625195429965
+DSYRK acceleration ratio: 27.34166442351328
+DTRSM acceleration ratio: 12.77743530070585
+
+
+Tile size: 1024
+DGEMM acceleration ratio: 92.67648214364955
+DPOTRF acceleration ratio: 13.691651747469843
+DSYRK acceleration ratio: 55.757006864340916
+DTRSM acceleration ratio: 24.22620996609686
+
+

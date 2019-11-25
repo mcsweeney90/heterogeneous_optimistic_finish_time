@@ -1,0 +1,169 @@
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Single_GPU
+7 CPUs, 1 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 256)
+Number of tasks: 35
+Maximum number of task predecessors: 3
+Average number of task predecessors: 1.7142857142857142
+Number of edges: 60
+Edge density: 0.10084033613445378
+Mean task CPU time: 511.4264285714286, standard deviation: 156.2165932130836
+Mean task GPU time: 74.99161600000001, standard deviation: 49.09449943900687
+Mean task acceleration ratio: 13.914027743719686, standard deviation: 13.528932238527112
+Mean task execution time: 456.872077
+Computation-to-communication ratio: 4.957292845567274
+Minimal serial time: 2624.7065600000005
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 256)
+Number of tasks: 220
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.25
+Number of edges: 495
+Edge density: 0.02054794520547945
+Mean task CPU time: 601.4995454545455, standard deviation: 154.70639197663988
+Mean task GPU time: 51.178717818181816, standard deviation: 40.357020062495316
+Mean task acceleration ratio: 21.7947281158698, standard deviation: 14.554836663672145
+Mean task execution time: 532.7094420000001
+Computation-to-communication ratio: 4.490493699746209
+Minimal serial time: 11259.317920000018
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 256)
+Number of tasks: 680
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.4705882352941178
+Number of edges: 1680
+Edge density: 0.0072771376591873865
+Mean task CPU time: 640.4842647058824, standard deviation: 141.81024534791487
+Mean task GPU time: 41.97057364705882, standard deviation: 34.67985185724519
+Mean task acceleration ratio: 25.43722170172786, standard deviation: 13.656489310920986
+Mean task execution time: 565.6700533235295
+Computation-to-communication ratio: 4.335601556421488
+Minimal serial time: 28539.990080000036
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 256)
+Number of tasks: 1540
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.590909090909091
+Number of edges: 3990
+Edge density: 0.003367003367003367
+Mean task CPU time: 662.1672077922078, standard deviation: 130.24648388925996
+Mean task GPU time: 37.07979158441558, standard deviation: 30.819817565079806
+Mean task acceleration ratio: 27.51179597394311, standard deviation: 12.682919396346733
+Mean task execution time: 584.0312807662339
+Computation-to-communication ratio: 4.257589690273077
+Minimal serial time: 57102.87903999874
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 256)
+Number of tasks: 2925
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.6666666666666665
+Number of edges: 7800
+Edge density: 0.001823985408116735
+Mean task CPU time: 675.963717948718, standard deviation: 120.71897697098184
+Mean task GPU time: 34.045860102564106, standard deviation: 27.99970552881503
+Mean task acceleration ratio: 28.848262710213724, standard deviation: 11.831868771429638
+Mean task execution time: 595.7239857179487
+Computation-to-communication ratio: 4.210541565136778
+Minimal serial time: 99584.14079999946
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 256)
+Number of tasks: 4960
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.71875
+Number of edges: 13485
+Edge density: 0.0010964912280701754
+Mean task CPU time: 685.5116532258064, standard deviation: 112.8653657141598
+Mean task GPU time: 31.97982487096774, standard deviation: 25.828679913611275
+Mean task acceleration ratio: 29.780258418039253, standard deviation: 11.109512925239235
+Mean task execution time: 603.8201746814516
+Computation-to-communication ratio: 4.179064823128329
+Minimal serial time: 158619.93136000502
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 256)
+Number of tasks: 7770
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7567567567567566
+Number of edges: 21420
+Edge density: 0.0007096812348453487
+Mean task CPU time: 692.5107657657658, standard deviation: 106.2997828678259
+Mean task GPU time: 30.48216302702703, standard deviation: 24.092494721894912
+Mean task acceleration ratio: 30.467010153405706, standard deviation: 10.49495064229005
+Mean task execution time: 609.7571904234235
+Computation-to-communication ratio: 4.156524017501355
+Minimal serial time: 236846.40672001385
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 256)
+Number of tasks: 11480
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7857142857142856
+Number of edges: 31980
+Edge density: 0.0004853583562530335
+Mean task CPU time: 697.8611324041813, standard deviation: 100.7254636924157
+Mean task GPU time: 29.34666575609756, standard deviation: 22.663735938781027
+Mean task acceleration ratio: 30.993962801100146, standard deviation: 9.967035691692056
+Mean task execution time: 614.2968240731708
+Computation-to-communication ratio: 4.139586042539492
+Minimal serial time: 336899.72288002545
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 256)
+Number of tasks: 16215
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.8085106382978724
+Number of edges: 45540
+Edge density: 0.0003464303242010451
+Mean task CPU time: 702.083788159112, standard deviation: 95.92512052292716
+Mean task GPU time: 28.456123086031454, standard deviation: 21.461550585891313
+Mean task acceleration ratio: 31.41103404633167, standard deviation: 9.50859876851343
+Mean task execution time: 617.880330024977
+Computation-to-communication ratio: 4.1263924964437795
+Minimal serial time: 461416.0358400412
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 256)
+Number of tasks: 22100
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.826923076923077
+Number of edges: 62475
+Edge density: 0.0002558417192563534
+Mean task CPU time: 705.5011990950228, standard deviation: 91.739523898129
+Mean task GPU time: 27.73898197285068, standard deviation: 20.431929381038366
+Mean task acceleration ratio: 31.74932598731534, standard deviation: 9.106348150557114
+Mean task execution time: 620.7809219547513
+Computation-to-communication ratio: 4.115825162818319
+Minimal serial time: 613031.5015999443
+--------------------------------------------------------
