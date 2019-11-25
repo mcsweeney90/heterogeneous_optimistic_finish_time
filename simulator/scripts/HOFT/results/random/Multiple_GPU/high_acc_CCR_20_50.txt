@@ -1,0 +1,92 @@
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Multiple_GPU
+28 CPUs, 4 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0138
+Number of tasks: 1002
+Maximum number of task predecessors: 152
+Average number of task predecessors: 64.379
+Number of edges: 64403
+Edge density: 0.1284204817138949
+Mean task CPU time: 2736.5199439567014, standard deviation: 3560.3864232811975
+Mean task GPU time: 49.300399201596804, standard deviation: 28.807721364590424
+Mean task acceleration ratio: 53.510619612145724, standard deviation: 53.51228278397476
+Mean task execution time: 2400.6175008623136
+Computation-to-communication ratio: 45.11252188145643
+Minimal serial time: 49399
+--------------------------------------------------------
+HEFT makespan: 12185.499535300965
+
+HEFT-WM makespan: 12401.971437441438
+Speedup (%) over HEFT: -1.7764713011014521
+
+HOFT makespan: 12167.495778300925
+Speedup (%) over HEFT: 0.14774738571762214
+
+HOFT-WM makespan: 12401.971437441438
+Speedup (%) over HEFT: -1.7764713011014521
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0163
+Number of tasks: 1002
+Maximum number of task predecessors: 18
+Average number of task predecessors: 5.078
+Number of edges: 5278
+Edge density: 0.010524405733986572
+Mean task CPU time: 2280.89532398264, standard deviation: 2833.4928177054267
+Mean task GPU time: 48.78443113772455, standard deviation: 28.55742257902548
+Mean task acceleration ratio: 48.694159112095754, standard deviation: 47.96303027888715
+Mean task execution time: 2001.8814623770256
+Computation-to-communication ratio: 21.457502574480213
+Minimal serial time: 48882
+--------------------------------------------------------
+HEFT makespan: 9865.03769488207
+
+HEFT-WM makespan: 9736.396332368657
+Speedup (%) over HEFT: 1.3040128836015725
+
+HOFT makespan: 9694.102031702807
+Speedup (%) over HEFT: 1.732742118846076
+
+HOFT-WM makespan: 9649.065791099978
+Speedup (%) over HEFT: 2.1892658747177194
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+SUMMARY
+--------------------------------------------------------
+HEFT.
+Number of best occurences: 0/180
+Number of failures: 0/180
+
+HEFT-WM.
+Average improvement compared to HEFT: -0.2362292087499398%
+Number of times better than HEFT: 1/180
+Number of best occurences: 0/180
+Number of failures: 0/180
+
+HOFT.
+Average improvement compared to HEFT: 0.9402447522818491%
+Number of times better than HEFT: 1/180
+Number of best occurences: 1/180
+Number of failures: 0/180
+
+HOFT-WM.
+Average improvement compared to HEFT: 0.20639728680813363%
+Number of times better than HEFT: 1/180
+Number of best occurences: 1/180
+Number of failures: 0/180
+
