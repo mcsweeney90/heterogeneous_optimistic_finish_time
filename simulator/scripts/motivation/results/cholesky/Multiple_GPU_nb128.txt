@@ -1,0 +1,161 @@
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Multiple_GPU
+28 CPUs, 4 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 35
+Maximum number of task predecessors: 3
+Average number of task predecessors: 1.7142857142857142
+Number of edges: 60
+Edge density: 0.10084033613445378
+--------------------------------------------------------
+Static HEFT makespan of original DAG: 1073.248552
+Dynamic HEFT makespan of original DAG: 1187.055616
+Mixed HEFT makespan of original DAG: 1073.248552
+Number of runs: 10
+Mean dynamic makespan: 1186.304
+Mean static makespan: 1074.9432000000002
+Mean mixed makespan: 1082.2992000000002
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 220
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.25
+Number of edges: 495
+Edge density: 0.02054794520547945
+--------------------------------------------------------
+Static HEFT makespan of original DAG: 2345.070104
+Dynamic HEFT makespan of original DAG: 3230.055551999999
+Mixed HEFT makespan of original DAG: 2345.070104
+Number of runs: 10
+Mean dynamic makespan: 2198.3388000000014
+Mean static makespan: 1717.9568
+Mean mixed makespan: 1689.3696
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 680
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.4705882352941178
+Number of edges: 1680
+Edge density: 0.0072771376591873865
+--------------------------------------------------------
+Static HEFT makespan of original DAG: 3527.269095999999
+Dynamic HEFT makespan of original DAG: 5653.633312000008
+Mixed HEFT makespan of original DAG: 3527.269095999999
+Number of runs: 10
+Mean dynamic makespan: 3326.227733333334
+Mean static makespan: 2494.5826666666667
+Mean mixed makespan: 2313.390133333334
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 1540
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.590909090909091
+Number of edges: 3990
+Edge density: 0.003367003367003367
+--------------------------------------------------------
+Static HEFT makespan of original DAG: 4820.382848
+Dynamic HEFT makespan of original DAG: 8463.015280000016
+Mixed HEFT makespan of original DAG: 4820.382848
+Number of runs: 10
+Mean dynamic makespan: 4583.8146000000015
+Mean static makespan: 3276.4557999999997
+Mean mixed makespan: 2940.2656
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 2925
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.6666666666666665
+Number of edges: 7800
+Edge density: 0.001823985408116735
+--------------------------------------------------------
+Static HEFT makespan of original DAG: 7438.174768000005
+Dynamic HEFT makespan of original DAG: 9878.883479999995
+Mixed HEFT makespan of original DAG: 7438.174768000005
+Number of runs: 10
+Mean dynamic makespan: 5674.16784
+Mean static makespan: 4224.07056
+Mean mixed makespan: 3817.499200000001
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 4960
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.71875
+Number of edges: 13485
+Edge density: 0.0010964912280701754
+--------------------------------------------------------
+Static HEFT makespan of original DAG: 10577.106176000012
+Dynamic HEFT makespan of original DAG: 13837.025480000002
+Mixed HEFT makespan of original DAG: 10577.106176000012
+Number of runs: 10
+Mean dynamic makespan: 7068.260266666667
+Mean static makespan: 5375.938266666665
+Mean mixed makespan: 4940.260399999999
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 7770
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7567567567567566
+Number of edges: 21420
+Edge density: 0.0007096812348453487
+--------------------------------------------------------
+Static HEFT makespan of original DAG: 14735.733703999871
+Dynamic HEFT makespan of original DAG: 18607.591631999963
+Mixed HEFT makespan of original DAG: 14735.733703999871
+Number of runs: 10
+Mean dynamic makespan: 8779.196228571427
+Mean static makespan: 6786.879428571419
+Mean mixed makespan: 6329.637028571408
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 11480
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7857142857142856
+Number of edges: 31980
+Edge density: 0.0004853583562530335
+--------------------------------------------------------
+Static HEFT makespan of original DAG: 20103.15029599957
+Dynamic HEFT makespan of original DAG: 24521.905375999915
+Mixed HEFT makespan of original DAG: 20103.15029599957
+Number of runs: 10
+Mean dynamic makespan: 10859.611499999994
+Mean static makespan: 8539.064399999985
+Mean mixed makespan: 8073.328399999936
+--------------------------------------------------------
+

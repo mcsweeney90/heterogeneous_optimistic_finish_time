@@ -323,7 +323,7 @@ class Node:
         source_type = "G" if source_id > self.n_CPUs - 1 else "C"
         target_type = "G" if target_id > self.n_CPUs - 1 else "C"
         
-        if estimates:# Where is this used?
+        if estimates:
             return estimates["{}".format(source_type + target_type)][parent.ID][child.ID]
         
         if self.adt:
