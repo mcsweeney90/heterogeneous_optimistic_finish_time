@@ -34,6 +34,7 @@ plt.rcParams['xtick.labelsize'] = 8
 plt.rcParams['ytick.labelsize'] = 8
 plt.rcParams['legend.fontsize'] = 16
 plt.rcParams['figure.titlesize'] = 12
+plt.rcParams["figure.figsize"] = (9.6,4)
 
 ####################################################################################################
 
@@ -191,6 +192,7 @@ def MCS(dag, platform, comp_sample, comm_sample, production_steps=10, selection_
         for task in dag.DAG:
             task.CPU_time = np.random.choice(comp_sample["CPU"][task.type])
             task.GPU_time = np.random.choice(comp_sample["GPU"][task.type])
+            cc_comm_costs, cg_comm_costs, gc_comm_costs, gg_comm_costs = {}, {}, {}, {}
             for child in dag.DAG.successors(task):
                 cc_comm_costs[child.ID] = np.random.choice(comm_sample["CC"][child.type])
                 cg_comm_costs[child.ID] = np.random.choice(comm_sample["CG"][child.type])
@@ -218,6 +220,7 @@ def MCS(dag, platform, comp_sample, comm_sample, production_steps=10, selection_
         for task in dag.DAG:
             task.CPU_time = np.random.choice(comp_sample["CPU"][task.type])
             task.GPU_time = np.random.choice(comp_sample["GPU"][task.type])
+            cc_comm_costs, cg_comm_costs, gc_comm_costs, gg_comm_costs = {}, {}, {}, {}
             for child in dag.DAG.successors(task):
                 cc_comm_costs[child.ID] = np.random.choice(comm_sample["CC"][child.type])
                 cg_comm_costs[child.ID] = np.random.choice(comm_sample["CG"][child.type])
@@ -440,18 +443,18 @@ for i, m in enumerate(dynamic_makespans):
     mcs_reductions.append(100 - (mcs_makespans[i] / m) * 100)
 
 
-preferences = {"DYNAMIC" : ["-", "o"], "STATIC": ["-", "s"], "HYBRID" : ["-", "o"], "MCS": ["-", "s"]}
+preferences = {"DYNAMIC" : ["-", "o"], "STATIC": ["-", "o"], "HYBRID" : ["-", "s"], "MCS": ["-", "D"]}
              
 fig1 = plt.figure(dpi=400) 
 ax1 = fig1.add_subplot(111)
 ax1.set_xlabel("NUMBER OF TASKS", labelpad=10) 
-ax1.set_ylabel("MEAN MAKESPAN (10 RUNS)", labelpad=10)  
+ax1.set_ylabel("MEAN REDUCTION VS DYNAMIC (%)", labelpad=10)  
 plt.xscale('log')
-plt.yscale('log')
-ax1.plot(n_tasks, dynamic_makespans, linestyle=preferences["DYNAMIC"][0], marker=preferences["DYNAMIC"][1], label="DYNAMIC")
-ax1.plot(n_tasks, static_makespans, linestyle=preferences["STATIC"][0], marker=preferences["STATIC"][1], label="STATIC")
-ax1.plot(n_tasks, mixed_makespans, linestyle=preferences["HYBRID"][0], marker=preferences["HYBRID"][1], label="HYBRID")
-ax1.plot(n_tasks, mcs_makespans, linestyle=preferences["MCS"][0], marker=preferences["MCS"][1], label="MCS")
-ax1.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
-#    ax1.set_title("Tile size {}".format(nb), color="black", fontsize='large', family='serif')    
-plt.savefig('plots/motivation_{}_cholesky_nb{}'.format(env.name, nb), bbox_inches='tight') 
+#plt.yscale('log')
+ax1.plot(n_tasks, static_reductions, linestyle=preferences["STATIC"][0], marker=preferences["STATIC"][1], label="STATIC")
+ax1.plot(n_tasks, mixed_reductions, linestyle=preferences["HYBRID"][0], marker=preferences["HYBRID"][1], label="HYBRID")
+ax1.plot(n_tasks, mcs_reductions, linestyle=preferences["MCS"][0], marker=preferences["MCS"][1], label="MCS")
+ax1.set_ylim(bottom=0)
+plt.yticks(np.arange(0, 50, 10.0)) # Bit of a hack to make it look nicer, should really calculate the 0 and 9 values.
+ax1.legend(handlelength=1.8, handletextpad=0.4, loc='upper left', fancybox=True)  
+plt.savefig('plots/motivation_{}_cholesky_nb{}_3'.format(env.name, nb), bbox_inches='tight') 
