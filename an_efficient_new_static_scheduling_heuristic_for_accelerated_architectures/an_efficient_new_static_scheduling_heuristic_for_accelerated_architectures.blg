@@ -9,45 +9,45 @@ You're missing a field name---line 272 of file references.bib
 I'm skipping whatever remains of this entry
 Warning--empty year in hagstrom88
 Warning--empty year in Tobita2002
-You've used 17 entries,
+You've used 18 entries,
             2850 wiz_defined-function locations,
-            731 strings with 8619 characters,
-and the built_in function-call counts, 11598 in all, are:
-= -- 992
-> -- 349
+            738 strings with 8892 characters,
+and the built_in function-call counts, 12366 in all, are:
+= -- 1039
+> -- 406
 < -- 27
-+ -- 146
-- -- 126
-* -- 783
-:= -- 1444
-add.period$ -- 40
-call.type$ -- 17
-change.case$ -- 124
++ -- 169
+- -- 148
+* -- 844
+:= -- 1551
+add.period$ -- 41
+call.type$ -- 18
+change.case$ -- 138
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 1004
-empty$ -- 990
-format.name$ -- 141
-if$ -- 2556
+cite$ -- 20
+duplicate$ -- 1062
+empty$ -- 1044
+format.name$ -- 164
+if$ -- 2709
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 192
-newline$ -- 57
-num.names$ -- 34
-pop$ -- 323
+int.to.str$ -- 18
+missing$ -- 211
+newline$ -- 60
+num.names$ -- 36
+pop$ -- 360
 preamble$ -- 1
-purify$ -- 97
+purify$ -- 110
 quote$ -- 0
-skip$ -- 335
+skip$ -- 342
 stack$ -- 0
-substring$ -- 741
-swap$ -- 631
+substring$ -- 754
+swap$ -- 666
 text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
+type$ -- 70
 warning$ -- 2
-while$ -- 89
-width$ -- 19
-write$ -- 207
+while$ -- 92
+width$ -- 20
+write$ -- 217
 (There was 1 error message)
