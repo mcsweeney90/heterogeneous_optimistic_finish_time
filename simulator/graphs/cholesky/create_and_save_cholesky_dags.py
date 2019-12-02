@@ -50,10 +50,10 @@ multiple = Environment.Node(28, 4, name="Multiple_GPU")
 #
 ## Load GPU data.
 #name = "V100"
-#dgemm_raw = np.genfromtxt('data/{}/one_pred_on_cpu/DGEMM_{}.csv'.format(name, name), delimiter=',', skip_header=1)
-#dpotrf_raw = np.genfromtxt('data/{}/one_pred_on_cpu/DPOTRF_{}.csv'.format(name, name), delimiter=',', skip_header=1)
-#dsyrk_raw = np.genfromtxt('data/{}/one_pred_on_cpu/DSYRK_{}.csv'.format(name, name), delimiter=',', skip_header=1)
-#dtrsm_raw = np.genfromtxt('data/{}/one_pred_on_cpu/DTRSM_{}.csv'.format(name, name), delimiter=',', skip_header=1)
+#dgemm_raw = np.genfromtxt('data/{}/DGEMM_{}.csv'.format(name, name), delimiter=',', skip_header=1)
+#dpotrf_raw = np.genfromtxt('data/{}/DPOTRF_{}.csv'.format(name, name), delimiter=',', skip_header=1)
+#dsyrk_raw = np.genfromtxt('data/{}/DSYRK_{}.csv'.format(name, name), delimiter=',', skip_header=1)
+#dtrsm_raw = np.genfromtxt('data/{}/DTRSM_{}.csv'.format(name, name), delimiter=',', skip_header=1)
 #
 #x = min_tile
 #i = 1 # Ignore the first iteration for each tile size - more expensive than later iterations because of libraries being loaded, etc.
