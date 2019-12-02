@@ -11,15 +11,15 @@ Warning--empty year in hagstrom88
 Warning--empty year in Tobita2002
 You've used 18 entries,
             2850 wiz_defined-function locations,
-            738 strings with 8892 characters,
-and the built_in function-call counts, 12366 in all, are:
-= -- 1039
+            739 strings with 8957 characters,
+and the built_in function-call counts, 12372 in all, are:
+= -- 1040
 > -- 406
 < -- 27
 + -- 169
 - -- 148
-* -- 844
-:= -- 1551
+* -- 847
+:= -- 1552
 add.period$ -- 41
 call.type$ -- 18
 change.case$ -- 138
@@ -28,13 +28,13 @@ cite$ -- 20
 duplicate$ -- 1062
 empty$ -- 1044
 format.name$ -- 164
-if$ -- 2709
+if$ -- 2710
 int.to.chr$ -- 0
 int.to.str$ -- 18
 missing$ -- 211
 newline$ -- 60
 num.names$ -- 36
-pop$ -- 360
+pop$ -- 359
 preamble$ -- 1
 purify$ -- 110
 quote$ -- 0
@@ -49,5 +49,5 @@ type$ -- 70
 warning$ -- 2
 while$ -- 92
 width$ -- 20
-write$ -- 217
+write$ -- 218
 (There was 1 error message)

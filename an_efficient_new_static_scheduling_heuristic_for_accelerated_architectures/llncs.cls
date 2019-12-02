@@ -892,6 +892,9 @@ to0pt{\kern0.55\wd0\vrule height0.45\ht0\hss}\box0}}}}
 \@ifpackageloaded{hyperref}{%
 \def\doi#1{\href{https://doi.org/#1}{https://doi.org/#1}}}{
 \def\doi#1{https://doi.org/#1}}
+\@ifpackageloaded{hyperref}{%
+	\def\url#1{\href{https://#1}{https://#1}}}{
+	\def\url#1{https://#1}}
 }
 \def\homedir{\~{ }}
 

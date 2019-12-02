@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.8.6)  29 NOV 2019 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.8.6)  2 DEC 2019 12:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -572,16 +572,16 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 File: images/cholesky_nb128_speedups.png Graphic file (type png)
 <use images/cholesky_nb128_speedups.png>
 Package pdftex.def Info: images/cholesky_nb128_speedups.png  used on input line
- 208.
+ 203.
 (pdftex.def)             Requested size: 161.59285pt x 126.32571pt.
 <images/random_speedups_high_acc.png, id=160, 384.4764pt x 315.8199pt>
 File: images/random_speedups_high_acc.png Graphic file (type png)
 <use images/random_speedups_high_acc.png>
 Package pdftex.def Info: images/random_speedups_high_acc.png  used on input lin
-e 209.
+e 204.
 (pdftex.def)             Requested size: 153.78783pt x 126.32571pt.
 
-Overfull \hbox (2.54373pt too wide) in paragraph at lines 215--216
+Overfull \hbox (2.54373pt too wide) in paragraph at lines 209--210
 []\OT1/cmr/m/n/10 Figure []1b[] shows the speedups for all 540 high ac-cel-er-a
 -tion randomly-generated
  []
@@ -592,16 +592,16 @@ c.png>] [10]
 File: images/hoft_speedup_cholesky_nb128.png Graphic file (type png)
 <use images/hoft_speedup_cholesky_nb128.png>
 Package pdftex.def Info: images/hoft_speedup_cholesky_nb128.png  used on input 
-line 314.
+line 307.
 (pdftex.def)             Requested size: 189.51729pt x 147.32103pt.
 <images/hoft_speedup_cholesky_nb1024.png, id=219, 396.40096pt x 327.3831pt>
 File: images/hoft_speedup_cholesky_nb1024.png Graphic file (type png)
 <use images/hoft_speedup_cholesky_nb1024.png>
 Package pdftex.def Info: images/hoft_speedup_cholesky_nb1024.png  used on input
- line 315.
+ line 308.
 (pdftex.def)             Requested size: 178.37877pt x 147.32103pt.
 
-Overfull \hbox (20.77252pt too wide) in paragraph at lines 314--316
+Overfull \hbox (20.77252pt too wide) in paragraph at lines 307--309
  [][][][] 
  []
 
@@ -627,41 +627,41 @@ T1/cmr/bx/n/9 21\OT1/cmr/m/n/9 (02), 173--193 (2011).
  []
 
 
-Underfull \hbox (badness 1721) in paragraph at lines 85--88
+Underfull \hbox (badness 1721) in paragraph at lines 86--89
 []\OT1/cmr/m/n/9 Shetti, K.R., Fahmy, S.A., Bretschnei-der, T.: Op-ti-miza-tion
  of the HEFT
  []
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 85--88
+Underfull \hbox (badness 1178) in paragraph at lines 86--89
 \OT1/cmr/m/n/9 al-go-rithm for a CPU-GPU en-vi-ron-ment. In: PD-CAT. pp. 212--2
 18 (2013).
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 90--93
+Underfull \hbox (badness 1496) in paragraph at lines 91--94
 \OT1/cmr/m/n/9 mul-ti-pro-ces-sor schedul-ing al-go-rithms. Jour-nal of Schedul
 -ing \OT1/cmr/bx/n/9 5\OT1/cmr/m/n/9 (5), 379--394.
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 372.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 365.
  [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 372.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 365.
 
 (./an_efficient_new_static_scheduling_heuristic_for_accelerated_architectures.a
 ux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 372.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 372.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 365.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 365.
 Package rerunfilecheck Info: File `an_efficient_new_static_scheduling_heuristic
 _for_accelerated_architectures.out' has not changed.
 (rerunfilecheck)             Checksum: 466D740438D67E4CFA52E0B15E8426B7;109.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 372.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 365.
  ) 
 Here is how much of TeX's memory you used:
  9021 strings out of 494485
  138517 string characters out of 6175793
- 256289 words of memory out of 5000000
+ 256375 words of memory out of 5000000
  12487 multiletter control sequences out of 15000+600000
  12507 words of font info for 45 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -690,10 +690,10 @@ ts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.p
 fb>
 Output written on an_efficient_new_static_scheduling_heuristic_for_accelerated_
-architectures.pdf (14 pages, 827953 bytes).
+architectures.pdf (14 pages, 828245 bytes).
 PDF statistics:
- 401 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
+ 403 PDF objects out of 1000 (max. 8388607)
+ 322 compressed objects within 4 object streams
  107 named destinations out of 1000 (max. 500000)
  29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
