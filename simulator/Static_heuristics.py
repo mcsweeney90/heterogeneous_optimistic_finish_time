@@ -15,7 +15,7 @@ from collections import defaultdict
 
 ####################################################################################################
     
-"""Implementations of classic heuristics (including HEFT).""" 
+"""Implementations of classic static scheduling heuristics (including HEFT).""" 
     
 ####################################################################################################   
     
@@ -125,6 +125,10 @@ def HBMCT(dag, platform, task_list=None, batch_policy="bmct", bmct_initial_alloc
 def PEFT(dag, platform, priority_list=None, return_schedule=False, schedule_dest=None):
     """
     Predict Earliest Finish Time (Arabnejad and Barbosa, 2014).
+    Notes:
+        - The suggested task prioritization phase doesn't always respect the precedence constraints.
+          Rank_oct(t) = sum(OCT(t) / P). Alternatives: use minimum OFT instead, or use suggested rank_oct as node weight and
+          compute upward ranks.
     """
     
     if return_schedule:
@@ -140,8 +144,8 @@ def PEFT(dag, platform, priority_list=None, return_schedule=False, schedule_dest
             if task.exit and task.CPU_time == 0:
                 task_ranks[task] = -1
                 continue
-            task_ranks[task] = sum(OCT[task].values()) / platform.n_workers
-#            task_ranks[task] = min(OCT[task].values()) # Use min values instead for now...             
+#            task_ranks[task] = sum(OCT[task].values()) / platform.n_workers
+            task_ranks[task] = min(OCT[task].values()) # Use min values instead...             
         priority_list = list(reversed(sorted(task_ranks, key=task_ranks.get)))
     
     # Schedule all tasks to the processor that minimizes the sum of the OCT and EFT.

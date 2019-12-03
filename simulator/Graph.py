@@ -5,7 +5,7 @@ Created on Tue Aug 21 15:50:57 2018
 
 Framework for describing a DAG. 
 
-@author: Neil Walton, Tom
+@author: Tom, Neil Walton
 """
 
 import numpy as np
@@ -67,7 +67,7 @@ class Task:
             return max(self.CPU_time, self.GPU_time)
         elif weighting == "best" or weighting == "B" or weighting == "simple best" or weighting == "sb":
             return min(self.CPU_time, self.GPU_time)   
-        elif weighting == "WM-I":
+        elif weighting == "HEFT-WM" or weighting == "WM-I":
             r = self.acceleration_ratio
             return (self.CPU_time * platform.n_CPUs + r * self.GPU_time * platform.n_GPUs) / (platform.n_CPUs + r * platform.n_GPUs) 
         elif weighting == "WM-II":

@@ -14,9 +14,12 @@ sys.path.append('../../') # Quick fix to let us import modules from main directo
 from Graph import Task, DAG    
 
 def cholesky(num_tiles, draw=False):
-    """Returns a DAG object representing a tiled Cholesky factorization."""
+    """
+    Returns a DAG object representing a tiled Cholesky factorization.
+    TODO: Ugly code with lots of duplication, tidy up. 
+    """
     
-    last_acted_on = {}
+    last_acted_on = {} # Useful for keeping track of 
     
     G = nx.DiGraph()
     
@@ -99,11 +102,11 @@ def cholesky(num_tiles, draw=False):
         # Set the exit tasks.
         if not list(dag.DAG.successors(t)):
             t.exit = True
-        t.ID = n
+        t.ID = n # Give each task an ID number.
         n += 1    
     dag.num_tasks = n   # Number of tasks in DAG, often useful. 
     dag.num_edges = dag.DAG.number_of_edges()     
-    max_edges = (n * (n - 1)) / 2 # If dummy entry and exit nodes should disregard these so assume this is not the case.
+    max_edges = (n * (n - 1)) / 2 # Maximum number of edges for DAG with n vertices.
     dag.edge_density = dag.num_edges / max_edges  
     if draw:
         dag.draw_graph()    
@@ -113,13 +116,8 @@ def cholesky(num_tiles, draw=False):
 def QR(num_tiles, draw=False):
     """
     Returns a DAG object representing a tiled QR factorization of a matrix.
-    http://www.netlib.org/lapack/lawnspdf/lawn222.pdf
-    https://icl.utk.edu/dte/files/JLESC7-PaRSEC.pdf
-    http://www.netlib.org/utk/people/JackDongarra/WEB-PAGES/SPRING-2015/lect14-2.pdf
-    https://www.researchgate.net/publication/237322338_QR_factorization_for_the_CELL_processor
     TODO. 
-    """    
-        
+    """            
     return 
 
         

@@ -3,6 +3,8 @@
 """
 Created on Mon Nov 11 16:17:56 2019
 
+Comparison of HOFT with HEFT and HEFT-WM. See Section 6 of paper.
+
 @author: Tom
 """
 
@@ -36,135 +38,76 @@ plt.rcParams['figure.titlesize'] = 12
 
 ####################################################################################################
 
-# Environments.
+# Define environments.
 
 single = Environment.Node(7, 1, name="Single_GPU")
 multiple = Environment.Node(28, 4, name="Multiple_GPU")
 
 ####################################################################################################
 
-"""Cholesky."""
-
-start = timer()
 heuristics = ["HEFT-WM", "HOFT", "HOFT-WM"]
-n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
-chol_speedup, chol_mkspans = defaultdict(lambda: defaultdict(lambda: defaultdict(list))), defaultdict(lambda: defaultdict(lambda: defaultdict(list))),
-for nb in [128, 1024]:
-    for env in [single, multiple]:
-        with open("results/cholesky/{}_nb{}.txt".format(env.name, nb), "w") as dest:            
-            env.print_info(filepath=dest)
-            for nt in n_tasks:
-                dag = nx.read_gpickle('../../graphs/cholesky/nb{}/{}tasks.gpickle'.format(nb, nt))
-                dag.print_info(filepath=dest)
-                mst = dag.minimal_serial_time(platform=env)
-                print("Minimal serial time: {}\n".format(mst), file=dest)   
-                chol_mkspans[env.name][nb]["MST"].append(mst)
-                
-                OFT = dag.optimistic_finish_times()    
 
-                heft_mkspan = HEFT(dag, platform=env)                
-                chol_mkspans[env.name][nb]["HEFT"].append(heft_mkspan)
-                print("HEFT makespan: {}\n".format(heft_mkspan), file=dest)  
-                
-                for h in heuristics:
-                    if h == "HEFT-WM":
-                        task_list = dag.sort_by_upward_rank(platform=env, weighting="WM-I")
-                        mkspan = HEFT(dag, platform=env, task_list=task_list)
-                    elif h == "HOFT":
-                        task_list = OFT_priorities(dag, platform=env, selection="HOFT", table=OFT)
-                        mkspan = HOFT(dag, platform=env, policy="HOFT", task_list=task_list)
-                    elif h == "HOFT-WM":
-                        task_list = dag.sort_by_upward_rank(platform=env, weighting="WM-I")
-                        mkspan = HOFT(dag, platform=env, policy="HOFT", table=OFT, task_list=task_list) 
-                    chol_mkspans[env.name][nb][h].append(mkspan)  
-                    sp = 100 - (mkspan / heft_mkspan) * 100
-                    chol_speedup[env.name][nb][h].append(sp)
-                    print("{} makespan: {}".format(h, mkspan), file=dest)           
-                    print("Speedup (%) over HEFT: {}\n".format(sp), file=dest)     
-                print("--------------------------------------------------------\n", file=dest)                  
-    
-# Save the makespans so can plot later if I want.
-with open('data/chol_mkspans.dill'.format(nb), 'wb') as handle:
-    dill.dump(chol_mkspans, handle)
-    
-# Save the speedups so can plot later if I want.
-with open('data/chol_speedups.dill'.format(nb), 'wb') as handle:
-    dill.dump(chol_speedup, handle)
-    
-elapsed = timer() - start
-print("Cholesky part took {} minutes".format(elapsed / 60))
+#######################################################################
 
-"""Plot the Cholesky speedups over HEFT."""
+"""Cholesky DAGs."""
 
-#with open('data/chol_speedups.dill', 'rb') as file:
-#    chol_speedups = dill.load(file)
-#n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
+#######################################################################
 
-## Paper.
-#for nb in [128, 1024]:
-#    fig = plt.figure(dpi=400)            
-#    ax = fig.add_subplot(111, frameon=False)
-#    # hide tick and tick label of the big axes
-#    plt.tick_params(labelcolor='none', top=False, bottom=False, left=False, right=False)
-#    ax.set_xlabel("Number of tasks", labelpad=10) 
-#    ax.set_ylabel("Makespan reduction vs HEFT (%)", labelpad=15)        
-#    
-#    preferences = {"HEFT-WM" : [":", "o"], "HOFT" : ["--", "s"]}
-#        
-#    ax1 = fig.add_subplot(211)
-#    plt.xscale('log')
-#    for h in heuristics:
-#        ax1.plot(n_tasks, chol_speedups["Single_GPU"][nb][h], linestyle=preferences[h][0], marker=preferences[h][1], label=h)
-#    ax1.set_xticklabels([])
-#    ax1.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
-#    ax1.set_title("Single GPU", color="black", fontsize='large', family='serif')
-#    
-#    ax2 = fig.add_subplot(212)
-#    plt.xscale('log')
-#    for h in heuristics: 
-#        ax2.plot(n_tasks, chol_speedups["Multiple_GPU"][nb][h], linestyle=preferences[h][0], marker=preferences[h][1], label=h)        
-#    #ax2.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
-#    ax2.set_title("Multiple GPU", color="black", fontsize='large', family='serif')
-#    
-#    plt.savefig('plots/hoft_speedup_cholesky_nb{}'.format(nb), bbox_inches='tight') 
-
-## Talk.
-#titles = {"Single_GPU" : "1 GPU, 1 CPU", "Multiple_GPU" : "4 GPUs, 4 CPUs"}
-#for nb in [128, 1024]:
-#    fig = plt.figure(dpi=400)            
-#    ax = fig.add_subplot(111, frameon=False)
-#    # hide tick and tick label of the big axes
-#    plt.tick_params(labelcolor='none', top=False, bottom=False, left=False, right=False)
-#    ax.set_xlabel("NUMBER OF TASKS", labelpad=10) 
-#    ax.set_ylabel("MAKESPAN REDUCTION VS HEFT (%)", labelpad=15)        
-#    
-#    preferences = {"HEFT-WM" : [":", "o"], "HOFT" : ["--", "s"]}
-#        
-#    ax1 = fig.add_subplot(211)
-#    plt.xscale('log')
-#    ax1.plot(n_tasks, len(n_tasks) * [0], linestyle='-', label="HEFT", color='#FBC15E')
-#    for h in heuristics:
-#        ax1.plot(n_tasks, chol_speedups["Single_GPU"][nb][h], linestyle=preferences[h][0], marker=preferences[h][1], label=h)
-#    ax1.set_xticklabels([])
-#    ax1.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
-#    ax1.set_title(titles["Single_GPU"], color="black", fontsize='large', family='serif')
-#    
-#    ax2 = fig.add_subplot(212)
-#    plt.xscale('log')
-#    ax2.plot(n_tasks, len(n_tasks) * [0], linestyle='-', label="HEFT", color='#FBC15E')
-#    for h in heuristics: 
-#        ax2.plot(n_tasks, chol_speedups["Multiple_GPU"][nb][h], linestyle=preferences[h][0], marker=preferences[h][1], label=h)        
-#    #ax2.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
-#    ax2.set_title(titles["Multiple_GPU"], color="black", fontsize='large', family='serif')
-#    
-#    plt.savefig('plots/hoft_speedup_cholesky_nb{}_TALK'.format(nb), bbox_inches='tight') 
-
-
-
-
-#"""Random."""
 #start = timer()
-#heuristics = ["HEFT-WM", "HOFT", "HOFT-WM"]
+#n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
+#chol_speedup, chol_mkspans = defaultdict(lambda: defaultdict(lambda: defaultdict(list))), defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+#for nb in [128, 1024]:
+#    for env in [single, multiple]:
+#        with open("results/cholesky/{}_nb{}.txt".format(env.name, nb), "w") as dest:            
+#            env.print_info(filepath=dest)
+#            for nt in n_tasks:
+#                dag = nx.read_gpickle('../../graphs/cholesky/nb{}/{}tasks.gpickle'.format(nb, nt))
+#                dag.print_info(filepath=dest)
+#                mst = dag.minimal_serial_time(platform=env)
+#                print("Minimal serial time: {}\n".format(mst), file=dest)   
+#                chol_mkspans[env.name][nb]["MST"].append(mst)
+#                
+#                OFT = dag.optimistic_finish_times()    
+#
+#                heft_mkspan = HEFT(dag, platform=env)                
+#                chol_mkspans[env.name][nb]["HEFT"].append(heft_mkspan)
+#                print("HEFT makespan: {}\n".format(heft_mkspan), file=dest)  
+#                
+#                for h in heuristics:
+#                    if h == "HEFT-WM":
+#                        task_list = dag.sort_by_upward_rank(platform=env, weighting="WM-I")
+#                        mkspan = HEFT(dag, platform=env, task_list=task_list)
+#                    elif h == "HOFT":
+#                        task_list = OFT_priorities(dag, platform=env, selection="HOFT", table=OFT)
+#                        mkspan = HOFT(dag, platform=env, policy="HOFT", task_list=task_list)
+#                    elif h == "HOFT-WM":
+#                        task_list = dag.sort_by_upward_rank(platform=env, weighting="WM-I")
+#                        mkspan = HOFT(dag, platform=env, policy="HOFT", table=OFT, task_list=task_list) 
+#                    chol_mkspans[env.name][nb][h].append(mkspan)  
+#                    sp = 100 - (mkspan / heft_mkspan) * 100
+#                    chol_speedup[env.name][nb][h].append(sp)
+#                    print("{} makespan: {}".format(h, mkspan), file=dest)           
+#                    print("Speedup (%) over HEFT: {}\n".format(sp), file=dest)     
+#                print("--------------------------------------------------------\n", file=dest)                  
+#    
+## Save the makespans so can plot later if I want.
+#with open('data/chol_mkspans.dill'.format(nb), 'wb') as handle:
+#    dill.dump(chol_mkspans, handle)
+#    
+## Save the speedups so can plot later if I want.
+#with open('data/chol_speedups.dill'.format(nb), 'wb') as handle:
+#    dill.dump(chol_speedup, handle)
+#    
+#elapsed = timer() - start
+#print("Cholesky part took {} minutes".format(elapsed / 60))
+
+#######################################################################
+
+"""Random DAGs."""
+
+#######################################################################
+
+#start = timer()
 #n_dags = 180
 #rand_mkspans = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(list))))
 #rand_speedups = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(list))))
@@ -180,7 +123,7 @@ print("Cholesky part took {} minutes".format(elapsed / 60))
 #                count = 0
 #                for app in os.listdir('../../graphs/random/{}/{}/CCR_{}'.format(env.name, acc, ccr)):
 #                    count += 1
-##                    if count > 2: # REMEMBER TO REMOVE THIS BEFORE LEAVING TO RUN!
+##                    if count > 2: # REMEMBER TO COMMENT THIS BEFORE LEAVING TO RUN!
 ##                        break
 #                    print("Starting DAG number {}...".format(count))
 #                    dag = nx.read_gpickle('../../graphs/random/{}/{}/CCR_{}/{}'.format(env.name, acc, ccr, app))
@@ -246,73 +189,144 @@ print("Cholesky part took {} minutes".format(elapsed / 60))
 ## Save the CCRs so can plot again later...
 #with open('data/rand_ccrs.dill', 'wb') as handle:
 #    dill.dump(rand_ccrs, handle)
-#    
-#    
-#"""Plot the speedup over HEFT for the random DAGs."""
-#
-#with open('data/rand_speedups.dill', 'rb') as file:
-#    rand_speedups = dill.load(file)
-#    
-#with open('data/rand_ccrs.dill', 'rb') as file:
-#    rand_ccrs = dill.load(file)
-#    
-#with open('data/rand_mkspans.dill', 'rb') as file:
-#    rand_mkspans = dill.load(file)
-#
-#all_ccrs = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
-#all_speedups = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
-#
-#for env in [single, multiple]:
-#    for acc in ["low_acc", "high_acc"]:
-#        for ccr in ["0_10", "10_20", "20_50"]:
-#            for i in range(len(rand_mkspans[env.name][acc][ccr]["MST"])):
-#                m = rand_mkspans[env.name][acc][ccr]["HEFT"][i]
-#                for h in heuristics:
-#                    m1 = rand_mkspans[env.name][acc][ccr][h][i]
-#                    d1, d2 = rand_ccrs[env.name][acc][ccr][i], rand_speedups[env.name][acc][ccr][h][i]
-#                    all_ccrs[env.name][acc][h].append(d1)
-#                    all_speedups[env.name][acc][h].append(d2)
-#                    
-#                    
-#with open("results/random/summary.txt", "w") as dest: 
-#    for env in [single, multiple]:  
-#        print("Platform: {}".format(env.name.replace('_', ' ')), file=dest)                
-#        for acc in ["low_acc", "high_acc"]:
-#            print("\n{} ACCELERATION".format("LOW" if acc == "low_acc" else "HIGH"), file=dest)
-#            for h in heuristics:
-#                print("{} mean speedup: {}".format(h, np.mean(all_speedups[env.name][acc][h])), file=dest)
-#        print("\n\n\n\n\n", file=dest)      
-                
+    
+#######################################################################
 
-#markers = {"HOFT" : '.', "HEFT-WM" : '.'}
-#
-#fig = plt.figure(dpi=400)            
-#ax = fig.add_subplot(111, frameon=False)
-## hide tick and tick label of the big axes
-#plt.tick_params(labelcolor='none', top=False, bottom=False, left=False, right=False)
-#ax.set_xlabel("CCR", labelpad=10) 
-#ax.set_ylabel("Makespan reduction vs HEFT (%)", labelpad=15)    
-#
-#ax1 = fig.add_subplot(211)
-##plt.xscale('log')
-#ax1.plot(valid_ccrs["Single_GPU"]["HEFT-WM"], len(valid_ccrs["Single_GPU"]["HEFT-WM"]) * [0], linestyle='-', color='#FBC15E')
-#for h in heuristics:
-#    ax1.scatter(valid_ccrs["Single_GPU"][h], valid_speedups["Single_GPU"][h], marker=markers[h], label=h)
-#    next(ax1._get_lines.prop_cycler) 
-#ax1.set_xticklabels([])
-#ax1.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
-#ax1.set_title("Single GPU", color="black", fontsize='large', family='serif')
-#
-#ax2 = fig.add_subplot(212)
-##plt.xscale('log')
-#ax2.plot(valid_ccrs["Single_GPU"]["HEFT-WM"], len(valid_ccrs["Single_GPU"]["HEFT-WM"]) * [0], linestyle='-', color='#FBC15E')
-#for h in heuristics:
-#    ax2.scatter(valid_ccrs["Multiple_GPU"][h], valid_speedups["Multiple_GPU"][h], marker=markers[h], label=h)
-#    next(ax2._get_lines.prop_cycler) 
-##ax2.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
-#ax2.set_title("Multiple GPU", color="black", fontsize='large', family='serif')
-#
-#plt.savefig('plots/random_speedups', bbox_inches='tight')     
+"""Make some plots."""
+
+#######################################################################
+
+"""A. Cholesky DAGs."""
+
+with open('data/chol_speedups.dill', 'rb') as file:
+    chol_speedups = dill.load(file)
+n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
+
+# Paper.
+for nb in [128, 1024]:
+    fig = plt.figure(dpi=400)            
+    ax = fig.add_subplot(111, frameon=False)
+    # hide tick and tick label of the big axes
+    plt.tick_params(labelcolor='none', top=False, bottom=False, left=False, right=False)
+    ax.set_xlabel("Number of tasks", labelpad=10) 
+    ax.set_ylabel("Makespan reduction vs HEFT (%)", labelpad=15)        
+    
+    preferences = {"HEFT-WM" : [":", "o"], "HOFT" : ["--", "s"]}
+        
+    ax1 = fig.add_subplot(211)
+    plt.xscale('log')
+    for h in heuristics:
+        ax1.plot(n_tasks, chol_speedups["Single_GPU"][nb][h], linestyle=preferences[h][0], marker=preferences[h][1], label=h)
+    ax1.set_xticklabels([])
+    ax1.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
+    ax1.set_title("Single GPU", color="black", fontsize='large', family='serif')
+    
+    ax2 = fig.add_subplot(212)
+    plt.xscale('log')
+    for h in heuristics: 
+        ax2.plot(n_tasks, chol_speedups["Multiple_GPU"][nb][h], linestyle=preferences[h][0], marker=preferences[h][1], label=h)        
+    #ax2.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
+    ax2.set_title("Multiple GPU", color="black", fontsize='large', family='serif')
+    
+    plt.savefig('plots/hoft_speedup_cholesky_nb{}'.format(nb), bbox_inches='tight') 
+
+# Talk.
+titles = {"Single_GPU" : "1 GPU, 1 CPU", "Multiple_GPU" : "4 GPUs, 4 CPUs"}
+for nb in [128, 1024]:
+    fig = plt.figure(dpi=400)            
+    ax = fig.add_subplot(111, frameon=False)
+    # hide tick and tick label of the big axes
+    plt.tick_params(labelcolor='none', top=False, bottom=False, left=False, right=False)
+    ax.set_xlabel("NUMBER OF TASKS", labelpad=10) 
+    ax.set_ylabel("MAKESPAN REDUCTION VS HEFT (%)", labelpad=15)        
+    
+    preferences = {"HEFT-WM" : [":", "o"], "HOFT" : ["--", "s"]}
+        
+    ax1 = fig.add_subplot(211)
+    plt.xscale('log')
+    ax1.plot(n_tasks, len(n_tasks) * [0], linestyle='-', label="HEFT", color='#FBC15E')
+    for h in heuristics:
+        ax1.plot(n_tasks, chol_speedups["Single_GPU"][nb][h], linestyle=preferences[h][0], marker=preferences[h][1], label=h)
+    ax1.set_xticklabels([])
+    ax1.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
+    ax1.set_title(titles["Single_GPU"], color="black", fontsize='large', family='serif')
+    
+    ax2 = fig.add_subplot(212)
+    plt.xscale('log')
+    ax2.plot(n_tasks, len(n_tasks) * [0], linestyle='-', label="HEFT", color='#FBC15E')
+    for h in heuristics: 
+        ax2.plot(n_tasks, chol_speedups["Multiple_GPU"][nb][h], linestyle=preferences[h][0], marker=preferences[h][1], label=h)        
+    #ax2.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
+    ax2.set_title(titles["Multiple_GPU"], color="black", fontsize='large', family='serif')
+    
+    plt.savefig('plots/hoft_speedup_cholesky_nb{}_TALK'.format(nb), bbox_inches='tight') 
+    
+"""B. Random DAGs."""
+
+with open('data/rand_speedups.dill', 'rb') as file:
+    rand_speedups = dill.load(file)
+    
+with open('data/rand_ccrs.dill', 'rb') as file:
+    rand_ccrs = dill.load(file)
+    
+with open('data/rand_mkspans.dill', 'rb') as file:
+    rand_mkspans = dill.load(file)
+
+all_ccrs = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+all_speedups = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+
+for env in [single, multiple]:
+    for acc in ["low_acc", "high_acc"]:
+        for ccr in ["0_10", "10_20", "20_50"]:
+            for i in range(len(rand_mkspans[env.name][acc][ccr]["MST"])):
+                m = rand_mkspans[env.name][acc][ccr]["HEFT"][i]
+                for h in heuristics:
+                    m1 = rand_mkspans[env.name][acc][ccr][h][i]
+                    d1, d2 = rand_ccrs[env.name][acc][ccr][i], rand_speedups[env.name][acc][ccr][h][i]
+                    all_ccrs[env.name][acc][h].append(d1)
+                    all_speedups[env.name][acc][h].append(d2)
+                    
+# Summarize the results for the random DAGs.                    
+with open("results/random/summary.txt", "w") as dest: 
+    for env in [single, multiple]:  
+        print("Platform: {}".format(env.name.replace('_', ' ')), file=dest)                
+        for acc in ["low_acc", "high_acc"]:
+            print("\n{} ACCELERATION".format("LOW" if acc == "low_acc" else "HIGH"), file=dest)
+            for h in heuristics:
+                print("{} mean speedup: {}".format(h, np.mean(all_speedups[env.name][acc][h])), file=dest)
+        print("\n\n\n\n\n", file=dest)      
+                
+# Some plots. Not very clear so will have to omit outliers etc before using anywhere.
+markers = {"HOFT" : '.', "HEFT-WM" : '.', "HOFT-WM" : '.'}
+
+for acc in ["low_acc", "high_acc"]:
+    fig = plt.figure(dpi=400)            
+    ax = fig.add_subplot(111, frameon=False)
+    # hide tick and tick label of the big axes
+    plt.tick_params(labelcolor='none', top=False, bottom=False, left=False, right=False)
+    ax.set_xlabel("CCR", labelpad=10) 
+    ax.set_ylabel("Makespan reduction vs HEFT (%)", labelpad=15)    
+    
+    ax1 = fig.add_subplot(211)
+    #plt.xscale('log')
+    ax1.plot(all_ccrs["Single_GPU"][acc]["HEFT-WM"], len(all_ccrs["Single_GPU"][acc]["HEFT-WM"]) * [0], linestyle='-', color='#FBC15E')
+    for h in heuristics:
+        ax1.scatter(all_ccrs["Single_GPU"][acc][h], all_speedups["Single_GPU"][acc][h], marker=markers[h], label=h)
+        next(ax1._get_lines.prop_cycler) 
+    ax1.set_xticklabels([])
+    ax1.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
+    ax1.set_title("Single GPU", color="black", fontsize='large', family='serif')
+    
+    ax2 = fig.add_subplot(212)
+    #plt.xscale('log')
+    ax2.plot(all_ccrs["Single_GPU"][acc]["HEFT-WM"], len(all_ccrs["Single_GPU"][acc]["HEFT-WM"]) * [0], linestyle='-', color='#FBC15E')
+    for h in heuristics:
+        ax2.scatter(all_ccrs["Multiple_GPU"][acc][h], all_speedups["Multiple_GPU"][acc][h], marker=markers[h], label=h)
+        next(ax2._get_lines.prop_cycler) 
+    #ax2.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
+    ax2.set_title("Multiple GPU", color="black", fontsize='large', family='serif')
+    
+    plt.savefig('plots/random_speedups_{}'.format(acc), bbox_inches='tight')     
 
 
 

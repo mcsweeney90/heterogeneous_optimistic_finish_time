@@ -4,13 +4,13 @@ data:
 Timing data used to set the computation and communication costs of the DAGs. 
 
 images:
-Folder for any images representing Cholesky DAGs. 
+Any images representing Cholesky DAGs. 
 
 nb32 -- nb1024:
 Pickled DAG objects representing Cholesky DAGs with tile size nb.
 
 summaries:
-Basic DAG info (e.g., edge density, CCR) for all of the Cholesky DAGs in this section.
+Basic DAG info (e.g., edge density, CCR) for all of the DAGs in this section.
 
 create_and_save_cholesky_dags.py:
 Create Cholesky DAGs using cholesky function from NLA_DAGs.py. Sample from real timing data to set computation and communication costs. 

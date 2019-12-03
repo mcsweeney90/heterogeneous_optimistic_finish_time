@@ -1,0 +1,81 @@
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Single_GPU
+7 CPUs, 1 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 1024)
+Number of tasks: 35
+Maximum number of task predecessors: 3
+Average number of task predecessors: 1.7142857142857142
+Number of edges: 60
+Edge density: 0.10084033613445378
+--------------------------------------------------------
+Minimal serial time: 23743.288760000003
+
+HEFT makespan: 23743.28876
+
+HBMCT makespan: 23743.28876
+
+PEFT makespan: 23743.288759999996
+
+PETS makespan: 23743.288760000003
+
+HCPT makespan: 23743.28876
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 1024)
+Number of tasks: 220
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.25
+Number of edges: 495
+Edge density: 0.02054794520547945
+--------------------------------------------------------
+Minimal serial time: 125515.55272000007
+
+HEFT makespan: 119512.47825600005
+
+HBMCT makespan: 119832.84375199999
+
+PEFT makespan: 119355.32132800008
+
+PETS makespan: 125515.55272000004
+
+HCPT makespan: 117286.60018399998
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 1024)
+Number of tasks: 680
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.4705882352941178
+Number of edges: 1680
+Edge density: 0.0072771376591873865
+--------------------------------------------------------
+Minimal serial time: 361114.4198800024
+
+HEFT makespan: 335899.7899920024
+
+HBMCT makespan: 330391.5997840021
+
+PEFT makespan: 333417.7495520021
+
+PETS makespan: 348653.19508000236
+
+HCPT makespan: 334847.6536400002
+
+--------------------------------------------------------
+

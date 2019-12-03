@@ -19,7 +19,6 @@
 \usepackage{subfig}
 \usepackage{booktabs}
 
-\newcommand{\round}[1]{\ensuremath{\lfloor#1\rceil}}
 \DeclareMathOperator*{\argmin}{arg\,min}
 
 \begin{document}
@@ -30,36 +29,37 @@
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
-\author{Thomas McSweeney\inst{1}\orcidID{0000-0001-9866-2229} }
+\author{Thomas McSweeney\inst{1}\orcidID{0000-0001-9866-2229} \and Neil Walton\inst{1}\orcidID{0000-0002-5241-9765} \and Mawussi Zounon\inst{1, 2}\orcidID{0000-0002-6955-1500} }
 %
-\authorrunning{T. McSweeney}
+\authorrunning{T. McSweeney et al.}
 % First names are abbreviated in the running head.
 % If there are more than two authors, 'et al.' is used.
 %
-\institute{University of Manchester, Manchester, UK, M13 9PL \\
-	\email{thomas.mcsweeney@postgrad.manchester.ac.uk} }
+\institute{University of Manchester, Manchester, UK \\
+	\email{thomas.mcsweeney@postgrad.manchester.ac.uk} \and The Numerical Algorithms Group (NAG), Manchester, UK}
+
 %
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
 
-Heterogeneous architectures that use {\em Graphics Processing Units} (GPUs) for general computations, in addition to multicore CPUs, are increasingly common in high-performance computing. However many of the existing methods for scheduling precedence-constrained tasks on such platforms were intended for more diversely heterogeneous clusters, such as the classic {\em Heterogeneous Earliest Finish Time} (HEFT) heuristic. We propose a new static scheduling heuristic called {\em Heterogeneous Optimistic Finish Time} (HOFT) which has the same structure as HEFT but exploits the binary heterogeneity of accelerated platforms. Through extensive experimentation with custom software for simulating task scheduling problems on user-defined CPU-GPU platforms, we show that HOFT can obtain schedules at least $5\%$ shorter than HEFT's for medium-to-large numerical linear algebra application task graphs and around $3\%$ shorter on average for a large collection of randomly-generated graphs.   
+Heterogeneous architectures that use {\em Graphics Processing Units} (GPUs) for general computations, in addition to multicore CPUs, are increasingly common in high-performance computing. However many of the existing methods for scheduling precedence-constrained tasks on such platforms were intended for more diversely heterogeneous clusters, such as the classic {\em Heterogeneous Earliest Finish Time} (HEFT) heuristic. We propose a new static scheduling heuristic called {\em Heterogeneous Optimistic Finish Time} (HOFT) which exploits the binary heterogeneity of accelerated platforms. Through extensive experimentation with custom software for simulating task scheduling problems on user-defined CPU-GPU platforms, we show that HOFT can obtain schedules at least $5\%$ shorter than HEFT's for medium-to-large numerical linear algebra application task graphs and around $3\%$ shorter on average for a large collection of randomly-generated graphs.   
 
 
-\keywords{GPU computing  \and task-based programming \and scheduling.}
+\keywords{High-performance computing \and GPU computing \and Scheduling \and Precedence constraints \and Directed acyclic graphs.}
 \end{abstract}
 
 
 \section{Introduction}
 \label{sect.intro}
 
-Modern {\em High-Performance Computing} (HPC) machines typically comprise hundreds or even thousands of networked nodes. These nodes are increasingly likely to be {\em heterogeneous}, hosting one or more GPUs in addition to multicore CPUs. For example, Summit, which currently heads the Top500\footnote{\href{https://www.top500.org/}{{\tt \small https://www.top500.org/}}} list of the world's fastest supercomputers, comprises over $4000$ nodes, each with two 22-core IBM Power9 CPUs and six NVIDIA Tesla V100 GPUs. 
+Modern {\em High-Performance Computing} (HPC) machines typically comprise hundreds or even thousands of networked nodes. These nodes are increasingly likely to be {\em heterogeneous}, hosting one or more powerful accelerators---usually GPUs---in addition to multicore CPUs. For example, Summit, which currently heads the Top500\footnote{\href{https://www.top500.org/}{{\tt \small https://www.top500.org/}}} list of the world's fastest supercomputers, comprises over $4000$ nodes, each with two 22-core IBM Power9 CPUs and six NVIDIA Tesla V100 GPUs. 
 
 Task-based parallel programming is a paradigm that aims to harness this processor heterogeneity. Here a program is described as a collection of {\em tasks}---logically discrete atomic units of work---with {\em precedence constraints} that define the order in which they can be executed. This can be expressed in the form of a graph, where each vertex represents a task and edges the precedence constraints between them. We are interested only in the case when such task graphs are {\em Directed Acyclic Graphs} (DAGs)---directed and without any cycles.  
 
-The immediate question is, how do we find the optimal way to assign the tasks to a set of heterogeneous resources while still respecting the precedence constraints? In other words, what {\em schedule} should we follow? This DAG scheduling problem is known to be NP-complete, even for homogeneous processors \cite{topcuoglu2002performance}, so typically we must rely on heuristic algorithms that give us reasonable solutions in a reasonable time.
+The immediate question is, how do we find the optimal way to assign the tasks to a set of heterogeneous resources while still respecting the precedence constraints? In other words, what {\em schedule} should we follow? This DAG scheduling problem is known to be NP-complete, even for homogeneous processors \cite{topcuoglu2002performance}, so typically we must rely on heuristic algorithms that give us reasonably good solutions in a reasonable time.
 
-A fundamental distinction is made between {\em static} and {\em dynamic} scheduling problems. Static schedules are fixed before execution based on the information available at that time, whereas dynamic schedules are determined during runtime. There are generic advantages and disadvantages to both: static scheduling makes greater use of the data so is superior when it is sufficiently accurate, whereas dynamic scheduling uses more recent data. In practice task scheduling is usually handled by a {\em runtime system}, such as OmpSs \cite{duran2011ompss}, PaRSEC \cite{bosilca2013parsec}, or StarPU \cite{augonnet2011starpu}. Most such systems use previous execution traces to predict task execution and data transfer times at runtime. On a single machine this is tricky since shared buses make estimating available bandwidth difficult and the possibility of asynchronous data transfers complicates matters further. Hence at present dynamic scheduling is typically preferred. However static schedules can be surprisingly robust, even when estimates are poor \cite{agullo2016}. Furthermore, robustness can be improved using timing distribution information \cite{ZHENG20131673}. In addition, superior performance can be achieved in dynamic environments by modifying an existing static schedule, rather than computing a new one from scratch \cite{agullo2016}. 
+A fundamental distinction is made between {\em static} and {\em dynamic} scheduling. Static schedules are fixed before execution based on the information available at that time, whereas dynamic schedules are determined during runtime. There are generic advantages and disadvantages to both: static scheduling makes greater use of the data so is superior when it is sufficiently accurate, whereas dynamic scheduling uses more recent data. In practice task scheduling is usually handled by a {\em runtime system}, such as OmpSs \cite{duran2011ompss}, PaRSEC \cite{bosilca2013parsec}, or StarPU \cite{augonnet2011starpu}. Most such systems use previous execution traces to predict task execution and data transfer times at runtime. On a single machine the latter is tricky because of shared buses and the possibility of asynchronous data transfers. Hence at present dynamic scheduling is typically preferred. However static schedules can be surprisingly robust, even when estimates are poor \cite{agullo2016}. Furthermore, robustness can be improved using timing distribution information \cite{ZHENG20131673}. In addition, superior performance can be achieved in dynamic environments by modifying an existing static schedule, rather than computing a new one from scratch \cite{agullo2016}. 
 
 In this paper we therefore focus on the problem of finding good static schedules for multicore and GPU platforms. To facilitate this investigation, we developed an open-source software simulator which allows users to simulate the static scheduling of arbitrary task DAGs on arbitrary CPU-GPU platforms, without worrying about the time or energy usage constraints imposed by real systems. Using this, we evaluate and optimize HEFT for these environments.  
 % we therefore focus on... "with the understanding that these can be used as a basis for better dynamic schedules in practice."
@@ -99,7 +99,7 @@ In this paper we use a simulation model to study the static task scheduling prob
 \begin{center}
 	\href{https://github.com/mcsweeney90/heterogeneous_optimistic_finish_time}{{\tt \small https://github.com/mcsweeney90/heterogeneous\_optimistic\_finish\_time}}.
 \end{center} 
-The code used to generate all results presented in this paper is available in the folder {\tt simulator/scripts} so interested researchers may repeat our experiments for themselves. In addition, users may make modifications to the simulator that they believe will more accurately reflect their own target environment. 
+All code used to generate results presented in this paper is available in the folder {\tt simulator/scripts} so interested researchers may repeat our experiments for themselves. In addition, users may make modifications to the simulator that they believe will more accurately reflect their own target environment. 
 
 To build the simulation model we gathered data from a single heterogeneous node of a local computing cluster. This comprises four octacore Intel (Skylake) Xeon Gold 6130 CPUs running at 2.10GHz with 192GB RAM and four Nvidia V100-SXM2-16GB (Volta) GPUs, each with 16GB GPU global memory, 5120 CUDA Cores and NVLink interconnect. We used {\em Basic Linear Algebra Subroutine} (BLAS) \cite{Dongarra:1990:SLB:77626.79170} and {\em Linear Algebra PACKage} (LAPACK) \cite{laug} kernels for this data-gathering as they are widely-used in scientific computing applications.
 
@@ -339,7 +339,7 @@ HOFT achieved smaller makespans than HEFT on average for the set of randomly-gen
 
 Overall our simulations suggest that HOFT is often superior to---and always competitive with---both standard HEFT and HEFT-WM for multicore and GPU platforms, especially when task acceleration ratios are high. The processor selection phase in particular appears to be useful, at least on average, for any task prioritization. It should also be noted that HEFT-WM was almost always superior to the standard algorithm in our simulations, suggesting that it should perhaps be the default in accelerated environments. 
 
-Static schedules for multicore and GPU are most useful in practice as a foundation for superior dynamic schedules \cite{agullo2016}, or when their robustness is reinforced using statistical analysis \cite{ZHENG20131673}. This paper was concerned only with computing the initial static schedules so the natural next step is to consider their extension to real---i.e., dynamic---environments. This is often called {\em stochastic} scheduling, since the costs are usually modeled as random variables from some---possibly unknown---distribution. The goal is typically to find methods that bound variation in the schedule makespan, which is notoriously difficult \cite{hagstrom88}. Experimentation with existing stochastic scheduling heuristics, such as {\em Monte Carlo Scheduling} \cite{ZHENG20131673}, suggested to us that the main issue with adapting such methods for multicore and GPU is their cost, which can be much greater than computing the static schedule itself. Hence in future work we intend to investigate cheaper ways to make effective use of static schedules for real platforms.  
+Static schedules for multicore and GPU are most useful in practice as a foundation for superior dynamic schedules \cite{agullo2016}, or when their robustness is reinforced using statistical analysis \cite{ZHENG20131673}. This paper was concerned only with computing the initial static schedules; the natural next step is to consider their extension to real---i.e., dynamic---environments. This is often called {\em stochastic} scheduling, since the costs are usually modeled as random variables from some---possibly unknown---distribution. The goal is typically to find methods that bound variation in the schedule makespan, which is notoriously difficult \cite{hagstrom88}. Experimentation with existing stochastic scheduling heuristics, such as {\em Monte Carlo Scheduling} \cite{ZHENG20131673}, suggested to us that the main issue with adapting such methods for multicore and GPU is their cost, which can be much greater than computing the static schedule itself. Hence in future work we intend to investigate cheaper ways to make effective use of static schedules for real platforms.  
 
 Although the number of failures HOFT recorded for DAGs with low CCRs was slightly smaller than for HEFT, the failure probability was still unacceptably high. Using the lookahead processor selection from \cite{bittencourt10} instead reduced the probability of failure further but it was still nonzero and the additional computational cost was considerable. We investigated cheaper {\em sampling-based} selection phases that consider only a small sample of the child tasks, selected either at random or based on priorities. These did reduce the failure probability slightly but the improvement was only minor. Alternatives to lookahead that we intend to consider in future are the duplication \cite{duplication} or aggregation of tasks.
 

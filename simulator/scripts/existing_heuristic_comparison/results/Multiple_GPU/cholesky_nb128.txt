@@ -1,8 +1,8 @@
 --------------------------------------------------------
 NODE INFO
 --------------------------------------------------------
-Name: Single_GPU
-7 CPUs, 1 GPUs
+Name: Multiple_GPU
+28 CPUs, 4 GPUs
 Communication: True
 Asynchronous data transfer: False
 --------------------------------------------------------
@@ -19,17 +19,15 @@ Edge density: 0.10084033613445378
 --------------------------------------------------------
 Minimal serial time: 1296.9830400000003
 
-HEFT with M weighting makespan: 1012.456272
-HEFT-MM makespan: 1221.347952
-Reduction: -20.632168102169658
+HEFT makespan: 1073.248552
 
-HEFT with WM-I weighting makespan: 1012.456272
-HEFT-MM makespan: 1121.487032
-Reduction: -10.768935213826197
+HBMCT makespan: 1119.8701919999999
 
-HEFT with OFT-VI weighting makespan: 1105.205328
-HEFT-MM makespan: 1210.030704
-Reduction: -9.484696946737841
+PEFT makespan: 1073.248552
+
+PETS makespan: 1176.8791199999998
+
+HCPT makespan: 1060.3655039999999
 
 --------------------------------------------------------
 
@@ -45,35 +43,39 @@ Edge density: 0.02054794520547945
 --------------------------------------------------------
 Minimal serial time: 5625.082880000006
 
-HEFT with M weighting makespan: 2823.541248
-HEFT-MM makespan: 2719.119456000001
-Reduction: 3.6982562969095767
+HEFT makespan: 2345.070104
 
-HEFT with WM-I weighting makespan: 2764.9995439999993
-HEFT-MM makespan: 2597.008247999999
-Reduction: 6.075635577030681
+HBMCT makespan: 2581.4599839999996
 
-HEFT with OFT-VI weighting makespan: 2748.2849999999994
-HEFT-MM makespan: 2777.9711440000005
-Reduction: -1.0801697786074271
+PEFT makespan: 2255.4475440000006
+
+PETS makespan: 2871.1732240000006
+
+HCPT makespan: 2318.5401760000004
 
 --------------------------------------------------------
 
 --------------------------------------------------------
-SUMMARY
+DAG INFO
 --------------------------------------------------------
-Weighting: M.
-Mean reduction: -8.46695590263004.
-Best reduction: 3.6982562969095767
-Worst reduction: -20.632168102169658
+Application: Cholesky (nb 128)
+Number of tasks: 680
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.4705882352941178
+Number of edges: 1680
+Edge density: 0.0072771376591873865
+--------------------------------------------------------
+Minimal serial time: 14398.955519999921
 
-Weighting: WM-I.
-Mean reduction: -2.3466498183977578.
-Best reduction: 6.075635577030681
-Worst reduction: -10.768935213826197
+HEFT makespan: 3527.269095999999
 
-Weighting: OFT-VI.
-Mean reduction: -5.282433362672634.
-Best reduction: -1.0801697786074271
-Worst reduction: -9.484696946737841
+HBMCT makespan: 4626.6687600000005
+
+PEFT makespan: 3513.9089839999992
+
+PETS makespan: 4655.705496000001
+
+HCPT makespan: 3676.4873759999987
+
+--------------------------------------------------------
 

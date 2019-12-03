@@ -1,0 +1,88 @@
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Multiple_GPU
+28 CPUs, 4 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 35
+Maximum number of task predecessors: 3
+Average number of task predecessors: 1.7142857142857142
+Number of edges: 60
+Edge density: 0.10084033613445378
+--------------------------------------------------------
+Minimal serial time: 1296.9830400000003
+
+HEFT weighting makespan: 1073.248552
+HBMCT-MM makespan: 1000.9999679999999
+Reduction: 6.7317662684347255
+
+HEFT-WM weighting makespan: 1073.248552
+HBMCT-MM makespan: 1000.9999679999999
+Reduction: 6.7317662684347255
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 220
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.25
+Number of edges: 495
+Edge density: 0.02054794520547945
+--------------------------------------------------------
+Minimal serial time: 5625.082880000006
+
+HEFT weighting makespan: 2345.070104
+HBMCT-MM makespan: 2282.1205840000002
+Reduction: 2.684334250503909
+
+HEFT-WM weighting makespan: 2345.070104
+HBMCT-MM makespan: 2244.4996320000005
+Reduction: 4.288591280425081
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 680
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.4705882352941178
+Number of edges: 1680
+Edge density: 0.0072771376591873865
+--------------------------------------------------------
+Minimal serial time: 14398.955519999921
+
+HEFT weighting makespan: 3527.269095999999
+HBMCT-MM makespan: 3497.114455999999
+Reduction: 0.8549004677356891
+
+HEFT-WM weighting makespan: 3504.0457839999985
+HBMCT-MM makespan: 3552.176639999999
+Reduction: -1.3735795411057126
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+SUMMARY
+--------------------------------------------------------
+Weighting: HEFT.
+Mean reduction: 3.423666995558108.
+Best reduction: 6.7317662684347255
+Worst reduction: 0.8549004677356891
+
+Weighting: HEFT-WM.
+Mean reduction: 3.2155926692513646.
+Best reduction: 6.7317662684347255
+Worst reduction: -1.3735795411057126
+

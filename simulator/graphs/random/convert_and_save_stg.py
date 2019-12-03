@@ -3,22 +3,21 @@
 """
 Created on Wed May 22 16:04:52 2019
 
-Read DAGs from the STG and construct corresponding DAG.
+Read .stg files, construct and save corresponding DAG topologies (without computation and communication costs).
 
 @author: Tom
 """
 
 import os
 import networkx as nx
+import re
+from timeit import default_timer as timer
 import sys
 sys.path.append('../../') # Quick fix to let us import modules from main directory.   
 from Graph import Task, DAG
-import re
-from timeit import default_timer as timer
 
 start = timer()
-
-# Read stg files and construct DAG objects from them.
+# Read stg files.
 for orig in os.listdir('STG/'):    
     if orig.endswith('.' + 'stg'):  
         print(orig)
@@ -40,26 +39,26 @@ for orig in os.listdir('STG/'):
                     continue
                 # Remove all whitespace - there is probably a nicer way to do this...
                 info = " ".join(re.split("\s+", row, flags=re.UNICODE)).strip().split() 
-                # Create node.        
+                # Create task.        
                 nd = Task()
                 nd.ID = int(info[0])
                 if info[2] == '0':
                     nd.entry = True
                     dag.DAG.add_node(nd)
                     continue
-                if nd.ID == 1001:
+                if nd.ID == 1001: # Assumes only one exit task, which is true for the STG but may not be in general!
                     nd.exit = True
                 # Add connections to predecessors.
                 predecessors = list(n for n in dag.DAG if str(n.ID) in info[3:])
                 for p in predecessors:
                     dag.DAG.add_edge(p, nd)
-        dag.num_tasks = len(dag.DAG)
+        dag.num_tasks = len(dag.DAG) # Number of tasks in DAG, often useful.
         dag.num_edges = dag.DAG.number_of_edges()
-        max_edges = (dag.num_tasks * (dag.num_tasks - 1)) / 2 # If dummy entry and exit nodes should disregard these so assume this is not the case.
+        max_edges = (dag.num_tasks * (dag.num_tasks - 1)) / 2 # Maximum number of edges for DAG with n vertices.
         dag.edge_density = dag.num_edges / max_edges
         dag.print_info()
         
-        # Save DAG for future use.
+        # Save DAG topology.
         nx.write_gpickle(dag, "topologies/{}.gpickle".format(dag.app))
         
 elapsed = timer() - start     

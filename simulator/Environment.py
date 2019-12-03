@@ -378,7 +378,7 @@ class Node:
         elif weighting == "simple best" or weighting == "sb":
             return min(parent.comm_costs["CC"][child.ID], parent.comm_costs["CG"][child.ID], parent.comm_costs["GC"][child.ID], parent.comm_costs["GG"][child.ID])         
                 
-        elif weighting == "WM-I":
+        elif weighting == "HEFT-WM" or weighting == "WM-I":
             A, B = parent.acceleration_ratio, child.acceleration_ratio
             c_bar = self.n_CPUs * (self.n_CPUs - 1) * parent.comm_costs["CC"][child.ID] 
             c_bar += self.n_CPUs * B * self.n_GPUs * parent.comm_costs["CG"][child.ID]

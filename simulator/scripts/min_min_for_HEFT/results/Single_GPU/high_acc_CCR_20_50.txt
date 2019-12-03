@@ -1,0 +1,48 @@
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Single_GPU
+7 CPUs, 1 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0138
+Number of tasks: 1002
+Maximum number of task predecessors: 152
+Average number of task predecessors: 64.379
+Number of edges: 64403
+Edge density: 0.1284204817138949
+Mean task CPU time: 2657.9654563107506, standard deviation: 3400.3652769754176
+Mean task GPU time: 50.69860279441118, standard deviation: 29.01243759103954
+Mean task acceleration ratio: 52.103127130137324, standard deviation: 49.843772958018505
+Mean task execution time: 2332.057099621208
+Computation-to-communication ratio: 31.474079455567356
+Minimal serial time: 50800
+--------------------------------------------------------
+HEFT weighting makespan: 41593.75658490106
+HBMCT-MM makespan: 41528.03282449931
+Reduction: 0.15801352365852495
+
+HEFT-WM weighting makespan: 41524.14294225099
+HBMCT-MM makespan: 41476
+Reduction: 0.11593964098895526
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+SUMMARY
+--------------------------------------------------------
+Weighting: HEFT.
+Mean reduction: 0.15801352365852495.
+Best reduction: 0.15801352365852495
+Worst reduction: 0.15801352365852495
+
+Weighting: HEFT-WM.
+Mean reduction: 0.11593964098895526.
+Best reduction: 0.11593964098895526
+Worst reduction: 0.11593964098895526
+

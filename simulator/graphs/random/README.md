@@ -13,12 +13,12 @@ in Tobita, T., Kasahara, H.: A standard task graph set for fair evaluation of mu
 (In the original storage format.)
 
 topologies:
-STG DAGs with 1002 tasks converted to DAG objects, without computation and communication costs, and stored using gpickle.
+DAGs with 1002 tasks from the STG converted to DAG objects, without computation and communication costs, and stored using gpickle.
 
 convert_and_save_stg.py : 
-Helper script for converting stg files to DAG objects and saving for future use. 
+Helper script for converting stg files to DAG objects and saving. 
 
 set_costs_and_save.py : 
-Helper script for reading unweighted DAG objects, setting costs and saving for future use.
+Helper script for reading unweighted DAG objects, setting costs and saving.
 
 

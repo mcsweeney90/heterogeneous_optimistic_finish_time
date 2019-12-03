@@ -1,0 +1,55 @@
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Single_GPU
+7 CPUs, 1 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0138
+Number of tasks: 1002
+Maximum number of task predecessors: 152
+Average number of task predecessors: 64.379
+Number of edges: 64403
+Edge density: 0.1284204817138949
+Mean task CPU time: 2704.9485679287063, standard deviation: 3312.006100046464
+Mean task GPU time: 51.27644710578842, standard deviation: 28.088831574724324
+Mean task acceleration ratio: 53.40260958674824, standard deviation: 54.79104875377867
+Mean task execution time: 2373.2395528258417
+Computation-to-communication ratio: 9.297500682453984
+Minimal serial time: 51379
+--------------------------------------------------------
+HEFT makespan: 41797.71647372429
+
+HBMCT makespan: 42812.811144196625
+
+PEFT makespan: 41647.896863112226
+
+PETS makespan: 42116.60352509653
+
+HCPT makespan: 43808.456733971194
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+SUMMARY
+--------------------------------------------------------
+Heuristic: HEFT.
+Mean makespan: 41797.71647372429.
+
+Heuristic: HBMCT.
+Mean makespan: 42812.811144196625.
+
+Heuristic: PEFT.
+Mean makespan: 41647.896863112226.
+
+Heuristic: PETS.
+Mean makespan: 42116.60352509653.
+
+Heuristic: HCPT.
+Mean makespan: 43808.456733971194.
+
