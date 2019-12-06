@@ -15,8 +15,8 @@ as in the Hybrid Balanced Minimum Completion Time (HBMCT) heuristic of Zhao and 
 corresponds to HEFT with a different task priority list and consistently improved on the original but the gains were only minor and the additional computational cost significant so we 
 ultimately elected not to include this investigation in the final paper.
 
-high_data:
-Heuristics targeting high-data/low CCR DAGs for which HEFT (and HOFT) are likely to fail. Referred to in the conclusion of paper but this was not promising so we didn't pursue it any further.  
+low_CCR:
+Heuristics targeting low CCR/high-data DAGs for which HEFT (and HOFT) are likely to fail. Referred to in the conclusion of paper but this was not promising so we didn't pursue it any further.  
 
 existing_heuristic_comparison:
 Comparison of five existing static scheduling heuristics - HEFT, HBMCT, PEFT, PETS and HCPT. Not referenced in the paper but this motivated our focus on HEFT in particular, as it was the best-performing along with PEFT and its structure offered more possibilities for optimization.  

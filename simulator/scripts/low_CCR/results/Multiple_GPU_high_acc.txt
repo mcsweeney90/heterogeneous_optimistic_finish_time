@@ -1,0 +1,41 @@
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Multiple_GPU
+28 CPUs, 4 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0046
+Number of tasks: 1002
+Maximum number of task predecessors: 109
+Average number of task predecessors: 45.057
+Number of edges: 45087
+Edge density: 0.08990410786817972
+Mean task CPU time: 2540.516683228889, standard deviation: 3117.5470918237925
+Mean task GPU time: 50.833333333333336, standard deviation: 28.417074206430176
+Mean task acceleration ratio: 50.254667568070815, standard deviation: 48.81466869068686
+Mean task execution time: 2229.3062644919446
+Computation-to-communication ratio: 4.9448078856017075
+Minimal serial time: 50935
+--------------------------------------------------------
+HEFT makespan: 20065.958233412635
+HEFT-L with 1P child sampling policy makespan: 16299.95294089012
+--------------------------------------------------------
+
+--------------------------------------------------------
+SUMMARY
+--------------------------------------------------------
+HEFT failures: 0
+
+Sampling policy: 1P.
+Average improvement compared to HEFT: 18.768130824929102%
+Number of times better than HEFT: 1/180
+Number of successes: 1/180
+Number of ties: 0/180
+Number of failures: 0/180
+
