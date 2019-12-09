@@ -57,40 +57,40 @@ heuristics = ["HEFT", "HBMCT", "PEFT", "PETS", "HCPT"]
 
 #######################################################################
 
-#start = timer()
-#n_tasks = [35, 220, 680]#, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
-#chol_mkspans = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
-#for nb in [128, 1024]:
-#    for env in [single, multiple]:
-#        with open("results/{}/cholesky_nb{}.txt".format(env.name, nb), "w") as dest:            
-#            env.print_info(filepath=dest)
-#            for nt in n_tasks:
-#                dag = nx.read_gpickle('../../graphs/cholesky/nb{}/{}tasks.gpickle'.format(nb, nt))
-#                dag.print_info(filepath=dest)
-#                mst = dag.minimal_serial_time(platform=env)
-#                print("Minimal serial time: {}\n".format(mst), file=dest)   
-#                chol_mkspans[env.name][nb]["MST"].append(mst)                    
-#                for h in heuristics:
-#                    if h == "HEFT":
-#                        mkspan = HEFT(dag, platform=env)
-#                    elif h == "HBMCT":
-#                        mkspan = HBMCT(dag, platform=env)
-#                    elif h == "PEFT":
-#                        mkspan = PEFT(dag, platform=env)
-#                    elif h == "PETS":
-#                        mkspan = PETS(dag, platform=env)
-#                    elif h == "HCPT":
-#                        mkspan = HCPT(dag, platform=env)
-#                    chol_mkspans[env.name][nb][h].append(mkspan)  
-#                    print("{} makespan: {}\n".format(h, mkspan), file=dest)       
-#                print("--------------------------------------------------------\n", file=dest)                  
-#    
-## Save the makespans so can plot later if I want.
-#with open('data/chol_mkspans.dill'.format(nb), 'wb') as handle:
-#    dill.dump(chol_mkspans, handle)
-#        
-#elapsed = timer() - start
-#print("Cholesky part took {} minutes".format(elapsed / 60))
+start = timer()
+n_tasks = [35, 220]#, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
+chol_mkspans = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+for nb in [128, 1024]:
+    for env in [single, multiple]:
+        with open("results/{}/cholesky_nb{}.txt".format(env.name, nb), "w") as dest:            
+            env.print_info(filepath=dest)
+            for nt in n_tasks:
+                dag = nx.read_gpickle('../../graphs/cholesky/nb{}/{}tasks.gpickle'.format(nb, nt))
+                dag.print_info(filepath=dest)
+                mst = dag.minimal_serial_time(platform=env)
+                print("Minimal serial time: {}\n".format(mst), file=dest)   
+                chol_mkspans[env.name][nb]["MST"].append(mst)                    
+                for h in heuristics:
+                    if h == "HEFT":
+                        mkspan = HEFT(dag, platform=env)
+                    elif h == "HBMCT":
+                        mkspan = HBMCT(dag, platform=env)
+                    elif h == "PEFT":
+                        mkspan = PEFT(dag, platform=env)
+                    elif h == "PETS":
+                        mkspan = PETS(dag, platform=env)
+                    elif h == "HCPT":
+                        mkspan = HCPT(dag, platform=env)
+                    chol_mkspans[env.name][nb][h].append(mkspan)  
+                    print("{} makespan: {}\n".format(h, mkspan), file=dest)       
+                print("--------------------------------------------------------\n", file=dest)                  
+    
+# Save the makespans so can plot later if I want.
+with open('data/chol_mkspans.dill'.format(nb), 'wb') as handle:
+    dill.dump(chol_mkspans, handle)
+        
+elapsed = timer() - start
+print("Cholesky part took {} minutes".format(elapsed / 60))
 
 #######################################################################
 
@@ -107,6 +107,7 @@ for env in [single, multiple]:
         for ccr in ["0_10", "10_20", "20_50"]:
             with open("results/{}/{}_CCR_{}.txt".format(env.name, acc, ccr), "w") as dest:            
                 env.print_info(filepath=dest)
+                bests = defaultdict(int)
                 count = 0
                 for app in os.listdir('../../graphs/random/{}/{}/CCR_{}'.format(env.name, acc, ccr)):
                     count += 1
@@ -114,7 +115,9 @@ for env in [single, multiple]:
                         break
                     print("Starting DAG number {}...".format(count))
                     dag = nx.read_gpickle('../../graphs/random/{}/{}/CCR_{}/{}'.format(env.name, acc, ccr, app))
-                    dag.print_info(platform=env, filepath=dest)                                       
+                    dag.print_info(platform=env, filepath=dest) 
+
+                    best = float('inf')                                     
                                   
                     for h in heuristics:
                         if h == "HEFT":
@@ -128,7 +131,12 @@ for env in [single, multiple]:
                         elif h == "HCPT":
                             mkspan = HCPT(dag, platform=env)
                         rand_mkspans[env.name][acc][ccr][h].append(mkspan)  
-                        print("{} makespan: {}\n".format(h, mkspan), file=dest)  
+                        best = min(best, mkspan)
+                        print("{} makespan: {}\n".format(h, mkspan), file=dest) 
+                        
+                    for h in heuristics:
+                        if rand_mkspans[env.name][acc][ccr][h][-1] == best:
+                            bests[h] += 1
                                                
                     print("--------------------------------------------------------\n", file=dest)                
                     
@@ -138,7 +146,8 @@ for env in [single, multiple]:
                 for h in heuristics:
                     mean_makespan = np.mean(rand_mkspans[env.name][acc][ccr][h])
                     print("Heuristic: {}.".format(h), file=dest)
-                    print("Mean makespan: {}.\n".format(mean_makespan), file=dest)          
+                    print("Mean makespan: {}.".format(mean_makespan), file=dest)  
+                    print("Number of best occurences: {}.\n".format(bests[h]), file=dest)  
                 
 
 # Save the reductions so can plot later if I want...
@@ -146,4 +155,4 @@ with open('data/rand_mkspans.dill', 'wb') as handle:
     dill.dump(rand_mkspans, handle)
     
 elapsed = timer() - start
-print("This took {} minutes".format(elapsed / 60))
+print("Random DAG part took {} minutes".format(elapsed / 60))

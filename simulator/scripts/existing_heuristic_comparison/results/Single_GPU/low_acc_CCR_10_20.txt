@@ -25,7 +25,7 @@ Minimal serial time: 51317
 --------------------------------------------------------
 HEFT makespan: 18055.52880420908
 
-HBMCT makespan: 19392.593975209835
+HBMCT makespan: 19300.037643655378
 
 PEFT makespan: 19226.253289072407
 
@@ -40,16 +40,21 @@ SUMMARY
 --------------------------------------------------------
 Heuristic: HEFT.
 Mean makespan: 18055.52880420908.
+Number of best occurences: 1.
 
 Heuristic: HBMCT.
-Mean makespan: 19392.593975209835.
+Mean makespan: 19300.037643655378.
+Number of best occurences: 0.
 
 Heuristic: PEFT.
 Mean makespan: 19226.253289072407.
+Number of best occurences: 0.
 
 Heuristic: PETS.
 Mean makespan: 20156.46846595675.
+Number of best occurences: 0.
 
 Heuristic: HCPT.
 Mean makespan: 21240.213472771684.
+Number of best occurences: 0.
 

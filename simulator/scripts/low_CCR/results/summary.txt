@@ -1,0 +1,118 @@
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Single_GPU
+7 CPUs, 1 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+LOW ACCELERATION
+
+Number of HEFT failures: 4
+
+Heuristic: HEFT-WM
+Number of failures: 4
+Number of HEFT corrections: 0
+Number of new failures: 0
+
+Heuristic: HOFT
+Number of failures: 4
+Number of HEFT corrections: 0
+Number of new failures: 0
+
+Heuristic: HOFT-WM
+Number of failures: 3
+Number of HEFT corrections: 1
+Number of new failures: 0
+
+Heuristic: 1P
+Number of failures: 2
+Number of HEFT corrections: 2
+Number of new failures: 0
+
+--------------------------------------------------------
+HIGH ACCELERATION
+
+Number of HEFT failures: 39
+
+Heuristic: HEFT-WM
+Number of failures: 33
+Number of HEFT corrections: 9
+Number of new failures: 3
+
+Heuristic: HOFT
+Number of failures: 19
+Number of HEFT corrections: 20
+Number of new failures: 0
+
+Heuristic: HOFT-WM
+Number of failures: 17
+Number of HEFT corrections: 22
+Number of new failures: 0
+
+Heuristic: 1P
+Number of failures: 17
+Number of HEFT corrections: 23
+Number of new failures: 1
+
+--------------------------------------------------------
+--------------------------------------------------------
+NODE INFO
+--------------------------------------------------------
+Name: Multiple_GPU
+28 CPUs, 4 GPUs
+Communication: True
+Asynchronous data transfer: False
+--------------------------------------------------------
+
+LOW ACCELERATION
+
+Number of HEFT failures: 2
+
+Heuristic: HEFT-WM
+Number of failures: 2
+Number of HEFT corrections: 0
+Number of new failures: 0
+
+Heuristic: HOFT
+Number of failures: 3
+Number of HEFT corrections: 0
+Number of new failures: 1
+
+Heuristic: HOFT-WM
+Number of failures: 2
+Number of HEFT corrections: 0
+Number of new failures: 0
+
+Heuristic: 1P
+Number of failures: 1
+Number of HEFT corrections: 1
+Number of new failures: 0
+
+--------------------------------------------------------
+HIGH ACCELERATION
+
+Number of HEFT failures: 18
+
+Heuristic: HEFT-WM
+Number of failures: 18
+Number of HEFT corrections: 1
+Number of new failures: 1
+
+Heuristic: HOFT
+Number of failures: 18
+Number of HEFT corrections: 0
+Number of new failures: 0
+
+Heuristic: HOFT-WM
+Number of failures: 17
+Number of HEFT corrections: 2
+Number of new failures: 1
+
+Heuristic: 1P
+Number of failures: 12
+Number of HEFT corrections: 6
+Number of new failures: 0
+
+--------------------------------------------------------

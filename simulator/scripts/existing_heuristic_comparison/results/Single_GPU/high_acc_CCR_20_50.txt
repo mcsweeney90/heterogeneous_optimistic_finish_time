@@ -31,25 +31,3 @@ PEFT makespan: 42192
 
 PETS makespan: 42701.39505320668
 
-HCPT makespan: 43903.39950784253
-
---------------------------------------------------------
-
---------------------------------------------------------
-SUMMARY
---------------------------------------------------------
-Heuristic: HEFT.
-Mean makespan: 41593.75658490106.
-
-Heuristic: HBMCT.
-Mean makespan: 41745.07136406232.
-
-Heuristic: PEFT.
-Mean makespan: 42192.0.
-
-Heuristic: PETS.
-Mean makespan: 42701.39505320668.
-
-Heuristic: HCPT.
-Mean makespan: 43903.39950784253.
-

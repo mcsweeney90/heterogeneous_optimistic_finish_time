@@ -40,16 +40,21 @@ SUMMARY
 --------------------------------------------------------
 Heuristic: HEFT.
 Mean makespan: 41797.71647372429.
+Number of best occurences: 0.
 
 Heuristic: HBMCT.
 Mean makespan: 42812.811144196625.
+Number of best occurences: 0.
 
 Heuristic: PEFT.
 Mean makespan: 41647.896863112226.
+Number of best occurences: 1.
 
 Heuristic: PETS.
 Mean makespan: 42116.60352509653.
+Number of best occurences: 0.
 
 Heuristic: HCPT.
 Mean makespan: 43808.456733971194.
+Number of best occurences: 0.
 

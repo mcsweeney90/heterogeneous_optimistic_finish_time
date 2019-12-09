@@ -3610,7 +3610,7 @@ HEFT-L with 1P child sampling policy makespan: 12677.821415769506
 --------------------------------------------------------
 SUMMARY
 --------------------------------------------------------
-HEFT failures: 0
+HEFT failures: 2
 
 Sampling policy: 1P.
 Average improvement compared to HEFT: 2.671072489896556%
