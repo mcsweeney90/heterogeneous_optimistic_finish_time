@@ -107,8 +107,8 @@ for env in [single, multiple]:
             count = 0
             for app in os.listdir('../../graphs/random/{}/{}/CCR_0_10'.format(env.name, acc)):
                 count += 1
-                if count > 1: # REMEMBER TO REMOVE THIS BEFORE LEAVING TO RUN!
-                    break
+#                if count > 1: # REMEMBER TO REMOVE THIS BEFORE LEAVING TO RUN!
+#                    break
                 print("Starting DAG number {}...".format(count))
                 dag = nx.read_gpickle('../../graphs/random/{}/{}/CCR_0_10/{}'.format(env.name, acc, app))
                 dag.print_info(platform=env, filepath=dest)  
