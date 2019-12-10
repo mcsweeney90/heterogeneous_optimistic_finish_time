@@ -25,7 +25,7 @@ Minimal serial time: 51550
 --------------------------------------------------------
 HEFT makespan: 8613.835816641786
 
-HBMCT makespan: 10153.646422032674
+HBMCT makespan: 10166.12727948615
 
 PEFT makespan: 8796.100114398207
 
@@ -36,20 +36,5037 @@ HCPT makespan: 9651.47243860943
 --------------------------------------------------------
 
 --------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0163
+Number of tasks: 1002
+Maximum number of task predecessors: 18
+Average number of task predecessors: 5.078
+Number of edges: 5278
+Edge density: 0.010524405733986572
+Mean task CPU time: 251.85706376199647, standard deviation: 324.3319748490631
+Mean task GPU time: 50.17165668662675, standard deviation: 28.964574602195146
+Mean task acceleration ratio: 5.047963937377262, standard deviation: 5.16579154787097
+Mean task execution time: 226.64638787757525
+Computation-to-communication ratio: 17.028980499464954
+Minimal serial time: 50272
+--------------------------------------------------------
+HEFT makespan: 3932.497011905432
+
+HBMCT makespan: 5298.81625178013
+
+PEFT makespan: 4051.1421717929156
+
+PETS makespan: 4757.78158931555
+
+HCPT makespan: 4912.571182558407
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0127
+Number of tasks: 1002
+Maximum number of task predecessors: 189
+Average number of task predecessors: 80.91
+Number of edges: 80924
+Edge density: 0.1613635865132871
+Mean task CPU time: 251.50255884115896, standard deviation: 313.63721479777064
+Mean task GPU time: 48.458083832335326, standard deviation: 28.418050045423414
+Mean task acceleration ratio: 5.094676797921376, standard deviation: 5.091317409063999
+Mean task execution time: 226.121999465056
+Computation-to-communication ratio: 19.052648368980464
+Minimal serial time: 48555
+--------------------------------------------------------
+HEFT makespan: 12600.103504585784
+
+HBMCT makespan: 13744.213986402285
+
+PEFT makespan: 12600.931892624934
+
+PETS makespan: 13391.194085347275
+
+HCPT makespan: 13073.755141090282
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0060
+Number of tasks: 1002
+Maximum number of task predecessors: 15
+Average number of task predecessors: 3.882
+Number of edges: 4140
+Edge density: 0.008255217836056159
+Mean task CPU time: 254.0756352364977, standard deviation: 343.8427169996451
+Mean task GPU time: 49.3502994011976, standard deviation: 28.579651012672763
+Mean task acceleration ratio: 5.075697931182149, standard deviation: 5.285919229676956
+Mean task execution time: 228.4849682570852
+Computation-to-communication ratio: 14.483849110425364
+Minimal serial time: 49449
+--------------------------------------------------------
+HEFT makespan: 3950.235431372172
+
+HBMCT makespan: 4854.299777492928
+
+PEFT makespan: 3998.790126224425
+
+PETS makespan: 4262.231602088949
+
+HCPT makespan: 4582.488156124829
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0154
+Number of tasks: 1002
+Maximum number of task predecessors: 50
+Average number of task predecessors: 17.109
+Number of edges: 17177
+Edge density: 0.034251177963752814
+Mean task CPU time: 269.93177822434484, standard deviation: 369.378749279698
+Mean task GPU time: 49.51596806387226, standard deviation: 28.039041866180646
+Mean task acceleration ratio: 5.236669910114708, standard deviation: 5.321481907623661
+Mean task execution time: 242.37980195428577
+Computation-to-communication ratio: 16.778216230280368
+Minimal serial time: 49615
+--------------------------------------------------------
+HEFT makespan: 6079.628367172552
+
+HBMCT makespan: 7733.305547881097
+
+PEFT makespan: 6103.380513507681
+
+PETS makespan: 7653.033982004278
+
+HCPT makespan: 6848.2321650981685
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0055
+Number of tasks: 1002
+Maximum number of task predecessors: 162
+Average number of task predecessors: 71.706
+Number of edges: 71735
+Edge density: 0.14304059214238854
+Mean task CPU time: 257.2764823713665, standard deviation: 343.0159600677579
+Mean task GPU time: 50.908183632734534, standard deviation: 28.68835146665738
+Mean task acceleration ratio: 5.0404235082626, standard deviation: 5.147112853789243
+Mean task execution time: 231.48044502903753
+Computation-to-communication ratio: 18.62393431076054
+Minimal serial time: 51010
+--------------------------------------------------------
+HEFT makespan: 8576.12394286712
+
+HBMCT makespan: 10466.13829536502
+
+PEFT makespan: 8883.50901602324
+
+PETS makespan: 9202.566542703502
+
+HCPT makespan: 9517.29313064477
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0037
+Number of tasks: 1002
+Maximum number of task predecessors: 215
+Average number of task predecessors: 91.54
+Number of edges: 91568
+Edge density: 0.1825878712106257
+Mean task CPU time: 240.26327296414047, standard deviation: 286.56104487499175
+Mean task GPU time: 49.949101796407184, standard deviation: 28.592993645653404
+Mean task acceleration ratio: 4.837779735854213, standard deviation: 4.513533351554051
+Mean task execution time: 216.4740015681738
+Computation-to-communication ratio: 12.806036719902268
+Minimal serial time: 50049
+--------------------------------------------------------
+HEFT makespan: 8994.877186158767
+
+HBMCT makespan: 10687.125314714653
+
+PEFT makespan: 9095.042910141085
+
+PETS makespan: 9209.903447813494
+
+HCPT makespan: 9754.415305456248
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0132
+Number of tasks: 1002
+Maximum number of task predecessors: 109
+Average number of task predecessors: 45.811
+Number of edges: 45834
+Edge density: 0.09139363630381594
+Mean task CPU time: 235.49058348980432, standard deviation: 316.1571790650692
+Mean task GPU time: 49.6497005988024, standard deviation: 29.583064909695835
+Mean task acceleration ratio: 4.763483059726022, standard deviation: 4.906966821760014
+Mean task execution time: 212.26047312842908
+Computation-to-communication ratio: 16.554384227511065
+Minimal serial time: 49749
+--------------------------------------------------------
+HEFT makespan: 8861.615184097638
+
+HBMCT makespan: 10353.315004792714
+
+PEFT makespan: 8973.017213753383
+
+PETS makespan: 10140.7453181334
+
+HCPT makespan: 9594.506885857905
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0173
+Number of tasks: 1002
+Maximum number of task predecessors: 16
+Average number of task predecessors: 3.967
+Number of edges: 4234
+Edge density: 0.008442655149241975
+Mean task CPU time: 256.1317302117651, standard deviation: 336.21201133344925
+Mean task GPU time: 50.3063872255489, standard deviation: 28.83376782156956
+Mean task acceleration ratio: 5.001966008349243, standard deviation: 4.878606264042075
+Mean task execution time: 230.4035623384881
+Computation-to-communication ratio: 17.628749685470126
+Minimal serial time: 50407
+--------------------------------------------------------
+HEFT makespan: 3987.0927248926673
+
+HBMCT makespan: 4681.027818839676
+
+PEFT makespan: 4092.9769028499654
+
+PETS makespan: 4545.257946996308
+
+HCPT makespan: 4504.785948994199
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0066
+Number of tasks: 1002
+Maximum number of task predecessors: 28
+Average number of task predecessors: 8.852
+Number of edges: 8975
+Edge density: 0.01789627538130532
+Mean task CPU time: 244.82041762262784, standard deviation: 320.4233515095475
+Mean task GPU time: 51.12375249500998, standard deviation: 28.885254695311115
+Mean task acceleration ratio: 4.823679414163181, standard deviation: 5.199574023026237
+Mean task execution time: 220.6083344816756
+Computation-to-communication ratio: 10.620355617868228
+Minimal serial time: 51226
+--------------------------------------------------------
+HEFT makespan: 4531.8176778155575
+
+HBMCT makespan: 6533.802560174723
+
+PEFT makespan: 4679.692375594321
+
+PETS makespan: 6152.481238483458
+
+HCPT makespan: 5675.082142295612
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0052
+Number of tasks: 1002
+Maximum number of task predecessors: 150
+Average number of task predecessors: 63.195
+Number of edges: 63222
+Edge density: 0.12606555121525181
+Mean task CPU time: 260.46125734892337, standard deviation: 332.08158511335705
+Mean task GPU time: 50.13373253493014, standard deviation: 28.547507063161866
+Mean task acceleration ratio: 5.166277557199717, standard deviation: 5.056000977389627
+Mean task execution time: 234.1703167471742
+Computation-to-communication ratio: 13.810793123450658
+Minimal serial time: 50234
+--------------------------------------------------------
+HEFT makespan: 8370.04985828944
+
+HBMCT makespan: 10242.447748323226
+
+PEFT makespan: 8732.035846894722
+
+PETS makespan: 8990.046892424902
+
+HCPT makespan: 9464.101853638207
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0089
+Number of tasks: 1002
+Maximum number of task predecessors: 40
+Average number of task predecessors: 14.049
+Number of edges: 14121
+Edge density: 0.028157471271243725
+Mean task CPU time: 254.9789847515716, standard deviation: 350.09797745127423
+Mean task GPU time: 51.25449101796407, standard deviation: 28.24356045854821
+Mean task acceleration ratio: 5.070321034822118, standard deviation: 5.487356452845691
+Mean task execution time: 229.51342303487064
+Computation-to-communication ratio: 16.987836979617697
+Minimal serial time: 51357
+--------------------------------------------------------
+HEFT makespan: 5513.4497499288955
+
+HBMCT makespan: 7519.220235695164
+
+PEFT makespan: 5550.363429144271
+
+PETS makespan: 6678.0290985179245
+
+HCPT makespan: 6216.976699804605
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0121
+Number of tasks: 1002
+Maximum number of task predecessors: 146
+Average number of task predecessors: 61.932
+Number of edges: 61947
+Edge density: 0.12352318340342293
+Mean task CPU time: 253.98554868667034, standard deviation: 331.24846277277635
+Mean task GPU time: 50.28842315369261, standard deviation: 29.065993561980513
+Mean task acceleration ratio: 4.971318913762954, standard deviation: 5.100936388833121
+Mean task execution time: 228.5234079950481
+Computation-to-communication ratio: 11.661667157416503
+Minimal serial time: 50389
+--------------------------------------------------------
+HEFT makespan: 10654.516687304127
+
+HBMCT makespan: 12109.696253378992
+
+PEFT makespan: 10391.40130047719
+
+PETS makespan: 11648.622053218382
+
+HCPT makespan: 11394.02621081387
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0036
+Number of tasks: 1002
+Maximum number of task predecessors: 93
+Average number of task predecessors: 38.746
+Number of edges: 38784
+Edge density: 0.07733583781487974
+Mean task CPU time: 262.4148700523628, standard deviation: 329.0913988653388
+Mean task GPU time: 50.58682634730539, standard deviation: 28.993511320817348
+Mean task acceleration ratio: 5.299672781581252, standard deviation: 5.32737812993379
+Mean task execution time: 235.9363645892306
+Computation-to-communication ratio: 12.108611464413116
+Minimal serial time: 50688
+--------------------------------------------------------
+HEFT makespan: 7530.532023188033
+
+HBMCT makespan: 9220.873454642215
+
+PEFT makespan: 7636.883406121713
+
+PETS makespan: 8549.64583574241
+
+HCPT makespan: 8607.160341330373
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0068
+Number of tasks: 1002
+Maximum number of task predecessors: 48
+Average number of task predecessors: 17.249
+Number of edges: 17304
+Edge density: 0.034504417737950675
+Mean task CPU time: 259.97501413287466, standard deviation: 340.3637739793677
+Mean task GPU time: 50.936127744510976, standard deviation: 28.233661344392246
+Mean task acceleration ratio: 4.9603800636542426, standard deviation: 5.088998974864343
+Mean task execution time: 233.8451533343292
+Computation-to-communication ratio: 12.423806385360475
+Minimal serial time: 51038
+--------------------------------------------------------
+HEFT makespan: 6169.761568377233
+
+HBMCT makespan: 7742.652598273005
+
+PEFT makespan: 6431.973090773452
+
+PETS makespan: 7741.27622861136
+
+HCPT makespan: 7162.188133343491
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0063
+Number of tasks: 1002
+Maximum number of task predecessors: 20
+Average number of task predecessors: 5.98
+Number of edges: 6159
+Edge density: 0.012281132041611083
+Mean task CPU time: 252.57774493121664, standard deviation: 337.2655975374571
+Mean task GPU time: 50.06287425149701, standard deviation: 29.1612120178407
+Mean task acceleration ratio: 5.068431824973354, standard deviation: 5.198174942137232
+Mean task execution time: 227.2633860962517
+Computation-to-communication ratio: 12.346473238763698
+Minimal serial time: 50163
+--------------------------------------------------------
+HEFT makespan: 4152.66523832318
+
+HBMCT makespan: 5235.384633136629
+
+PEFT makespan: 4391.006059145998
+
+PETS makespan: 4919.719778536518
+
+HCPT makespan: 4732.341426502385
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0099
+Number of tasks: 1002
+Maximum number of task predecessors: 45
+Average number of task predecessors: 15.973
+Number of edges: 16048
+Edge density: 0.03199993619155296
+Mean task CPU time: 236.84695472624335, standard deviation: 290.6529901773676
+Mean task GPU time: 50.579840319361274, standard deviation: 28.676913746259906
+Mean task acceleration ratio: 4.825722083591015, standard deviation: 4.642158326092005
+Mean task execution time: 213.56356542538308
+Computation-to-communication ratio: 15.377899962866389
+Minimal serial time: 50681
+--------------------------------------------------------
+HEFT makespan: 5537.161302318634
+
+HBMCT makespan: 6978.0416242465335
+
+PEFT makespan: 5718.770578198331
+
+PETS makespan: 6730.719718463656
+
+HCPT makespan: 6240.158038145909
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0088
+Number of tasks: 1002
+Maximum number of task predecessors: 6
+Average number of task predecessors: 0.997
+Number of edges: 1864
+Edge density: 0.0037168420401953338
+Mean task CPU time: 251.16720364257253, standard deviation: 345.56749407949883
+Mean task GPU time: 50.08083832335329, standard deviation: 29.241755958094974
+Mean task acceleration ratio: 4.974546869661103, standard deviation: 5.448734878872909
+Mean task execution time: 226.0314079776701
+Computation-to-communication ratio: 14.537086674871777
+Minimal serial time: 50181
+--------------------------------------------------------
+HEFT makespan: 3885.015223490107
+
+HBMCT makespan: 4157.941503493908
+
+PEFT makespan: 3771.7728927590656
+
+PETS makespan: 4176.055983295416
+
+HCPT makespan: 4293.156876432923
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0149
+Number of tasks: 1002
+Maximum number of task predecessors: 115
+Average number of task predecessors: 48.302
+Number of edges: 48336
+Edge density: 0.09638265925691075
+Mean task CPU time: 253.7619863860535, standard deviation: 307.7996247327117
+Mean task GPU time: 50.0748502994012, standard deviation: 28.36653073774363
+Mean task acceleration ratio: 5.084201498438484, standard deviation: 5.026331425862582
+Mean task execution time: 228.301094375222
+Computation-to-communication ratio: 18.300773450803923
+Minimal serial time: 50175
+--------------------------------------------------------
+HEFT makespan: 7818.091892264872
+
+HBMCT makespan: 9285.690694129771
+
+PEFT makespan: 7938.90997200698
+
+PETS makespan: 8538.99519633161
+
+HCPT makespan: 8759.013802928757
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0104
+Number of tasks: 1002
+Maximum number of task predecessors: 23
+Average number of task predecessors: 7.019
+Number of edges: 7189
+Edge density: 0.014334966430774814
+Mean task CPU time: 250.28824272670744, standard deviation: 311.3263479691054
+Mean task GPU time: 50.424151696606785, standard deviation: 29.301801044305485
+Mean task acceleration ratio: 5.101263061547486, standard deviation: 4.977280694466102
+Mean task execution time: 225.30523134794484
+Computation-to-communication ratio: 12.276675417090074
+Minimal serial time: 50525
+--------------------------------------------------------
+HEFT makespan: 4330.173414309418
+
+HBMCT makespan: 5625.300402421895
+
+PEFT makespan: 4457.563574537649
+
+PETS makespan: 5286.170549112633
+
+HCPT makespan: 5112.241721225762
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0058
+Number of tasks: 1002
+Maximum number of task predecessors: 182
+Average number of task predecessors: 81.487
+Number of edges: 81509
+Edge density: 0.16253008468577332
+Mean task CPU time: 240.84137744496093, standard deviation: 308.606147442939
+Mean task GPU time: 48.44011976047904, standard deviation: 27.987253072007544
+Mean task acceleration ratio: 4.991984408482605, standard deviation: 5.1629560905922975
+Mean task execution time: 216.7912202344007
+Computation-to-communication ratio: 17.933873459885998
+Minimal serial time: 48537
+--------------------------------------------------------
+HEFT makespan: 8238.051532390691
+
+HBMCT makespan: 9805.394451347664
+
+PEFT makespan: 8430.710306774927
+
+PETS makespan: 8955.680162781427
+
+HCPT makespan: 9148.500801000231
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0111
+Number of tasks: 1002
+Maximum number of task predecessors: 20
+Average number of task predecessors: 5.948
+Number of edges: 6115
+Edge density: 0.012193395426928362
+Mean task CPU time: 244.0883700497375, standard deviation: 300.2498102573707
+Mean task GPU time: 51.3562874251497, standard deviation: 28.35277844054484
+Mean task acceleration ratio: 4.864977446665774, standard deviation: 4.790329638345893
+Mean task execution time: 219.99685972166404
+Computation-to-communication ratio: 14.130758098676582
+Minimal serial time: 51459
+--------------------------------------------------------
+HEFT makespan: 4060.710879246888
+
+HBMCT makespan: 5975.713473685189
+
+PEFT makespan: 4150.602225686261
+
+PETS makespan: 4729.993244859046
+
+HCPT makespan: 4741.810344388217
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0161
+Number of tasks: 1002
+Maximum number of task predecessors: 49
+Average number of task predecessors: 15.855
+Number of edges: 15922
+Edge density: 0.03174869043132516
+Mean task CPU time: 252.50675230657825, standard deviation: 321.41911068583136
+Mean task GPU time: 50.0688622754491, standard deviation: 29.43266357523098
+Mean task acceleration ratio: 5.088049254690976, standard deviation: 4.9718060020419745
+Mean task execution time: 227.20201605268713
+Computation-to-communication ratio: 19.99824726592601
+Minimal serial time: 50169
+--------------------------------------------------------
+HEFT makespan: 6160.502130793559
+
+HBMCT makespan: 7750.203399032173
+
+PEFT makespan: 6192.471713442361
+
+PETS makespan: 7302.6085646811825
+
+HCPT makespan: 6506.674447984112
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0091
+Number of tasks: 1002
+Maximum number of task predecessors: 11
+Average number of task predecessors: 3.025
+Number of edges: 3371
+Edge density: 0.006721821093078578
+Mean task CPU time: 250.05190070512748, standard deviation: 305.6948854097201
+Mean task GPU time: 49.70459081836327, standard deviation: 28.994434025745164
+Mean task acceleration ratio: 5.143313241872519, standard deviation: 5.080552036096501
+Mean task execution time: 225.00848696928193
+Computation-to-communication ratio: 18.625595549567272
+Minimal serial time: 49804
+--------------------------------------------------------
+HEFT makespan: 3985.3403038173274
+
+HBMCT makespan: 4303.622955361253
+
+PEFT makespan: 3918.792680144242
+
+PETS makespan: 4092.92700105364
+
+HCPT makespan: 4493.919066486297
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0106
+Number of tasks: 1002
+Maximum number of task predecessors: 46
+Average number of task predecessors: 14.894
+Number of edges: 14969
+Edge density: 0.029848395117856197
+Mean task CPU time: 255.7577257336573, standard deviation: 342.2627782181353
+Mean task GPU time: 48.86327345309381, standard deviation: 28.804147455562546
+Mean task acceleration ratio: 5.200865011281243, standard deviation: 5.348183267498564
+Mean task execution time: 229.89591919858688
+Computation-to-communication ratio: 14.935894832781939
+Minimal serial time: 48961
+--------------------------------------------------------
+HEFT makespan: 5386.943947818077
+
+HBMCT makespan: 7007.477877154827
+
+PEFT makespan: 5536.901797444382
+
+PETS makespan: 6493.652409176766
+
+HCPT makespan: 6124.840222010836
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0017
+Number of tasks: 1002
+Maximum number of task predecessors: 179
+Average number of task predecessors: 80.1
+Number of edges: 80116
+Edge density: 0.1597524232254771
+Mean task CPU time: 264.66991277086254, standard deviation: 333.90436922425016
+Mean task GPU time: 51.421157684630735, standard deviation: 28.701510727155874
+Mean task acceleration ratio: 5.25302591999456, standard deviation: 5.157275175710126
+Mean task execution time: 238.01381838508357
+Computation-to-communication ratio: 11.65329781927729
+Minimal serial time: 51524
+--------------------------------------------------------
+HEFT makespan: 13177.363202834262
+
+HBMCT makespan: 14206.901249164173
+
+PEFT makespan: 13100.612789230918
+
+PETS makespan: 13960.438856203868
+
+HCPT makespan: 13506.060796845317
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0001
+Number of tasks: 1002
+Maximum number of task predecessors: 130
+Average number of task predecessors: 55.989
+Number of edges: 56002
+Edge density: 0.11166877035140509
+Mean task CPU time: 264.64702656209397, standard deviation: 320.969878087384
+Mean task GPU time: 51.62175648702595, standard deviation: 28.682682113117988
+Mean task acceleration ratio: 5.139820907247994, standard deviation: 5.049969165059348
+Mean task execution time: 238.01886780271047
+Computation-to-communication ratio: 11.909601770537217
+Minimal serial time: 51725
+--------------------------------------------------------
+HEFT makespan: 10478.75732562348
+
+HBMCT makespan: 12205.711136530797
+
+PEFT makespan: 10377.826383639624
+
+PETS makespan: 11830.28077957376
+
+HCPT makespan: 11282.336810637173
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0041
+Number of tasks: 1002
+Maximum number of task predecessors: 186
+Average number of task predecessors: 78.895
+Number of edges: 78920
+Edge density: 0.1573675825172831
+Mean task CPU time: 253.95087414022294, standard deviation: 327.4541820781155
+Mean task GPU time: 50.653692614770456, standard deviation: 28.042504652810873
+Mean task acceleration ratio: 5.040965501283147, standard deviation: 5.199712989722853
+Mean task execution time: 228.5387264495414
+Computation-to-communication ratio: 11.763266178689861
+Minimal serial time: 50755
+--------------------------------------------------------
+HEFT makespan: 8570.140392028237
+
+HBMCT makespan: 10292.2812642002
+
+PEFT makespan: 8815.432960939674
+
+PETS makespan: 8860.715877113304
+
+HCPT makespan: 9503.68736517075
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0175
+Number of tasks: 1002
+Maximum number of task predecessors: 36
+Average number of task predecessors: 11.888
+Number of edges: 11983
+Edge density: 0.02389426940325144
+Mean task CPU time: 265.28233883820354, standard deviation: 346.4969934005286
+Mean task GPU time: 50.9810379241517, standard deviation: 28.97415462869734
+Mean task acceleration ratio: 5.128814703002488, standard deviation: 5.046504817433235
+Mean task execution time: 238.49467622394707
+Computation-to-communication ratio: 12.654645430776549
+Minimal serial time: 51083
+--------------------------------------------------------
+HEFT makespan: 5447.155693987246
+
+HBMCT makespan: 7190.583722477727
+
+PEFT makespan: 5288.368211662114
+
+PETS makespan: 6458.43261885304
+
+HCPT makespan: 6045.215614948854
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0000
+Number of tasks: 1002
+Maximum number of task predecessors: 173
+Average number of task predecessors: 77.703
+Number of edges: 77716
+Edge density: 0.15496678969732863
+Mean task CPU time: 237.9164835709647, standard deviation: 311.2355609946327
+Mean task GPU time: 48.622754491017965, standard deviation: 28.40242956486699
+Mean task acceleration ratio: 4.9376826872666575, standard deviation: 4.851963967009584
+Mean task execution time: 214.25476743597136
+Computation-to-communication ratio: 10.840312003846849
+Minimal serial time: 48720
+--------------------------------------------------------
+HEFT makespan: 11857.865275461438
+
+HBMCT makespan: 13424.540421390775
+
+PEFT makespan: 11767.27681538513
+
+PETS makespan: 12639.675718627659
+
+HCPT makespan: 12314.598929436359
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0080
+Number of tasks: 1002
+Maximum number of task predecessors: 24
+Average number of task predecessors: 7.028
+Number of edges: 7147
+Edge density: 0.014251217844032216
+Mean task CPU time: 266.3694974852436, standard deviation: 348.5544833773473
+Mean task GPU time: 51.159680638722556, standard deviation: 28.281950315889876
+Mean task acceleration ratio: 5.155533127421274, standard deviation: 5.17117597045115
+Mean task execution time: 239.46827037942847
+Computation-to-communication ratio: 19.738202255423786
+Minimal serial time: 51262
+--------------------------------------------------------
+HEFT makespan: 4441.11055570587
+
+HBMCT makespan: 5902.750578882882
+
+PEFT makespan: 4449.0552001296255
+
+PETS makespan: 5136.3121082324315
+
+HCPT makespan: 4981.858705646374
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0177
+Number of tasks: 1002
+Maximum number of task predecessors: 8
+Average number of task predecessors: 0.923
+Number of edges: 1847
+Edge density: 0.0036829438027042817
+Mean task CPU time: 259.3239821603711, standard deviation: 329.1101556621521
+Mean task GPU time: 51.358283433133735, standard deviation: 29.354471656547233
+Mean task acceleration ratio: 5.064650128020319, standard deviation: 4.998533569352912
+Mean task execution time: 233.3282698194664
+Computation-to-communication ratio: 13.567768963145552
+Minimal serial time: 51461
+--------------------------------------------------------
+HEFT makespan: 4001.7515821954157
+
+HBMCT makespan: 4157.16595483831
+
+PEFT makespan: 3970.552585572526
+
+PETS makespan: 4430.605169498522
+
+HCPT makespan: 4315.241721717469
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0105
+Number of tasks: 1002
+Maximum number of task predecessors: 5
+Average number of task predecessors: 1.003
+Number of edges: 1859
+Edge density: 0.0037068719703450244
+Mean task CPU time: 236.39696648675732, standard deviation: 315.14697996892784
+Mean task GPU time: 47.59580838323353, standard deviation: 28.4337887329808
+Mean task acceleration ratio: 4.89342055115124, standard deviation: 4.940349759567005
+Mean task execution time: 212.79682172381686
+Computation-to-communication ratio: 18.375377575550154
+Minimal serial time: 47691
+--------------------------------------------------------
+HEFT makespan: 3695.192344717897
+
+HBMCT makespan: 4029.626419945744
+
+PEFT makespan: 3661.9811521733345
+
+PETS makespan: 3871.773056779812
+
+HCPT makespan: 4062.3046261542004
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0129
+Number of tasks: 1002
+Maximum number of task predecessors: 91
+Average number of task predecessors: 36.81
+Number of edges: 36832
+Edge density: 0.07344352254531895
+Mean task CPU time: 244.75514881468553, standard deviation: 310.03791049274776
+Mean task GPU time: 50.5748502994012, standard deviation: 28.90867453379596
+Mean task acceleration ratio: 4.912918436377895, standard deviation: 5.023920466546533
+Mean task execution time: 220.482611500275
+Computation-to-communication ratio: 10.933712681989173
+Minimal serial time: 50676
+--------------------------------------------------------
+HEFT makespan: 8943.678054924036
+
+HBMCT makespan: 10599.820181981939
+
+PEFT makespan: 8854.076091534733
+
+PETS makespan: 10258.946885954347
+
+HCPT makespan: 9455.710447740657
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0176
+Number of tasks: 1002
+Maximum number of task predecessors: 20
+Average number of task predecessors: 6.071
+Number of edges: 6236
+Edge density: 0.012434671117305849
+Mean task CPU time: 250.22952783155966, standard deviation: 345.5475790189462
+Mean task GPU time: 49.5688622754491, standard deviation: 27.894149589838968
+Mean task acceleration ratio: 4.989519904466201, standard deviation: 5.188520625732655
+Mean task execution time: 225.14694463704586
+Computation-to-communication ratio: 17.27141966676335
+Minimal serial time: 49668
+--------------------------------------------------------
+HEFT makespan: 3945.2005925114704
+
+HBMCT makespan: 5045.55697505987
+
+PEFT makespan: 4186.68917519961
+
+PETS makespan: 4440.86088051625
+
+HCPT makespan: 4488.335645419099
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0071
+Number of tasks: 1002
+Maximum number of task predecessors: 51
+Average number of task predecessors: 19.338
+Number of edges: 19387
+Edge density: 0.03865794883758956
+Mean task CPU time: 248.71087483481318, standard deviation: 305.8342886055294
+Mean task GPU time: 50.08882235528942, standard deviation: 28.553851752619263
+Mean task acceleration ratio: 5.026350507622515, standard deviation: 4.965888733441492
+Mean task execution time: 223.88311827487271
+Computation-to-communication ratio: 16.803966054369432
+Minimal serial time: 50189
+--------------------------------------------------------
+HEFT makespan: 6587.5902854221395
+
+HBMCT makespan: 8300.930728113372
+
+PEFT makespan: 6683.921526344262
+
+PETS makespan: 7872.496345369613
+
+HCPT makespan: 7456.453428546852
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0039
+Number of tasks: 1002
+Maximum number of task predecessors: 115
+Average number of task predecessors: 47.981
+Number of edges: 48013
+Edge density: 0.09573859274458077
+Mean task CPU time: 241.81477106179437, standard deviation: 302.7716827273202
+Mean task GPU time: 49.430139720558884, standard deviation: 28.382819467041006
+Mean task acceleration ratio: 4.845002716390548, standard deviation: 4.86651554480697
+Mean task execution time: 217.76669214413994
+Computation-to-communication ratio: 13.183276775948435
+Minimal serial time: 49529
+--------------------------------------------------------
+HEFT makespan: 7673.964869684591
+
+HBMCT makespan: 9013.364696823925
+
+PEFT makespan: 7811.3870754873205
+
+PETS makespan: 8289.253433980097
+
+HCPT makespan: 8686.468182832057
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0048
+Number of tasks: 1002
+Maximum number of task predecessors: 182
+Average number of task predecessors: 75.524
+Number of edges: 75547
+Edge density: 0.15064177339626442
+Mean task CPU time: 262.19708909553316, standard deviation: 323.2359075867516
+Mean task GPU time: 50.199600798403196, standard deviation: 28.618072815216006
+Mean task acceleration ratio: 5.1729322785301015, standard deviation: 4.950833484231189
+Mean task execution time: 235.69740305839193
+Computation-to-communication ratio: 19.943962221603318
+Minimal serial time: 50300
+--------------------------------------------------------
+HEFT makespan: 8622.927092823087
+
+HBMCT makespan: 10198.233366509841
+
+PEFT makespan: 8907.63622283278
+
+PETS makespan: 9077.518126015393
+
+HCPT makespan: 9627.280141789526
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0123
+Number of tasks: 1002
+Maximum number of task predecessors: 210
+Average number of task predecessors: 93.36
+Number of edges: 93367
+Edge density: 0.18617510234276702
+Mean task CPU time: 245.76710848156816, standard deviation: 299.3731699410029
+Mean task GPU time: 49.134730538922156, standard deviation: 29.076964622084912
+Mean task acceleration ratio: 5.043650311460319, standard deviation: 4.770323585943761
+Mean task execution time: 221.18806123873742
+Computation-to-communication ratio: 14.049099582524825
+Minimal serial time: 49233
+--------------------------------------------------------
+HEFT makespan: 14407.39080009941
+
+HBMCT makespan: 16049.676280685733
+
+PEFT makespan: 14319.213060436075
+
+PETS makespan: 14744.445889636758
+
+HCPT makespan: 14714.2209459436
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0110
+Number of tasks: 1002
+Maximum number of task predecessors: 34
+Average number of task predecessors: 12.183
+Number of edges: 12276
+Edge density: 0.02447851549647957
+Mean task CPU time: 231.6681330905832, standard deviation: 295.82305747837347
+Mean task GPU time: 48.73652694610779, standard deviation: 29.167669383056538
+Mean task acceleration ratio: 4.903418245542206, standard deviation: 5.041878213987591
+Mean task execution time: 208.80168232252376
+Computation-to-communication ratio: 16.226872722159282
+Minimal serial time: 48834
+--------------------------------------------------------
+HEFT makespan: 4732.272751719046
+
+HBMCT makespan: 6303.216011917853
+
+PEFT makespan: 4939.087208212176
+
+PETS makespan: 5871.619248009791
+
+HCPT makespan: 5517.5167566128985
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0144
+Number of tasks: 1002
+Maximum number of task predecessors: 187
+Average number of task predecessors: 82.424
+Number of edges: 82450
+Edge density: 0.16440645183160152
+Mean task CPU time: 254.05406548696712, standard deviation: 293.272005067977
+Mean task GPU time: 50.41816367265469, standard deviation: 28.58628060003731
+Mean task acceleration ratio: 5.206570295999514, standard deviation: 4.9747203426842415
+Mean task execution time: 228.59957776017805
+Computation-to-communication ratio: 16.07891391849855
+Minimal serial time: 50519
+--------------------------------------------------------
+HEFT makespan: 9084.538925223625
+
+HBMCT makespan: 10654.024739429386
+
+PEFT makespan: 9371.045344560385
+
+PETS makespan: 9492.584825418178
+
+HCPT makespan: 10042.749970950847
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0015
+Number of tasks: 1002
+Maximum number of task predecessors: 130
+Average number of task predecessors: 49.105
+Number of edges: 49129
+Edge density: 0.09796391233516982
+Mean task CPU time: 258.3629875379171, standard deviation: 332.669954225155
+Mean task GPU time: 50.10179640718563, standard deviation: 28.95291133232084
+Mean task acceleration ratio: 5.1382441716433895, standard deviation: 5.027491076910174
+Mean task execution time: 232.33033864657568
+Computation-to-communication ratio: 16.07537547058998
+Minimal serial time: 50202
+--------------------------------------------------------
+HEFT makespan: 9448.233238504712
+
+HBMCT makespan: 11046.002489281738
+
+PEFT makespan: 9385.46973262793
+
+PETS makespan: 10863.538065967816
+
+HCPT makespan: 9960.349228609202
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0170
+Number of tasks: 1002
+Maximum number of task predecessors: 10
+Average number of task predecessors: 2.003
+Number of edges: 2487
+Edge density: 0.004959112743543881
+Mean task CPU time: 249.9152943481459, standard deviation: 323.81947752279837
+Mean task GPU time: 48.51596806387226, standard deviation: 28.520228569135043
+Mean task acceleration ratio: 5.150399763556766, standard deviation: 5.17303885688522
+Mean task execution time: 224.74037856261168
+Computation-to-communication ratio: 14.384462868008255
+Minimal serial time: 48613
+--------------------------------------------------------
+HEFT makespan: 3902.570316499459
+
+HBMCT makespan: 4220.785559263104
+
+PEFT makespan: 3802.6397996488145
+
+PETS makespan: 4267.8610423477585
+
+HCPT makespan: 4595.178915249196
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0018
+Number of tasks: 1002
+Maximum number of task predecessors: 143
+Average number of task predecessors: 58.726
+Number of edges: 58737
+Edge density: 0.1171223985595243
+Mean task CPU time: 259.9208844368037, standard deviation: 351.01512117904184
+Mean task GPU time: 51.16566866267465, standard deviation: 28.77489374406154
+Mean task acceleration ratio: 4.927770860005749, standard deviation: 5.118176593525252
+Mean task execution time: 233.8264824650376
+Computation-to-communication ratio: 17.35394568764408
+Minimal serial time: 51268
+--------------------------------------------------------
+HEFT makespan: 11190.5948014849
+
+HBMCT makespan: 12717.594149736582
+
+PEFT makespan: 11048.064550327996
+
+PETS makespan: 12219.46826708232
+
+HCPT makespan: 11493.489818233727
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0016
+Number of tasks: 1002
+Maximum number of task predecessors: 72
+Average number of task predecessors: 26.938
+Number of edges: 26970
+Edge density: 0.05377855677256875
+Mean task CPU time: 241.44556612317382, standard deviation: 309.7707413877119
+Mean task GPU time: 50.10878243512974, standard deviation: 29.20461134934752
+Mean task acceleration ratio: 4.745984624539007, standard deviation: 4.621977335606671
+Mean task execution time: 217.5284681621683
+Computation-to-communication ratio: 10.34113366733742
+Minimal serial time: 50209
+--------------------------------------------------------
+HEFT makespan: 7472.9821053512915
+
+HBMCT makespan: 9285.770773979748
+
+PEFT makespan: 7614.04643748976
+
+PETS makespan: 8818.488356714042
+
+HCPT makespan: 8445.624832287784
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0054
+Number of tasks: 1002
+Maximum number of task predecessors: 219
+Average number of task predecessors: 94.437
+Number of edges: 94464
+Edge density: 0.18836253566792488
+Mean task CPU time: 254.93587812228134, standard deviation: 316.46354470122446
+Mean task GPU time: 49.458083832335326, standard deviation: 28.505116316348214
+Mean task acceleration ratio: 5.124006811114474, standard deviation: 4.879953539172368
+Mean task execution time: 229.2511538360381
+Computation-to-communication ratio: 18.17605183760067
+Minimal serial time: 49557
+--------------------------------------------------------
+HEFT makespan: 8898.430182173663
+
+HBMCT makespan: 10749.270116354377
+
+PEFT makespan: 8978.092710315284
+
+PETS makespan: 9278.403766374007
+
+HCPT makespan: 9634.891860031217
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0137
+Number of tasks: 1002
+Maximum number of task predecessors: 196
+Average number of task predecessors: 85.947
+Number of edges: 85974
+Edge density: 0.17143335706209958
+Mean task CPU time: 254.6891781318973, standard deviation: 328.01468716865577
+Mean task GPU time: 50.79740518962076, standard deviation: 28.232706243819305
+Mean task acceleration ratio: 5.143071627645637, standard deviation: 5.305259000966721
+Mean task execution time: 229.20270651411275
+Computation-to-communication ratio: 14.031136986079728
+Minimal serial time: 50899
+--------------------------------------------------------
+HEFT makespan: 8951.655393643461
+
+HBMCT makespan: 10704.219811845824
+
+PEFT makespan: 9051.62182743544
+
+PETS makespan: 9574.165927764636
+
+HCPT makespan: 9831.267195257398
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0059
+Number of tasks: 1002
+Maximum number of task predecessors: 154
+Average number of task predecessors: 60.458
+Number of edges: 60488
+Edge density: 0.12061391702110265
+Mean task CPU time: 243.35181368436022, standard deviation: 312.9201862765047
+Mean task GPU time: 48.057884231536924, standard deviation: 28.85732406876548
+Mean task acceleration ratio: 5.076929965533588, standard deviation: 5.011810338614163
+Mean task execution time: 218.94007250275732
+Computation-to-communication ratio: 18.341667598001102
+Minimal serial time: 48154
+--------------------------------------------------------
+HEFT makespan: 7666.750190243229
+
+HBMCT makespan: 9318.547632471573
+
+PEFT makespan: 7829.608562258365
+
+PETS makespan: 8685.355928634322
+
+HCPT makespan: 8625.8416472321
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0133
+Number of tasks: 1002
+Maximum number of task predecessors: 226
+Average number of task predecessors: 99.385
+Number of edges: 99394
+Edge density: 0.19819302454032994
+Mean task CPU time: 246.33688523095884, standard deviation: 308.99604529789053
+Mean task GPU time: 50.62375249500998, standard deviation: 28.312505342570315
+Mean task acceleration ratio: 4.782014989407043, standard deviation: 4.600260024921521
+Mean task execution time: 221.87274363896523
+Computation-to-communication ratio: 17.903964730469205
+Minimal serial time: 50725
+--------------------------------------------------------
+HEFT makespan: 15304.625866800821
+
+HBMCT makespan: 15927.531159484543
+
+PEFT makespan: 15297.253084476937
+
+PETS makespan: 15897.01921608907
+
+HCPT makespan: 15412.393847343132
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0164
+Number of tasks: 1002
+Maximum number of task predecessors: 45
+Average number of task predecessors: 18.028
+Number of edges: 18085
+Edge density: 0.036061742648569
+Mean task CPU time: 252.66915692514658, standard deviation: 329.4008555930946
+Mean task GPU time: 49.72355289421158, standard deviation: 29.086738343389126
+Mean task acceleration ratio: 5.004910716609558, standard deviation: 4.9150467363770804
+Mean task execution time: 227.3009564212797
+Computation-to-communication ratio: 18.56239154440323
+Minimal serial time: 49823
+--------------------------------------------------------
+HEFT makespan: 6195.339249292188
+
+HBMCT makespan: 7884.705652675713
+
+PEFT makespan: 6343.867171448376
+
+PETS makespan: 7409.824609682128
+
+HCPT makespan: 6959.397014498844
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0107
+Number of tasks: 1002
+Maximum number of task predecessors: 30
+Average number of task predecessors: 8.901
+Number of edges: 9010
+Edge density: 0.017966065870257487
+Mean task CPU time: 249.7427745018501, standard deviation: 323.9569199746343
+Mean task GPU time: 50.45409181636727, standard deviation: 29.078433205181746
+Mean task acceleration ratio: 4.7651482701721735, standard deviation: 4.6013345739556675
+Mean task execution time: 224.83168916616475
+Computation-to-communication ratio: 16.56813018496257
+Minimal serial time: 50555
+--------------------------------------------------------
+HEFT makespan: 4521.071509355884
+
+HBMCT makespan: 6473.094200116359
+
+PEFT makespan: 4714.128302639762
+
+PETS makespan: 5296.101342253653
+
+HCPT makespan: 5410.597653461424
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0027
+Number of tasks: 1002
+Maximum number of task predecessors: 199
+Average number of task predecessors: 86.395
+Number of edges: 86403
+Edge density: 0.17228878905525613
+Mean task CPU time: 246.98161816996083, standard deviation: 307.55580908733657
+Mean task GPU time: 50.11477045908184, standard deviation: 28.682058511137814
+Mean task acceleration ratio: 4.9470831662716215, standard deviation: 4.766259493442253
+Mean task execution time: 222.37326220610097
+Computation-to-communication ratio: 17.53393858605896
+Minimal serial time: 50215
+--------------------------------------------------------
+HEFT makespan: 13237.025014640232
+
+HBMCT makespan: 14589.812000579861
+
+PEFT makespan: 13028.857986119463
+
+PETS makespan: 13899.830790570264
+
+HCPT makespan: 13532.977737375671
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0092
+Number of tasks: 1002
+Maximum number of task predecessors: 43
+Average number of task predecessors: 15.957
+Number of edges: 16027
+Edge density: 0.03195806189818166
+Mean task CPU time: 240.25187583630677, standard deviation: 321.0563853675056
+Mean task GPU time: 50.374251497005986, standard deviation: 28.097361659489923
+Mean task acceleration ratio: 4.76507000088767, standard deviation: 4.969043520316775
+Mean task execution time: 216.5171727938942
+Computation-to-communication ratio: 18.483914691909135
+Minimal serial time: 50475
+--------------------------------------------------------
+HEFT makespan: 5435.626330310267
+
+HBMCT makespan: 7005.051393895326
+
+PEFT makespan: 5464.134320767703
+
+PETS makespan: 6686.587877751124
+
+HCPT makespan: 6021.663313531392
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0150
+Number of tasks: 1002
+Maximum number of task predecessors: 6
+Average number of task predecessors: 0.98
+Number of edges: 1873
+Edge density: 0.0037347881659258904
+Mean task CPU time: 256.03120455183716, standard deviation: 340.84856509568476
+Mean task GPU time: 49.846307385229544, standard deviation: 29.31500626220331
+Mean task acceleration ratio: 5.090292942880793, standard deviation: 5.174044996280097
+Mean task execution time: 230.2580924060112
+Computation-to-communication ratio: 15.459271375994527
+Minimal serial time: 49946
+--------------------------------------------------------
+HEFT makespan: 4032.102103860375
+
+HBMCT makespan: 4337.894968748324
+
+PEFT makespan: 4068.257937023483
+
+PETS makespan: 4133.9495126639285
+
+HCPT makespan: 4426.7532425046265
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0025
+Number of tasks: 1002
+Maximum number of task predecessors: 129
+Average number of task predecessors: 54.845
+Number of edges: 54864
+Edge density: 0.10939958245347467
+Mean task CPU time: 233.71290042114055, standard deviation: 295.5449682444265
+Mean task GPU time: 49.89620758483034, standard deviation: 28.213351788657107
+Mean task acceleration ratio: 4.764940985266544, standard deviation: 4.68331224981901
+Mean task execution time: 210.73581381660176
+Computation-to-communication ratio: 16.914673255903722
+Minimal serial time: 49996
+--------------------------------------------------------
+HEFT makespan: 9898.721529291519
+
+HBMCT makespan: 11444.797380272355
+
+PEFT makespan: 10018.537139703376
+
+PETS makespan: 11096.986922081502
+
+HCPT makespan: 10762.78460668664
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0064
+Number of tasks: 1002
+Maximum number of task predecessors: 8
+Average number of task predecessors: 0.981
+Number of edges: 1865
+Edge density: 0.0037188360541653954
+Mean task CPU time: 249.9965864095834, standard deviation: 328.80344658896786
+Mean task GPU time: 50.116766467065865, standard deviation: 28.693287174278623
+Mean task acceleration ratio: 5.015887898038985, standard deviation: 5.153081361364772
+Mean task execution time: 225.0116089167687
+Computation-to-communication ratio: 11.44394436462037
+Minimal serial time: 50217
+--------------------------------------------------------
+HEFT makespan: 4089.161533305006
+
+HBMCT makespan: 4391.438756462051
+
+PEFT makespan: 3899.899259568644
+
+PETS makespan: 4306.73197865986
+
+HCPT makespan: 4416.755044997843
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0094
+Number of tasks: 1002
+Maximum number of task predecessors: 18
+Average number of task predecessors: 5.045
+Number of edges: 5246
+Edge density: 0.010460597286944592
+Mean task CPU time: 238.12773666107813, standard deviation: 311.76824339753045
+Mean task GPU time: 49.64271457085828, standard deviation: 28.77526819504856
+Mean task acceleration ratio: 4.937382891692415, standard deviation: 5.0883222299291635
+Mean task execution time: 214.56710889980064
+Computation-to-communication ratio: 10.338831324685469
+Minimal serial time: 49742
+--------------------------------------------------------
+HEFT makespan: 3983.4099629075654
+
+HBMCT makespan: 5186.279097656289
+
+PEFT makespan: 4090.5180876359277
+
+PETS makespan: 4246.869533356205
+
+HCPT makespan: 4777.308163855211
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0033
+Number of tasks: 1002
+Maximum number of task predecessors: 74
+Average number of task predecessors: 29.664
+Number of edges: 29715
+Edge density: 0.05925212512038859
+Mean task CPU time: 235.10928801527592, standard deviation: 298.27970883025495
+Mean task GPU time: 48.17664670658683, standard deviation: 29.04933743688297
+Mean task acceleration ratio: 4.966801875269539, standard deviation: 4.871123989257649
+Mean task execution time: 211.74270785168977
+Computation-to-communication ratio: 19.216378545279042
+Minimal serial time: 48273
+--------------------------------------------------------
+HEFT makespan: 6576.511478122707
+
+HBMCT makespan: 7872.617704466988
+
+PEFT makespan: 6613.034557511723
+
+PETS makespan: 7442.362108512217
+
+HCPT makespan: 7467.8541207597955
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0077
+Number of tasks: 1002
+Maximum number of task predecessors: 19
+Average number of task predecessors: 5.007
+Number of edges: 5216
+Edge density: 0.010400776867842736
+Mean task CPU time: 253.09999061755454, standard deviation: 351.6584198189032
+Mean task GPU time: 50.53992015968064, standard deviation: 29.408725862911048
+Mean task acceleration ratio: 4.8671622916537025, standard deviation: 5.139917186295548
+Mean task execution time: 227.7799818103203
+Computation-to-communication ratio: 11.433720592497568
+Minimal serial time: 50641
+--------------------------------------------------------
+HEFT makespan: 4259.158923634157
+
+HBMCT makespan: 5305.061287439176
+
+PEFT makespan: 4305.067574485119
+
+PETS makespan: 4513.223122517635
+
+HCPT makespan: 4729.293299614094
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0124
+Number of tasks: 1002
+Maximum number of task predecessors: 173
+Average number of task predecessors: 71.577
+Number of edges: 71592
+Edge density: 0.1427554481446697
+Mean task CPU time: 265.9416150957327, standard deviation: 343.5527867122064
+Mean task GPU time: 51.082834331337324, standard deviation: 28.369428541986903
+Mean task acceleration ratio: 5.180475567184797, standard deviation: 5.249367681452628
+Mean task execution time: 239.08426750018327
+Computation-to-communication ratio: 10.753126375762552
+Minimal serial time: 51185
+--------------------------------------------------------
+HEFT makespan: 12629.85753321251
+
+HBMCT makespan: 13940.55978674555
+
+PEFT makespan: 12496.355154601764
+
+PETS makespan: 13605.267297479279
+
+HCPT makespan: 12810.413024603946
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0131
+Number of tasks: 1002
+Maximum number of task predecessors: 154
+Average number of task predecessors: 68.16
+Number of edges: 68171
+Edge density: 0.13593392635308804
+Mean task CPU time: 252.505529989527, standard deviation: 311.0399944303868
+Mean task GPU time: 50.56187624750499, standard deviation: 28.83649729976953
+Mean task acceleration ratio: 5.021043649547366, standard deviation: 4.88190389699401
+Mean task execution time: 227.26257327177424
+Computation-to-communication ratio: 18.744603793483957
+Minimal serial time: 50663
+--------------------------------------------------------
+HEFT makespan: 12121.793984849932
+
+HBMCT makespan: 13200.069079504015
+
+PEFT makespan: 11844.773758309231
+
+PETS makespan: 12969.658292819477
+
+HCPT makespan: 12468.121043760846
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0093
+Number of tasks: 1002
+Maximum number of task predecessors: 32
+Average number of task predecessors: 10.926
+Number of edges: 11016
+Edge density: 0.021966057894201606
+Mean task CPU time: 251.72416151301448, standard deviation: 338.2394625529518
+Mean task GPU time: 48.833333333333336, standard deviation: 29.221283337097514
+Mean task acceleration ratio: 5.17851025502968, standard deviation: 5.150508034004532
+Mean task execution time: 226.36280799055433
+Computation-to-communication ratio: 12.349132276258587
+Minimal serial time: 48931
+--------------------------------------------------------
+HEFT makespan: 4584.6161020553145
+
+HBMCT makespan: 6275.479285350083
+
+PEFT makespan: 4977.599283345397
+
+PETS makespan: 5563.312902359585
+
+HCPT makespan: 5460.643278081667
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0171
+Number of tasks: 1002
+Maximum number of task predecessors: 44
+Average number of task predecessors: 15.169
+Number of edges: 15256
+Edge density: 0.030420677127263953
+Mean task CPU time: 248.28471922901957, standard deviation: 310.1779543064967
+Mean task GPU time: 50.4311377245509, standard deviation: 28.696389719564372
+Mean task acceleration ratio: 4.911313107240865, standard deviation: 4.7412841780599155
+Mean task execution time: 223.55302154096097
+Computation-to-communication ratio: 18.062781346228704
+Minimal serial time: 50532
+--------------------------------------------------------
+HEFT makespan: 5317.926479841991
+
+HBMCT makespan: 7089.504702804519
+
+PEFT makespan: 5537.49590282291
+
+PETS makespan: 6543.056767063169
+
+HCPT makespan: 6155.445207444277
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0075
+Number of tasks: 1002
+Maximum number of task predecessors: 47
+Average number of task predecessors: 16.036
+Number of edges: 16097
+Edge density: 0.03209764287608599
+Mean task CPU time: 262.21129840571575, standard deviation: 345.4398978704402
+Mean task GPU time: 49.992015968063875, standard deviation: 28.901165744049397
+Mean task acceleration ratio: 5.080244414641306, standard deviation: 5.15406090952351
+Mean task execution time: 235.68388810100927
+Computation-to-communication ratio: 15.603312151840678
+Minimal serial time: 50092
+--------------------------------------------------------
+HEFT makespan: 5739.763981359244
+
+HBMCT makespan: 7562.7321320980245
+
+PEFT makespan: 5875.725626507594
+
+PETS makespan: 7003.061417226766
+
+HCPT makespan: 6621.157911803424
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0096
+Number of tasks: 1002
+Maximum number of task predecessors: 41
+Average number of task predecessors: 13.246
+Number of edges: 13333
+Edge density: 0.02658618826283497
+Mean task CPU time: 250.96275933328445, standard deviation: 310.4188125840798
+Mean task GPU time: 49.29441117764471, standard deviation: 28.1859761264745
+Mean task acceleration ratio: 5.16297554812445, standard deviation: 5.070035821274818
+Mean task execution time: 225.7542158138295
+Computation-to-communication ratio: 10.564200910241508
+Minimal serial time: 49393
+--------------------------------------------------------
+HEFT makespan: 5374.795507534
+
+HBMCT makespan: 7160.372328904627
+
+PEFT makespan: 5408.483723733757
+
+PETS makespan: 6487.772558847307
+
+HCPT makespan: 6043.576952333516
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0040
+Number of tasks: 1002
+Maximum number of task predecessors: 66
+Average number of task predecessors: 26.191
+Number of edges: 26234
+Edge density: 0.052310962490603206
+Mean task CPU time: 268.97960268004675, standard deviation: 358.5926747439001
+Mean task GPU time: 50.62375249500998, standard deviation: 28.002301635701752
+Mean task acceleration ratio: 5.323694860740564, standard deviation: 5.290712400324355
+Mean task execution time: 241.68512140691715
+Computation-to-communication ratio: 14.733774791561299
+Minimal serial time: 50725
+--------------------------------------------------------
+HEFT makespan: 6923.969941775107
+
+HBMCT makespan: 8608.62601007472
+
+PEFT makespan: 6793.4314589325995
+
+PETS makespan: 8015.914703011261
+
+HCPT makespan: 7338.608863024626
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0023
+Number of tasks: 1002
+Maximum number of task predecessors: 218
+Average number of task predecessors: 98.644
+Number of edges: 98654
+Edge density: 0.19671745420248415
+Mean task CPU time: 246.51542318129052, standard deviation: 320.90257827659696
+Mean task GPU time: 48.52395209580838, standard deviation: 28.728023365639118
+Mean task acceleration ratio: 5.0264754606228434, standard deviation: 5.082830909847474
+Mean task execution time: 221.76648929560525
+Computation-to-communication ratio: 14.361523789815061
+Minimal serial time: 48621
+--------------------------------------------------------
+HEFT makespan: 13798.696681424408
+
+HBMCT makespan: 14809.056434212793
+
+PEFT makespan: 13808.6097147097
+
+PETS makespan: 14345.039397820248
+
+HCPT makespan: 14167.543171056366
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0020
+Number of tasks: 1002
+Maximum number of task predecessors: 204
+Average number of task predecessors: 89.584
+Number of edges: 89595
+Edge density: 0.17865368164769363
+Mean task CPU time: 235.76431437453252, standard deviation: 285.30541511965254
+Mean task GPU time: 48.55189620758483, standard deviation: 28.7769278805213
+Mean task acceleration ratio: 5.052719849228097, standard deviation: 4.899950101833852
+Mean task execution time: 212.36276210366407
+Computation-to-communication ratio: 19.48010711663827
+Minimal serial time: 48649
+--------------------------------------------------------
+HEFT makespan: 13196.509473501452
+
+HBMCT makespan: 14366.15956365278
+
+PEFT makespan: 13135.66216556857
+
+PETS makespan: 14031.843371724552
+
+HCPT makespan: 13531.767937774774
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0014
+Number of tasks: 1002
+Maximum number of task predecessors: 168
+Average number of task predecessors: 71.212
+Number of edges: 71227
+Edge density: 0.14202763304559712
+Mean task CPU time: 246.9802385553324, standard deviation: 313.3345098890287
+Mean task GPU time: 49.66067864271457, standard deviation: 28.36349159443646
+Mean task acceleration ratio: 4.899091023994855, standard deviation: 4.866573935167004
+Mean task execution time: 222.31529356625518
+Computation-to-communication ratio: 19.518404728417625
+Minimal serial time: 49760
+--------------------------------------------------------
+HEFT makespan: 11715.137692189172
+
+HBMCT makespan: 13333.485132642834
+
+PEFT makespan: 11549.495027042378
+
+PETS makespan: 12621.875949145562
+
+HCPT makespan: 12120.380653669721
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0114
+Number of tasks: 1002
+Maximum number of task predecessors: 29
+Average number of task predecessors: 8.027
+Number of edges: 8176
+Edge density: 0.016303058219225883
+Mean task CPU time: 249.27880520907038, standard deviation: 340.41723498334244
+Mean task GPU time: 49.352295409181636, standard deviation: 28.508685508485225
+Mean task acceleration ratio: 5.027304300977038, standard deviation: 5.08487257566638
+Mean task execution time: 224.28799148408427
+Computation-to-communication ratio: 12.336926322302707
+Minimal serial time: 49451
+--------------------------------------------------------
+HEFT makespan: 4190.966269689953
+
+HBMCT makespan: 5765.157002262249
+
+PEFT makespan: 4281.441137578975
+
+PETS makespan: 4832.978972551746
+
+HCPT makespan: 4802.289206942199
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0128
+Number of tasks: 1002
+Maximum number of task predecessors: 142
+Average number of task predecessors: 58.763
+Number of edges: 58776
+Edge density: 0.11720016510435673
+Mean task CPU time: 249.23493006675844, standard deviation: 315.56153227528813
+Mean task GPU time: 50.21556886227545, standard deviation: 27.844260296564226
+Mean task acceleration ratio: 4.947037647232228, standard deviation: 4.887788630095097
+Mean task execution time: 224.35750991619807
+Computation-to-communication ratio: 18.543624556457743
+Minimal serial time: 50316
+--------------------------------------------------------
+HEFT makespan: 9964.795084138977
+
+HBMCT makespan: 11641.1848945309
+
+PEFT makespan: 9901.393699450628
+
+PETS makespan: 11112.456851473056
+
+HCPT makespan: 10765.10404907419
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0157
+Number of tasks: 1002
+Maximum number of task predecessors: 51
+Average number of task predecessors: 19.121
+Number of edges: 19170
+Edge density: 0.03822524780608613
+Mean task CPU time: 253.81162851742468, standard deviation: 323.0216215468818
+Mean task GPU time: 50.71556886227545, standard deviation: 28.513818779724026
+Mean task acceleration ratio: 4.97828709629994, standard deviation: 4.920244734183492
+Mean task execution time: 228.42462106053102
+Computation-to-communication ratio: 14.222326467001423
+Minimal serial time: 50817
+--------------------------------------------------------
+HEFT makespan: 6518.660108131639
+
+HBMCT makespan: 8525.57714246721
+
+PEFT makespan: 6668.93528548173
+
+PETS makespan: 8039.578528043902
+
+HCPT makespan: 7429.442063406383
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0038
+Number of tasks: 1002
+Maximum number of task predecessors: 159
+Average number of task predecessors: 69.81
+Number of edges: 69842
+Edge density: 0.13926592369706142
+Mean task CPU time: 245.03099975190074, standard deviation: 329.8768748066112
+Mean task GPU time: 48.9251497005988, standard deviation: 28.793631930481585
+Mean task acceleration ratio: 4.946561502112257, standard deviation: 4.932238310043918
+Mean task execution time: 220.51776849548799
+Computation-to-communication ratio: 18.742767372052953
+Minimal serial time: 49023
+--------------------------------------------------------
+HEFT makespan: 8246.693677265166
+
+HBMCT makespan: 10036.802017636095
+
+PEFT makespan: 8342.01186411201
+
+PETS makespan: 8633.517429391923
+
+HCPT makespan: 9012.506130359774
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0050
+Number of tasks: 1002
+Maximum number of task predecessors: 84
+Average number of task predecessors: 32.53
+Number of edges: 32566
+Edge density: 0.064937058949035
+Mean task CPU time: 254.7849685345654, standard deviation: 326.12932609895046
+Mean task GPU time: 49.76147704590819, standard deviation: 28.6651811052778
+Mean task acceleration ratio: 5.08744695374147, standard deviation: 5.035852429108838
+Mean task execution time: 229.15703209848323
+Computation-to-communication ratio: 18.41539255727404
+Minimal serial time: 49861
+--------------------------------------------------------
+HEFT makespan: 7036.457661129395
+
+HBMCT makespan: 8520.244372370022
+
+PEFT makespan: 7194.394139289959
+
+PETS makespan: 7866.91424284323
+
+HCPT makespan: 7735.394501586756
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0076
+Number of tasks: 1002
+Maximum number of task predecessors: 33
+Average number of task predecessors: 9.858
+Number of edges: 9954
+Edge density: 0.019848415057995897
+Mean task CPU time: 250.78070701045695, standard deviation: 319.1030846855968
+Mean task GPU time: 49.591816367265466, standard deviation: 29.11687599929455
+Mean task acceleration ratio: 5.066395086550903, standard deviation: 5.04644228806907
+Mean task execution time: 225.632095680058
+Computation-to-communication ratio: 16.341859246789067
+Minimal serial time: 49691
+--------------------------------------------------------
+HEFT makespan: 4923.236893749516
+
+HBMCT makespan: 6314.5545173832115
+
+PEFT makespan: 4967.385469000613
+
+PETS makespan: 6117.716038022827
+
+HCPT makespan: 5621.625282823183
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0062
+Number of tasks: 1002
+Maximum number of task predecessors: 32
+Average number of task predecessors: 12.092
+Number of edges: 12178
+Edge density: 0.024283102127413504
+Mean task CPU time: 236.9414433975123, standard deviation: 289.6707759375414
+Mean task GPU time: 48.9940119760479, standard deviation: 28.797177105635715
+Mean task acceleration ratio: 4.974725999799771, standard deviation: 4.87015789002827
+Mean task execution time: 213.44801446982925
+Computation-to-communication ratio: 18.643057691925083
+Minimal serial time: 49092
+--------------------------------------------------------
+HEFT makespan: 5047.748419165076
+
+HBMCT makespan: 6939.296169719346
+
+PEFT makespan: 5383.694004079704
+
+PETS makespan: 6851.7284140650245
+
+HCPT makespan: 5838.9091662095925
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0003
+Number of tasks: 1002
+Maximum number of task predecessors: 190
+Average number of task predecessors: 86.373
+Number of edges: 86379
+Edge density: 0.17224093271997465
+Mean task CPU time: 255.57464136653087, standard deviation: 313.24356753676534
+Mean task GPU time: 49.615768463073856, standard deviation: 28.966273162015344
+Mean task acceleration ratio: 5.0834610636616935, standard deviation: 4.948434616500541
+Mean task execution time: 229.82978225359875
+Computation-to-communication ratio: 11.877870990584908
+Minimal serial time: 49715
+--------------------------------------------------------
+HEFT makespan: 14509.116349320433
+
+HBMCT makespan: 15525.551247410489
+
+PEFT makespan: 14417.635211118739
+
+PETS makespan: 15004.189784079565
+
+HCPT makespan: 14529.611720752726
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0122
+Number of tasks: 1002
+Maximum number of task predecessors: 97
+Average number of task predecessors: 40.057
+Number of edges: 40080
+Edge density: 0.07992007992007992
+Mean task CPU time: 250.4571466190518, standard deviation: 327.56646619559643
+Mean task GPU time: 49.87225548902195, standard deviation: 29.219139830558316
+Mean task acceleration ratio: 5.169628771183818, standard deviation: 5.1858026712080285
+Mean task execution time: 225.38403522779805
+Computation-to-communication ratio: 11.883149014568296
+Minimal serial time: 49972
+--------------------------------------------------------
+HEFT makespan: 8696.673295308514
+
+HBMCT makespan: 10301.528158243671
+
+PEFT makespan: 8728.160813147771
+
+PETS makespan: 10087.153996766818
+
+HCPT makespan: 9550.100128894088
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0012
+Number of tasks: 1002
+Maximum number of task predecessors: 95
+Average number of task predecessors: 39.909
+Number of edges: 39933
+Edge density: 0.07962695986648083
+Mean task CPU time: 248.02035979593612, standard deviation: 310.21473969885307
+Mean task GPU time: 49.756487025948104, standard deviation: 28.616581998969128
+Mean task acceleration ratio: 4.989078336726686, standard deviation: 4.9725080796090575
+Mean task execution time: 223.23737569968762
+Computation-to-communication ratio: 16.154870641736483
+Minimal serial time: 49856
+--------------------------------------------------------
+HEFT makespan: 8647.940948359741
+
+HBMCT makespan: 10180.76222913725
+
+PEFT makespan: 8422.008646211967
+
+PETS makespan: 9796.871091995481
+
+HCPT makespan: 9220.869011367406
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0067
+Number of tasks: 1002
+Maximum number of task predecessors: 12
+Average number of task predecessors: 3.041
+Number of edges: 3339
+Edge density: 0.006658012646036598
+Mean task CPU time: 272.70689488818186, standard deviation: 343.0884462808669
+Mean task GPU time: 52.22554890219561, standard deviation: 28.336920507007513
+Mean task acceleration ratio: 5.183709585969869, standard deviation: 5.121499826851673
+Mean task execution time: 245.14672663993358
+Computation-to-communication ratio: 11.861918005986894
+Minimal serial time: 52330
+--------------------------------------------------------
+HEFT makespan: 4389.300807583194
+
+HBMCT makespan: 4861.324475545785
+
+PEFT makespan: 4526.045865225355
+
+PETS makespan: 4622.582586470088
+
+HCPT makespan: 4819.346296754778
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0013
+Number of tasks: 1002
+Maximum number of task predecessors: 217
+Average number of task predecessors: 93.008
+Number of edges: 93018
+Edge density: 0.18547919146721542
+Mean task CPU time: 261.9020711372077, standard deviation: 323.9847476067166
+Mean task GPU time: 50.99301397205589, standard deviation: 29.104035139049948
+Mean task acceleration ratio: 5.173574994882986, standard deviation: 5.080770632678547
+Mean task execution time: 235.53843899156374
+Computation-to-communication ratio: 17.68420700217099
+Minimal serial time: 51095
+--------------------------------------------------------
+HEFT makespan: 14103.594347629409
+
+HBMCT makespan: 15243.479436490461
+
+PEFT makespan: 13985.73465057829
+
+PETS makespan: 14566.953016098047
+
+HCPT makespan: 14281.858286616669
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0031
+Number of tasks: 1002
+Maximum number of task predecessors: 164
+Average number of task predecessors: 73.209
+Number of edges: 73240
+Edge density: 0.14604158316733168
+Mean task CPU time: 257.1190064975101, standard deviation: 313.7454773493849
+Mean task GPU time: 51.58083832335329, standard deviation: 29.10329789215321
+Mean task acceleration ratio: 4.956827580769975, standard deviation: 4.676683545229998
+Mean task execution time: 231.4267354757405
+Computation-to-communication ratio: 12.50777123470473
+Minimal serial time: 51684
+--------------------------------------------------------
+HEFT makespan: 8937.19380113976
+
+HBMCT makespan: 10309.602732402742
+
+PEFT makespan: 9001.804512072229
+
+PETS makespan: 9521.960047270886
+
+HCPT makespan: 9692.708764363259
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0147
+Number of tasks: 1002
+Maximum number of task predecessors: 220
+Average number of task predecessors: 91.504
+Number of edges: 91527
+Edge density: 0.18250611663785316
+Mean task CPU time: 261.4391829803701, standard deviation: 346.21895262670944
+Mean task GPU time: 50.73652694610779, standard deviation: 28.07308758616571
+Mean task acceleration ratio: 5.1433623911859145, standard deviation: 5.348455317189632
+Mean task execution time: 235.1013509760873
+Computation-to-communication ratio: 19.10717064205539
+Minimal serial time: 50838
+--------------------------------------------------------
+HEFT makespan: 8798.350129043205
+
+HBMCT makespan: 10403.629997046055
+
+PEFT makespan: 8967.189891464957
+
+PETS makespan: 9104.067310254306
+
+HCPT makespan: 9475.822879039515
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0085
+Number of tasks: 1002
+Maximum number of task predecessors: 45
+Average number of task predecessors: 16.967
+Number of edges: 17033
+Edge density: 0.0339640399520639
+Mean task CPU time: 238.43795944030643, standard deviation: 291.46119894471354
+Mean task GPU time: 50.64071856287425, standard deviation: 28.384771764915463
+Mean task acceleration ratio: 4.825786751012951, standard deviation: 4.732160499017339
+Mean task execution time: 214.9633043306274
+Computation-to-communication ratio: 13.738000345707139
+Minimal serial time: 50742
+--------------------------------------------------------
+HEFT makespan: 6041.67751012555
+
+HBMCT makespan: 8040.088667553248
+
+PEFT makespan: 6128.553911043667
+
+PETS makespan: 7272.622867193357
+
+HCPT makespan: 6852.634427383503
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0053
+Number of tasks: 1002
+Maximum number of task predecessors: 106
+Average number of task predecessors: 41.676
+Number of edges: 41710
+Edge density: 0.08317032269128077
+Mean task CPU time: 260.55074917780865, standard deviation: 322.6809439642159
+Mean task GPU time: 50.61177644710579, standard deviation: 29.015241040058562
+Mean task acceleration ratio: 5.185039708510703, standard deviation: 5.037286985335401
+Mean task execution time: 234.30837758647078
+Computation-to-communication ratio: 18.457557638193794
+Minimal serial time: 50713
+--------------------------------------------------------
+HEFT makespan: 7594.7641935251895
+
+HBMCT makespan: 9353.131678041804
+
+PEFT makespan: 7741.5480163693055
+
+PETS makespan: 8326.992040682577
+
+HCPT makespan: 8648.522513631393
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0143
+Number of tasks: 1002
+Maximum number of task predecessors: 81
+Average number of task predecessors: 30.079
+Number of edges: 30120
+Edge density: 0.060059700778263655
+Mean task CPU time: 265.47510413762643, standard deviation: 325.69916717063245
+Mean task GPU time: 50.78043912175649, standard deviation: 29.14595551977093
+Mean task acceleration ratio: 5.2041722517315385, standard deviation: 4.970755366256795
+Mean task execution time: 238.63827101064268
+Computation-to-communication ratio: 18.110285132891583
+Minimal serial time: 50882
+--------------------------------------------------------
+HEFT makespan: 7127.9187226531285
+
+HBMCT makespan: 8735.09866444083
+
+PEFT makespan: 7508.558122050102
+
+PETS makespan: 8209.108013663248
+
+HCPT makespan: 8127.512704037992
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0125
+Number of tasks: 1002
+Maximum number of task predecessors: 121
+Average number of task predecessors: 49.193
+Number of edges: 49217
+Edge density: 0.09813938556453526
+Mean task CPU time: 254.58304813459847, standard deviation: 319.395783520579
+Mean task GPU time: 49.3253493013972, standard deviation: 28.13057549309291
+Mean task acceleration ratio: 5.154875845918712, standard deviation: 5.1605816674263
+Mean task execution time: 228.92583578044832
+Computation-to-communication ratio: 15.599973080072296
+Minimal serial time: 49424
+--------------------------------------------------------
+HEFT makespan: 9877.760903420374
+
+HBMCT makespan: 11252.976789576644
+
+PEFT makespan: 9777.530138334378
+
+PETS makespan: 11188.596567811874
+
+HCPT makespan: 10350.63076909891
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0168
+Number of tasks: 1002
+Maximum number of task predecessors: 43
+Average number of task predecessors: 14.939
+Number of edges: 15021
+Edge density: 0.029952083844299413
+Mean task CPU time: 247.34278173477318, standard deviation: 303.3577530812391
+Mean task GPU time: 50.39121756487026, standard deviation: 29.006342528846503
+Mean task acceleration ratio: 4.881591623454122, standard deviation: 4.883313417028512
+Mean task execution time: 222.72383621353532
+Computation-to-communication ratio: 17.33827823737762
+Minimal serial time: 50492
+--------------------------------------------------------
+HEFT makespan: 5598.568695779387
+
+HBMCT makespan: 7410.520815586494
+
+PEFT makespan: 5581.4090669440975
+
+PETS makespan: 6462.1847644257
+
+HCPT makespan: 6174.305459648725
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0151
+Number of tasks: 1002
+Maximum number of task predecessors: 41
+Average number of task predecessors: 13.862
+Number of edges: 13930
+Edge density: 0.027776614602961908
+Mean task CPU time: 250.09831536576505, standard deviation: 312.76307781180435
+Mean task GPU time: 50.507984031936125, standard deviation: 29.24800070154658
+Mean task acceleration ratio: 5.112954245864618, standard deviation: 5.110404040077418
+Mean task execution time: 225.14952394903642
+Computation-to-communication ratio: 13.379461738010654
+Minimal serial time: 50609
+--------------------------------------------------------
+HEFT makespan: 5808.929053922739
+
+HBMCT makespan: 7320.84243930872
+
+PEFT makespan: 5991.759983316902
+
+PETS makespan: 6779.796751325394
+
+HCPT makespan: 6436.346691316523
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0026
+Number of tasks: 1002
+Maximum number of task predecessors: 81
+Average number of task predecessors: 33.262
+Number of edges: 33293
+Edge density: 0.06638670710526998
+Mean task CPU time: 244.22332917112578, standard deviation: 313.5757797443835
+Mean task GPU time: 48.78542914171657, standard deviation: 28.06274811208383
+Mean task acceleration ratio: 4.969277797210652, standard deviation: 4.877647676671951
+Mean task execution time: 219.79359166744962
+Computation-to-communication ratio: 12.24254818908522
+Minimal serial time: 48883
+--------------------------------------------------------
+HEFT makespan: 8309.584308209742
+
+HBMCT makespan: 9693.76382266379
+
+PEFT makespan: 8165.21064896295
+
+PETS makespan: 9410.054112744952
+
+HCPT makespan: 9114.427632118559
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0142
+Number of tasks: 1002
+Maximum number of task predecessors: 132
+Average number of task predecessors: 51.255
+Number of edges: 51280
+Edge density: 0.10225303638477291
+Mean task CPU time: 252.4270426913358, standard deviation: 315.1575469995235
+Mean task GPU time: 51.078842315369265, standard deviation: 28.48171965924092
+Mean task acceleration ratio: 4.937380049859215, standard deviation: 4.989936626596435
+Mean task execution time: 227.25851764433997
+Computation-to-communication ratio: 17.873028621841307
+Minimal serial time: 51181
+--------------------------------------------------------
+HEFT makespan: 8164.269274706265
+
+HBMCT makespan: 9428.5616281698
+
+PEFT makespan: 8072.116501244759
+
+PETS makespan: 8904.507025558632
+
+HCPT makespan: 9029.976508015247
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0074
+Number of tasks: 1002
+Maximum number of task predecessors: 10
+Average number of task predecessors: 2.008
+Number of edges: 2514
+Edge density: 0.005012951120735552
+Mean task CPU time: 276.64979579519405, standard deviation: 357.49533467897896
+Mean task GPU time: 51.743512974051896, standard deviation: 28.298048056124962
+Mean task acceleration ratio: 5.283372597999254, standard deviation: 5.166927164546004
+Mean task execution time: 248.53651044255128
+Computation-to-communication ratio: 14.839553682097986
+Minimal serial time: 51847
+--------------------------------------------------------
+HEFT makespan: 4031.105509160432
+
+HBMCT makespan: 4524.697488137198
+
+PEFT makespan: 4088.5223712628786
+
+PETS makespan: 4268.9998554190415
+
+HCPT makespan: 4679.154466908613
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0082
+Number of tasks: 1002
+Maximum number of task predecessors: 40
+Average number of task predecessors: 14.882
+Number of edges: 14949
+Edge density: 0.02980851483845496
+Mean task CPU time: 250.1945406105635, standard deviation: 329.60161986226154
+Mean task GPU time: 51.07085828343313, standard deviation: 28.202892807944426
+Mean task acceleration ratio: 4.922882926737773, standard deviation: 5.177521944340502
+Mean task execution time: 225.3040803196722
+Computation-to-communication ratio: 12.259503574928079
+Minimal serial time: 51173
+--------------------------------------------------------
+HEFT makespan: 5773.304936928041
+
+HBMCT makespan: 7234.320095830984
+
+PEFT makespan: 5957.5226103111345
+
+PETS makespan: 7164.489261345488
+
+HCPT makespan: 6578.900542781253
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0061
+Number of tasks: 1002
+Maximum number of task predecessors: 58
+Average number of task predecessors: 17.201
+Number of edges: 17260
+Edge density: 0.03441668112326795
+Mean task CPU time: 250.7513299766078, standard deviation: 351.2444219292945
+Mean task GPU time: 49.424151696606785, standard deviation: 28.39180421241436
+Mean task acceleration ratio: 4.985993624663474, standard deviation: 5.184007190988429
+Mean task execution time: 225.58543269160765
+Computation-to-communication ratio: 15.787458046501833
+Minimal serial time: 49523
+--------------------------------------------------------
+HEFT makespan: 6003.191054465385
+
+HBMCT makespan: 7749.731090221606
+
+PEFT makespan: 6104.691754450399
+
+PETS makespan: 7447.822469585362
+
+HCPT makespan: 6784.358908237274
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0134
+Number of tasks: 1002
+Maximum number of task predecessors: 177
+Average number of task predecessors: 77.227
+Number of edges: 77240
+Edge density: 0.15401763904757917
+Mean task CPU time: 263.3983293702974, standard deviation: 366.326520768751
+Mean task GPU time: 49.83532934131737, standard deviation: 29.058270134591417
+Mean task acceleration ratio: 5.089963926194388, standard deviation: 5.251091494292119
+Mean task execution time: 236.7029543666749
+Computation-to-communication ratio: 16.704095742425526
+Minimal serial time: 49935
+--------------------------------------------------------
+HEFT makespan: 12414.563611076159
+
+HBMCT makespan: 13560.70896100297
+
+PEFT makespan: 12333.645923248974
+
+PETS makespan: 12911.836266281141
+
+HCPT makespan: 12782.148502445523
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0113
+Number of tasks: 1002
+Maximum number of task predecessors: 38
+Average number of task predecessors: 14.057
+Number of edges: 14140
+Edge density: 0.028195357536674903
+Mean task CPU time: 251.67786493804365, standard deviation: 337.8113379458813
+Mean task GPU time: 50.7185628742515, standard deviation: 29.21440862635702
+Mean task acceleration ratio: 4.872708336359584, standard deviation: 4.956806170604083
+Mean task execution time: 226.55795218006963
+Computation-to-communication ratio: 16.961861019604964
+Minimal serial time: 50820
+--------------------------------------------------------
+HEFT makespan: 5203.5255351250225
+
+HBMCT makespan: 7342.355690557564
+
+PEFT makespan: 5438.517814401993
+
+PETS makespan: 6324.668498319275
+
+HCPT makespan: 6036.851712122557
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0065
+Number of tasks: 1002
+Maximum number of task predecessors: 45
+Average number of task predecessors: 13.957
+Number of edges: 14020
+Edge density: 0.027956075860267476
+Mean task CPU time: 269.8690970576045, standard deviation: 354.94879056553026
+Mean task GPU time: 51.3812375249501, standard deviation: 28.80023368559324
+Mean task acceleration ratio: 5.146352751276743, standard deviation: 5.235331808352293
+Mean task execution time: 242.55811461602272
+Computation-to-communication ratio: 17.18005725888741
+Minimal serial time: 51484
+--------------------------------------------------------
+HEFT makespan: 5889.177935933109
+
+HBMCT makespan: 7642.571227799154
+
+PEFT makespan: 6025.132867788071
+
+PETS makespan: 7246.420015642027
+
+HCPT makespan: 6818.104680387072
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0090
+Number of tasks: 1002
+Maximum number of task predecessors: 32
+Average number of task predecessors: 8.888
+Number of edges: 9011
+Edge density: 0.01796805988422755
+Mean task CPU time: 263.4587895477244, standard deviation: 332.69723588812246
+Mean task GPU time: 50.821357285429144, standard deviation: 27.981156743221216
+Mean task acceleration ratio: 5.168045880224748, standard deviation: 5.059605212215457
+Mean task execution time: 236.8791105149375
+Computation-to-communication ratio: 11.507789218704714
+Minimal serial time: 50923
+--------------------------------------------------------
+HEFT makespan: 4492.642987889167
+
+HBMCT makespan: 5688.711940111824
+
+PEFT makespan: 4705.9537904584895
+
+PETS makespan: 5597.839042848528
+
+HCPT makespan: 5111.901939242445
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0002
+Number of tasks: 1002
+Maximum number of task predecessors: 91
+Average number of task predecessors: 33.962
+Number of edges: 33995
+Edge density: 0.06778650491225341
+Mean task CPU time: 240.32344685840863, standard deviation: 322.36899937830253
+Mean task GPU time: 47.94311377245509, standard deviation: 28.911313173672646
+Mean task acceleration ratio: 4.89769602451073, standard deviation: 4.9818906356780195
+Mean task execution time: 216.27590522266442
+Computation-to-communication ratio: 11.854031758939833
+Minimal serial time: 48039
+--------------------------------------------------------
+HEFT makespan: 7804.572520321008
+
+HBMCT makespan: 9546.130578389631
+
+PEFT makespan: 7823.504551694686
+
+PETS makespan: 9333.079940261397
+
+HCPT makespan: 8452.988584642673
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0109
+Number of tasks: 1002
+Maximum number of task predecessors: 51
+Average number of task predecessors: 17.045
+Number of edges: 17110
+Edge density: 0.034117579027758665
+Mean task CPU time: 248.95065518727404, standard deviation: 300.02059674893746
+Mean task GPU time: 50.72055888223553, standard deviation: 27.608247424191113
+Mean task acceleration ratio: 4.9525661279354996, standard deviation: 5.082015592429012
+Mean task execution time: 224.1718931491442
+Computation-to-communication ratio: 16.886044034698685
+Minimal serial time: 50822
+--------------------------------------------------------
+HEFT makespan: 5580.827763151535
+
+HBMCT makespan: 7219.14398648275
+
+PEFT makespan: 5625.596894495212
+
+PETS makespan: 6476.275279305952
+
+HCPT makespan: 6293.496122921085
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0043
+Number of tasks: 1002
+Maximum number of task predecessors: 87
+Average number of task predecessors: 35.4
+Number of edges: 35441
+Edge density: 0.07066984911296288
+Mean task CPU time: 240.44253943029923, standard deviation: 310.1716242839328
+Mean task GPU time: 49.33832335329341, standard deviation: 28.723548247654968
+Mean task acceleration ratio: 4.925618105215294, standard deviation: 4.829993306668495
+Mean task execution time: 216.5545124206735
+Computation-to-communication ratio: 17.240003159870316
+Minimal serial time: 49437
+--------------------------------------------------------
+HEFT makespan: 6699.017077337899
+
+HBMCT makespan: 8681.255725315119
+
+PEFT makespan: 7131.768493148093
+
+PETS makespan: 7692.580075653159
+
+HCPT makespan: 7529.19071845854
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0024
+Number of tasks: 1002
+Maximum number of task predecessors: 188
+Average number of task predecessors: 77.017
+Number of edges: 77034
+Edge density: 0.15360687216974642
+Mean task CPU time: 259.62672215909055, standard deviation: 334.57506479852077
+Mean task GPU time: 50.259481037924154, standard deviation: 28.952582455946875
+Mean task acceleration ratio: 5.089333687644109, standard deviation: 5.026013506285503
+Mean task execution time: 233.45581701894474
+Computation-to-communication ratio: 13.379122034315504
+Minimal serial time: 50360
+--------------------------------------------------------
+HEFT makespan: 13442.748063595185
+
+HBMCT makespan: 14493.653570632767
+
+PEFT makespan: 13203.021883438169
+
+PETS makespan: 14081.587872796623
+
+HCPT makespan: 13677.31086294624
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0178
+Number of tasks: 1002
+Maximum number of task predecessors: 45
+Average number of task predecessors: 14.061
+Number of edges: 14141
+Edge density: 0.028197351550644963
+Mean task CPU time: 246.32432944003048, standard deviation: 313.576880241515
+Mean task GPU time: 50.14071856287425, standard deviation: 28.945181147460733
+Mean task acceleration ratio: 4.959140498581568, standard deviation: 4.95135491124398
+Mean task execution time: 221.80137808038597
+Computation-to-communication ratio: 19.957704707420806
+Minimal serial time: 50241
+--------------------------------------------------------
+HEFT makespan: 5067.793563571773
+
+HBMCT makespan: 6740.048898995674
+
+PEFT makespan: 5303.497719699364
+
+PETS makespan: 5981.577041981811
+
+HCPT makespan: 5731.643821101951
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0057
+Number of tasks: 1002
+Maximum number of task predecessors: 79
+Average number of task predecessors: 29.223
+Number of edges: 29271
+Edge density: 0.058366782917681125
+Mean task CPU time: 268.55624954961485, standard deviation: 368.86616135804167
+Mean task GPU time: 50.41816367265469, standard deviation: 28.914592891082584
+Mean task acceleration ratio: 5.049102880214501, standard deviation: 5.0100121350313644
+Mean task execution time: 241.2889888149948
+Computation-to-communication ratio: 19.496600491809932
+Minimal serial time: 50519
+--------------------------------------------------------
+HEFT makespan: 6845.971549304958
+
+HBMCT makespan: 8292.171215275857
+
+PEFT makespan: 7015.8058757128965
+
+PETS makespan: 8011.921434262721
+
+HCPT makespan: 7845.6347269272
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0045
+Number of tasks: 1002
+Maximum number of task predecessors: 156
+Average number of task predecessors: 66.585
+Number of edges: 66614
+Edge density: 0.1328292466017017
+Mean task CPU time: 252.12512770043074, standard deviation: 319.7778347989666
+Mean task GPU time: 51.45309381237525, standard deviation: 28.60789178643287
+Mean task acceleration ratio: 4.840215262829986, standard deviation: 5.019167966914907
+Mean task execution time: 227.0411234644238
+Computation-to-communication ratio: 12.384761380538768
+Minimal serial time: 51556
+--------------------------------------------------------
+HEFT makespan: 8472.029321551936
+
+HBMCT makespan: 10065.68950007247
+
+PEFT makespan: 8383.870101453926
+
+PETS makespan: 8848.101709108001
+
+HCPT makespan: 9330.846664639068
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0030
+Number of tasks: 1002
+Maximum number of task predecessors: 213
+Average number of task predecessors: 94.328
+Number of edges: 94352
+Edge density: 0.18813920610327797
+Mean task CPU time: 240.26022557263357, standard deviation: 312.6498646831264
+Mean task GPU time: 49.4750499001996, standard deviation: 28.546244937774393
+Mean task acceleration ratio: 4.835612194697807, standard deviation: 4.8948153522082025
+Mean task execution time: 216.41207861357933
+Computation-to-communication ratio: 10.828457105765665
+Minimal serial time: 49574
+--------------------------------------------------------
+HEFT makespan: 8660.122898109425
+
+HBMCT makespan: 10158.454076197648
+
+PEFT makespan: 8820.924522494886
+
+PETS makespan: 9139.679539665412
+
+HCPT makespan: 9881.185346868788
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0153
+Number of tasks: 1002
+Maximum number of task predecessors: 12
+Average number of task predecessors: 3.005
+Number of edges: 3326
+Edge density: 0.006632090464425794
+Mean task CPU time: 226.9764572759609, standard deviation: 290.2726768612142
+Mean task GPU time: 50.33433133732535, standard deviation: 28.45750059863574
+Mean task acceleration ratio: 4.676055763823562, standard deviation: 4.6826778085258525
+Mean task execution time: 204.89619153363145
+Computation-to-communication ratio: 14.299334634284785
+Minimal serial time: 50435
+--------------------------------------------------------
+HEFT makespan: 3906.335262378142
+
+HBMCT makespan: 4213.628946042839
+
+PEFT makespan: 3731.0983845918
+
+PETS makespan: 3970.3355167313293
+
+HCPT makespan: 4390.646452772625
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0162
+Number of tasks: 1002
+Maximum number of task predecessors: 33
+Average number of task predecessors: 9.906
+Number of edges: 10011
+Edge density: 0.019962073854289424
+Mean task CPU time: 245.06290804900488, standard deviation: 328.81699165515687
+Mean task GPU time: 50.56487025948104, standard deviation: 28.70950734181126
+Mean task acceleration ratio: 4.837404676968676, standard deviation: 5.1580572060807715
+Mean task execution time: 220.7506533253144
+Computation-to-communication ratio: 12.810140232845209
+Minimal serial time: 50666
+--------------------------------------------------------
+HEFT makespan: 4794.185798522003
+
+HBMCT makespan: 6662.858441678157
+
+PEFT makespan: 4929.386870044705
+
+PETS makespan: 5974.3897106622835
+
+HCPT makespan: 5293.4702682431025
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0116
+Number of tasks: 1002
+Maximum number of task predecessors: 44
+Average number of task predecessors: 15.786
+Number of edges: 15859
+Edge density: 0.03162306755121126
+Mean task CPU time: 254.64208520118677, standard deviation: 311.70855337173884
+Mean task GPU time: 49.35728542914172, standard deviation: 28.674651184891804
+Mean task acceleration ratio: 5.127207392507822, standard deviation: 4.948854011530431
+Mean task execution time: 228.98148522968114
+Computation-to-communication ratio: 17.857665320315633
+Minimal serial time: 49456
+--------------------------------------------------------
+HEFT makespan: 5592.087287164047
+
+HBMCT makespan: 7385.671667343811
+
+PEFT makespan: 5888.812018019128
+
+PETS makespan: 6709.301916867773
+
+HCPT makespan: 6489.062421954655
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0158
+Number of tasks: 1002
+Maximum number of task predecessors: 42
+Average number of task predecessors: 14.146
+Number of edges: 14209
+Edge density: 0.02833294450060917
+Mean task CPU time: 266.6889803388689, standard deviation: 325.3499895547801
+Mean task GPU time: 50.37824351297405, standard deviation: 29.030778039202808
+Mean task acceleration ratio: 5.303171852654058, standard deviation: 5.06072771867872
+Mean task execution time: 239.650138235632
+Computation-to-communication ratio: 12.351365752577411
+Minimal serial time: 50479
+--------------------------------------------------------
+HEFT makespan: 5753.8904020159935
+
+HBMCT makespan: 7643.543507461934
+
+PEFT makespan: 6116.10511929396
+
+PETS makespan: 7359.684705478183
+
+HCPT makespan: 6756.063626813087
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0139
+Number of tasks: 1002
+Maximum number of task predecessors: 113
+Average number of task predecessors: 42.482
+Number of edges: 42517
+Edge density: 0.0847794919651207
+Mean task CPU time: 254.16084455339848, standard deviation: 352.9843525843579
+Mean task GPU time: 48.95309381237525, standard deviation: 28.192112460743044
+Mean task acceleration ratio: 5.213986483197894, standard deviation: 5.5138764486266005
+Mean task execution time: 228.5098757107706
+Computation-to-communication ratio: 17.27945655345212
+Minimal serial time: 49051
+--------------------------------------------------------
+HEFT makespan: 7125.485042617051
+
+HBMCT makespan: 8675.247223794442
+
+PEFT makespan: 7360.5123749434115
+
+PETS makespan: 7763.646854733429
+
+HCPT makespan: 8083.282407109004
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0130
+Number of tasks: 1002
+Maximum number of task predecessors: 198
+Average number of task predecessors: 89.813
+Number of edges: 89821
+Edge density: 0.1791043288049276
+Mean task CPU time: 245.98781667086863, standard deviation: 319.0588131925292
+Mean task GPU time: 49.80139720558882, standard deviation: 29.056615498633718
+Mean task acceleration ratio: 4.879303191011109, standard deviation: 4.89184525345663
+Mean task execution time: 221.46451423770864
+Computation-to-communication ratio: 12.30543783846294
+Minimal serial time: 49901
+--------------------------------------------------------
+HEFT makespan: 14532.988821717436
+
+HBMCT makespan: 15438.016598343385
+
+PEFT makespan: 14292.372900276749
+
+PETS makespan: 15135.126607608352
+
+HCPT makespan: 14669.263362700416
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0103
+Number of tasks: 1002
+Maximum number of task predecessors: 36
+Average number of task predecessors: 12.117
+Number of edges: 12206
+Edge density: 0.024338934518575238
+Mean task CPU time: 259.44177499787315, standard deviation: 332.0297412782359
+Mean task GPU time: 50.996007984031934, standard deviation: 28.842991310480667
+Mean task acceleration ratio: 5.1037284259801705, standard deviation: 5.2602695506846375
+Mean task execution time: 233.386054121143
+Computation-to-communication ratio: 15.693760539963785
+Minimal serial time: 51098
+--------------------------------------------------------
+HEFT makespan: 5186.335706774714
+
+HBMCT makespan: 6901.684658302388
+
+PEFT makespan: 5410.043746443381
+
+PETS makespan: 6598.299565063559
+
+HCPT makespan: 6165.874960746411
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0101
+Number of tasks: 1002
+Maximum number of task predecessors: 21
+Average number of task predecessors: 5.002
+Number of edges: 5200
+Edge density: 0.010368872644321746
+Mean task CPU time: 246.9919859683906, standard deviation: 332.1028591081764
+Mean task GPU time: 49.355289421157686, standard deviation: 28.807737597303916
+Mean task acceleration ratio: 4.959520592165759, standard deviation: 4.787480865661514
+Mean task execution time: 222.2873988999865
+Computation-to-communication ratio: 14.65552711944331
+Minimal serial time: 49454
+--------------------------------------------------------
+HEFT makespan: 4009.7875621892445
+
+HBMCT makespan: 5156.442232059919
+
+PEFT makespan: 4157.120344857551
+
+PETS makespan: 4448.219583120934
+
+HCPT makespan: 4686.32897727963
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0118
+Number of tasks: 1002
+Maximum number of task predecessors: 19
+Average number of task predecessors: 5.099
+Number of edges: 5293
+Edge density: 0.0105543159435375
+Mean task CPU time: 239.43981837160734, standard deviation: 308.5054218035321
+Mean task GPU time: 50.49900199600798, standard deviation: 28.776835934986625
+Mean task acceleration ratio: 4.946563500480907, standard deviation: 5.113310995278359
+Mean task execution time: 215.82221632465743
+Computation-to-communication ratio: 19.317148864039584
+Minimal serial time: 50600
+--------------------------------------------------------
+HEFT makespan: 3920.2336102679083
+
+HBMCT makespan: 5311.178216540402
+
+PEFT makespan: 3847.707864623228
+
+PETS makespan: 4129.759019671909
+
+HCPT makespan: 4611.93435304789
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0152
+Number of tasks: 1002
+Maximum number of task predecessors: 28
+Average number of task predecessors: 8.885
+Number of edges: 8995
+Edge density: 0.017936155660706558
+Mean task CPU time: 247.04043610416784, standard deviation: 292.20894000221267
+Mean task GPU time: 48.67065868263473, standard deviation: 28.507717156768074
+Mean task acceleration ratio: 5.207637685688914, standard deviation: 5.074881543440307
+Mean task execution time: 222.2442139264762
+Computation-to-communication ratio: 14.802515156871396
+Minimal serial time: 48768
+--------------------------------------------------------
+HEFT makespan: 4531.129489162431
+
+HBMCT makespan: 6260.679618608198
+
+PEFT makespan: 4877.541766250326
+
+PETS makespan: 5837.175681823874
+
+HCPT makespan: 5595.650950180824
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0081
+Number of tasks: 1002
+Maximum number of task predecessors: 7
+Average number of task predecessors: 0.971
+Number of edges: 1838
+Edge density: 0.003664997676973725
+Mean task CPU time: 253.89458557674547, standard deviation: 313.306375656644
+Mean task GPU time: 50.44810379241517, standard deviation: 28.13993761931195
+Mean task acceleration ratio: 5.105753643324487, standard deviation: 5.147330001817463
+Mean task execution time: 228.4637753537042
+Computation-to-communication ratio: 10.697627090292276
+Minimal serial time: 50549
+--------------------------------------------------------
+HEFT makespan: 4016.042066405167
+
+HBMCT makespan: 4200.475563462379
+
+PEFT makespan: 4009.0736218868283
+
+PETS makespan: 4346.127353944682
+
+HCPT makespan: 4585.851903501749
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0097
+Number of tasks: 1002
+Maximum number of task predecessors: 27
+Average number of task predecessors: 8.103
+Number of edges: 8223
+Edge density: 0.01639677687581879
+Mean task CPU time: 248.81628383512017, standard deviation: 322.7782153869364
+Mean task GPU time: 50.003992015968066, standard deviation: 29.54042502420564
+Mean task acceleration ratio: 4.9653296894139345, standard deviation: 4.8049754800437805
+Mean task execution time: 223.96474735772617
+Computation-to-communication ratio: 10.601568309566096
+Minimal serial time: 50104
+--------------------------------------------------------
+HEFT makespan: 4441.840827579359
+
+HBMCT makespan: 5891.386485625894
+
+PEFT makespan: 4560.36077694797
+
+PETS makespan: 5072.17016312381
+
+HCPT makespan: 4870.4556252226
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0120
+Number of tasks: 1002
+Maximum number of task predecessors: 199
+Average number of task predecessors: 83.877
+Number of edges: 83888
+Edge density: 0.1672738439205505
+Mean task CPU time: 240.2019698774298, standard deviation: 289.01789293459944
+Mean task GPU time: 49.88622754491018, standard deviation: 28.779896890192283
+Mean task acceleration ratio: 4.922335987024474, standard deviation: 4.910973264590586
+Mean task execution time: 216.41250208586484
+Computation-to-communication ratio: 10.21490993519011
+Minimal serial time: 49986
+--------------------------------------------------------
+HEFT makespan: 12733.255116862165
+
+HBMCT makespan: 13802.85379399423
+
+PEFT makespan: 12685.351578981354
+
+PETS makespan: 13529.424287562042
+
+HCPT makespan: 13101.847864036057
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0098
+Number of tasks: 1002
+Maximum number of task predecessors: 10
+Average number of task predecessors: 2.0
+Number of edges: 2493
+Edge density: 0.004971076827364252
+Mean task CPU time: 250.6652894950291, standard deviation: 310.70666723791044
+Mean task GPU time: 50.032934131736525, standard deviation: 28.38053916273118
+Mean task acceleration ratio: 5.129051531452935, standard deviation: 5.270391714298825
+Mean task execution time: 225.58624507461752
+Computation-to-communication ratio: 10.960982070952406
+Minimal serial time: 50133
+--------------------------------------------------------
+HEFT makespan: 4071.56067596919
+
+HBMCT makespan: 4380.723312890165
+
+PEFT makespan: 4052.6297609245103
+
+PETS makespan: 4079.1016329221884
+
+HCPT makespan: 4507.8037374331325
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0145
+Number of tasks: 1002
+Maximum number of task predecessors: 142
+Average number of task predecessors: 60.839
+Number of edges: 60866
+Edge density: 0.12136765430178603
+Mean task CPU time: 259.3270458069658, standard deviation: 336.30611675632616
+Mean task GPU time: 50.184630738522955, standard deviation: 28.375772665508933
+Mean task acceleration ratio: 5.111639378939369, standard deviation: 5.041968493827674
+Mean task execution time: 233.18424392341046
+Computation-to-communication ratio: 15.632662818698783
+Minimal serial time: 50285
+--------------------------------------------------------
+HEFT makespan: 8502.818623332345
+
+HBMCT makespan: 9735.88363797736
+
+PEFT makespan: 8418.11579418078
+
+PETS makespan: 9120.791947613949
+
+HCPT makespan: 9292.444376037567
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0141
+Number of tasks: 1002
+Maximum number of task predecessors: 176
+Average number of task predecessors: 73.31
+Number of edges: 73338
+Edge density: 0.14623699653639774
+Mean task CPU time: 254.60323816840196, standard deviation: 350.24574819186137
+Mean task GPU time: 50.54291417165668, standard deviation: 28.141300416156927
+Mean task acceleration ratio: 4.923851323910271, standard deviation: 5.0678929851497525
+Mean task execution time: 229.0956976688088
+Computation-to-communication ratio: 15.1390840099663
+Minimal serial time: 50644
+--------------------------------------------------------
+HEFT makespan: 8527.173367020268
+
+HBMCT makespan: 10825.222883476721
+
+PEFT makespan: 8751.530285537057
+
+PETS makespan: 9205.984048179016
+
+HCPT makespan: 9515.082449558837
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0159
+Number of tasks: 1002
+Maximum number of task predecessors: 27
+Average number of task predecessors: 7.864
+Number of edges: 7986
+Edge density: 0.015924195564914128
+Mean task CPU time: 242.7097911719332, standard deviation: 326.968705389733
+Mean task GPU time: 48.49800399201597, standard deviation: 28.2712216231251
+Mean task acceleration ratio: 5.063613059614667, standard deviation: 5.234040545406263
+Mean task execution time: 218.43331777444357
+Computation-to-communication ratio: 16.52408525409897
+Minimal serial time: 48595
+--------------------------------------------------------
+HEFT makespan: 4428.280792503049
+
+HBMCT makespan: 6007.317990375481
+
+PEFT makespan: 4491.518710653869
+
+PETS makespan: 5375.726789965055
+
+HCPT makespan: 5135.882590183941
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0169
+Number of tasks: 1002
+Maximum number of task predecessors: 25
+Average number of task predecessors: 6.992
+Number of edges: 7139
+Edge density: 0.014235265732271721
+Mean task CPU time: 250.6726976920557, standard deviation: 334.0860766351015
+Mean task GPU time: 50.713572854291414, standard deviation: 29.202623323790608
+Mean task acceleration ratio: 4.880348419142559, standard deviation: 5.231536801133417
+Mean task execution time: 225.67780708733517
+Computation-to-communication ratio: 15.591099300034562
+Minimal serial time: 50815
+--------------------------------------------------------
+HEFT makespan: 4101.303863103814
+
+HBMCT makespan: 5732.043716573438
+
+PEFT makespan: 4295.4032980509255
+
+PETS makespan: 4632.003219030248
+
+HCPT makespan: 4662.803217397153
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0155
+Number of tasks: 1002
+Maximum number of task predecessors: 34
+Average number of task predecessors: 10.945
+Number of edges: 11026
+Edge density: 0.021985998033902224
+Mean task CPU time: 256.47685272558186, standard deviation: 334.9991939815895
+Mean task GPU time: 49.54590818363273, standard deviation: 28.378683705307076
+Mean task acceleration ratio: 5.187727123854978, standard deviation: 5.425901151943858
+Mean task execution time: 230.6104846578382
+Computation-to-communication ratio: 11.542145060798122
+Minimal serial time: 49645
+--------------------------------------------------------
+HEFT makespan: 5212.91905066981
+
+HBMCT makespan: 7139.888259765667
+
+PEFT makespan: 5277.552344366687
+
+PETS makespan: 6538.229870023857
+
+HCPT makespan: 5868.5923202620625
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0179
+Number of tasks: 1002
+Maximum number of task predecessors: 18
+Average number of task predecessors: 4.018
+Number of edges: 4283
+Edge density: 0.008540361833775007
+Mean task CPU time: 244.2787760938697, standard deviation: 321.8029796499033
+Mean task GPU time: 48.9750499001996, standard deviation: 28.883660511756265
+Mean task acceleration ratio: 5.018672855158352, standard deviation: 4.832157468686483
+Mean task execution time: 219.86581031966094
+Computation-to-communication ratio: 16.713408889692737
+Minimal serial time: 49073
+--------------------------------------------------------
+HEFT makespan: 3832.083189979122
+
+HBMCT makespan: 4742.464983256792
+
+PEFT makespan: 3805.828630831218
+
+PETS makespan: 4102.503650754437
+
+HCPT makespan: 4485.9375601688225
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0172
+Number of tasks: 1002
+Maximum number of task predecessors: 32
+Average number of task predecessors: 10.017
+Number of edges: 10132
+Edge density: 0.02020334954466691
+Mean task CPU time: 282.2315310325579, standard deviation: 369.609265828868
+Mean task GPU time: 51.6746506986028, standard deviation: 28.01795717534
+Mean task acceleration ratio: 5.229207259150951, standard deviation: 5.4240705339072255
+Mean task execution time: 253.41192099081348
+Computation-to-communication ratio: 18.950388805301777
+Minimal serial time: 51778
+--------------------------------------------------------
+HEFT makespan: 5035.204728977685
+
+HBMCT makespan: 6549.624004190252
+
+PEFT makespan: 5070.011883090582
+
+PETS makespan: 6213.5886280984605
+
+HCPT makespan: 5805.672297133878
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0160
+Number of tasks: 1002
+Maximum number of task predecessors: 12
+Average number of task predecessors: 3.058
+Number of edges: 3368
+Edge density: 0.006715839051168393
+Mean task CPU time: 259.1168091896065, standard deviation: 348.4898766023089
+Mean task GPU time: 50.1746506986028, standard deviation: 28.657946199387883
+Mean task acceleration ratio: 5.130980074309265, standard deviation: 5.14982171813449
+Mean task execution time: 232.99903937823103
+Computation-to-communication ratio: 11.954490361691024
+Minimal serial time: 50275
+--------------------------------------------------------
+HEFT makespan: 4011.1374759685896
+
+HBMCT makespan: 4580.829144524498
+
+PEFT makespan: 4082.4109062359717
+
+PETS makespan: 4214.12816547398
+
+HCPT makespan: 4687.873178304214
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0102
+Number of tasks: 1002
+Maximum number of task predecessors: 48
+Average number of task predecessors: 18.261
+Number of edges: 18322
+Edge density: 0.03653432395947366
+Mean task CPU time: 243.79519919581173, standard deviation: 313.5908965967059
+Mean task GPU time: 50.27445109780439, standard deviation: 28.149329591221765
+Mean task acceleration ratio: 4.847414262217324, standard deviation: 4.793288784213901
+Mean task execution time: 219.60510568356082
+Computation-to-communication ratio: 13.471957597325463
+Minimal serial time: 50375
+--------------------------------------------------------
+HEFT makespan: 5940.418610935531
+
+HBMCT makespan: 7725.621404970381
+
+PEFT makespan: 6107.11723760575
+
+PETS makespan: 6865.284027488779
+
+HCPT makespan: 6967.496812475427
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0070
+Number of tasks: 1002
+Maximum number of task predecessors: 17
+Average number of task predecessors: 4.992
+Number of edges: 5180
+Edge density: 0.010328992364920509
+Mean task CPU time: 239.19616772196903, standard deviation: 309.41676278131956
+Mean task GPU time: 50.40718562874252, standard deviation: 27.589264817988155
+Mean task acceleration ratio: 4.8760842944564615, standard deviation: 4.862991634456595
+Mean task execution time: 215.59754496031573
+Computation-to-communication ratio: 11.97378152856253
+Minimal serial time: 50508
+--------------------------------------------------------
+HEFT makespan: 4062.703378029271
+
+HBMCT makespan: 5360.4442706713435
+
+PEFT makespan: 4141.792787921158
+
+PETS makespan: 4558.422345573667
+
+HCPT makespan: 4628.453906467658
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0029
+Number of tasks: 1002
+Maximum number of task predecessors: 105
+Average number of task predecessors: 42.76
+Number of edges: 42786
+Edge density: 0.08531588172306735
+Mean task CPU time: 239.4704954803608, standard deviation: 310.5273402870188
+Mean task GPU time: 50.37225548902195, standard deviation: 28.78459731553249
+Mean task acceleration ratio: 4.717446971755896, standard deviation: 4.582764045394435
+Mean task execution time: 215.83321548144343
+Computation-to-communication ratio: 14.563775737252511
+Minimal serial time: 50473
+--------------------------------------------------------
+HEFT makespan: 8854.747397517423
+
+HBMCT makespan: 10566.122632593413
+
+PEFT makespan: 8919.155010733919
+
+PETS makespan: 10345.99913027321
+
+HCPT makespan: 9490.197154190633
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0056
+Number of tasks: 1002
+Maximum number of task predecessors: 119
+Average number of task predecessors: 50.774
+Number of edges: 50808
+Edge density: 0.1013118617909037
+Mean task CPU time: 256.616050106617, standard deviation: 332.7689080531914
+Mean task GPU time: 49.213572854291414, standard deviation: 27.737331815743712
+Mean task acceleration ratio: 5.16331660837704, standard deviation: 5.196404193762039
+Mean task execution time: 230.69074045007633
+Computation-to-communication ratio: 18.38129966873742
+Minimal serial time: 49312
+--------------------------------------------------------
+HEFT makespan: 7809.8443859392055
+
+HBMCT makespan: 9444.28700173037
+
+PEFT makespan: 7902.726265035856
+
+PETS makespan: 8458.244439106653
+
+HCPT makespan: 8438.417638471761
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0136
+Number of tasks: 1002
+Maximum number of task predecessors: 78
+Average number of task predecessors: 33.388
+Number of edges: 33424
+Edge density: 0.06664792293534809
+Mean task CPU time: 258.4905547330339, standard deviation: 328.81374132271685
+Mean task GPU time: 50.22355289421158, standard deviation: 28.44197658545414
+Mean task acceleration ratio: 5.053402862733596, standard deviation: 4.975201115151374
+Mean task execution time: 232.4571795031811
+Computation-to-communication ratio: 14.716572113479844
+Minimal serial time: 50324
+--------------------------------------------------------
+HEFT makespan: 7177.8513580017225
+
+HBMCT makespan: 8845.19801140346
+
+PEFT makespan: 7384.696307601277
+
+PETS makespan: 8224.392061863793
+
+HCPT makespan: 8165.7763852632115
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0073
+Number of tasks: 1002
+Maximum number of task predecessors: 25
+Average number of task predecessors: 7.873
+Number of edges: 8013
+Edge density: 0.0159780339421058
+Mean task CPU time: 238.6598977482072, standard deviation: 319.667240922646
+Mean task GPU time: 49.65169660678643, standard deviation: 28.843639351747225
+Mean task acceleration ratio: 4.934564699223628, standard deviation: 4.945547631782984
+Mean task execution time: 215.03387260552958
+Computation-to-communication ratio: 17.743801688892763
+Minimal serial time: 49751
+--------------------------------------------------------
+HEFT makespan: 4304.704468138571
+
+HBMCT makespan: 6009.9210569710485
+
+PEFT makespan: 4387.341849030731
+
+PETS makespan: 5462.05486077983
+
+HCPT makespan: 5114.699763813262
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0035
+Number of tasks: 1002
+Maximum number of task predecessors: 136
+Average number of task predecessors: 60.424
+Number of edges: 60460
+Edge density: 0.12055808462994091
+Mean task CPU time: 269.76796396220806, standard deviation: 376.57606982079517
+Mean task GPU time: 51.025948103792416, standard deviation: 29.492908673531183
+Mean task acceleration ratio: 5.197653609250677, standard deviation: 5.276682456670183
+Mean task execution time: 242.4252119799061
+Computation-to-communication ratio: 16.795851735828588
+Minimal serial time: 51128
+--------------------------------------------------------
+HEFT makespan: 8514.212436528082
+
+HBMCT makespan: 10147.534340228378
+
+PEFT makespan: 8420.370520074961
+
+PETS makespan: 9111.5063116049
+
+HCPT makespan: 9230.257421555287
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0009
+Number of tasks: 1002
+Maximum number of task predecessors: 74
+Average number of task predecessors: 30.625
+Number of edges: 30653
+Edge density: 0.061122510224306634
+Mean task CPU time: 262.74489314360494, standard deviation: 315.9261720812343
+Mean task GPU time: 52.67365269461078, standard deviation: 28.70168481133328
+Mean task acceleration ratio: 5.051865496047723, standard deviation: 4.9745087656543125
+Mean task execution time: 236.48598808748068
+Computation-to-communication ratio: 10.888958560301074
+Minimal serial time: 52779
+--------------------------------------------------------
+HEFT makespan: 8464.10443163975
+
+HBMCT makespan: 9699.518876245422
+
+PEFT makespan: 8514.879222926225
+
+PETS makespan: 10014.690131496578
+
+HCPT makespan: 9280.622021476278
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0100
+Number of tasks: 1002
+Maximum number of task predecessors: 31
+Average number of task predecessors: 9.935
+Number of edges: 10043
+Edge density: 0.020025882301331403
+Mean task CPU time: 236.4538729415498, standard deviation: 306.02324573414313
+Mean task GPU time: 50.209580838323355, standard deviation: 28.860770949929655
+Mean task acceleration ratio: 4.751929980517792, standard deviation: 4.643003030781511
+Mean task execution time: 213.17333642864648
+Computation-to-communication ratio: 17.831140052463326
+Minimal serial time: 50310
+--------------------------------------------------------
+HEFT makespan: 4687.5221957398235
+
+HBMCT makespan: 6532.580941240821
+
+PEFT makespan: 4887.446958089484
+
+PETS makespan: 5843.025318765037
+
+HCPT makespan: 5333.069173722967
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0078
+Number of tasks: 1002
+Maximum number of task predecessors: 56
+Average number of task predecessors: 18.181
+Number of edges: 18233
+Edge density: 0.036356856716138156
+Mean task CPU time: 240.38793773153589, standard deviation: 323.8392266967199
+Mean task GPU time: 50.63073852295409, standard deviation: 29.359825859573554
+Mean task acceleration ratio: 4.714870809733955, standard deviation: 4.792832733082317
+Mean task execution time: 216.66828783046316
+Computation-to-communication ratio: 15.436694928072065
+Minimal serial time: 50732
+--------------------------------------------------------
+HEFT makespan: 6104.901450266281
+
+HBMCT makespan: 7916.012928748268
+
+PEFT makespan: 6296.150914729506
+
+PETS makespan: 7544.196450291897
+
+HCPT makespan: 6858.693394551807
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0005
+Number of tasks: 1002
+Maximum number of task predecessors: 106
+Average number of task predecessors: 43.107
+Number of edges: 43129
+Edge density: 0.08599982851479858
+Mean task CPU time: 246.61171926484224, standard deviation: 313.52240512386663
+Mean task GPU time: 50.33932135728543, standard deviation: 29.398335097849877
+Mean task acceleration ratio: 4.888269852179247, standard deviation: 4.922576604943275
+Mean task execution time: 222.07766952639764
+Computation-to-communication ratio: 12.704625905672767
+Minimal serial time: 50440
+--------------------------------------------------------
+HEFT makespan: 8860.144725998518
+
+HBMCT makespan: 11067.209467635126
+
+PEFT makespan: 8625.948522086715
+
+PETS makespan: 10090.760995677789
+
+HCPT makespan: 9522.81852350192
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0072
+Number of tasks: 1002
+Maximum number of task predecessors: 39
+Average number of task predecessors: 12.99
+Number of edges: 13060
+Edge density: 0.026041822449008076
+Mean task CPU time: 234.85834058762345, standard deviation: 300.27425017744565
+Mean task GPU time: 49.647704590818364, standard deviation: 28.085282152284176
+Mean task acceleration ratio: 4.870442863166145, standard deviation: 5.082607713508873
+Mean task execution time: 211.70701108802282
+Computation-to-communication ratio: 13.664079084340822
+Minimal serial time: 49747
+--------------------------------------------------------
+HEFT makespan: 4943.160960860708
+
+HBMCT makespan: 6373.520739202897
+
+PEFT makespan: 5078.071791809624
+
+PETS makespan: 6443.0486618510095
+
+HCPT makespan: 5539.856014044745
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0156
+Number of tasks: 1002
+Maximum number of task predecessors: 21
+Average number of task predecessors: 5.917
+Number of edges: 6081
+Edge density: 0.012125598951946258
+Mean task CPU time: 267.3061299927518, standard deviation: 368.72200293610894
+Mean task GPU time: 50.65169660678643, standard deviation: 28.00964764849752
+Mean task acceleration ratio: 5.048014076020836, standard deviation: 4.9607540013451095
+Mean task execution time: 240.2243258195061
+Computation-to-communication ratio: 16.86253796192628
+Minimal serial time: 50753
+--------------------------------------------------------
+HEFT makespan: 4296.635679610608
+
+HBMCT makespan: 5645.558456357906
+
+PEFT makespan: 4348.727043971047
+
+PETS makespan: 4925.323057235405
+
+HCPT makespan: 4941.181281447952
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0004
+Number of tasks: 1002
+Maximum number of task predecessors: 163
+Average number of task predecessors: 64.91
+Number of edges: 64922
+Edge density: 0.129455374964357
+Mean task CPU time: 243.17448191093902, standard deviation: 334.8726866401558
+Mean task GPU time: 50.486027944111775, standard deviation: 28.8884962219097
+Mean task acceleration ratio: 4.686206714394086, standard deviation: 4.725917140191344
+Mean task execution time: 219.08842516508562
+Computation-to-communication ratio: 10.163115667732399
+Minimal serial time: 50587
+--------------------------------------------------------
+HEFT makespan: 11497.11605309865
+
+HBMCT makespan: 13224.240913748892
+
+PEFT makespan: 11270.44088609946
+
+PETS makespan: 12560.391290986865
+
+HCPT makespan: 11925.5899173793
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0034
+Number of tasks: 1002
+Maximum number of task predecessors: 189
+Average number of task predecessors: 82.378
+Number of edges: 82403
+Edge density: 0.16431273317500864
+Mean task CPU time: 254.77365828925974, standard deviation: 336.25595577810543
+Mean task GPU time: 50.11077844311377, standard deviation: 28.558143645130414
+Mean task acceleration ratio: 5.11638606142553, standard deviation: 5.271737631034276
+Mean task execution time: 229.19079830849148
+Computation-to-communication ratio: 10.492681497724435
+Minimal serial time: 50211
+--------------------------------------------------------
+HEFT makespan: 9089.295499858083
+
+HBMCT makespan: 10505.325170367381
+
+PEFT makespan: 8999.16385144475
+
+PETS makespan: 9521.389067033813
+
+HCPT makespan: 9799.260406851352
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0146
+Number of tasks: 1002
+Maximum number of task predecessors: 107
+Average number of task predecessors: 38.93
+Number of edges: 38966
+Edge density: 0.07769874835743099
+Mean task CPU time: 263.054933050083, standard deviation: 341.90019484186263
+Mean task GPU time: 49.958083832335326, standard deviation: 28.577384514849133
+Mean task acceleration ratio: 5.133115637289982, standard deviation: 5.14263558071342
+Mean task execution time: 236.41782689786453
+Computation-to-communication ratio: 16.836826587720477
+Minimal serial time: 50058
+--------------------------------------------------------
+HEFT makespan: 7657.207709278928
+
+HBMCT makespan: 9318.74306191741
+
+PEFT makespan: 7842.904959856643
+
+PETS makespan: 8514.297381861123
+
+HCPT makespan: 8356.434191571003
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0095
+Number of tasks: 1002
+Maximum number of task predecessors: 50
+Average number of task predecessors: 18.796
+Number of edges: 18857
+Edge density: 0.037601121433456765
+Mean task CPU time: 242.04649498112002, standard deviation: 300.0868936653035
+Mean task GPU time: 48.4750499001996, standard deviation: 27.899911578986668
+Mean task acceleration ratio: 4.893531504965498, standard deviation: 4.764619031030767
+Mean task execution time: 217.85006434600496
+Computation-to-communication ratio: 15.502469671948099
+Minimal serial time: 48572
+--------------------------------------------------------
+HEFT makespan: 5572.389293115326
+
+HBMCT makespan: 7168.033973443909
+
+PEFT makespan: 5903.844684271001
+
+PETS makespan: 6536.095898127061
+
+HCPT makespan: 6552.616200909902
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0046
+Number of tasks: 1002
+Maximum number of task predecessors: 109
+Average number of task predecessors: 45.057
+Number of edges: 45087
+Edge density: 0.08990410786817972
+Mean task CPU time: 242.08636974255563, standard deviation: 316.6563084566906
+Mean task GPU time: 49.936127744510976, standard deviation: 28.649961110486416
+Mean task acceleration ratio: 4.860277116425224, standard deviation: 4.807274534331765
+Mean task execution time: 218.06758949280004
+Computation-to-communication ratio: 17.956154705544908
+Minimal serial time: 50036
+--------------------------------------------------------
+HEFT makespan: 7697.338399449389
+
+HBMCT makespan: 9305.29310732294
+
+PEFT makespan: 7663.872453971537
+
+PETS makespan: 8415.513367496791
+
+HCPT makespan: 8343.031388875299
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0047
+Number of tasks: 1002
+Maximum number of task predecessors: 221
+Average number of task predecessors: 96.978
+Number of edges: 97000
+Edge density: 0.1934193550960018
+Mean task CPU time: 246.66849446500908, standard deviation: 307.1669746962814
+Mean task GPU time: 50.89121756487026, standard deviation: 29.084417409370364
+Mean task acceleration ratio: 4.874524683114958, standard deviation: 4.696386028914115
+Mean task execution time: 222.1963348524917
+Computation-to-communication ratio: 13.926724033817862
+Minimal serial time: 50993
+--------------------------------------------------------
+HEFT makespan: 8954.181675887434
+
+HBMCT makespan: 10830.918886744292
+
+PEFT makespan: 9389.027904666526
+
+PETS makespan: 9318.3035935818
+
+HCPT makespan: 9876.430602014323
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0108
+Number of tasks: 1002
+Maximum number of task predecessors: 15
+Average number of task predecessors: 3.971
+Number of edges: 4234
+Edge density: 0.008442655149241975
+Mean task CPU time: 241.68494115703348, standard deviation: 305.63203934978134
+Mean task GPU time: 48.983033932135726, standard deviation: 28.47428912711005
+Mean task acceleration ratio: 4.942885192168213, standard deviation: 4.753487158907776
+Mean task execution time: 217.59720275392124
+Computation-to-communication ratio: 17.25816579774539
+Minimal serial time: 49081
+--------------------------------------------------------
+HEFT makespan: 3858.5565848474344
+
+HBMCT makespan: 4620.079902645905
+
+PEFT makespan: 3871.095829203757
+
+PETS makespan: 4056.1493192535654
+
+HCPT makespan: 4598.463565210523
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0042
+Number of tasks: 1002
+Maximum number of task predecessors: 133
+Average number of task predecessors: 56.831
+Number of edges: 56861
+Edge density: 0.11338162835168823
+Mean task CPU time: 254.4540985835269, standard deviation: 318.2383309493485
+Mean task GPU time: 51.11177644710579, standard deviation: 28.556374908976803
+Mean task acceleration ratio: 4.985467874422993, standard deviation: 4.797780947224389
+Mean task execution time: 229.03630831647425
+Computation-to-communication ratio: 14.331301439911716
+Minimal serial time: 51214
+--------------------------------------------------------
+HEFT makespan: 8324.226368119162
+
+HBMCT makespan: 9922.175191048715
+
+PEFT makespan: 8512.33434268934
+
+PETS makespan: 9079.263281698546
+
+HCPT makespan: 9210.94560046909
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0083
+Number of tasks: 1002
+Maximum number of task predecessors: 32
+Average number of task predecessors: 9.011
+Number of edges: 9110
+Edge density: 0.018165467267263674
+Mean task CPU time: 237.67549123817318, standard deviation: 300.69676290846945
+Mean task GPU time: 48.8562874251497, standard deviation: 28.773381629700822
+Mean task acceleration ratio: 4.879505144099302, standard deviation: 4.719573284826322
+Mean task execution time: 214.07309076154525
+Computation-to-communication ratio: 17.326643819856873
+Minimal serial time: 48954
+--------------------------------------------------------
+HEFT makespan: 4545.592309723042
+
+HBMCT makespan: 6086.716410574316
+
+PEFT makespan: 4816.056985081213
+
+PETS makespan: 5801.743161394671
+
+HCPT makespan: 5261.366690532556
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0019
+Number of tasks: 1002
+Maximum number of task predecessors: 91
+Average number of task predecessors: 36.681
+Number of edges: 36712
+Edge density: 0.07320424086891153
+Mean task CPU time: 238.7134078093919, standard deviation: 288.25612810687267
+Mean task GPU time: 50.08083832335329, standard deviation: 28.31083617990464
+Mean task acceleration ratio: 4.774137479402131, standard deviation: 4.734117608159465
+Mean task execution time: 215.13433662363707
+Computation-to-communication ratio: 13.1636871863398
+Minimal serial time: 50181
+--------------------------------------------------------
+HEFT makespan: 8346.190496860985
+
+HBMCT makespan: 9941.723532957933
+
+PEFT makespan: 8282.91266083415
+
+PETS makespan: 9771.696216821974
+
+HCPT makespan: 9025.329575444339
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0044
+Number of tasks: 1002
+Maximum number of task predecessors: 203
+Average number of task predecessors: 87.713
+Number of edges: 87734
+Edge density: 0.17494282164940847
+Mean task CPU time: 256.1084428343958, standard deviation: 317.87912104043477
+Mean task GPU time: 49.41516966067864, standard deviation: 28.906541010552754
+Mean task acceleration ratio: 5.224052571235401, standard deviation: 5.159101261454703
+Mean task execution time: 230.27178368768116
+Computation-to-communication ratio: 19.149186176828444
+Minimal serial time: 49514
+--------------------------------------------------------
+HEFT makespan: 8940.325295027069
+
+HBMCT makespan: 10786.307963992991
+
+PEFT makespan: 8963.974705180337
+
+PETS makespan: 9117.764676341558
+
+HCPT makespan: 9943.31032687441
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0174
+Number of tasks: 1002
+Maximum number of task predecessors: 46
+Average number of task predecessors: 17.008
+Number of edges: 17069
+Edge density: 0.03403582445498613
+Mean task CPU time: 254.09595381432337, standard deviation: 309.08311434454896
+Mean task GPU time: 51.4560878243513, standard deviation: 28.54220127035678
+Mean task acceleration ratio: 4.99504087755418, standard deviation: 4.827832879600571
+Mean task execution time: 228.76597056557685
+Computation-to-communication ratio: 18.629908951030032
+Minimal serial time: 51559
+--------------------------------------------------------
+HEFT makespan: 5733.806626856023
+
+HBMCT makespan: 7556.983581203733
+
+PEFT makespan: 5994.008559264046
+
+PETS makespan: 7046.357787795987
+
+HCPT makespan: 6507.454867981805
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0119
+Number of tasks: 1002
+Maximum number of task predecessors: 52
+Average number of task predecessors: 19.183
+Number of edges: 19247
+Edge density: 0.038378786881780896
+Mean task CPU time: 252.80573873755512, standard deviation: 328.28065294644045
+Mean task GPU time: 48.89620758483034, standard deviation: 28.60550045491723
+Mean task acceleration ratio: 5.154105041871253, standard deviation: 5.307392873990956
+Mean task execution time: 227.3170473434645
+Computation-to-communication ratio: 18.529164599427045
+Minimal serial time: 48994
+--------------------------------------------------------
+HEFT makespan: 5886.230495160782
+
+HBMCT makespan: 7460.793466990624
+
+PEFT makespan: 5930.342914007775
+
+PETS makespan: 7208.779208362916
+
+HCPT makespan: 6715.034062882865
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0167
+Number of tasks: 1002
+Maximum number of task predecessors: 10
+Average number of task predecessors: 2.073
+Number of edges: 2549
+Edge density: 0.005082741609687718
+Mean task CPU time: 243.09109559833468, standard deviation: 299.0802181429136
+Mean task GPU time: 49.41516966067864, standard deviation: 29.186496642260106
+Mean task acceleration ratio: 5.092996832846932, standard deviation: 4.94244388858255
+Mean task execution time: 218.88160485612767
+Computation-to-communication ratio: 12.41790895787915
+Minimal serial time: 49514
+--------------------------------------------------------
+HEFT makespan: 3804.4305043342906
+
+HBMCT makespan: 4056.0437614598723
+
+PEFT makespan: 3816.5387385356476
+
+PETS makespan: 4198.027621546121
+
+HCPT makespan: 4477.62679571887
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0165
+Number of tasks: 1002
+Maximum number of task predecessors: 35
+Average number of task predecessors: 12.771
+Number of edges: 12847
+Edge density: 0.0256170974733849
+Mean task CPU time: 263.12900202558285, standard deviation: 322.38930146215364
+Mean task GPU time: 51.27445109780439, standard deviation: 28.031980701762336
+Mean task acceleration ratio: 5.135518868611711, standard deviation: 5.181368879896952
+Mean task execution time: 236.64718315961053
+Computation-to-communication ratio: 19.737586526235606
+Minimal serial time: 51377
+--------------------------------------------------------
+HEFT makespan: 5115.047420582963
+
+HBMCT makespan: 6592.7426793551385
+
+PEFT makespan: 5324.772085283321
+
+PETS makespan: 6256.266198958813
+
+HCPT makespan: 5837.679236701739
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0086
+Number of tasks: 1002
+Maximum number of task predecessors: 37
+Average number of task predecessors: 12.038
+Number of edges: 12125
+Edge density: 0.024177419387000226
+Mean task CPU time: 253.3079446585931, standard deviation: 317.9194803694363
+Mean task GPU time: 50.3063872255489, standard deviation: 28.24332784899444
+Mean task acceleration ratio: 5.035692243071209, standard deviation: 5.1388363845513245
+Mean task execution time: 227.93274997946259
+Computation-to-communication ratio: 16.891934601425312
+Minimal serial time: 50407
+--------------------------------------------------------
+HEFT makespan: 5286.627545242362
+
+HBMCT makespan: 6764.577912889499
+
+PEFT makespan: 5527.165408868308
+
+PETS makespan: 6786.973776435577
+
+HCPT makespan: 6161.788019168042
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0021
+Number of tasks: 1002
+Maximum number of task predecessors: 151
+Average number of task predecessors: 67.811
+Number of edges: 67833
+Edge density: 0.1352599496312071
+Mean task CPU time: 246.56736144697183, standard deviation: 319.9769325147526
+Mean task GPU time: 49.58083832335329, standard deviation: 28.371465805486764
+Mean task acceleration ratio: 4.879308736256138, standard deviation: 4.924225156924342
+Mean task execution time: 221.9440460565195
+Computation-to-communication ratio: 18.358968128659736
+Minimal serial time: 49680
+--------------------------------------------------------
+HEFT makespan: 11675.897445023826
+
+HBMCT makespan: 12944.497846057522
+
+PEFT makespan: 11624.108257410804
+
+PETS makespan: 12449.658340719667
+
+HCPT makespan: 11950.970396370732
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0028
+Number of tasks: 1002
+Maximum number of task predecessors: 149
+Average number of task predecessors: 64.42
+Number of edges: 64440
+Edge density: 0.12849426023078717
+Mean task CPU time: 249.27891320202787, standard deviation: 337.92500909899974
+Mean task GPU time: 49.85928143712575, standard deviation: 27.808461618856587
+Mean task acceleration ratio: 4.932206381597522, standard deviation: 5.1783841937162
+Mean task execution time: 224.35145923141508
+Computation-to-communication ratio: 15.238939096088776
+Minimal serial time: 49959
+--------------------------------------------------------
+HEFT makespan: 11641.131367613682
+
+HBMCT makespan: 12802.175286577816
+
+PEFT makespan: 11256.938857319932
+
+PETS makespan: 12447.696915934283
+
+HCPT makespan: 11888.854512370302
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0166
+Number of tasks: 1002
+Maximum number of task predecessors: 23
+Average number of task predecessors: 6.978
+Number of edges: 7149
+Edge density: 0.01425520587197234
+Mean task CPU time: 259.69247951619667, standard deviation: 328.2326834187855
+Mean task GPU time: 49.74550898203593, standard deviation: 28.114431565761514
+Mean task acceleration ratio: 5.060146761643556, standard deviation: 4.788456849712343
+Mean task execution time: 233.44910819942658
+Computation-to-communication ratio: 18.26972092342499
+Minimal serial time: 49845
+--------------------------------------------------------
+HEFT makespan: 4258.430641388035
+
+HBMCT makespan: 5501.322419580158
+
+PEFT makespan: 4458.685279408717
+
+PETS makespan: 5160.6389699234305
+
+HCPT makespan: 5062.001067147155
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0112
+Number of tasks: 1002
+Maximum number of task predecessors: 56
+Average number of task predecessors: 18.984
+Number of edges: 19049
+Edge density: 0.03798397211570864
+Mean task CPU time: 258.81018761518357, standard deviation: 322.51439216162953
+Mean task GPU time: 51.67065868263473, standard deviation: 28.628031524841084
+Mean task acceleration ratio: 4.919971752382734, standard deviation: 4.816686599284934
+Mean task execution time: 232.91774649861495
+Computation-to-communication ratio: 10.155914588191228
+Minimal serial time: 51774
+--------------------------------------------------------
+HEFT makespan: 6070.3252802167935
+
+HBMCT makespan: 7494.244183197292
+
+PEFT makespan: 6170.669052805806
+
+PETS makespan: 7282.319296418382
+
+HCPT makespan: 6824.550103897711
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0117
+Number of tasks: 1002
+Maximum number of task predecessors: 32
+Average number of task predecessors: 11.051
+Number of edges: 11147
+Edge density: 0.02222727372427971
+Mean task CPU time: 251.83930718206602, standard deviation: 314.5888202659374
+Mean task GPU time: 50.812375249500995, standard deviation: 28.39936054189476
+Mean task acceleration ratio: 4.974346917332769, standard deviation: 4.960355497859783
+Mean task execution time: 226.7109406904954
+Computation-to-communication ratio: 15.239097504234573
+Minimal serial time: 50914
+--------------------------------------------------------
+HEFT makespan: 4828.423147730905
+
+HBMCT makespan: 6118.330780156905
+
+PEFT makespan: 4962.842183031053
+
+PETS makespan: 5847.485301151829
+
+HCPT makespan: 5830.274209960178
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0010
+Number of tasks: 1002
+Maximum number of task predecessors: 199
+Average number of task predecessors: 83.442
+Number of edges: 83452
+Edge density: 0.16640445382960353
+Mean task CPU time: 256.5431482791775, standard deviation: 352.6141606678499
+Mean task GPU time: 49.446107784431135, standard deviation: 28.318258109136725
+Mean task acceleration ratio: 5.113745349106243, standard deviation: 5.330456420741807
+Mean task execution time: 230.6560182173342
+Computation-to-communication ratio: 15.305592105307053
+Minimal serial time: 49545
+--------------------------------------------------------
+HEFT makespan: 12744.598603818371
+
+HBMCT makespan: 14179.37451690489
+
+PEFT makespan: 12656.74672037908
+
+PETS makespan: 13403.655841406093
+
+HCPT makespan: 13087.494343775537
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0087
+Number of tasks: 1002
+Maximum number of task predecessors: 21
+Average number of task predecessors: 6.073
+Number of edges: 6227
+Edge density: 0.012416724991575291
+Mean task CPU time: 238.67652654113613, standard deviation: 296.5617518255213
+Mean task GPU time: 47.63373253493014, standard deviation: 28.167388524457568
+Mean task acceleration ratio: 5.019129469457289, standard deviation: 4.892238943732583
+Mean task execution time: 214.7961772903604
+Computation-to-communication ratio: 18.0071108432764
+Minimal serial time: 47729
+--------------------------------------------------------
+HEFT makespan: 3944.3028542617844
+
+HBMCT makespan: 5281.414690121171
+
+PEFT makespan: 4065.1598847290347
+
+PETS makespan: 4822.03497402411
+
+HCPT makespan: 4858.7775607443355
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0049
+Number of tasks: 1002
+Maximum number of task predecessors: 128
+Average number of task predecessors: 54.192
+Number of edges: 54224
+Edge density: 0.10812341351263507
+Mean task CPU time: 254.68109117278416, standard deviation: 329.40856146379514
+Mean task GPU time: 50.166666666666664, standard deviation: 28.32779974142514
+Mean task acceleration ratio: 5.030407783351853, standard deviation: 5.017922855380405
+Mean task execution time: 229.1167881095195
+Computation-to-communication ratio: 19.867479815825593
+Minimal serial time: 50267
+--------------------------------------------------------
+HEFT makespan: 8203.909951894153
+
+HBMCT makespan: 9910.896768688392
+
+PEFT makespan: 8279.56383141555
+
+PETS makespan: 8870.69975837351
+
+HCPT makespan: 9104.812726809017
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0051
+Number of tasks: 1002
+Maximum number of task predecessors: 201
+Average number of task predecessors: 85.26
+Number of edges: 85291
+Edge density: 0.17007144552054732
+Mean task CPU time: 255.86082039505987, standard deviation: 318.3239583137275
+Mean task GPU time: 50.22754491017964, standard deviation: 28.046940261718216
+Mean task acceleration ratio: 5.067299387937059, standard deviation: 4.783877335849221
+Mean task execution time: 230.15666095944985
+Computation-to-communication ratio: 13.272785741328558
+Minimal serial time: 50328
+--------------------------------------------------------
+HEFT makespan: 9205.58870600134
+
+HBMCT makespan: 10685.186078223882
+
+PEFT makespan: 9111.7174180685
+
+PETS makespan: 9553.409654238858
+
+HCPT makespan: 9966.356189486374
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0011
+Number of tasks: 1002
+Maximum number of task predecessors: 141
+Average number of task predecessors: 61.861
+Number of edges: 61875
+Edge density: 0.12337961439757847
+Mean task CPU time: 267.3412164928764, standard deviation: 344.88535631624086
+Mean task GPU time: 50.467065868263475, standard deviation: 28.500926433337842
+Mean task acceleration ratio: 5.263485656128909, standard deviation: 5.365479939857692
+Mean task execution time: 240.2319476647998
+Computation-to-communication ratio: 16.80628492503599
+Minimal serial time: 50568
+--------------------------------------------------------
+HEFT makespan: 11376.828682321197
+
+HBMCT makespan: 12435.717429256185
+
+PEFT makespan: 11344.65931808045
+
+PETS makespan: 12288.917575772015
+
+HCPT makespan: 11695.45245451939
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0079
+Number of tasks: 1002
+Maximum number of task predecessors: 38
+Average number of task predecessors: 12.868
+Number of edges: 12954
+Edge density: 0.02583045696818152
+Mean task CPU time: 257.48615276989966, standard deviation: 329.726618435075
+Mean task GPU time: 49.42814371257485, standard deviation: 29.35955312377982
+Mean task acceleration ratio: 5.073432777625474, standard deviation: 4.834196453490982
+Mean task execution time: 231.47890163773405
+Computation-to-communication ratio: 18.384501006660912
+Minimal serial time: 49527
+--------------------------------------------------------
+HEFT makespan: 5358.427429906941
+
+HBMCT makespan: 6653.601263832404
+
+PEFT makespan: 5538.940481781374
+
+PETS makespan: 6282.250481560916
+
+HCPT makespan: 6101.668761071868
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0084
+Number of tasks: 1002
+Maximum number of task predecessors: 20
+Average number of task predecessors: 3.987
+Number of edges: 4227
+Edge density: 0.008428697051451543
+Mean task CPU time: 257.6332055410713, standard deviation: 324.8797886023285
+Mean task GPU time: 50.56287425149701, standard deviation: 28.161434731027747
+Mean task acceleration ratio: 5.078850203510958, standard deviation: 5.080983156605225
+Mean task execution time: 231.7494141298745
+Computation-to-communication ratio: 14.811584912108863
+Minimal serial time: 50664
+--------------------------------------------------------
+HEFT makespan: 4133.122076665663
+
+HBMCT makespan: 4872.295262816783
+
+PEFT makespan: 4145.181574743006
+
+PETS makespan: 4451.778929796395
+
+HCPT makespan: 4732.868133125852
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0115
+Number of tasks: 1002
+Maximum number of task predecessors: 14
+Average number of task predecessors: 3.029
+Number of edges: 3343
+Edge density: 0.006665988701916845
+Mean task CPU time: 237.93296589135574, standard deviation: 296.7158550745654
+Mean task GPU time: 49.53193612774451, standard deviation: 28.6545164923976
+Mean task acceleration ratio: 4.900115667850111, standard deviation: 4.829201882719258
+Mean task execution time: 214.38283717090434
+Computation-to-communication ratio: 11.889876228585694
+Minimal serial time: 49631
+--------------------------------------------------------
+HEFT makespan: 3966.0254643686735
+
+HBMCT makespan: 4422.972102993006
+
+PEFT makespan: 3988.973243874396
+
+PETS makespan: 4151.162113099511
+
+HCPT makespan: 4504.101784599407
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0006
+Number of tasks: 1002
+Maximum number of task predecessors: 211
+Average number of task predecessors: 96.179
+Number of edges: 96192
+Edge density: 0.1918081918081918
+Mean task CPU time: 244.65734753315792, standard deviation: 308.38450067979875
+Mean task GPU time: 50.29540918163673, standard deviation: 28.187647506281166
+Mean task acceleration ratio: 4.851941977674576, standard deviation: 4.864948429072966
+Mean task execution time: 220.36210523921778
+Computation-to-communication ratio: 18.630926349535144
+Minimal serial time: 50396
+--------------------------------------------------------
+HEFT makespan: 15678.446329231769
+
+HBMCT makespan: 16382.18534230916
+
+PEFT makespan: 15578.777615756617
+
+PETS makespan: 16115.63957072926
+
+HCPT makespan: 15667.991686286567
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0069
+Number of tasks: 1002
+Maximum number of task predecessors: 35
+Average number of task predecessors: 10.965
+Number of edges: 11060
+Edge density: 0.02205379450888433
+Mean task CPU time: 251.0822398343111, standard deviation: 334.91794048572206
+Mean task GPU time: 49.49900199600798, standard deviation: 27.89920729101567
+Mean task acceleration ratio: 4.922460467159521, standard deviation: 4.943892771312852
+Mean task execution time: 225.88433510452322
+Computation-to-communication ratio: 11.410534128198172
+Minimal serial time: 49598
+--------------------------------------------------------
+HEFT makespan: 5129.3684025814255
+
+HBMCT makespan: 6824.192789246017
+
+PEFT makespan: 5328.272357530225
+
+PETS makespan: 6543.252652793074
+
+HCPT makespan: 6010.658220865419
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0032
+Number of tasks: 1002
+Maximum number of task predecessors: 122
+Average number of task predecessors: 50.847
+Number of edges: 50883
+Edge density: 0.10146141283865835
+Mean task CPU time: 228.64254738965505, standard deviation: 293.9058426576502
+Mean task GPU time: 48.56487025948104, standard deviation: 28.685337478590217
+Mean task acceleration ratio: 4.836541235113108, standard deviation: 4.996523461670914
+Mean task execution time: 206.1328377483833
+Computation-to-communication ratio: 18.459691192499818
+Minimal serial time: 48662
+--------------------------------------------------------
+HEFT makespan: 7415.07367396503
+
+HBMCT makespan: 9085.626204157466
+
+PEFT makespan: 7514.077747037808
+
+PETS makespan: 8150.283696108756
+
+HCPT makespan: 8270.978517017144
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0022
+Number of tasks: 1002
+Maximum number of task predecessors: 118
+Average number of task predecessors: 45.858
+Number of edges: 45877
+Edge density: 0.0914793789045286
+Mean task CPU time: 230.61379177153682, standard deviation: 306.07407248389296
+Mean task GPU time: 49.9251497005988, standard deviation: 28.62869507790771
+Mean task acceleration ratio: 4.608447760825166, standard deviation: 4.713390736544645
+Mean task execution time: 208.02771151266955
+Computation-to-communication ratio: 16.150683499889425
+Minimal serial time: 50025
+--------------------------------------------------------
+HEFT makespan: 8866.531952283989
+
+HBMCT makespan: 10673.824716996909
+
+PEFT makespan: 8962.106649390715
+
+PETS makespan: 10041.41713068993
+
+HCPT makespan: 9664.747199275562
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0148
+Number of tasks: 1002
+Maximum number of task predecessors: 169
+Average number of task predecessors: 70.05
+Number of edges: 70075
+Edge density: 0.13973052895208585
+Mean task CPU time: 268.64588208866445, standard deviation: 365.1465461546024
+Mean task GPU time: 51.68363273453094, standard deviation: 29.05443840096132
+Mean task acceleration ratio: 5.247206087196284, standard deviation: 5.437862280619382
+Mean task execution time: 241.52560091939776
+Computation-to-communication ratio: 10.213169793731646
+Minimal serial time: 51787
+--------------------------------------------------------
+HEFT makespan: 8970.168811259933
+
+HBMCT makespan: 10689.283624054186
+
+PEFT makespan: 9063.135419959106
+
+PETS makespan: 9399.133539854476
+
+HCPT makespan: 9510.412552667769
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0126
+Number of tasks: 1002
+Maximum number of task predecessors: 76
+Average number of task predecessors: 27.827
+Number of edges: 27867
+Edge density: 0.05556718730371425
+Mean task CPU time: 245.96313639883041, standard deviation: 332.0556157923463
+Mean task GPU time: 50.13373253493014, standard deviation: 28.80282753640925
+Mean task acceleration ratio: 4.778905965273095, standard deviation: 4.870192192031826
+Mean task execution time: 221.4844609158429
+Computation-to-communication ratio: 19.56728881187138
+Minimal serial time: 50234
+--------------------------------------------------------
+HEFT makespan: 7337.101585445094
+
+HBMCT makespan: 9144.837860355323
+
+PEFT makespan: 7431.165276159978
+
+PETS makespan: 8529.413642941181
+
+HCPT makespan: 7974.199661716596
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0135
+Number of tasks: 1002
+Maximum number of task predecessors: 125
+Average number of task predecessors: 55.153
+Number of edges: 55185
+Edge density: 0.11003966093786453
+Mean task CPU time: 240.8674474852247, standard deviation: 318.19988884780855
+Mean task GPU time: 49.83233532934132, standard deviation: 28.657482961278674
+Mean task acceleration ratio: 4.879104693340639, standard deviation: 5.0684040994442725
+Mean task execution time: 216.98805846573927
+Computation-to-communication ratio: 18.67122264286203
+Minimal serial time: 49932
+--------------------------------------------------------
+HEFT makespan: 7614.206035852051
+
+HBMCT makespan: 9348.502128606095
+
+PEFT makespan: 7844.712989513824
+
+PETS makespan: 8412.306279595707
+
+HCPT makespan: 8488.303131624987
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0140
+Number of tasks: 1002
+Maximum number of task predecessors: 210
+Average number of task predecessors: 94.882
+Number of edges: 94903
+Edge density: 0.18923790780078206
+Mean task CPU time: 248.618817906987, standard deviation: 307.65093763242055
+Mean task GPU time: 49.99301397205589, standard deviation: 28.07668695549762
+Mean task acceleration ratio: 5.148489536007051, standard deviation: 5.113387071206401
+Mean task execution time: 223.7905924151206
+Computation-to-communication ratio: 14.795729638679056
+Minimal serial time: 50093
+--------------------------------------------------------
+HEFT makespan: 8664.640824654323
+
+HBMCT makespan: 10327.03737464802
+
+PEFT makespan: 8741.142758048032
+
+PETS makespan: 9058.023579629791
+
+HCPT makespan: 9529.445600212357
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0008
+Number of tasks: 1002
+Maximum number of task predecessors: 123
+Average number of task predecessors: 52.277
+Number of edges: 52291
+Edge density: 0.10426898450850547
+Mean task CPU time: 266.32860964514185, standard deviation: 338.16846359135604
+Mean task GPU time: 50.02794411177645, standard deviation: 28.475910216173794
+Mean task acceleration ratio: 5.237731061626145, standard deviation: 5.287787514898791
+Mean task execution time: 239.29102645347118
+Computation-to-communication ratio: 19.08839486612635
+Minimal serial time: 50128
+--------------------------------------------------------
+HEFT makespan: 10310.255666325966
+
+HBMCT makespan: 11976.180922387677
+
+PEFT makespan: 10343.263834769943
+
+PETS makespan: 11569.864221934973
+
+HCPT makespan: 11007.378820218571
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: rand0007
+Number of tasks: 1002
+Maximum number of task predecessors: 175
+Average number of task predecessors: 74.306
+Number of edges: 74319
+Edge density: 0.14819312424102843
+Mean task CPU time: 268.0024400239035, standard deviation: 356.25680155568165
+Mean task GPU time: 51.10578842315369, standard deviation: 29.25755931162746
+Mean task acceleration ratio: 5.252497444639575, standard deviation: 5.29633399669486
+Mean task execution time: 240.89035857380975
+Computation-to-communication ratio: 13.549672626295255
+Minimal serial time: 51208
+--------------------------------------------------------
+HEFT makespan: 12540.278964343177
+
+HBMCT makespan: 13579.149883020873
+
+PEFT makespan: 12315.179739632547
+
+PETS makespan: 13290.84592966046
+
+HCPT makespan: 13093.998939281682
+
+--------------------------------------------------------
+
+--------------------------------------------------------
 SUMMARY
 --------------------------------------------------------
 Heuristic: HEFT.
-Mean makespan: 8613.835816641786.
+Mean makespan: 7252.767781377745.
+Number of best occurences: 126.
 
 Heuristic: HBMCT.
-Mean makespan: 10153.646422032674.
+Mean makespan: 8681.371124489295.
+Number of best occurences: 0.
 
 Heuristic: PEFT.
-Mean makespan: 8796.100114398207.
+Mean makespan: 7320.475135526393.
+Number of best occurences: 54.
 
 Heuristic: PETS.
-Mean makespan: 9235.535370772679.
+Mean makespan: 8101.3187799805155.
+Number of best occurences: 0.
 
 Heuristic: HCPT.
-Mean makespan: 9651.47243860943.
+Mean makespan: 7942.052868694514.
+Number of best occurences: 0.
 

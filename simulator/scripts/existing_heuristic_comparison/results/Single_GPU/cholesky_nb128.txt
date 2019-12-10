@@ -55,3 +55,195 @@ HCPT makespan: 2874.3938960000005
 
 --------------------------------------------------------
 
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 680
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.4705882352941178
+Number of edges: 1680
+Edge density: 0.0072771376591873865
+--------------------------------------------------------
+Minimal serial time: 14398.955519999921
+
+HEFT makespan: 6016.193976000006
+
+HBMCT makespan: 7599.724488000006
+
+PEFT makespan: 6569.214824000005
+
+PETS makespan: 7323.094407999988
+
+HCPT makespan: 6552.039696000005
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 1540
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.590909090909091
+Number of edges: 3990
+Edge density: 0.003367003367003367
+--------------------------------------------------------
+Minimal serial time: 29033.25695999953
+
+HEFT makespan: 10986.12471200005
+
+HBMCT makespan: 14193.95532799997
+
+PEFT makespan: 12343.99183199998
+
+PETS makespan: 13635.910175999963
+
+HCPT makespan: 13166.155719999984
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 2925
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.6666666666666665
+Number of edges: 7800
+Edge density: 0.001823985408116735
+--------------------------------------------------------
+Minimal serial time: 50942.64319999917
+
+HEFT makespan: 19464.127431999575
+
+HBMCT makespan: 24556.109903999906
+
+PEFT makespan: 20473.29055999994
+
+PETS makespan: 23273.152631999776
+
+HCPT makespan: 23037.283351999904
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 4960
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.71875
+Number of edges: 13485
+Edge density: 0.0010964912280701754
+--------------------------------------------------------
+Minimal serial time: 81541.77024000113
+
+HEFT makespan: 31487.736727998952
+
+HBMCT makespan: 39450.05617599989
+
+PEFT makespan: 32503.587551999855
+
+PETS makespan: 36805.182879999615
+
+HCPT makespan: 37381.200999999804
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 7770
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7567567567567566
+Number of edges: 21420
+Edge density: 0.0007096812348453487
+--------------------------------------------------------
+Minimal serial time: 122245.2940800123
+
+HEFT makespan: 48094.233815998086
+
+HBMCT makespan: 59236.71490399988
+
+PEFT makespan: 49300.077895998176
+
+PETS makespan: 55203.583455998974
+
+HCPT makespan: 56186.07107199971
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 11480
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7857142857142856
+Number of edges: 31980
+Edge density: 0.0004853583562530335
+--------------------------------------------------------
+Minimal serial time: 174467.87072003438
+
+HEFT makespan: 70124.81245599841
+
+HBMCT makespan: 83800.45648000082
+
+PEFT makespan: 71311.7681119981
+
+PETS makespan: 79148.73896000057
+
+HCPT makespan: 82403.84339200087
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 16215
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.8085106382978724
+Number of edges: 45540
+Edge density: 0.0003464303242010451
+--------------------------------------------------------
+Minimal serial time: 239624.1561600624
+
+HEFT makespan: 98062.6341040146
+
+HBMCT makespan: 115228.06990400293
+
+PEFT makespan: 98778.07112001057
+
+PETS makespan: 109232.92103200834
+
+HCPT makespan: 113613.82347200316
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 22100
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.826923076923077
+Number of edges: 62475
+Edge density: 0.0002558417192563534
+--------------------------------------------------------
+Minimal serial time: 319128.8064001091
+
+HEFT makespan: 132907.52213603508
+
+HBMCT makespan: 153711.98673600185
+
+PEFT makespan: 134360.6744240026
+
+PETS makespan: 146367.6501680227
+
+HCPT makespan: 153281.15452000313
+
+--------------------------------------------------------
+
