@@ -299,9 +299,7 @@ class DAG:
                         print("Task type: {}".format(task.type)) 
                     print("CPU time: {}".format(task.CPU_time))
                     print("GPU time: {}".format(task.GPU_time))
-                    print("Acceleration ratio: {}".format(task.acceleration_ratio)) 
-                    for child, time in task.comm_costs.items():
-                        print("Child task ID: {}, comm cost (when nonzero): {}".format(child, time))               
+                    print("Acceleration ratio: {}".format(task.acceleration_ratio))               
         print("--------------------------------------------------------") 
         
         # If filepath, also print to file.
@@ -333,9 +331,7 @@ class DAG:
                         if task.type:
                             print("Task type: {}".format(task.type), file=filepath)
                         print("CPU time: {}".format(task.CPU_time), file=filepath)
-                        print("GPU time: {}".format(task.GPU_time), file=filepath)
-                        for child, time in task.comm_costs.items():
-                            print("Child task ID: {}, comm cost (when nonzero): {}".format(child, time), file=filepath)                   
+                        print("GPU time: {}".format(task.GPU_time), file=filepath)                 
             print("--------------------------------------------------------", file=filepath) 
             
         
