@@ -165,7 +165,10 @@ def reset_dag_to_original_values(dag, original_comp, original_comm):
         task.CPU_time = original_comp["CPU"][task.ID]
         task.GPU_time = original_comp["GPU"][task.ID]
         for child in dag.DAG.successors(task):
-            task.comm_costs[child.ID] = original_comm[task.ID][child.ID]
+            task.comm_costs["CC"][child.ID] = original_comm["CC"][task.ID][child.ID]
+            task.comm_costs["CG"][child.ID] = original_comm["CG"][task.ID][child.ID]
+            task.comm_costs["GC"][child.ID] = original_comm["GC"][task.ID][child.ID]
+            task.comm_costs["GG"][child.ID] = original_comm["GG"][task.ID][child.ID]
 
 def MCS(dag, platform, comp_sample, comm_sample, production_steps=10, selection_steps=10, heuristic="heft", threshold=0.1):
     """ 
