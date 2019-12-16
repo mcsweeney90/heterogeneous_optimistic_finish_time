@@ -56,7 +56,6 @@ class Task:
         Average execution cost of a task across all processors in a platform. Used in e.g., HEFT.
         Assumes only CPUs and GPUs and the cost is the same on all processors of each kind. 
         """
-        # Let user set custom weights. Not really pursued in any depth so far.
         
         if weighting == "HEFT" or weighting == "mean" or weighting == "MEAN" or weighting == "M":
             return (self.CPU_time * platform.n_CPUs + self.GPU_time * platform.n_GPUs) / platform.n_workers
