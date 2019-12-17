@@ -1,9 +1,11 @@
-Example task DAGs used for numerical experiments.  
+# Graphs
 
-cholesky:
-DAGs representing tiled Cholesky factorization of a matrix. 
+Task DAGs used for numerical experiments in paper, stored using `gpickle`.  
 
-random:
-Randomly-generated DAGs with a wide range of topologies.
+## Navigation
+
+`cholesky`: DAGs representing the tiled Cholesky factorization of a matrix. 
+
+`random`: Randomly-generated DAGs with a wide range of topologies.
 
 

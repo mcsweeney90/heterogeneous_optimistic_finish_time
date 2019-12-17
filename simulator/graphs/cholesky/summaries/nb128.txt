@@ -1,0 +1,210 @@
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 35
+Maximum number of task predecessors: 3
+Average number of task predecessors: 1.7142857142857142
+Number of edges: 60
+Edge density: 0.10084033613445378
+Mean task CPU time: 87.93228571428573, standard deviation: 22.842275591632323
+Mean task GPU time: 37.05665828571429, standard deviation: 23.173945852684113
+Mean task acceleration ratio: 3.6403500586153705, standard deviation: 2.7294812800446295
+
+Mean task execution time on Single_GPU platform: 81.5728322857143
+Computation-to-communication ratio on Single_GPU platform: 1.5729158327911494
+Minimal serial time on Single_GPU platform: 1296.9830400000003
+
+Mean task execution time on Multiple_GPU platform: 81.5728322857143
+Computation-to-communication ratio on Multiple_GPU platform: 1.4929370616322772
+Minimal serial time on Multiple_GPU platform: 1296.9830400000003
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 220
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.25
+Number of edges: 495
+Edge density: 0.02054794520547945
+Mean task CPU time: 85.56800000000001, standard deviation: 14.448244613415532
+Mean task GPU time: 25.568558545454554, standard deviation: 18.675556724375998
+Mean task acceleration ratio: 5.218317574311633, standard deviation: 2.9870765010265163
+
+Mean task execution time on Single_GPU platform: 78.06806981818184
+Computation-to-communication ratio on Single_GPU platform: 1.166417877865603
+Minimal serial time on Single_GPU platform: 5625.082880000006
+
+Mean task execution time on Multiple_GPU platform: 78.06806981818184
+Computation-to-communication ratio on Multiple_GPU platform: 1.107108494245318
+Minimal serial time on Multiple_GPU platform: 5625.082880000006
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 680
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.4705882352941178
+Number of edges: 1680
+Edge density: 0.0072771376591873865
+Mean task CPU time: 85.99079411764707, standard deviation: 11.152558652691773
+Mean task GPU time: 21.1749345882353, standard deviation: 15.913709564615015
+Mean task acceleration ratio: 5.962203205037022, standard deviation: 2.816596319434012
+
+Mean task execution time on Single_GPU platform: 77.8888116764706
+Computation-to-communication ratio on Single_GPU platform: 1.0557556698497312
+Minimal serial time on Single_GPU platform: 14398.955519999921
+
+Mean task execution time on Multiple_GPU platform: 77.8888116764706
+Computation-to-communication ratio on Multiple_GPU platform: 1.0020731781624568
+Minimal serial time on Multiple_GPU platform: 14398.955519999921
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 1540
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.590909090909091
+Number of edges: 3990
+Edge density: 0.003367003367003367
+Mean task CPU time: 86.52968831168833, standard deviation: 9.385410924809085
+Mean task GPU time: 18.852764259740265, standard deviation: 14.076682099462131
+Mean task acceleration ratio: 6.388741901178894, standard deviation: 2.6220350718744596
+
+Mean task execution time on Single_GPU platform: 78.07007280519483
+Computation-to-communication ratio on Single_GPU platform: 1.0050911756656018
+Minimal serial time on Single_GPU platform: 29033.25695999953
+
+Mean task execution time on Multiple_GPU platform: 78.07007280519483
+Computation-to-communication ratio on Multiple_GPU platform: 0.9539848446995542
+Minimal serial time on Multiple_GPU platform: 29033.25695999953
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 2925
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.6666666666666665
+Number of edges: 7800
+Edge density: 0.001823985408116735
+Mean task CPU time: 86.97526495726497, standard deviation: 8.259877367514536
+Mean task GPU time: 17.416288273504275, standard deviation: 12.750861375596324
+Mean task acceleration ratio: 6.664467777112353, standard deviation: 2.4495260337829947
+
+Mean task execution time on Single_GPU platform: 78.28039287179489
+Computation-to-communication ratio on Single_GPU platform: 0.9761895321261873
+Minimal serial time on Single_GPU platform: 50942.64319999917
+
+Mean task execution time on Multiple_GPU platform: 78.28039287179489
+Computation-to-communication ratio on Multiple_GPU platform: 0.9265527762553643
+Minimal serial time on Multiple_GPU platform: 50942.64319999917
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 4960
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.71875
+Number of edges: 13485
+Edge density: 0.0010964912280701754
+Mean task CPU time: 87.32787903225807, standard deviation: 7.4658018431224145
+Mean task GPU time: 16.439873032258067, standard deviation: 11.738186782234381
+Mean task acceleration ratio: 6.857149329974537, standard deviation: 2.302109170863894
+
+Mean task execution time on Single_GPU platform: 78.46687828225807
+Computation-to-communication ratio on Single_GPU platform: 0.9575460679465626
+Minimal serial time on Single_GPU platform: 81541.77024000113
+
+Mean task execution time on Multiple_GPU platform: 78.46687828225807
+Computation-to-communication ratio on Multiple_GPU platform: 0.9088572848306357
+Minimal serial time on Multiple_GPU platform: 81541.77024000113
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 7770
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7567567567567566
+Number of edges: 21420
+Edge density: 0.0007096812348453487
+Mean task CPU time: 87.60854054054056, standard deviation: 6.8673120989636605
+Mean task GPU time: 15.732985081081084, standard deviation: 10.93278678579132
+Mean task acceleration ratio: 6.99932884816085, standard deviation: 2.176189245340008
+
+Mean task execution time on Single_GPU platform: 78.62409610810812
+Computation-to-communication ratio on Single_GPU platform: 0.9445351487525006
+Minimal serial time on Single_GPU platform: 122245.2940800123
+
+Mean task execution time on Multiple_GPU platform: 78.62409610810812
+Computation-to-communication ratio on Multiple_GPU platform: 0.8965079377989835
+Minimal serial time on Multiple_GPU platform: 122245.2940800123
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 11480
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7857142857142856
+Number of edges: 31980
+Edge density: 0.0004853583562530335
+Mean task CPU time: 87.83542160278748, standard deviation: 6.3951930431524024
+Mean task GPU time: 15.19754971428572, standard deviation: 10.272693522431293
+Mean task acceleration ratio: 7.10853545341429, standard deviation: 2.0677369579871954
+
+Mean task execution time on Single_GPU platform: 78.75568761672476
+Computation-to-communication ratio on Single_GPU platform: 0.9349442080214815
+Minimal serial time on Single_GPU platform: 174467.87072003438
+
+Mean task execution time on Multiple_GPU platform: 78.75568761672476
+Computation-to-communication ratio on Multiple_GPU platform: 0.8874046720203892
+Minimal serial time on Multiple_GPU platform: 174467.87072003438
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 16215
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.8085106382978724
+Number of edges: 45540
+Edge density: 0.0003464303242010451
+Mean task CPU time: 88.02188529139686, standard deviation: 6.010218114301388
+Mean task GPU time: 14.777931308048109, standard deviation: 9.719019919197464
+Mean task acceleration ratio: 7.195036175033399, standard deviation: 1.9733808091995768
+
+Mean task execution time on Single_GPU platform: 78.86639104347826
+Computation-to-communication ratio on Single_GPU platform: 0.9275836830607109
+Minimal serial time on Single_GPU platform: 239624.1561600624
+
+Mean task execution time on Multiple_GPU platform: 78.86639104347826
+Computation-to-communication ratio on Multiple_GPU platform: 0.8804184110406748
+Minimal serial time on Multiple_GPU platform: 239624.1561600624
+--------------------------------------------------------
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 128)
+Number of tasks: 22100
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.826923076923077
+Number of edges: 62475
+Edge density: 0.0002558417192563534
+Mean task CPU time: 88.17750226244345, standard deviation: 5.688335163383954
+Mean task GPU time: 14.4402174841629, standard deviation: 9.246004208428081
+Mean task acceleration ratio: 7.2652400093056775, standard deviation: 1.8904724522221523
+
+Mean task execution time on Single_GPU platform: 78.96034166515838
+Computation-to-communication ratio on Single_GPU platform: 0.9217576818029789
+Minimal serial time on Single_GPU platform: 319128.8064001091
+
+Mean task execution time on Multiple_GPU platform: 78.96034166515838
+Computation-to-communication ratio on Multiple_GPU platform: 0.8748886471350308
+Minimal serial time on Multiple_GPU platform: 319128.8064001091
+--------------------------------------------------------

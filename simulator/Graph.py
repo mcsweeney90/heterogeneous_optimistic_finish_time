@@ -252,86 +252,66 @@ class DAG:
     def print_info(self, platform=None, detailed=False, filepath=None):
         """ Prints all the information about the DAG."""
         # Print to screen.
-        print("--------------------------------------------------------")
-        print("DAG INFO")
-        print("--------------------------------------------------------")   
-        print("Application: {}".format(self.app))
-        print("Number of tasks: {}".format(self.num_tasks))
+        print("--------------------------------------------------------", file=filepath)
+        print("DAG INFO", file=filepath)
+        print("--------------------------------------------------------", file=filepath)   
+        print("Application: {}".format(self.app), file=filepath)
+        print("Number of tasks: {}".format(self.num_tasks), file=filepath)
         self.compute_topological_info()
-        print("Maximum number of task predecessors: {}".format(self.max_task_predecessors))
-        print("Average number of task predecessors: {}".format(self.avg_task_predecessors))
-        print("Number of edges: {}".format(self.num_edges))
-        print("Edge density: {}".format(self.edge_density))
+        print("Maximum number of task predecessors: {}".format(self.max_task_predecessors), file=filepath)
+        print("Average number of task predecessors: {}".format(self.avg_task_predecessors), file=filepath)
+        print("Number of edges: {}".format(self.num_edges), file=filepath)
+        print("Edge density: {}".format(self.edge_density), file=filepath)
         
-        if platform:
+        if platform: 
             cpu_times = list(task.CPU_time for task in self.DAG)
             gpu_times = list(task.GPU_time for task in self.DAG)
             acc_ratios = list(task.acceleration_ratio for task in self.DAG)
             cpu_mu, cpu_sigma = np.mean(cpu_times), np.std(cpu_times)
-            print("Mean task CPU time: {}, standard deviation: {}".format(cpu_mu, cpu_sigma))
+            print("Mean task CPU time: {}, standard deviation: {}".format(cpu_mu, cpu_sigma), file=filepath)
             gpu_mu, gpu_sigma = np.mean(gpu_times), np.std(gpu_times)
-            print("Mean task GPU time: {}, standard deviation: {}".format(gpu_mu, gpu_sigma))
-            task_mu = (platform.n_GPUs * gpu_mu + platform.n_CPUs * cpu_mu) / platform.n_workers
-            print("Mean task execution time: {}".format(task_mu))
+            print("Mean task GPU time: {}, standard deviation: {}".format(gpu_mu, gpu_sigma), file=filepath)            
             acc_mu, acc_sigma = np.mean(acc_ratios), np.std(acc_ratios)
-            print("Mean task acceleration ratio: {}, standard deviation: {}".format(acc_mu, acc_sigma)) 
+            print("Mean task acceleration ratio: {}, standard deviation: {}".format(acc_mu, acc_sigma), file=filepath) 
             
-            # Compute the CCR if not already set.
-            try:
-                ccr = self.CCR[platform.name]
-            except KeyError:                 
-                ccr = self.compute_CCR(platform)
-            print("Computation-to-communication ratio: {}".format(ccr))
+            if isinstance(platform, list):
+                for p in platform:
+                    task_mu = (p.n_GPUs * gpu_mu + p.n_CPUs * cpu_mu) / p.n_workers
+                    print("\nMean task execution time on {} platform: {}".format(p.name, task_mu), file=filepath)
+                    try:
+                        ccr = self.CCR[p.name]
+                    except KeyError:                 
+                        ccr = self.compute_CCR(p)
+                    print("Computation-to-communication ratio on {} platform: {}".format(p.name, ccr), file=filepath)
+                    mst = self.minimal_serial_time(platform)
+                    print("Minimal serial time on {} platform: {}".format(p.name, mst), file=filepath)
+            else:
+                task_mu = (platform.n_GPUs * gpu_mu + platform.n_CPUs * cpu_mu) / platform.n_workers
+                print("Mean task execution time on {} platform: {}".format(platform.name, task_mu), file=filepath)            
+                # Compute the CCR if not already set.
+                try:
+                    ccr = self.CCR[platform.name]
+                except KeyError:                 
+                    ccr = self.compute_CCR(platform)
+                print("Computation-to-communication ratio: {}".format(ccr), file=filepath)
             
-            mst = self.minimal_serial_time(platform)
-            print("Minimal serial time: {}".format(mst))
+                mst = self.minimal_serial_time(platform)
+                print("Minimal serial time: {}".format(mst), file=filepath)
                         
             if detailed:
-                print("\nTASK INFO:")
+                print("\nTASK INFO:", file=filepath)
                 for task in self.DAG:
-                    print("\nTask ID: {}".format(task.ID))
+                    print("\nTask ID: {}".format(task.ID), file=filepath)
                     if task.entry:
-                        print("Entry task.")
+                        print("Entry task.", file=filepath)
                     if task.exit:
-                        print("Exit task.")
+                        print("Exit task.", file=filepath)
                     if task.type:
-                        print("Task type: {}".format(task.type)) 
-                    print("CPU time: {}".format(task.CPU_time))
-                    print("GPU time: {}".format(task.GPU_time))
-                    print("Acceleration ratio: {}".format(task.acceleration_ratio))               
-        print("--------------------------------------------------------") 
-        
-        # If filepath, also print to file.
-        if filepath:
-            print("--------------------------------------------------------", file=filepath)
-            print("DAG INFO", file=filepath)
-            print("--------------------------------------------------------", file=filepath)   
-            print("Application: {}".format(self.app), file=filepath)
-            print("Number of tasks: {}".format(self.num_tasks), file=filepath)
-            print("Maximum number of task predecessors: {}".format(self.max_task_predecessors), file=filepath)
-            print("Average number of task predecessors: {}".format(self.avg_task_predecessors), file=filepath)
-            print("Number of edges: {}".format(self.num_edges), file=filepath)
-            print("Edge density: {}".format(self.edge_density), file=filepath)
-            if platform: 
-                print("Mean task CPU time: {}, standard deviation: {}".format(cpu_mu, cpu_sigma), file=filepath)
-                print("Mean task GPU time: {}, standard deviation: {}".format(gpu_mu, gpu_sigma), file=filepath)
-                print("Mean task acceleration ratio: {}, standard deviation: {}".format(acc_mu, acc_sigma), file=filepath)
-                print("Mean task execution time: {}".format(task_mu), file=filepath)
-                print("Computation-to-communication ratio: {}".format(ccr), file=filepath)
-                print("Minimal serial time: {}".format(mst), file=filepath)
-                if detailed:
-                    print("\nTASK INFO:", file=filepath)
-                    for task in self.DAG:
-                        print("\nTask ID: {}".format(task.ID), file=filepath)
-                        if task.entry:
-                            print("Entry task.", file=filepath)
-                        if task.exit:
-                            print("Exit task.", file=filepath)
-                        if task.type:
-                            print("Task type: {}".format(task.type), file=filepath)
-                        print("CPU time: {}".format(task.CPU_time), file=filepath)
-                        print("GPU time: {}".format(task.GPU_time), file=filepath)                 
-            print("--------------------------------------------------------", file=filepath) 
+                        print("Task type: {}".format(task.type), file=filepath) 
+                    print("CPU time: {}".format(task.CPU_time), file=filepath)
+                    print("GPU time: {}".format(task.GPU_time), file=filepath)
+                    print("Acceleration ratio: {}".format(task.acceleration_ratio), file=filepath)               
+        print("--------------------------------------------------------", file=filepath)        
             
         
     def draw_graph(self, filepath="graphs/images", verbose=False):
