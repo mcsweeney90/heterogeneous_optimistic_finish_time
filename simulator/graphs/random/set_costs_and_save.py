@@ -16,7 +16,7 @@ from timeit import default_timer as timer
 sys.path.append('../../') # Quick fix to let us import modules from main directory.
 import Environment    # Node classes and functions.
 
-# Set up the environments - needed to ensure CCR is correct for the target platform.  
+# Target platforms (needed to ensure CCR is correct)  
 single = Environment.Node(7, 1, name="Single_GPU")
 multiple = Environment.Node(28, 4, name="Multiple_GPU")
 
