@@ -3,9 +3,11 @@
 """
 Created on Mon Oct 21 09:46:31 2019
 
+TODO: rerun this at some point (low priority).
+
 Method we investigated for improving any complete task ranking in HEFT. The idea is to divide the task list into "groups" of independent (no precedence constraints between them) tasks 
 as in the Hybrid Balanced Minimum Completion Time (HBMCT) heuristic of Zhao and Sakellariou (2004), and schedule them according to the classic min-min heuristic. This effectively
-corresponds to HEFt with a different task priority list and consistently improved on the original but the gains were only minor and the additional computational cost significant so we 
+corresponds to HEFT with a different task priority list and consistently improved on the original but the gains were only minor and the additional computational cost significant so we 
 ultimately elected not to include this investigation in the final paper.
 
 @author: Tom

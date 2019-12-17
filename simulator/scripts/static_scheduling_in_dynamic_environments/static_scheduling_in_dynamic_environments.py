@@ -3,8 +3,9 @@
 """
 Created on Tue Nov 26 11:42:26 2019
 
+TODO: re-run this (forgot MCS initially so ran it separately but should re-run so all results are saved to the same place.)
+
 Investigating how useful static scheduling actually is for dynamic environments.
-Never referenced in paper but provided the main motivation for why we decided to look at static scheduling.
 
 @author: Tom
 """
@@ -256,7 +257,6 @@ multiple = Environment.Node(28, 4, name="Multiple_GPU")
 ####################################################################################################
 
 """Load real timing data. used for simulating dynamic executions."""  
-# TODO: Ugly code, tidy up. 
 
 min_tile = 32
 max_tile = 1024
@@ -266,7 +266,6 @@ sizes = [32, 64, 128, 256, 512, 1024]
 cpu_data = defaultdict(lambda: defaultdict(list))
 gpu_data = defaultdict(lambda: defaultdict(list))
 comm_data = defaultdict(lambda: defaultdict(list))
-
 
 # Load CPU data.
 name = "skylake"
@@ -283,8 +282,7 @@ while x < max_tile + 1:
     cpu_data[x]["SYRK"]= [y[2] for y in dsyrk_raw[i: i + iterations - 1]]
     cpu_data[x]["TRSM"] = [y[2] for y in dtrsm_raw[i: i + iterations - 1]]            
     i += iterations
-    x *= inc_factor    
-    
+    x *= inc_factor        
 
 # Load GPU data.
 name = "V100"
@@ -450,4 +448,4 @@ ax1.plot(n_tasks, mcs_reductions, linestyle=preferences["MCS"][0], marker=prefer
 ax1.set_ylim(bottom=0)
 plt.yticks(np.arange(0, 50, 10.0)) # Make it look nicer.
 ax1.legend(handlelength=1.8, handletextpad=0.4, loc='upper left', fancybox=True)  
-plt.savefig('plots/motivation_{}_cholesky_nb{}'.format(env.name, nb), bbox_inches='tight') 
+plt.savefig('plots/{}_cholesky_nb{}'.format(env.name, nb), bbox_inches='tight') 

@@ -3,8 +3,7 @@
 """
 Created on Tue Dec  3 16:39:17 2019
 
-Comparison of five existing static scheduling heuristics - HEFT, HBMCT, PEFT, PETS and HCPT. Not referenced in the paper but this motivated our focus on 
-HEFT in particular, as it was the best-performing along with PEFT and its structure offered more possibilities for optimization. 
+Comparison of five existing static scheduling heuristics - HEFT, HBMCT, PEFT, PETS and HCPT. 
 
 (The only two criteria for inclusion in the comparison were that at least one publication claims it is either the best or among the best, and it produces a "fullahead" schedule
 matching all tasks to a processor before runtime.)

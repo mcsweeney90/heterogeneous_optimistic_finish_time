@@ -4,7 +4,7 @@
 Created on Wed Nov  6 09:49:29 2019
 
 Heuristics targeting low CCR/high-data DAGs for which HEFT (and HOFT) are likely to fail. 
-Referred to in the conclusion of paper but this was not promising so we didn't pursue it any further.  
+Referred to in the conclusion of paper but this was not promising so we didn't pursue it very far.  
 
 @author: Tom
 """
