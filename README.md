@@ -1,11 +1,16 @@
 # Heterogeneous Optimistic Finish Time (HOFT)
 
-This repository provides the source code for the static task graph scheduling simulator for multicore CPU and GPU target platforms described in the paper "An efficient static scheduling heuristic for accelerated architectures" (Tom McSweeney, Neil Walton, Mawussi Zounon, 2019).  
+This repository provides the source code used to generate all results presented in the paper "An efficient static scheduling heuristic for accelerated architectures," which introduces a new static task scheduling heuristic for accelerated architectures called Hetergeneous Optimistic Finish Time (HOFT). 
 
-### An_efficient_new_static_scheduling_heuristic_for_accelerated_architectures
+## Paper
 
-LaTeX source, images, etc for the paper itself.
+The LaTeX source for the paper and all other relevant files are contained in the folder `An_efficient_new_static_scheduling_heuristic_for_accelerated_architectures`.
 
-### simulator
+## Simulator
 
-Source code for the simulator itself.
+Source code for the simulator itself. 
+
+## License
+
+This project is licensed under the GPL-3.0 License - see [LICENSE.md](LICENSE.md) for details.
+
