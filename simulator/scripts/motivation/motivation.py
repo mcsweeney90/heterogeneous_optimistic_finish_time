@@ -18,7 +18,7 @@ import dill
 import sys
 sys.path.append('../../') # Quick fix to let us import modules from main directory. 
 import Environment    # Node classes and functions.
-from Static_heuristics import HEFT
+from Heuristics import HEFT
 
 # Set some parameters for plots.
 # See here: http://www.futurile.net/2016/02/27/matplotlib-beautiful-plots-with-style/

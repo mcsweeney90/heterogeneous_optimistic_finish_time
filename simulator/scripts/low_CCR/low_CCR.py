@@ -19,7 +19,7 @@ from timeit import default_timer as timer
 import sys
 sys.path.append('../../') # Quick fix to let us import modules from main directory. 
 import Environment    # Node classes and functions.
-from Static_heuristics import HEFT, HEFT_L
+from Heuristics import HEFT, HEFT_L
 
 # Set some parameters for plots.
 # See here: http://www.futurile.net/2016/02/27/matplotlib-beautiful-plots-with-style/

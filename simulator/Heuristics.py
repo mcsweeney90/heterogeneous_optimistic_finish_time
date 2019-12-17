@@ -3,7 +3,7 @@
 """
 Created on Tue Oct 16 16:11:27 2018
 
-Implementations of classic static listing scheduling heuristics, as well as Heterogeneous Optimistic Finish Time (HOFT)
+Implementations of classic static listing heuristics, as well as Heterogeneous Optimistic Finish Time (HOFT)
 and a few experimental ones that I may pursue further in the future.
 
 @author: Tom
@@ -15,7 +15,7 @@ from collections import defaultdict
 
 ####################################################################################################
     
-"""Implementations of classic static scheduling heuristics (including HEFT).""" 
+"""Classic heuristics.""" 
     
 ####################################################################################################   
     
