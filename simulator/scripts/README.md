@@ -1,6 +1,6 @@
 # Scripts
 
-Short Python scripts for generating results presented or described in the paper.
+Short scripts for generating results presented or described in the paper.
 
 ## Presented in paper
 
@@ -10,11 +10,11 @@ Short Python scripts for generating results presented or described in the paper.
 
 ## Referenced in paper
 
-`low_CCR`: Sampling-based lookahead heuristics for low CCR/high-data DAGs for which HEFT (and HOFT) are likely to fail. Referred to in the conclusion but was not promising so we didn't pursue it any further.
+`low_CCR`: Sampling-based lookahead heuristics for low CCR/high-data DAGs for which HEFT (and HOFT) are likely to fail. Referred to in the conclusion but was not promising so we didn't pursue it very far.
 
 ## For interest
 
-`motivation`: Investigating how useful static scheduling actually is in practice by simulating static scheduling in dynamic environments. Never referenced in paper but provided some of the motivation for our decision to look at static scheduling for CPU and GPU. 
+`static_scheduling_in_dynamic_environments`: Investigating how useful static scheduling actually is in practice by simulating static scheduling in dynamic environments. Never referenced in paper but provided some of the motivation for our decision to look at static scheduling for CPU and GPU. 
 
 `min_min_for_HEFT`: A method we investigated for improving any complete task ranking in HEFT. The idea is to divide the task list into "groups" of independent (no precedence constraints between them) tasks 
 as in the Hybrid Balanced Minimum Completion Time (HBMCT) heuristic of Zhao and Sakellariou (2004), and schedule them according to the classic min-min heuristic. This effectively
