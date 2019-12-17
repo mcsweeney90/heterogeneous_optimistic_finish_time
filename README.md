@@ -12,5 +12,5 @@ Source code for the simulator itself.
 
 ## License
 
-This project is licensed under the GPL-3.0 License - see [LICENSE.md](LICENSE.md) for details.
+This project is licensed under the GPL-3.0 License - see [LICENSE](LICENSE.md) for details.
 
