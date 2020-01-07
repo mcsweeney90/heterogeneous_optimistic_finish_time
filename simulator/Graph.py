@@ -251,7 +251,6 @@ class DAG:
 
     def print_info(self, platform=None, detailed=False, filepath=None):
         """ Prints all the information about the DAG."""
-        # Print to screen.
         print("--------------------------------------------------------", file=filepath)
         print("DAG INFO", file=filepath)
         print("--------------------------------------------------------", file=filepath)   

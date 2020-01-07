@@ -199,26 +199,14 @@ class Node:
     
     def print_info(self, filepath=None):
         """Print basic information about the Node."""
-        # Print to screen.
-        print("--------------------------------------------------------")
-        print("NODE INFO")
-        print("--------------------------------------------------------")
-        print("Name: {}".format(self.name))
-        print("{} CPUs, {} GPUs".format(self.n_CPUs, self.n_GPUs))
-        print("Communication: {}".format(self.communication))
-        print("Asynchronous data transfer: {}".format(self.adt))
-        print("--------------------------------------------------------\n")
-        
-        # If filepath, also print to file.
-        if filepath:
-            print("--------------------------------------------------------", file=filepath)
-            print("NODE INFO", file=filepath)
-            print("--------------------------------------------------------", file=filepath)
-            print("Name: {}".format(self.name), file=filepath)
-            print("{} CPUs, {} GPUs".format(self.n_CPUs, self.n_GPUs), file=filepath)
-            print("Communication: {}".format(self.communication), file=filepath) 
-            print("Asynchronous data transfer: {}".format(self.adt), file=filepath)
-            print("--------------------------------------------------------\n", file=filepath)            
+        print("--------------------------------------------------------", file=filepath)
+        print("NODE INFO", file=filepath)
+        print("--------------------------------------------------------", file=filepath)
+        print("Name: {}".format(self.name), file=filepath)
+        print("{} CPUs, {} GPUs".format(self.n_CPUs, self.n_GPUs), file=filepath)
+        print("Communication: {}".format(self.communication), file=filepath) 
+        print("Asynchronous data transfer: {}".format(self.adt), file=filepath)
+        print("--------------------------------------------------------\n", file=filepath)            
        
     def where_scheduled(self, task):
         """Return the ID of the processor where task is scheduled, or None if it isn't."""
