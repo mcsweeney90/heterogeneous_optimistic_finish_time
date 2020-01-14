@@ -23,7 +23,7 @@ def cholesky(num_tiles, draw=False):
     Returns a DAG object representing a tiled Cholesky factorization.
     """
     
-    last_acted_on = {} # Useful for keeping track of 
+    last_acted_on = {} # Useful for keeping track of things...
     
     G = nx.DiGraph()
     

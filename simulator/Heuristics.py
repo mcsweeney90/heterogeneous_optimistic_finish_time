@@ -126,9 +126,8 @@ def PEFT(dag, platform, priority_list=None, return_schedule=False, schedule_dest
     """
     Predict Earliest Finish Time (Arabnejad and Barbosa, 2014).
     Notes:
-        - The suggested task prioritization phase doesn't always respect the precedence constraints.
-          Rank_oct(t) = sum(OCT(t) / P). Alternatives: use minimum OFT instead, or use suggested rank_oct as node weight and
-          compute upward ranks.
+        - The suggested task prioritization phase rank_oct(t) = sum(OCT(t) / P) doesn't always respect the precedence constraints.
+          Alternatives: use minimum OFT instead, or take suggested rank_oct as node weight and compute upward ranks, or just operate on ready tasks.
     """
     
     if return_schedule:
@@ -164,7 +163,7 @@ def PEFT(dag, platform, priority_list=None, return_schedule=False, schedule_dest
         print("\n", file=schedule_dest)
         platform.print_schedule(name="PEFT", filepath=schedule_dest)
         
-    # Makespan is the maximum AFT of all the exit tasks.        
+    # Compute makespan.        
     mkspan = dag.makespan()
     
     # Clean up DAG and platform.
@@ -399,7 +398,6 @@ def HEFT_L(dag, platform, weighted_average=False, child_sampling_policy=None, cp
 def OFT_priorities(dag, platform, selection="HOFT", table=None):
     """
     Returns a priority list of the tasks for use in any listing scheduler.
-    (Put in a separate function because otherwise would need to significantly rewrite Graph.sort_by_upward_rank.)
     """
     
     if table:
