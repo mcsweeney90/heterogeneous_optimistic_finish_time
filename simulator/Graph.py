@@ -3,7 +3,7 @@
 """
 Created on Tue Aug 21 15:50:57 2018
 
-Framework for describing a DAG. 
+This module contains classes which create a framework for describing task DAGs.  
 
 @author: Tom, Neil Walton
 """

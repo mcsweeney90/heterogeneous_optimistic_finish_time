@@ -3,11 +3,12 @@
 """
 Created on Tue Aug 21 16:00:45 2018
 
-This is a module containing two classes which create a framework for describing arbitrary CPU and GPU computing environments. 
+This module contains classes which create a framework for describing arbitrary CPU and GPU computing environments. 
 
 Notes:
-    1. Although "GPU" is used throughout, both processor types are defined entirely by their task processing/communication times so this
-       can easily be used for any computing environment with only two different types of processing resources. 
+    1. Although "GPU" is used throughout, both processor types are defined entirely by their task
+       processing/communication times so this can easily be used for any computing environment with only two different 
+       types of processing resources. 
 
 @author: Tom, Neil Walton
 """
@@ -28,10 +29,10 @@ class Worker:
         Parameters
         --------------------
         GPU - bool
-              True if Worker is a GPU. Assumed to be a CPU unless specified otherwise.
+        True if Worker is a GPU. Assumed to be a CPU unless specified otherwise.
         
         ID - Int
-             Assigns an integer ID to the task. Often very useful.        
+        Assigns an integer ID to the task. Often very useful.        
         """        
         self.GPU = True if GPU else False
         self.CPU = not self.GPU   
@@ -52,10 +53,12 @@ class Worker:
         The DAG to which the task belongs.
               
         platform - Node object
-        The Node object to which the Worker belongs. Needed for calculating communication costs, although this is a bit unconventional.
+        The Node object to which the Worker belongs.
+        Needed for calculating communication costs, although this is a bit unconventional.
         
         insertion - bool
-        If True, use insertion-based scheduling policy - i.e., task can be scheduled between two already scheduled tasks, if permitted by dependencies.
+        If True, use insertion-based scheduling policy - i.e., task can be scheduled 
+        between two already scheduled tasks, if permitted by dependencies.
                  
         comm_estimates - dict
         TODO: Might remove this, check! Ditto below.
@@ -113,14 +116,16 @@ class Worker:
         The DAG to which the task belongs.
               
         platform - Node object
-        The Node object to which the Worker belongs. Needed for calculating communication costs, although this is a bit unconventional.
+        The Node object to which the Worker belongs. 
+        Needed for calculating communication costs, although this is a bit unconventional.
         
         insertion - bool
-        If True, use insertion-based scheduling policy - i.e., task can be scheduled between two already scheduled tasks, if permitted by dependencies.
+        If True, use insertion-based scheduling policy - i.e., task can be scheduled 
+        between two already scheduled tasks, if permitted by dependencies.
         
         start_time - float
-        If not None, taken to be task's actual start time. Validity is checked with valid_start_time which raises ValueError if it fails.
-        Should be used very carefully!
+        If not None, taken to be task's actual start time. Validity is checked with valid_start_time which raises
+        ValueError if it fails. Should be used very carefully!
                  
         comm_estimates - dict
         TODO: Might remove this, check! Ditto below.
@@ -151,17 +156,19 @@ class Worker:
         Represents a (static) task.
         
         start_time - float
-        If not None, taken to be task's actual start time. Validity is checked with valid_start_time which raises ValueError if it fails.
-        Should be used very carefully!
+        If not None, taken to be task's actual start time. Validity is checked with 
+        valid_start_time which raises ValueError if it fails. Should be used very carefully!
         
         dag - DAG object (see Graph.py module)
         The DAG to which the task belongs.
               
         platform - Node object
-        The Node object to which the Worker belongs. Needed for calculating communication costs, although this is a bit unconventional.
+        The Node object to which the Worker belongs. 
+        Needed for calculating communication costs, although this is a bit unconventional.
         
         insertion - bool
-        If True, use insertion-based scheduling policy - i.e., task can be scheduled between two already scheduled tasks, if permitted by dependencies.
+        If True, use insertion-based scheduling policy - i.e., task can be scheduled 
+        between two already scheduled tasks, if permitted by dependencies.
         
         Returns
         ------------------------
@@ -169,7 +176,7 @@ class Worker:
         True if the input start time is valid (respects all dependencies, etc), False otherwise.                  
         """          
         
-        # Compute earliest possible start time, when all predecessors have completed and relevant data has been transferred. 
+        # Compute earliest possible start time. 
         est = max(p.AFT + platform.comm_cost(p, task, p.where_scheduled, self.ID) 
                                     for p in dag.DAG.predecessors(task)) 
         
@@ -205,22 +212,26 @@ class Worker:
         The DAG to which the task belongs.
               
         platform - Node object
-        The Node object to which the Worker belongs. Needed for calculating communication costs, although this is a bit unconventional.
+        The Node object to which the Worker belongs. 
+        Needed for calculating communication costs, although this is a bit unconventional.
         
         insertion - bool
-        If True, use insertion-based scheduling policy - i.e., task can be scheduled between two already scheduled tasks, if permitted by dependencies.
+        If True, use insertion-based scheduling policy - i.e., task can be scheduled 
+        between two already scheduled tasks, if permitted by dependencies.
         
         start_time - float
-        If not None, schedules task at this start time. Validity is checked with valid_start_time which raises ValueError if it fails.
-        Should be used very carefully!
+        If not None, schedules task at this start time. Validity is checked with 
+        valid_start_time which raises ValueError if it fails. Should be used very carefully!
         
         finish_time - float
-        If not None, taken to be task's actual finish time. Should be used with great care (see note below!)
+        If not None, taken to be task's actual finish time. 
+        Should be used with great care (see note below!)
         
         Notes
         ------------------------
-        1. If finish_time, doesn't check that all task predecessors have actually been scheduled. This is so we can do lookahead
-           in e.g., platform.estimate_finish_times and to save repeated calculations in some circumstances but should be used very, very carefully!
+        1. If finish_time, doesn't check that all task predecessors have actually been scheduled.
+           This is so we can do lookahead in e.g., platform.estimate_finish_times and to save repeated
+           calculations in some circumstances but should be used very, very carefully!
                  
         """                    
         if start_time:
@@ -309,7 +320,8 @@ class Node:
         If False, disregard all communication - all costs are taken to be zero.
         
         adt - bool
-        If True, simulates the effect of asynchronous data transfers. Not used anywhere but may be used in future.
+        If True, simulates the effect of asynchronous data transfers. 
+        Not used anywhere but may be used in future.
         """
         self.name = name  
         self.communication = communication         
@@ -447,15 +459,17 @@ class Node:
         Returns
         ------------------------
         mkspan - float
-        The makespan of the DAG.                  
+        The makespan of the DAG.   
+
+        Notes
+        ------------------------               
+        1. We assume that task.AST, task.AFT aren't set so can't just use dag.makespan().
         """ 
         # Check if it's a valid schedule.
         if not self.valid_schedule(schedule, dag):
             raise ValueError('Schedule you are trying to evaluate is invalid! Check it again...') 
         
-        # Compute makespan.  
-        # Note that here we assume that task.AST, task.AFT aren't set so can't just use dag.makespan().
-        # Assume that task.exit is set so only need to check the exit tasks. If not, comment/remove "if not t.exit" statement in the loop.
+        # Compute makespan. 
         mkspan =  0.0
         for t, p, st in schedule:
             # If task.exit is not set, comment/remove next statement.
@@ -512,7 +526,8 @@ class Node:
     def approximate_comm_cost(self, parent, child, weighting="HEFT", r_bar=None): 
         #TODO - extra weightings - remove?
         """
-        Compute the "approximate" communication time from parent to child tasks. Usually used for setting priorities in HEFT and similar heuristics.
+        Compute the "approximate" communication time from parent to child tasks. 
+        Usually used for setting priorities in HEFT and similar heuristics.
         
         Parameters
         ------------------------
@@ -636,7 +651,8 @@ class Node:
         Returns
         ------------------------
         tuple (int, float)
-        ID of the Worker of the input type expected to complete it at the earliest time and the estimated time it can start. 
+        ID of the Worker of the input type expected to complete it at the earliest time and the 
+        estimated time it can start. 
         """         
         if gpu:
             finish_times = [p.earliest_finish_time(task, dag, self) for p in self.workers if p.GPU]
@@ -646,7 +662,8 @@ class Node:
         
     def schedule_batch(self, dag, batch, policy="eft", bmct_initial_allocation="met", mapping=None, batch_sort=None):
         """
-        Schedule a batch of independent (no precedence constraints between them) tasks from a DAG according to some input rule.
+        Schedule a batch of independent (no precedence constraints between them) tasks from a 
+        DAG according to some input rule.
         
         Parameters
         ------------------------
@@ -742,7 +759,7 @@ class Node:
             
             # Schedule the tasks.
             for task in batch:
-                # Schedule all tasks on their fastest processor initially (classic Minimum Execution Time heuristic). No suggestion on how to break ties, so do it randomly.
+                # Schedule all tasks on their fastest processor initially (classic Minimum Execution Time heuristic).
                 if bmct_initial_allocation == "met":                
                     if task.CPU_time < task.GPU_time:
                         rand_processor = np.random.choice(range(self.n_CPUs))
@@ -816,8 +833,8 @@ class Node:
     def estimate_makespan(self, dag, batch, policy="eft", mapping=None, just_batch=False):
         """
         Estimate the new makespan after scheduling a batch of independent tasks.
-        At the moment, basically just schedule the tasks in the batch then reset everything back to the initial state but in the future may 
-        try something else.
+        At the moment, basically just schedule the tasks in the batch then reset everything back to the initial state
+        but in the future may try something else.
         
         Parameters
         ------------------------
@@ -840,7 +857,8 @@ class Node:
         Which Worker each task should be scheduled on.
         
         just_batch - bool
-        If True, return the estimated maximum finish time of all tasks in the batch only, else return current makespan of entire DAG.      
+        If True, return the estimated maximum finish time of all tasks in the batch only, else 
+        return current makespan of entire DAG.      
         
         Returns
         ------------------------
