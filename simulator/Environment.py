@@ -3,9 +3,13 @@
 """
 Created on Tue Aug 21 16:00:45 2018
 
-Framework for describing a CPU-GPU environment.
+This is a module containing two classes which create a framework for describing arbitrary CPU and GPU computing environments. 
 
-@author: Neil Walton, Tom
+Notes:
+    1. Although "GPU" is used throughout, both processor types are defined entirely by their task processing/communication times so this
+       can easily be used for any computing environment with only two different types of processing resources. 
+
+@author: Tom, Neil Walton
 """
 
 import numpy as np
@@ -15,21 +19,51 @@ from collections import defaultdict
 
 class Worker:
     """
-    Represents any CPU or GPU processing resource.
+    Represents any CPU or GPU processing resource. 
     """
     def __init__(self, GPU=False, ID=None):
+        """
+        Create the Worker object.
         
-        # Is a CPU unless stated otherwise.
+        Parameters
+        --------------------
+        GPU - bool
+              True if Worker is a GPU. Assumed to be a CPU unless specified otherwise.
+        
+        ID - Int
+             Assigns an integer ID to the task. Often very useful.        
+        """        
         self.GPU = True if GPU else False
         self.CPU = not self.GPU   
-        self.ID = ID   # Useful for debugging, etc.
+        self.ID = ID   
         self.load = [] # Tasks scheduled on the processor.
         self.idle = True # True if no tasks currently scheduled on the processor. 
                 
     def earliest_start_time(self, task, dag, platform, insertion=True, comm_estimates=None, comp_estimates=None):
         """
-        Returns the estimated earliest start time for task on the processor.
-        If insertion, uses the insertion-based policy - i.e., a task can be scheduled between two already scheduled tasks (if permitted by dependencies).
+        Returns the estimated earliest start time for a task on the Worker.
+        
+        Parameters
+        ------------------------
+        task - Task object (see Graph.py module)
+        Represents a (static) task.
+        
+        dag - DAG object (see Graph.py module)
+        The DAG to which the task belongs.
+              
+        platform - Node object
+        The Node object to which the Worker belongs. Needed for calculating communication costs, although this is a bit unconventional.
+        
+        insertion - bool
+        If True, use insertion-based scheduling policy - i.e., task can be scheduled between two already scheduled tasks, if permitted by dependencies.
+                 
+        comm_estimates - dict
+        TODO: Might remove this, check! Ditto below.
+        
+        Returns
+        ------------------------
+        float 
+        The earliest start time for task on Worker.        
         """        
         
         if self.idle:   # If no tasks scheduled on processor...
@@ -68,13 +102,39 @@ class Worker:
         
     def earliest_finish_time(self, task, dag, platform, insertion=True, start_time=None, comm_estimates=None, comp_estimates=None): 
         """
-        Returns the estimated earliest finish time for task on the processor.
-        If start_time is not None, checks it is valid and, if so, takes this to be task's actual start time.
-        """       
+        Returns the estimated earliest finish time for a task on the Worker.
+        
+        Parameters
+        ------------------------
+        task - Task object (see Graph.py module)
+        Represents a (static) task.
+        
+        dag - DAG object (see Graph.py module)
+        The DAG to which the task belongs.
+              
+        platform - Node object
+        The Node object to which the Worker belongs. Needed for calculating communication costs, although this is a bit unconventional.
+        
+        insertion - bool
+        If True, use insertion-based scheduling policy - i.e., task can be scheduled between two already scheduled tasks, if permitted by dependencies.
+        
+        start_time - float
+        If not None, taken to be task's actual start time. Validity is checked with valid_start_time which raises ValueError if it fails.
+        Should be used very carefully!
+                 
+        comm_estimates - dict
+        TODO: Might remove this, check! Ditto below.
+        
+        Returns
+        ------------------------
+        float 
+        The earliest finish time for task on Worker. 
+        """                
         if comp_estimates:
             processing_time = comp_estimates["CPU"][task.ID] if self.CPU else comp_estimates["GPU"][task.ID]
         else:
             processing_time = task.CPU_time if self.CPU else task.GPU_time 
+        # If start_time, make sure it is valid.
         if start_time: 
             if not self.valid_start_time(task, start_time, dag, platform):
                 raise ValueError('Invalid input start time! Processor ID: {}, task ID, attempted start time: {}'.format(self.ID, task.ID, start_time))
@@ -83,8 +143,31 @@ class Worker:
 
     def valid_start_time(self, task, start_time, dag, platform, insertion=True):
         """
-        True if the input start time is possible (respects all dependencies, etc), False otherwise.
-        """
+        Check if input start time is valid.
+        
+        Parameters
+        ------------------------
+        task - Task object (see Graph.py module)
+        Represents a (static) task.
+        
+        start_time - float
+        If not None, taken to be task's actual start time. Validity is checked with valid_start_time which raises ValueError if it fails.
+        Should be used very carefully!
+        
+        dag - DAG object (see Graph.py module)
+        The DAG to which the task belongs.
+              
+        platform - Node object
+        The Node object to which the Worker belongs. Needed for calculating communication costs, although this is a bit unconventional.
+        
+        insertion - bool
+        If True, use insertion-based scheduling policy - i.e., task can be scheduled between two already scheduled tasks, if permitted by dependencies.
+        
+        Returns
+        ------------------------
+        bool
+        True if the input start time is valid (respects all dependencies, etc), False otherwise.                  
+        """          
         
         # Compute earliest possible start time, when all predecessors have completed and relevant data has been transferred. 
         est = max(p.AFT + platform.comm_cost(p, task, p.where_scheduled, self.ID) 
@@ -111,13 +194,35 @@ class Worker:
         
     def schedule_task(self, task, dag, platform, insertion=True, start_time=None, finish_time=None):
         """
-        Schedule the task on the processor. Tasks are stored in a list in ascending order of start time.
-        If insertion, uses insertion-based scheduling policy. 
-        If start_time is not None, checks if task can be executed at this time and, if so, schedules it then.
-        If finish_time is not None, schedules it at that time. 
-        NOTE: if finish_time, doesn't check that all task predecessors have been scheduled. (This is so we can do lookahead in e.g., platform.estimate_finish_times.) 
-        """
-           
+        Schedules the task on the Worker.
+        
+        Parameters
+        ------------------------
+        task - Task object (see Graph.py module)
+        Represents a (static) task.
+                
+        dag - DAG object (see Graph.py module)
+        The DAG to which the task belongs.
+              
+        platform - Node object
+        The Node object to which the Worker belongs. Needed for calculating communication costs, although this is a bit unconventional.
+        
+        insertion - bool
+        If True, use insertion-based scheduling policy - i.e., task can be scheduled between two already scheduled tasks, if permitted by dependencies.
+        
+        start_time - float
+        If not None, schedules task at this start time. Validity is checked with valid_start_time which raises ValueError if it fails.
+        Should be used very carefully!
+        
+        finish_time - float
+        If not None, taken to be task's actual finish time. Should be used with great care (see note below!)
+        
+        Notes
+        ------------------------
+        1. If finish_time, doesn't check that all task predecessors have actually been scheduled. This is so we can do lookahead
+           in e.g., platform.estimate_finish_times and to save repeated calculations in some circumstances but should be used very, very carefully!
+                 
+        """                    
         if start_time:
             if not self.valid_start_time(task, start_time, dag, platform):
                 raise ValueError('Invalid input start time! Processor ID: {}, task ID, attempted start time: {}'.format(self.ID, task.ID, start_time))
@@ -150,55 +255,83 @@ class Worker:
                 self.load.append(task)         
 
     def unschedule_task(self, task):
-        """Unschedules the task on the processor."""
-        # Remove task from the load and revert the processor to idle if necessary.
+        """
+        Unschedules the task on the Worker.
+        
+        Parameters
+        ------------------------
+        task - Task object (see Graph.py module)
+        Represents a (static) task.                 
+        """
+        # Remove task from the load.
         self.load.remove(task)
+        # Revert Worker to idle if necessary.
         if not len(self.load):
             self.idle = True
         # Reset the task itself.    
         task.reset()                         
         
     def print_schedule(self, filepath=None):
-        """Prints the tasks scheduled on the processor."""
+        """
+        Print the current tasks scheduled on the Worker, either to screen or as txt file.
+        
+        Parameters
+        ------------------------
+        filepath - string
+        Destination for schedule txt file.                           
+        """
         proc_type = "CPU" if self.CPU else "GPU"
-        if filepath:
-            print("Processor {}, {}: ".format(self.ID, proc_type), file=filepath)
-            for t in self.load:
-                type_info = " Task type: {},".format(t.type) if t.type else ""
-                print("Task ID: {},{} AST = {}, AFT = {}.".format(t.ID, type_info, t.AST, t.AFT), file=filepath) 
-        else:
-            print("Processor {}, {}: ".format(self.ID, proc_type))
-            for t in self.load:
-                print("Task ID: {}, AST = {}, AFT = {}.".format(t.ID, t.AST, t.AFT))     
+        print("PROCESSOR {}, TYPE {}: ".format(self.ID, proc_type), file=filepath)
+        for t in self.load:
+            task_info = "Task type: {},".format(t.type) if t.type else ""
+            print("Task ID: {}, {}, AST = {}, AFT = {}.".format(t.ID, task_info, t.AST, t.AFT), file=filepath)     
  
 class Node:
     """          
-    A node is basically just a collection of CPUs and GPUs.
-    Inputs:
-        - CPUs, integer, the number of CPUs.
-        - GPUs, integer, the number of GPUs.
-        - name, string, used to identify node.
-        - communication, bool, can turn communication costs on and off.
-        - adt, bool, can turn asynchronous data transfers on and off.
+    A Node is basically just a collection of CPU and GPU Worker objects.
     """
     def __init__(self, CPUs, GPUs, name="generic", communication=True, adt=False):
+        """
+        Print the current tasks scheduled on the Worker, either to screen or file.
         
+        Parameters
+        ------------------------
+        CPUs - int
+        The number of CPUs.
+
+        GPUs - int
+        The number of GPUs.
+        
+        name - string
+        An identifying name for the Node. Often useful.
+        
+        communication - bool
+        If False, disregard all communication - all costs are taken to be zero.
+        
+        adt - bool
+        If True, simulates the effect of asynchronous data transfers. Not used anywhere but may be used in future.
+        """
         self.name = name  
         self.communication = communication         
         self.adt = adt
         
-        # Workers.
         self.n_CPUs, self.n_GPUs = CPUs, GPUs 
-        self.n_workers = self.n_CPUs + self.n_GPUs
-        self.workers = []
+        self.n_workers = self.n_CPUs + self.n_GPUs # Often useful.
+        self.workers = [] # List of all Worker objects.
         for i in range(self.n_CPUs):
             self.workers.append(Worker(ID=i))          
         for j in range(self.n_GPUs):
-            self.workers.append(Worker(GPU=True, ID=self.n_CPUs + j))  
-                           
+            self.workers.append(Worker(GPU=True, ID=self.n_CPUs + j))                             
     
     def print_info(self, filepath=None):
-        """Print basic information about the Node."""
+        """
+        Print basc information about the Node, either to screen or as txt file.
+        
+        Parameters
+        ------------------------
+        filepath - string
+        Destination for txt file.                           
+        """
         print("--------------------------------------------------------", file=filepath)
         print("NODE INFO", file=filepath)
         print("--------------------------------------------------------", file=filepath)
@@ -209,47 +342,70 @@ class Node:
         print("--------------------------------------------------------\n", file=filepath)            
        
     def where_scheduled(self, task):
-        """Return the ID of the processor where task is scheduled, or None if it isn't."""
+        """
+        Which Worker the task is currently scheduled on.
+        
+        Parameters
+        ------------------------
+        task - Task object (see Graph.py module)
+        Represents a (static) task. 
+
+        Returns
+        ------------------------ 
+        None/int
+        ID of the Worker on which task is scheduled, None if task is not scheduled anywhere.               
+        """
         for p in range(self.n_workers):
             if task in self.workers[p].load:
                 return p
         return None       
     
     def reset(self):
-        """ Resets some attributes to defaults so we can simulate the execution of another job. """
+        """Resets some attributes to defaults so we can simulate the execution of another DAG. """
         for w in self.workers:
             w.load = []   
             w.idle = True 
             
-    def print_schedule(self, name="", filepath=None):
-        """Prints the current schedule for all processors."""
-        if filepath:
-            print("--------------------------------------------------------", file=filepath)
-            print("{} SCHEDULE".format(name), file=filepath)
-            print("--------------------------------------------------------", file=filepath)
-            for w in self.workers:
-                w.print_schedule(filepath=filepath)  
-            makespan = max(w.load[-1].AFT for w in self.workers if w.load) 
-            print("\n{} makespan: {}".format(name, makespan), file=filepath)            
-            print("--------------------------------------------------------\n", file=filepath)
-        else:
-            print("--------------------------------------------------------")
-            print("{} SCHEDULE".format(name))
-            print("--------------------------------------------------------")
-            for w in self.workers:
-                w.print_schedule()  
-            makespan = max(w.load[-1].AFT for w in self.workers if w.load) 
-            print("\n{} makespan: {}".format(name, makespan))            
-            print("--------------------------------------------------------\n")
+    def print_schedule(self, heuristic_name="", filepath=None):
+        """
+        Print the current schedule, all tasks scheduled on each Worker, either to screen or as txt file.
+        
+        Parameters
+        ------------------------
+        heuristic_name - string
+        Name of the heuristic which produced the current schedule. Often helpful.
+        
+        filepath - string
+        Destination for schedule txt file.                           
+        """
+        print("--------------------------------------------------------", file=filepath)
+        print("{} SCHEDULE".format(heuristic_name), file=filepath)
+        print("--------------------------------------------------------", file=filepath)
+        for w in self.workers:
+            w.print_schedule(filepath=filepath)  
+        makespan = max(w.load[-1].AFT for w in self.workers if w.load) 
+        print("\n{} MAKESPAN: {}".format(heuristic_name, makespan), file=filepath)            
+        print("--------------------------------------------------------\n", file=filepath)
+        
     
     def valid_schedule(self, schedule, dag):
         """
-        Inputs:
-            - schedule, list of the form [(task, processor scheduled on, start time), ...].
-        Returns True if schedule is valid (doesn't violate any task dependencies or 
-        schedule multiple tasks on same processor at same time), False otherwise.        
-        """        
+        Check if input schedule is valid.
         
+        Parameters
+        ------------------------
+        schedule - list of the form [(task, processor scheduled on, start time), ...]
+        Represents a (static) task.        
+        
+        dag - DAG object (see Graph.py module)
+        The DAG to which the task belongs.
+        
+        Returns
+        ------------------------
+        bool
+        True if the input schedule is valid (doesn't violate any task dependencies or 
+        schedule multiple tasks on same processor at same time), False otherwise.                  
+        """    
         finish_times, where_scheduled, processor_loads, start_times = {}, {}, {}, {}
         for t, p, st in schedule:
             start_times[t] = st
@@ -278,11 +434,21 @@ class Node:
     
     def evaluate_schedule(self, schedule, dag):
         """
-        Inputs:
-            - schedule, list of the form [[(task, processor scheduled on, start time), ...].
-            - dag, the DAG the schedule corresponds to.        
-        Checks that an input schedule is valid and, if so, returns its makespan.
-        """
+        Compute the makespan of the input schedule.
+        
+        Parameters
+        ------------------------
+        schedule - list of the form [(task, processor scheduled on, start time), ...]
+        Represents a (static) task.        
+        
+        dag - DAG object (see Graph.py module)
+        The DAG to which the task belongs.
+        
+        Returns
+        ------------------------
+        mkspan - float
+        The makespan of the DAG.                  
+        """ 
         # Check if it's a valid schedule.
         if not self.valid_schedule(schedule, dag):
             raise ValueError('Schedule you are trying to evaluate is invalid! Check it again...') 
@@ -299,10 +465,32 @@ class Node:
             mkspan = max(finish_time, mkspan)
         return mkspan
         
-    def comm_cost(self, parent, child, source_id, target_id, estimates=None):    
+    def comm_cost(self, parent, child, source_id, target_id, estimates=None):   
         """
-        Communication cost between parent and child tasks (assumes one exists).         
-        """        
+        Compute the communication time from a parent task to a child.
+        
+        Parameters
+        ------------------------
+        parent - Task object (see Graph.py module)
+        The parent task that is sending its data.
+        
+        child - Task object (see Graph.py module)
+        The child task that is receiving data.
+        
+        source_id - int
+        The ID of the Worker on which parent is scheduled.
+        
+        target_id - int
+        The ID of the Worker on which child may be scheduled.
+                         
+        estimates - dict
+        TODO: Might remove this, check!
+        
+        Returns
+        ------------------------
+        float 
+        The communication time between parent and child.        
+        """       
         if source_id == target_id:
             return 0 
         if not self.communication:
@@ -321,10 +509,45 @@ class Node:
         return parent.comm_costs["{}".format(source_type + target_type)][child.ID]    
                 
     
-    def approximate_comm_cost(self, parent, child, weighting="HEFT", r_bar=None):  
+    def approximate_comm_cost(self, parent, child, weighting="HEFT", r_bar=None): 
+        #TODO - extra weightings - remove?
         """
-        Approximate communication cost of the edge from a parent task to a child task. Used in HEFT and similar heuristics. 
-        """ 
+        Compute the "approximate" communication time from parent to child tasks. Usually used for setting priorities in HEFT and similar heuristics.
+        
+        Parameters
+        ------------------------
+        parent - Task object (see Graph.py module)
+        The parent task that is sending its data.
+        
+        child - Task object (see Graph.py module)
+        The child task that is receiving data.
+        
+        weighting - string
+        How the approximation should be computed. 
+        Options:
+            - "HEFT", use mean values over all processors as in HEFT.
+            - "median", use median values over all processors. 
+            - "worst", assume each task is on its slowest processor type and compute corresponding communication cost.
+            - "simple worst", always use largest possible communication cost.
+            - "best", assume each task is on its fastest processor type and compute corresponding communication cost.
+            - "simple best", always use smallest possible communication cost.
+            - "HEFT-WM", compute mean over all processors, weighted by task acceleration ratios.
+            - "WM-II", alternative to above that uses mean acceleration ratio over all tasks in DAG instead.
+            - "PS", "D", "SFB" - speedup-based weightings used in HEFT No Cross (Shetti, Fahmy and Bretschneider, 2013).
+            - "EPS", "EW", "CC-I", "CC-II", "CC-III" - experimental weightings that weren't promising. TODO.
+        
+        r_bar - None/float
+        Mean acceleration ratio of all tasks in DAG, used in "WM-II" weighting.
+                                 
+        Returns
+        ------------------------
+        float 
+        The approximate communication cost between parent and child. 
+        
+        Notes
+        ------------------------
+        1. "median", "worst", "simple worst", "best", "simple best" were all considered by Zhao and Sakellariou, 2003. 
+        """
         if not self.communication:
             return 0
         
@@ -386,7 +609,7 @@ class Node:
             c_bar /= ((self.n_CPUs + r * self.n_GPUs)**2)
             return c_bar 
             
-        elif weighting == "PS" or weighting == "ps" or weighting == "diff" or weighting == "SFB" or weighting == "sfb" or weighting == "EPS": 
+        elif weighting == "PS" or weighting == "ps" or weighting == "D" or weighting == "diff" or weighting == "SFB" or weighting == "sfb" or weighting == "EPS": 
             return 0
         elif weighting[:2] == "EW":
             return 0        
@@ -397,8 +620,24 @@ class Node:
         
     def fastest_processor_of_type(self, task, dag, gpu=False):
         """
-        Returns (ID of the processor of the given type which will complete the task at the earliest time, estimated time it will start).
-        """        
+        Finds the fastest Worker of a CPU or GPU type for the task.
+        
+        Parameters
+        ------------------------
+        task - Task object (see Graph.py module)
+        Represents a (static) task.
+        
+        dag - DAG object (see Graph.py module)
+        The DAG to which the task belongs.
+              
+        gpu - bool
+        If True, finds fastest GPU for task, else CPU.
+        
+        Returns
+        ------------------------
+        tuple (int, float)
+        ID of the Worker of the input type expected to complete it at the earliest time and the estimated time it can start. 
+        """         
         if gpu:
             finish_times = [p.earliest_finish_time(task, dag, self) for p in self.workers if p.GPU]
             return np.argmin(finish_times) + self.n_CPUs, np.amin(finish_times) - task.GPU_time           
@@ -407,16 +646,38 @@ class Node:
         
     def schedule_batch(self, dag, batch, policy="eft", bmct_initial_allocation="met", mapping=None, batch_sort=None):
         """
-        Schedule an independent batch of the tasks in the DAG according to some processor selection policy.
-        Inputs:
-            - policy describes how we schedule the tasks. Default is "eft" which corresponds to scheduling each task on the processor estimated
-              to complete it at the earliest time. 
-              If policy == "eft" use the classic Earliest Finish Time heuristic.
-              If policy == "met" then use the classic Minimum Execution Time heuristic. 
-              If policy == "bmct" then we use Sakellariou and Zhao's Balanced Minimum Completion Time. 
-              If policy == "custom" then we expect a mapping to be specified and throw an error otherwise.
-            - mapping is a dict {task ID : processor ID} that describes where we want to schedule each task.
-        """
+        Schedule a batch of independent (no precedence constraints between them) tasks from a DAG according to some input rule.
+        
+        Parameters
+        ------------------------
+        
+        dag - DAG object (see Graph.py module)
+        The DAG to which the tasks belongs.
+              
+        batch - list of Task objects
+        The tasks to be scheduled.
+        
+        policy - string
+        Describes the rule used for scheduling the tasks.
+        Options:
+            - "eft", use the classic Earliest Finish Time heuristic.
+            - "met", use the classic Minimum Execution Time heuristic.
+            - "bmct", use Sakellariou and Zhao's Balanced Minimum Completion Time heuristic.
+            - "custom", expect a mapping {task : processor} to be specified and throw an error otherwise. 
+            
+        bmct_initial_allocation - string
+        How the tasks should be initially scheduled when following the BMCT policy.
+        Options:
+            - "eft", use the classic Earliest Finish Time heuristic.
+            - "met", use the classic Minimum Execution Time heuristic.
+            - "random", assign tasks randomly, weighted by processor speed.
+            
+        mapping - dict, {task ID : processor ID}
+        Which Worker each task should be scheduled on.
+        
+        batch_sort - None/string
+        Optional, how to weight each task to compute priorities. Can use any weighting defined in task.approximate_execution_cost (see Graph.py).        
+        """ 
         
         if batch_sort:
             weight = {}
@@ -553,17 +814,39 @@ class Node:
             raise ValueError('Unrecognised processor selection policy in schedule_batch!')
         
     def estimate_makespan(self, dag, batch, policy="eft", mapping=None, just_batch=False):
-        """ 
-        Estimate the new makespan resulting after scheduling a batch of independent tasks from dag on platform.        
+        """
+        Estimate the new makespan after scheduling a batch of independent tasks.
         At the moment, basically just schedule the tasks in the batch then reset everything back to the initial state but in the future may 
         try something else.
         
-        Inputs:
-            - policy describes how we schedule the tasks. Default is "eft" which corresponds to scheduling each task on the processor estimated
-              to complete it at the earliest time. If heuristic == "custom" then we expect a mapping to be specified and throw an error otherwise.
-            - mapping is a dict {task ID : processor ID} that describes where we want to schedule each task.
-        """                           
+        Parameters
+        ------------------------
         
+        dag - DAG object (see Graph.py module)
+        The DAG to which the tasks belongs.
+              
+        batch - list of Task objects
+        The tasks to be scheduled.
+        
+        policy - string
+        Describes the rule used for scheduling the tasks.
+        Options:
+            - "eft", use the classic Earliest Finish Time heuristic.
+            - "met", use the classic Minimum Execution Time heuristic.
+            - "bmct", use Sakellariou and Zhao's Balanced Minimum Completion Time heuristic.
+            - "custom", expect a mapping {task : processor} to be specified and throw an error otherwise. 
+                        
+        mapping - dict, {task ID : processor ID}
+        Which Worker each task should be scheduled on.
+        
+        just_batch - bool
+        If True, return the estimated maximum finish time of all tasks in the batch only, else return current makespan of entire DAG.      
+        
+        Returns
+        ------------------------
+        makespan - float
+        The current makespan of the DAG.        
+        """                                 
         self.schedule_batch(dag, batch, policy=policy, mapping=mapping)              
             
         # Compute the makespan.
@@ -584,7 +867,39 @@ class Node:
         Estimate the finish times of all tasks in batch. 
         Assumes that all tasks in batch are independent and that they are ready to schedule (so disregards any unscheduled parents).
         Helper function for HEFT_L (HEFT with lookahead).
-        """
+        
+        Parameters
+        ------------------------
+        
+        dag - DAG object (see Graph.py module)
+        The DAG to which the tasks belongs.
+              
+        batch - list of Task objects
+        The tasks to be scheduled.
+        
+        policy - string
+        Describes the rule used for scheduling the tasks.
+        Options:
+            - "eft", use the classic Earliest Finish Time heuristic.
+                        
+        where_scheduled - bool
+        If True also return a dict describing which Worker each task is to be scheduled on.
+        
+        cpu_samples - None/int
+        The number of CPU Workers to sample.
+        
+        gpu_samples - None/int
+        The number of GPU Workers to sample.    
+        
+        Returns
+        ------------------------
+        makespan - float
+        The current makespan of the DAG.  
+        
+        If where_scheduled:
+        destinations - dict {task ID : (Worker ID, estimated finish time of task on Worker)}
+        Where each task is expected to be scheduled.
+        """ 
         
         if policy != "EFT":
             raise ValueError("Sorry, estimate_finish_times only works for EFT processor selection now (but will extend in future).")
@@ -652,14 +967,6 @@ class Node:
         if where_scheduled:
             return finish_times, destinations
         return finish_times     
-        
-
-# TODO: Working only at node-level now but may develop a Cluster class later.
-class Cluster:
-    def __init__(self, nodes, interconnect):
-        """Cluster is a collection of nodes."""
-        self.nodes = nodes
-        self.interconnect = interconnect
         
         
     
