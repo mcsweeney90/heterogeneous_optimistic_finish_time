@@ -116,7 +116,7 @@ class Worker:
         The DAG to which the task belongs.
               
         platform - Node object
-        The Node object to which the Worker belongs. 
+        The Node to which the Worker belongs. 
         Needed for calculating communication costs, although this is a bit unconventional.
         
         insertion - bool

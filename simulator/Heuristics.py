@@ -3,8 +3,8 @@
 """
 Created on Tue Oct 16 16:11:27 2018
 
-Implementations of classic static listing heuristics, as well as Heterogeneous Optimistic Finish Time (HOFT)
-and a few experimental ones that I may pursue further in the future.
+This module contains implementations of several static scheduling heuristics, as well as 
+Heterogeneous Optimistic Finish Time (HOFT).
 
 @author: Tom
 """
@@ -19,19 +19,49 @@ from collections import defaultdict
     
 ####################################################################################################   
     
-def HEFT(dag, platform, task_list=None, weighting="mean", return_schedule=False, schedule_dest=None):
+def HEFT(dag, platform, priority_list=None, weighting="HEFT", return_schedule=False, schedule_dest=None):
     """
-    Heterogeneous Earliest Finish Time (Topcuoglu, Hariri and Wu, 2002).
-    If return_schedule == True, returns the schedule explictly as a dict {task ID : processor ID}.
-    """   
+    Heterogeneous Earliest Finish Time.
+    'Performance-effective and low-complexity task scheduling for heterogeneous computing',
+    Topcuoglu, Hariri and Wu, 2002.
+    
+    Parameters
+    ------------------------    
+    dag - DAG object (see Graph.py module)
+    The DAG to which the task belongs.
+          
+    platform - Node object (see Environment.py module)
+    The Node to which the Worker belongs. 
+    
+    priority_list - None/list
+    If not None, an ordered list which gives the order in which tasks are to be scheduled. 
+    
+    weighting - string
+    How the tasks and edges should be weighted in dag.sort_by_upward_rank.
+    Default is "HEFT" which is mean values over all processors as in the original paper. 
+    See platform.approximate_comm_cost and task.approximate_execution_cost for other options.
+    
+    return_schedule - bool
+    If True, return the schedule as well.
+             
+    schedule_dest - None/string
+    Path to save schedule. 
+    
+    Returns
+    ------------------------
+    mkspan - float
+    The makespan of the schedule produced by HEFT. 
+    
+    If return_schedule == True:
+    pi - defaultdict(int)
+    The schedule in the form {task : ID of Worker it is scheduled on}.    
+    """ 
     
     if return_schedule:
         pi = defaultdict(int)  
     
-    # Get a list of the tasks in nonincreasing order of upward rank.
-    if task_list:
-        priority_list = task_list
-    else:
+    # List all tasks by upward rank unless alternative is specified.
+    if priority_list is None:
         priority_list = dag.sort_by_upward_rank(platform, weighting=weighting)   
     
     # Schedule the tasks.
@@ -58,7 +88,7 @@ def HEFT(dag, platform, task_list=None, weighting="mean", return_schedule=False,
     # Makespan is the maximum AFT of all the exit tasks. 
     mkspan = dag.makespan() 
     
-    # Clean up DAG and platform.
+    # Reset DAG and platform.
     dag.reset()
     platform.reset() 
     
@@ -66,55 +96,86 @@ def HEFT(dag, platform, task_list=None, weighting="mean", return_schedule=False,
         return mkspan, pi    
     return mkspan 
 
-def HBMCT(dag, platform, task_list=None, batch_policy="bmct", bmct_initial_allocation="met", group_sort=None, return_schedule=False, schedule_dest=None):
+def HBMCT(dag, platform, priority_list=None, batch_policy="bmct", bmct_initial_allocation="met", group_sort=None, return_schedule=False, schedule_dest=None):
     """
-    Hybrid Balanced Minimum Completion Time (Sakellariou and Zhao, 2004).
-    """
+    Hybrid Balanced Minimum Completion Time.
+    'A hybrid heuristic for DAG scheduling on heterogeneous systems',
+    Sakellariou and Zhao, 2004.
+    
+    Parameters
+    ------------------------    
+    dag - DAG object (see Graph.py module)
+    The DAG to which the task belongs.
+          
+    platform - Node object (see Environment.py module)
+    The Node to which the Worker belongs. 
+    
+    priority_list - None/list
+    If not None, an ordered list which gives the order in which tasks are to be scheduled. 
+    
+    bmct_policy - string
+    bmct_initial_allocation - string
+    group_sort - None/string
+    The above 3 parameters are all options for platform.schedule_batch; see that method for more detail.
+    
+    return_schedule - bool
+    If True, return the schedule as well.
+             
+    schedule_dest - None/string
+    Path to save schedule. 
+    
+    Returns
+    ------------------------
+    mkspan - float
+    The makespan of the schedule produced by HBMCT. 
+    
+    If return_schedule == True:
+    pi - defaultdict(int)
+    The schedule in the form {task : ID of Worker it is scheduled on}.    
+    """ 
     
     if return_schedule:
+        task_order = []
         pi = defaultdict(int) 
+    elif schedule_dest:
+        task_order = [] 
     
-    # Get the priority list of tasks.
-    if task_list:
-        priority_list = task_list
-    else:        
-        priority_list = dag.sort_by_upward_rank(platform) 
-                
-    if schedule_dest:
-        task_order = []  
+    # List all tasks by upward rank unless alternative is specified.
+    if priority_list is None:       
+        priority_list = dag.sort_by_upward_rank(platform)                 
                         
     # Find the groups and schedule them.
     G = []
     for task in priority_list:
         if any(p in G for p in dag.DAG.predecessors(task)):
             platform.schedule_batch(dag, G, policy=batch_policy, bmct_initial_allocation=bmct_initial_allocation, batch_sort=group_sort)
-            if schedule_dest:
+            if return_schedule or schedule_dest:
                 for t in G:            
                     task_order.append(t.ID)
             G = []
         G.append(task)
     if len(G):
         platform.schedule_batch(dag, G, policy=batch_policy, bmct_initial_allocation=bmct_initial_allocation, batch_sort=group_sort)
-        if schedule_dest:
+        if return_schedule or schedule_dest:
             for task in G:            
                 task_order.append(task.ID)
     
     # If schedule_dest, save the priority list and schedule.           
     if schedule_dest: 
         print("The tasks were scheduled in the following order:", file=schedule_dest)
-        for t in priority_list:
+        for t in task_order:
             print(t.ID, file=schedule_dest)
         print("\n", file=schedule_dest)
         platform.print_schedule(name="HBMCT", filepath=schedule_dest)
         
     if return_schedule:
-        for t in priority_list:
+        for t in task_order:
             pi[t] = t.where_scheduled
         
     # Compute makespan.       
     mkspan = dag.makespan()
     
-    # Clean up DAG and platform.
+    # Reset DAG and platform.
     dag.reset()
     platform.reset()    
     
@@ -124,49 +185,84 @@ def HBMCT(dag, platform, task_list=None, batch_policy="bmct", bmct_initial_alloc
     
 def PEFT(dag, platform, priority_list=None, return_schedule=False, schedule_dest=None):
     """
-    Predict Earliest Finish Time (Arabnejad and Barbosa, 2014).
-    Notes:
-        - The suggested task prioritization phase rank_oct(t) = sum(OCT(t) / P) doesn't always respect the precedence constraints.
-          Alternatives: use minimum OFT instead, or take suggested rank_oct as node weight and compute upward ranks, or just operate on ready tasks.
-    """
+    Predict Earliest Finish Time.
+    'List scheduling algorithm for heterogeneous systems by an optimistic cost table',
+    Arabnejad and Barbosa, 2014.
+    
+    Parameters
+    ------------------------    
+    dag - DAG object (see Graph.py module)
+    The DAG to which the task belongs.
+          
+    platform - Node object (see Environment.py module)
+    The Node to which the Worker belongs. 
+    
+    priority_list - None/list
+    If not None, an ordered list which gives the order in which tasks are to be scheduled. 
+        
+    return_schedule - bool
+    If True, return the schedule as well.
+             
+    schedule_dest - None/string
+    Path to save schedule. 
+    
+    Returns
+    ------------------------
+    mkspan - float
+    The makespan of the schedule produced by PEFT. 
+    
+    If return_schedule == True:
+    pi - defaultdict(int)
+    The schedule in the form {task : ID of Worker it is scheduled on}.    
+    """ 
     
     if return_schedule:
         pi = defaultdict(int) 
+    if schedule_dest and priority_list is None:
+        task_order = []
     
     OCT = dag.optimistic_cost_table(platform)   
     
-    if not priority_list:        
-        task_ranks = {}
-        # Compute the task ranks.
-        for task in dag.DAG:
-            # Quick hack to handle the case when we have a single artificial cost zero exit task.
-            if task.exit and task.CPU_time == 0:
-                task_ranks[task] = -1
-                continue
-#            task_ranks[task] = sum(OCT[task].values()) / platform.n_workers
-            task_ranks[task] = min(OCT[task].values()) # Use min values instead...             
-        priority_list = list(reversed(sorted(task_ranks, key=task_ranks.get)))
-    
-    # Schedule all tasks to the processor that minimizes the sum of the OCT and EFT.
-    for task in priority_list:
-        OEFT = [p.earliest_finish_time(task, dag, platform) + OCT[task][p.ID] for p in platform.workers]
-        p = np.argmin(OEFT)
-        platform.workers[p].schedule_task(task, dag, platform)
-        if return_schedule:
-            pi[task] = p
+    if priority_list is not None:   
+        for task in priority_list:
+            OEFT = [p.earliest_finish_time(task, dag, platform) + OCT[task][p.ID] for p in platform.workers]
+            p = np.argmin(OEFT)
+            platform.workers[p].schedule_task(task, dag, platform)
+            if return_schedule:
+                pi[task] = p
+    else:            
+        task_weights = {t.ID : np.mean(OCT[task].values()) for t in dag.DAG}    
+        ready_tasks = list(t for t in dag.DAG if t.entry)    
+        while len(ready_tasks):          
+            task = max(ready_tasks, key = lambda t : task_weights[t.ID]) 
+            if schedule_dest:         
+                task_order.append(task.ID)
+            OEFT = [p.earliest_finish_time(task, dag, platform) + OCT[task][p.ID] for p in platform.workers]
+            p = np.argmin(OEFT)  
+            platform.workers[p].schedule_task(task, dag, platform)
+            if return_schedule:
+                pi[task] = p                
+            ready_tasks.remove(task)
+            for c in dag.DAG.successors(task):
+                if c.ready_to_schedule(dag):
+                    ready_tasks.append(c) 
         
     # If schedule_dest, save the priority list and schedule.
     if schedule_dest: 
         print("The tasks were scheduled in the following order:", file=schedule_dest)
-        for t in priority_list:
-            print(t.ID, file=schedule_dest)
+        if priority_list is None:
+            for t in task_order:
+                print(t.ID, file=schedule_dest)
+        else:            
+            for t in priority_list:
+                print(t.ID, file=schedule_dest)
         print("\n", file=schedule_dest)
         platform.print_schedule(name="PEFT", filepath=schedule_dest)
         
     # Compute makespan.        
     mkspan = dag.makespan()
     
-    # Clean up DAG and platform.
+    # Reset DAG and platform.
     dag.reset()
     platform.reset()  
     
@@ -174,10 +270,35 @@ def PEFT(dag, platform, priority_list=None, return_schedule=False, schedule_dest
         return mkspan, pi        
     return mkspan    
 
-def PETS(dag, platform, selection_heuristic="eft", return_schedule=False, schedule_dest=None):
+def PETS(dag, platform, return_schedule=False, schedule_dest=None):
     """
-    Performance Effective Task Scheduling (Ilavarasan and Thambidurai, 2007). 
-    """
+    Performance Effective Task Scheduling.
+    'Low complexity performance effective task scheduling algorithm for heterogeneous computing environments',
+    Ilavarasan and Thambidurai, 2007.
+    
+    Parameters
+    ------------------------    
+    dag - DAG object (see Graph.py module)
+    The DAG to which the task belongs.
+          
+    platform - Node object (see Environment.py module)
+    The Node to which the Worker belongs. 
+            
+    return_schedule - bool
+    If True, return the schedule as well.
+             
+    schedule_dest - None/string
+    Path to save schedule. 
+    
+    Returns
+    ------------------------
+    mkspan - float
+    The makespan of the schedule produced by PETS. 
+    
+    If return_schedule == True:
+    pi - defaultdict(int)
+    The schedule in the form {task : ID of Worker it is scheduled on}.    
+    """ 
     
     if return_schedule:
         pi = defaultdict(int)     
@@ -205,8 +326,7 @@ def PETS(dag, platform, selection_heuristic="eft", return_schedule=False, schedu
         for task in levels[current_level]:
             acc[task] = task.approximate_execution_cost(platform)
             rpt = max(rank[p] for p in dag.DAG.predecessors(task)) if not task.entry else 0      
-            dtc = sum(platform.approximate_comm_cost(task, c) for c in dag.DAG.successors(task))             
-            # Rank is just the sum of all three factors.                     
+            dtc = sum(platform.approximate_comm_cost(task, c) for c in dag.DAG.successors(task))                        
             rank[task] = round(acc[task] + dtc + rpt)            
             
         # Sort all tasks at current level by rank (largest first) with ties broken by acc (smallest first).
@@ -214,14 +334,13 @@ def PETS(dag, platform, selection_heuristic="eft", return_schedule=False, schedu
         priority_list = list(reversed(sorted(priority_list, key=lambda t: rank[t])))   
         
         # Schedule all tasks in current level.
-        platform.schedule_batch(dag, priority_list, policy=selection_heuristic)
+        platform.schedule_batch(dag, priority_list, policy="eft")
         if schedule_dest:
             task_order += list(t.ID for t in priority_list)  
         if return_schedule:
             for task in priority_list:
                 pi[task] = task.where_scheduled    
                 
-    # If schedule_dest, save the priority list and schedule.
     if schedule_dest: 
         print("The tasks were scheduled in the following order:", file=schedule_dest)
         for t in task_order:
@@ -241,6 +360,34 @@ def PETS(dag, platform, selection_heuristic="eft", return_schedule=False, schedu
     return mkspan
 
 def HCPT(dag, platform, return_schedule=False, schedule_dest=None):
+    """
+    Heterogeneous Critical Parent Trees.
+    'A simple scheduling heuristic for heterogeneous computing environments',
+    Hagras and Janecek, 2003.
+    
+    Parameters
+    ------------------------    
+    dag - DAG object (see Graph.py module)
+    The DAG to which the task belongs.
+          
+    platform - Node object (see Environment.py module)
+    The Node to which the Worker belongs. 
+            
+    return_schedule - bool
+    If True, return the schedule as well.
+             
+    schedule_dest - None/string
+    Path to save schedule. 
+    
+    Returns
+    ------------------------
+    mkspan - float
+    The makespan of the schedule produced by PETS. 
+    
+    If return_schedule == True:
+    pi - defaultdict(int)
+    The schedule in the form {task : ID of Worker it is scheduled on}.    
+    """ 
     """
     Heterogeneous Critical Parent Trees (Hagras and Janecek, 2003).
     Notes:
@@ -300,7 +447,6 @@ def HCPT(dag, platform, return_schedule=False, schedule_dest=None):
         if return_schedule:
             pi[t] = min_processor
     
-    # If schedule_dest, save the priority list and schedule.
     if schedule_dest: 
         print("The tasks were scheduled in the following order:", file=schedule_dest)
         for t in L:
@@ -308,10 +454,9 @@ def HCPT(dag, platform, return_schedule=False, schedule_dest=None):
         print("\n", file=schedule_dest)
         platform.print_schedule(name="HCPT", filepath=schedule_dest)
         
-    # Makespan is the maximum AFT of all the exit tasks. 
     mkspan = dag.makespan() 
     
-    # Clean up DAG and platform.
+    # Reset DAG and platform.
     dag.reset()
     platform.reset()    
     
@@ -626,84 +771,6 @@ def level_scheduler(dag, platform, level_sort="HEFT", selection_heuristic="eft",
         
     return mkspan
 
-def stochastic_list_scheduler(dag, platform, task_list=None, policy="R-I", schedule_dest=None):
-    """
-    Stochastic processor selection methods for any input task list.  
-    Obviously expected to do badly, the idea was that it might be useful for a kind of Monte Carlo sampling lookahead
-    but didn't pursue that very far.
-    """     
-    
-    # Get a list of the tasks in nonincreasing order of upward rank.
-    if task_list:
-        priority_list = task_list
-    else:
-        priority_list = dag.sort_by_upward_rank(platform) 
-    
-    if policy == "R-II" or policy == "R-IV":        
-        r = np.mean(list(t.acceleration_ratio for t in dag.DAG))
-        
-    for task in priority_list:
-        if policy == "R-I":
-            chosen_processor = np.random.choice(range(platform.n_workers))
-    
-        elif policy == "R-II" or policy == "R-III":
-            if policy == "R-III":
-                r = task.acceleration_ratio
-            s = platform.n_CPUs + r * platform.n_GPUs 
-            relative_speeds = [1 / s] * platform.n_CPUs + [r / s] * platform.n_GPUs
-            chosen_processor = np.random.choice(range(platform.n_workers), p=relative_speeds)           
-            
-        elif policy == "R-IV" or policy == "R-V":
-            cpu_finish_times = list([p.earliest_finish_time(task, dag, platform) for p in platform.workers if p.CPU])
-            gpu_finish_times = list([p.earliest_finish_time(task, dag, platform) for p in platform.workers if p.GPU])
-            if policy == "R-V":
-                r = task.acceleration_ratio
-            w = platform.n_CPUs + r * platform.n_GPUs
-            aff = np.random.choice(["CPU", "GPU"], p=(platform.n_CPUs / w, (r * platform.n_GPUs) / w))            
-            # Now choose the specific worker.
-            finish_times = cpu_finish_times if aff == "CPU" else gpu_finish_times
-            st = platform.n_CPUs if aff == "GPU" else 0
-            chosen_processor = st + np.argmin(finish_times)         
-            
-        elif policy == "R-VI":            
-            finish_times = list([p.earliest_finish_time(task, dag, platform) for p in platform.workers])
-            m = max(finish_times)
-            relative_finish_times = list([m - f for f in finish_times])
-            # Normalize... 
-            n = sum(relative_finish_times)
-            relative_finish_times = list([f/n for f in relative_finish_times])
-            chosen_processor = np.random.choice(range(platform.n_workers), p=relative_finish_times)             
-            
-        elif policy == "R-VII":
-            finish_times = list([p.earliest_finish_time(task, dag, platform) for p in platform.workers])
-            p1 = np.argmin(finish_times)
-            eft1 = finish_times[p1]
-            finish_times[p1] = float('inf')
-            p2 = np.argmin(finish_times)
-            eft2 = finish_times[p2]
-            
-            # Now use the two EFT values to select the chosen processor.
-            # Want q = 0.5 if eft2 - eft1 > eft1. Want relatively big q if gap is small and small q if gap is large.
-            d = eft2 - eft1
-            q = 0.5 if 2 * d >= eft1 else d / eft1
-            chosen_processor = np.random.choice([p1, p2], p=(0.5 + q, 0.5 - q))         
-            
-        # Schedule the task on the chosen worker.  
-        platform.workers[chosen_processor].schedule_task(task, dag, platform)                 
-        
-    # If verbose, print the schedule (i.e., the load of all the processors).
-    if schedule_dest: 
-        platform.print_schedule(name="Stochastic list scheduler with {} selection policy".format(policy), filepath=schedule_dest)
-     
-    mkspan = dag.makespan() 
-    
-    # Clean up DAG and platform.
-    dag.reset()
-    platform.reset()    
-    
-    return mkspan    
-
-
 def HEFT_FL(dag, platform, verbose=False, schedule_dest=False):
     """ 
     Extension of lookahead HEFT from Bittencourt, Sakellariou and Madeira that looks at a task's grandchildren.
@@ -791,151 +858,6 @@ def HEFT_FL(dag, platform, verbose=False, schedule_dest=False):
     return mkspan  
 
     
-def LB_priorities(dag, platform, selection="LB-I"):
-    """
-    Helper function for LB_heuristic below.
-    "LB" = "Load Balancing". Priorities determined based on acceleration ratio and how many tasks "should be" assigned to CPU/GPU 
-    according to an "optimal" load balance. 
-    Notes:
-        - Put in a separate function because otherwise would need to significantly rewrite Graph.sort_by_upward_rank.
-    """
-    
-    if not selection == "LB-III":
-        acc_ratios = list(t.acceleration_ratio for t in dag.DAG)
-        r_bar = np.mean(acc_ratios)
-    
-    if selection == "LB-I":
-        num_tasks_on_cpu = int(round(dag.num_tasks * platform.n_CPUs / (platform.n_CPUs + r_bar * platform.n_GPUs)))
-        sorted(acc_ratios)
-        thresh = acc_ratios[num_tasks_on_cpu] 
-          
-    where_scheduled = defaultdict(str)
-    for t in dag.DAG:
-        if selection == "LB-I":
-            where_scheduled[t.ID] = "CPU" if t.acceleration_ratio < thresh else "GPU" 
-        else:
-            r = r_bar if selection == "LB-II" else t.acceleration_ratio
-            w = platform.n_CPUs + r * platform.n_GPUs
-            where_scheduled[t.ID] = np.random.choice(["CPU", "GPU"], p=[platform.n_CPUs / w, (r * platform.n_GPUs) / w])            
-    
-    # Compute upward rank.
-    backward_traversal = list(reversed(list(nx.topological_sort(dag.DAG))))
-    task_ranks = {}
-    for t in backward_traversal:            
-        task_ranks[t] = t.CPU_time if where_scheduled[t.ID] == "CPU" else t.GPU_time 
-        try:
-            child_comm_costs = {}
-            for s in dag.DAG.successors(t):
-                child_comm_costs[s.ID] = platform.comm_cost()
-                if where_scheduled[t.ID] == "CPU" and where_scheduled[s.ID] == "CPU":
-                    A = (platform.n_CPUs - 1) / platform.n_CPUs
-                    child_comm_costs[s.ID] = A * t.comm_costs["CC"][s.ID]
-                elif where_scheduled[t.ID] == "CPU" and where_scheduled[s.ID] == "GPU":
-                    child_comm_costs[s.ID] = t.comm_costs["CG"][s.ID]
-                elif where_scheduled[t.ID] == "GPU" and where_scheduled[s.ID] == "CPU":
-                    child_comm_costs[s.ID] = t.comm_costs["GC"][s.ID]
-                else: # Both GPU.
-                    A = (platform.n_GPUs - 1) / platform.n_GPUs
-                    child_comm_costs[s.ID] = A * t.comm_costs["GG"][s.ID]
-            task_ranks[t] += max(child_comm_costs[s.ID] + task_ranks[s] for s in dag.DAG.successors(t))
-        except ValueError:
-            pass  
-    # Create and return priority list of tasks.            
-    priority_list = list(reversed(sorted(task_ranks, key=task_ranks.get)))
-    return priority_list
 
-def LB_heuristic(dag, platform, schedule_dest=None):
-    """
-    Basic idea: try to restrict tasks to a CPU or GPU based on their acceleration ratio.
-    Expected to do poorly (and does), but might try and extend this approach somehow in the future.
-    """
-    
-    priority_list, where_scheduled = LB_priorities(dag, platform)    
-    
-    for task in priority_list:
-        gpu = True if where_scheduled[task.ID] == "GPU" else False        
-        proc, _ = platform.fastest_processor_of_type(task, dag, gpu=gpu)
-        platform.workers[proc].schedule_task(task, dag, platform)
-    
-    # If schedule_dest, print the schedule (i.e., the load of all the processors).
-    if schedule_dest: 
-        print("The tasks were scheduled in the following order:", file=schedule_dest)
-        for t in priority_list:
-            print(t.ID, file=schedule_dest)
-        print("\n", file=schedule_dest)
-        platform.print_schedule(name="LB heuristic", filepath=schedule_dest)         
-        
-    # Makespan is the maximum AFT of all the exit tasks.        
-    mkspan = dag.makespan()
-    
-    # Clean up DAG and platform.
-    dag.reset()
-    platform.reset()    
-        
-    return mkspan                
-    
-def CP_heuristic(dag, platform, priority_list=None, weighting="mean", schedule_dest=None):
-    """
-    Very similar to Critical Path on a Processor (Topcuoglu, Hariri and Wu, 2002) but uses any input priority list.
-    Meant to pursue this further but early results weren't promising.
-    """  
-        
-    # Compute upward and downward ranks of all tasks.
-    if priority_list is None:
-        priority_list, upward_ranks = dag.sort_by_upward_rank(platform, weighting, return_rank_values=True)
-    else:
-        _, upward_ranks = dag.sort_by_upward_rank(platform, weighting, return_rank_values=True)
-    _, downward_ranks = dag.sort_by_downward_rank(platform, weighting, return_rank_values=True)
-    
-    # Compute priorities.
-    priority = defaultdict(float)    
-    for t in dag.DAG:
-        priority[t.ID] = upward_ranks[t] + downward_ranks[t]
-        if t.entry:
-            cp = priority[t.ID] # Assumes single entry task.
-            nk = t
-            cpu_weight, gpu_weight = t.CPU_time, t.GPU_time
-        if t.exit:
-            exit_id = t.ID 
-    
-    # Identify the tasks on the critical path.
-    cp_tasks = {nk.ID}
-    while nk.ID != exit_id:
-        nj = np.random.choice(list(s for s in dag.DAG.successors(nk) if abs(priority[s.ID] - cp) < 1e-6))           
-        cp_tasks.add(nj.ID)
-        cpu_weight += t.CPU_time
-        gpu_weight += t.GPU_time
-        nk = nj
-    
-    if cpu_weight < gpu_weight:
-        cp_processor = platform.workers[0]
-    else:
-        cp_processor = platform.workers[-1]    
-       
-    for task in priority_list:
-        
-        if task.ID in cp_tasks:
-            cp_processor.schedule_task(task, dag, platform)
-        else:
-            finish_times = list([p.earliest_finish_time(task, dag, platform) for p in platform.workers])
-            min_processor = np.argmin(finish_times)   
-            platform.workers[min_processor].schedule_task(task, dag, platform, finish_time=finish_times[min_processor])     
-            
-    # If schedule_dest, print the schedule (i.e., the load of all the processors).
-    if schedule_dest: 
-        print("The tasks were scheduled in the following order:", file=schedule_dest)
-        for t in priority_list:
-            print(t.ID, file=schedule_dest)
-        print("\n", file=schedule_dest)
-        platform.print_schedule(name="CP heuristic", filepath=schedule_dest)  
-            
-    # Makespan is the maximum AFT of all the exit tasks. 
-    mkspan = dag.makespan() 
-    
-    # Clean up DAG and platform.
-    dag.reset()
-    platform.reset()    
-    
-    return mkspan     
     
     
