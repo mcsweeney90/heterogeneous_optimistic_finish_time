@@ -303,7 +303,7 @@ class Node:
     """
     def __init__(self, CPUs, GPUs, name="generic", communication=True, adt=False):
         """
-        Print the current tasks scheduled on the Worker, either to screen or file.
+        Initialize the Node by giving the number of CPUs and GPUs.
         
         Parameters
         ------------------------
@@ -337,7 +337,7 @@ class Node:
     
     def print_info(self, filepath=None):
         """
-        Print basc information about the Node, either to screen or as txt file.
+        Print basic information about the Node, either to screen or as txt file.
         
         Parameters
         ------------------------
@@ -442,43 +442,8 @@ class Node:
                 s = processor_loads[proc][i + 1]
                 if finish_times[t] > start_times[s]:
                     return False            
-        return True        
+        return True  
     
-    def evaluate_schedule(self, schedule, dag):
-        """
-        Compute the makespan of the input schedule.
-        
-        Parameters
-        ------------------------
-        schedule - list of the form [(task, processor scheduled on, start time), ...]
-        Represents a (static) task.        
-        
-        dag - DAG object (see Graph.py module)
-        The DAG to which the task belongs.
-        
-        Returns
-        ------------------------
-        mkspan - float
-        The makespan of the DAG.   
-
-        Notes
-        ------------------------               
-        1. We assume that task.AST, task.AFT aren't set so can't just use dag.makespan().
-        """ 
-        # Check if it's a valid schedule.
-        if not self.valid_schedule(schedule, dag):
-            raise ValueError('Schedule you are trying to evaluate is invalid! Check it again...') 
-        
-        # Compute makespan. 
-        mkspan =  0.0
-        for t, p, st in schedule:
-            # If task.exit is not set, comment/remove next statement.
-            if not t.exit:
-                continue
-            finish_time = st + t.CPU_time if p < self.n_CPUs else st + t.GPU_time
-            mkspan = max(finish_time, mkspan)
-        return mkspan
-        
     def comm_cost(self, parent, child, source_id, target_id, estimates=None):   
         """
         Compute the communication time from a parent task to a child.
@@ -523,8 +488,7 @@ class Node:
         return parent.comm_costs["{}".format(source_type + target_type)][child.ID]    
                 
     
-    def approximate_comm_cost(self, parent, child, weighting="HEFT", r_bar=None): 
-        #TODO - extra weightings - remove?
+    def approximate_comm_cost(self, parent, child, weighting="HEFT"): 
         """
         Compute the "approximate" communication time from parent to child tasks. 
         Usually used for setting priorities in HEFT and similar heuristics.
@@ -547,13 +511,10 @@ class Node:
             - "best", assume each task is on its fastest processor type and compute corresponding communication cost.
             - "simple best", always use smallest possible communication cost.
             - "HEFT-WM", compute mean over all processors, weighted by task acceleration ratios.
-            - "WM-II", alternative to above that uses mean acceleration ratio over all tasks in DAG instead.
-            - "PS", "D", "SFB" - speedup-based weightings used in HEFT No Cross (Shetti, Fahmy and Bretschneider, 2013).
-            - "EPS", "EW", "CC-I", "CC-II", "CC-III" - experimental weightings that weren't promising. TODO.
-        
-        r_bar - None/float
-        Mean acceleration ratio of all tasks in DAG, used in "WM-II" weighting.
-                                 
+            - "PS", "D", "SFB" - speedup-based weightings from Shetti, Fahmy and Bretschneider, 2013. 
+               Returns zero in all three cases so definitions can be found in approximate_execution_cost
+               method in the Task class in Graph.py.
+                                         
         Returns
         ------------------------
         float 
@@ -604,31 +565,16 @@ class Node:
         elif weighting == "simple best" or weighting == "sb":
             return min(parent.comm_costs["CC"][child.ID], parent.comm_costs["CG"][child.ID], parent.comm_costs["GC"][child.ID], parent.comm_costs["GG"][child.ID])         
                 
-        elif weighting == "HEFT-WM" or weighting == "WM-I":
+        elif weighting == "HEFT-WM" or weighting == "WM":
             A, B = parent.acceleration_ratio, child.acceleration_ratio
             c_bar = self.n_CPUs * (self.n_CPUs - 1) * parent.comm_costs["CC"][child.ID] 
             c_bar += self.n_CPUs * B * self.n_GPUs * parent.comm_costs["CG"][child.ID]
             c_bar += A * self.n_GPUs * self.n_CPUs * parent.comm_costs["GC"][child.ID]
             c_bar += A * self.n_GPUs * B * (self.n_GPUs - 1) * parent.comm_costs["GG"][child.ID]
             c_bar /= ((self.n_CPUs + A * self.n_GPUs) * (self.n_CPUs + B * self.n_GPUs))
-            return c_bar            
-        
-        elif weighting == "WM-II":
-            if not r_bar:
-                raise ValueError("Tried to use approximate_comm_cost with weighting == WM-II but haven't entered the mean acceleration ratio!")
-            r = r_bar
-            c_bar = self.n_CPUs * (self.n_CPUs - 1) * parent.comm_costs["CC"][child.ID] 
-            c_bar += self.n_CPUs * r * self.n_GPUs * parent.comm_costs["CG"][child.ID]
-            c_bar += r * self.n_GPUs * self.n_CPUs * parent.comm_costs["GC"][child.ID]
-            c_bar += r * self.n_GPUs * r * (self.n_GPUs - 1) * parent.comm_costs["GG"][child.ID]
-            c_bar /= ((self.n_CPUs + r * self.n_GPUs)**2)
-            return c_bar 
+            return c_bar              
             
-        elif weighting == "PS" or weighting == "ps" or weighting == "D" or weighting == "diff" or weighting == "SFB" or weighting == "sfb" or weighting == "EPS": 
-            return 0
-        elif weighting[:2] == "EW":
-            return 0        
-        elif weighting == "CC-I" or weighting == "CC-II" or weighting == "CC-III":
+        elif weighting == "PS" or weighting == "ps" or weighting == "D" or weighting == "d" or weighting == "SFB" or weighting == "sfb": 
             return 0
         
         raise ValueError('No weighting (e.g., "mean" or "median") specified for approximate_comm_cost.')
@@ -883,8 +829,9 @@ class Node:
     def estimate_finish_times(self, dag, batch, policy="EFT", where_scheduled=False, cpu_samples=None, gpu_samples=None):
         """
         Estimate the finish times of all tasks in batch. 
-        Assumes that all tasks in batch are independent and that they are ready to schedule (so disregards any unscheduled parents).
-        Helper function for HEFT_L (HEFT with lookahead).
+        Effectively a helper function for HEFT_L (HEFT with lookahead).
+        Assumes that all tasks in batch are independent and that they are ready to schedule,
+        so in particular disregards any unscheduled parents.
         
         Parameters
         ------------------------
