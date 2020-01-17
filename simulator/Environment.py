@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Aug 21 16:00:45 2018
 
 This module contains classes which create a framework for describing arbitrary CPU and GPU computing environments. 
 
 Notes:
     1. Although "GPU" is used throughout, both processor types are defined entirely by their task
        processing/communication times so this can easily be used for any computing environment with only two different 
-       types of processing resources. 
-
-@author: Tom, Neil Walton
+       types of processing resources.
+       
 """
 
 import numpy as np

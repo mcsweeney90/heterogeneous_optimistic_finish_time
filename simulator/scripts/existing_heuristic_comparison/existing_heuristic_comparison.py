@@ -1,14 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Dec  3 16:39:17 2019
-
+TODO: Re-run this, will need to leave overnight!
 Comparison of five existing static scheduling heuristics - HEFT, HBMCT, PEFT, PETS and HCPT. 
 
-(The only two criteria for inclusion in the comparison were that at least one publication claims it is either the best or among the best, and it produces a "fullahead" schedule
-matching all tasks to a processor before runtime.)
-
-@author: Tom
 """
 
 import os
@@ -38,11 +33,11 @@ plt.rcParams['xtick.labelsize'] = 8
 plt.rcParams['ytick.labelsize'] = 8
 plt.rcParams['legend.fontsize'] = 8
 plt.rcParams['figure.titlesize'] = 12
+#plt.ioff() # Uncomment to suppress plots.
 
 ####################################################################################################
 
-# Define environments.
-
+# Define environments to be considered.
 single = Environment.Node(7, 1, name="Single_GPU")
 multiple = Environment.Node(28, 4, name="Multiple_GPU")
 
@@ -84,8 +79,8 @@ for nb in [128, 1024]:
                     print("{} makespan: {}\n".format(h, mkspan), file=dest)       
                 print("--------------------------------------------------------\n", file=dest)                  
     
-# Save the makespans so can plot later if I want.
-with open('data/chol_mkspans.dill'.format(nb), 'wb') as handle:
+# Save the makespans so can plot later.
+with open('results/chol_mkspans.dill'.format(nb), 'wb') as handle:
     dill.dump(chol_mkspans, handle)
         
 elapsed = timer() - start
@@ -110,14 +105,11 @@ for env in [single, multiple]:
                 count = 0
                 for app in os.listdir('../../graphs/random/{}/{}/CCR_{}'.format(env.name, acc, ccr)):
                     count += 1
-#                    if count > 1: # MAKE SURE TO UNCOMMENT BEFORE LEAVING TO RUN!
-#                        break
                     print("Starting DAG number {}...".format(count))
                     dag = nx.read_gpickle('../../graphs/random/{}/{}/CCR_{}/{}'.format(env.name, acc, ccr, app))
                     dag.print_info(platform=env, filepath=dest) 
 
-                    best = float('inf')                                     
-                                  
+                    best = float('inf')   
                     for h in heuristics:
                         if h == "HEFT":
                             mkspan = HEFT(dag, platform=env)
@@ -137,8 +129,7 @@ for env in [single, multiple]:
                         if rand_mkspans[env.name][acc][ccr][h][-1] == best:
                             bests[h] += 1
                                                
-                    print("--------------------------------------------------------\n", file=dest)                
-                    
+                    print("--------------------------------------------------------\n", file=dest)   
                 print("--------------------------------------------------------", file=dest)
                 print("SUMMARY", file=dest)
                 print("--------------------------------------------------------", file=dest)            
@@ -146,11 +137,10 @@ for env in [single, multiple]:
                     mean_makespan = np.mean(rand_mkspans[env.name][acc][ccr][h])
                     print("Heuristic: {}.".format(h), file=dest)
                     print("Mean makespan: {}.".format(mean_makespan), file=dest)  
-                    print("Number of best occurences: {}.\n".format(bests[h]), file=dest)  
-                
+                    print("Number of best occurences: {}.\n".format(bests[h]), file=dest)                
 
-# Save the reductions so can plot later if I want...
-with open('data/rand_mkspans.dill', 'wb') as handle:
+# Save the reductions so can plot later.
+with open('results/rand_mkspans.dill', 'wb') as handle:
     dill.dump(rand_mkspans, handle)
     
 elapsed = timer() - start

@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Aug 21 15:50:57 2018
 
 This module contains classes which create a framework for describing task DAGs.  
 
-@author: Tom, Neil Walton
 """
 
 import numpy as np

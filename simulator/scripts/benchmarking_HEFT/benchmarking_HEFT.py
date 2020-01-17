@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Oct  4 10:10:55 2019
-
 Benchmarking the performance of HEFT. See Section 4.1 of paper.
 
-@author: Tom
 """
 
 import os
@@ -17,7 +14,7 @@ from timeit import default_timer as timer
 import dill
 import sys
 sys.path.append('../../') # Quick fix to let us import modules from main directory. 
-import Environment    # Node classes and functions.
+import Environment    
 from Heuristics import HEFT
 
 # Set some parameters for plots.
@@ -35,11 +32,11 @@ plt.rcParams['xtick.labelsize'] = 8
 plt.rcParams['ytick.labelsize'] = 8
 plt.rcParams['legend.fontsize'] = 16
 plt.rcParams['figure.titlesize'] = 12
+#plt.ioff() # Uncomment to suppress plots.
 
 ####################################################################################################
 
-# Define environments.
-
+# Define environments to be considered.
 single = Environment.Node(7, 1, name="Single_GPU")
 multiple = Environment.Node(28, 4, name="Multiple_GPU")
 
@@ -66,7 +63,6 @@ for env in [single, multiple]:
                 mst = dag.minimal_serial_time(platform=env)
                 print("Minimal serial time: {}".format(mst), file=dest)     
                 
-                # Standard HEFT.
                 heft_mkspan = HEFT(dag, platform=env)
                 chol_mkspans[env.name][nb].append(heft_mkspan)
                 print("Standard HEFT makespan: {}".format(heft_mkspan), file=dest)
@@ -88,11 +84,10 @@ for nb in [128, 1024]:
     #ax1.set_title("Cholesky (nb = {})".format(nb), color="black", fontsize='large', family='serif')    
     plt.savefig('plots/cholesky_nb{}_speedups'.format(nb), bbox_inches='tight') 
     
-# Save the speedups so can plot again later if I want...
-with open('data/cholesky/cholesky_speedups.dill', 'wb') as handle:
-    dill.dump(chol_speedups, handle)
-    
-with open('data/cholesky/cholesky_mkspans.dill', 'wb') as handle:
+# Save speedups and makespans so can plot later.
+with open('results/cholesky_speedups.dill', 'wb') as handle:
+    dill.dump(chol_speedups, handle)    
+with open('results/cholesky_mkspans.dill', 'wb') as handle:
     dill.dump(chol_mkspans, handle)
     
 elapsed = timer() - start
@@ -122,8 +117,7 @@ for env in [single, multiple]:
                     dag.print_info(platform=env, filepath=dest)  
                     mst = dag.minimal_serial_time(platform=env)       
                     print("Minimal serial time: {}".format(mst), file=dest) 
-                    
-                    # HEFT.
+                                        
                     heft_mkspan = HEFT(dag, platform=env)
                     if heft_mkspan > mst:
                         failures += 1
@@ -132,8 +126,7 @@ for env in [single, multiple]:
                     print("Speedup: {}".format(s), file=dest)
                     speedups.append(s)
                     rand_speedups[env.name][acc][dag.CCR[env.name]].append(s)                                                
-                    print("--------------------------------------------------------\n", file=dest)                
-                    
+                    print("--------------------------------------------------------\n", file=dest)   
                 print("--------------------------------------------------------", file=dest)
                 print("SUMMARY", file=dest)
                 print("--------------------------------------------------------", file=dest)  
@@ -142,8 +135,8 @@ for env in [single, multiple]:
                 print("Worst speedup: {}.".format(min(speedups)), file=dest)            
                 print("Number of HEFT failures: {}/180".format(failures), file=dest)
 
-## Save the speedups so can plot again later if I want...
-with open('data/random/rand_speedups.dill', 'wb') as handle:
+## Save the speedups so can plot later.
+with open('results/rand_speedups.dill', 'wb') as handle:
     dill.dump(rand_speedups, handle)
     
 elapsed = timer() - start
@@ -157,12 +150,14 @@ print("Random DAG part took {} minutes".format(elapsed / 60))
 
 """Cholesky."""
 
-# Load data.
-with open('data/cholesky/cholesky_speedups.dill', 'rb') as file:
-    chol_speedups = dill.load(file)
+# Load data if necessary.
+try:
+    chol_speedups
+except NameError:
+    with open('results/cholesky_speedups.dill', 'rb') as file:
+        chol_speedups = dill.load(file)
+        
 n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
-
-# For paper.
 preferences = {"Single_GPU" : ["-", "o"], "Multiple_GPU": ["-", "o"]}
 for nb in [128, 1024]:               
     fig1 = plt.figure(dpi=400) 
@@ -176,56 +171,25 @@ for nb in [128, 1024]:
     plt.yticks(np.arange(0, 9, 1.0)) # Bit of a hack to make it look nicer, should really calculate the 0 and 9 values.
     ax1.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
     #ax1.set_title("Cholesky (nb = {})".format(nb), color="black", fontsize='large', family='serif')    
-    plt.savefig('plots/cholesky_nb{}_speedups'.format(nb), bbox_inches='tight') 
-    
-# For NLA group talk.
-preferences = {"Single_GPU" : ["-", "o", "1 GPU, 1 CPU"], "Multiple_GPU": ["-", "o", "4 GPUs, 4 CPUs"]}
-for nb in [128, 1024]:               
-    fig1 = plt.figure(dpi=400) 
-    ax1 = fig1.add_subplot(111)
-    ax1.set_xlabel("NUMBER OF TASKS", labelpad=10) 
-    ax1.set_ylabel("SPEEDUP", labelpad=10)  
-    plt.xscale('log')
-    for env in ["Single_GPU", "Multiple_GPU"]:
-        ax1.plot(n_tasks, chol_speedups[env][nb], linestyle=preferences[env][0], marker=preferences[env][1], label=preferences[env][2])
-    ax1.set_ylim(bottom=0)
-    plt.yticks(np.arange(0, 9, 1.0)) # Bit of a hack to make it look nicer, should really calculate the 0 and 9 values.
-    ax1.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)
-#    ax1.set_title("Tile size {}".format(nb), color="black", fontsize='large', family='serif')    
-    plt.savefig('plots/cholesky_nb{}_speedups_TALK'.format(nb), bbox_inches='tight') 
-    
+    plt.savefig('plots/cholesky_nb{}_speedups'.format(nb), bbox_inches='tight')       
     
 """Random DAGs."""
     
-# Load data.
-with open('data/random/rand_speedups.dill', 'rb') as file:
-    rand_speedups = dill.load(file)
-    
-markers = {"Single_GPU" : '.', "Multiple_GPU" : '.'}
-    
-# For paper.
+# Load data if necessary.
+try:
+    rand_speedups
+except NameError:
+    with open('results/rand_speedups.dill', 'rb') as file:
+        rand_speedups = dill.load(file)
+        
 for acc in ["low_acc", "high_acc"]:    
     fig1 = plt.figure(dpi=400) 
     ax1 = fig1.add_subplot(111)
     ax1.set_ylabel("Speedup", labelpad=10)  
     ax1.set_xlabel("CCR", labelpad=10) 
-    #plt.xscale('log')
     for env in ["Single_GPU", "Multiple_GPU"]:
-        ax1.scatter(rand_speedups[env][acc].keys(), rand_speedups[env][acc].values(), marker=markers[env], label="{}".format(env.replace('_', ' ')))
+        ax1.scatter(rand_speedups[env][acc].keys(), rand_speedups[env][acc].values(), marker='.', label="{}".format(env.replace('_', ' ')))
         next(ax1._get_lines.prop_cycler)                
     ax1.legend(handletextpad=0.1, loc='best', fancybox=True) 
     plt.savefig('plots/random_speedups_{}'.format(acc), bbox_inches='tight') 
 
-# For talk.
-labels = {"Single_GPU" : "1 GPU, 1 CPU", "Multiple_GPU" : "4 GPUs, 4 CPUs"}
-for acc in ["low_acc", "high_acc"]: 
-    fig1 = plt.figure(dpi=400) 
-    ax1 = fig1.add_subplot(111)
-    ax1.set_ylabel("SPEEDUP", labelpad=10)  
-    ax1.set_xlabel("COMPUTATION-TO-COMMUNICATION RATIO", labelpad=10) 
-    #plt.xscale('log')
-    for env in ["Single_GPU", "Multiple_GPU"]:
-        ax1.scatter(rand_speedups[env][acc].keys(), rand_speedups[env][acc].values(), marker=markers[env], label=labels[env])
-        next(ax1._get_lines.prop_cycler)                
-    ax1.legend(handletextpad=0.1, loc='best', fancybox=True) 
-    plt.savefig('plots/random_speedups_{}_TALK'.format(acc), bbox_inches='tight') 
