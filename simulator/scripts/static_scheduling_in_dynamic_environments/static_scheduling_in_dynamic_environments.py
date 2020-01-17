@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Nov 26 11:42:26 2019
 
 TODO: re-run this (forgot MCS initially so ran it separately but should re-run so all results are saved to the same place.)
 
 Investigating how useful static scheduling actually is for dynamic environments.
 
-@author: Tom
 """
 
 import networkx as nx
@@ -17,8 +15,8 @@ from collections import defaultdict
 from timeit import default_timer as timer
 import dill
 import sys
-sys.path.append('../../') # Quick fix to let us import modules from main directory. 
-import Environment    # Node classes and functions.
+sys.path.append('../../') 
+import Environment    
 from Heuristics import HEFT
 
 # Set some parameters for plots.
@@ -37,27 +35,45 @@ plt.rcParams['ytick.labelsize'] = 8
 plt.rcParams['legend.fontsize'] = 16
 plt.rcParams['figure.titlesize'] = 12
 plt.rcParams["figure.figsize"] = (9.6,4)
+#plt.ioff() # Uncomment to suppress plots.
 
 ####################################################################################################
 
-def dynamic_allocation_tester(dag, platform, schedule, schedule_dest=None):
+def follow_schedule(dag, platform, schedule, schedule_dest=None):
     """
-    For testing static schedules in dynamic environments. 
-    Notes: 
-        1. Schedule is assumed be an (ordered) dict {task : processor to schedule it on}.    
-    """    
+    Schedule all tasks according to the input schedule.
+    
+    Parameters
+    ------------------------    
+    dag - DAG object (see Graph.py module)
+    Represents the task DAG to be scheduled.
+          
+    platform - Node object (see Environment.py module)
+    Represents the target platform. 
+    
+    schedule - dict
+    An ordered dict {task : Worker ID} which describes where all tasks are to be scheduled. 
+                     
+    schedule_dest - None/string
+    Path to save schedule. 
+    
+    Returns
+    ------------------------
+    mkspan - float
+    The makespan of the schedule. 
+       
+    """  
    
     for task in schedule:
         chosen_processor = schedule[task]
         platform.workers[chosen_processor].schedule_task(task, dag, platform)                     
         
-    # If verbose, print the schedule (i.e., the load of all the processors).
     if schedule_dest: 
-        platform.print_schedule(name="Dynamic allocation tester", filepath=schedule_dest)
+        platform.print_schedule(name="CUSTOM", filepath=schedule_dest)
      
     mkspan = dag.makespan() 
     
-    # Clean up DAG and platform.
+    # Reset DAG and platform.
     dag.reset()
     platform.reset()    
     
@@ -181,7 +197,8 @@ def MCS(dag, platform, comp_sample, comm_sample, production_steps=10, selection_
     M_std, pi = HEFT(dag, platform, return_schedule=True)
     L.append(pi)
     
-    default_comp, default_comm = defaultdict(lambda: defaultdict(float)), defaultdict(lambda: defaultdict(lambda: defaultdict(float)))
+    default_comp = defaultdict(lambda: defaultdict(float))
+    default_comm = defaultdict(lambda: defaultdict(lambda: defaultdict(float)))
     for task in dag.DAG:
         default_comp["CPU"][task.ID] = task.CPU_time
         default_comp["GPU"][task.ID] = task.GPU_time
@@ -249,14 +266,13 @@ def MCS(dag, platform, comp_sample, comm_sample, production_steps=10, selection_
 
 ####################################################################################################
 
-# Environments.
-
+# Define environments to be considered.
 single = Environment.Node(7, 1, name="Single_GPU")
 multiple = Environment.Node(28, 4, name="Multiple_GPU")
 
 ####################################################################################################
 
-"""Load real timing data. used for simulating dynamic executions."""  
+"""Load real timing data. Used for simulating dynamic executions."""  
 
 min_tile = 32
 max_tile = 1024
@@ -327,7 +343,7 @@ for env in [single, multiple]:
         comp_sample["CPU"], comp_sample["GPU"] = cpu_data[nb], gpu_data[nb]
         comm_sample["CG"], comm_sample["GC"], comm_sample["GG"] = comm_data[nb], comm_data[nb], comm_data[nb]  
         comm_sample["CC"]["GEMM"], comm_sample["CC"]["POTRF"], comm_sample["CC"]["SYRK"], comm_sample["CC"]["TRSM"] = [0], [0], [0], [0] # lazy hack, fix...
-        with open("results/cholesky/MCS_{}_nb{}.txt".format(env.name, nb), "w") as dest:            
+        with open("results/MCS_{}_nb{}.txt".format(env.name, nb), "w") as dest:            
             env.print_info(filepath=dest)
             for j, nt in enumerate(n_tasks):
                 dag = nx.read_gpickle('../../graphs/cholesky/nb{}/{}tasks.gpickle'.format(nb, nt))              
@@ -393,59 +409,59 @@ for env in [single, multiple]:
                 print("--------------------------------------------------------\n", file=dest)  
                 
 # Save the makespans so can use again later if I want...
-with open('data/static_mkspans.dill', 'wb') as handle:
+with open('results/static_mkspans.dill', 'wb') as handle:
     dill.dump(static_mkspans, handle)    
-with open('data/dynamic_mkspans.dill', 'wb') as handle:
+with open('results/dynamic_mkspans.dill', 'wb') as handle:
     dill.dump(dynamic_mkspans, handle)    
-with open('data/mixed_mkspans.dill', 'wb') as handle:
+with open('results/mixed_mkspans.dill', 'wb') as handle:
     dill.dump(mixed_mkspans, handle)    
-with open('data/mcs_mkspans.dill', 'wb') as handle:
+with open('results/mcs_mkspans.dill', 'wb') as handle:
     dill.dump(mcs_mkspans, handle)    
 elapsed = timer() - start
 print("This took {} minutes".format(elapsed / 60))
     
 
 """Plot the mean makespans."""  
-
-with open('data/static_mkspans.dill', 'rb') as file:
-    static_mkspans = dill.load(file)    
-with open('data/dynamic_mkspans.dill', 'rb') as file:
-    dynamic_mkspans = dill.load(file)
-with open('data/mixed_mkspans.dill', 'rb') as file:
-    mixed_mkspans = dill.load(file)
-with open('data/mcs_mkspans.dill', 'rb') as file:
-    mcs_mkspans = dill.load(file)    
-
-n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480]
-nb = 128
-env = multiple
-
-dynamic_makespans, static_makespans, mixed_makespans, mcs_makespans = [], [], [], [] 
-
-for i in range(0, 80, 10):
-    dynamic_makespans.append(np.mean(dynamic_mkspans[env.name][nb][i:i+10]))
-    static_makespans.append(np.mean(static_mkspans[env.name][nb][i:i+10]))
-    mixed_makespans.append(np.mean(mixed_mkspans[env.name][nb][i:i+10]))
-    mcs_makespans.append(np.mean(mcs_mkspans[env.name][nb][i:i+10]))
-    
-static_reductions, mixed_reductions, mcs_reductions = [], [], []
-for i, m in enumerate(dynamic_makespans):
-    static_reductions.append(100 - (static_makespans[i] / m) * 100)
-    mixed_reductions.append(100 - (mixed_makespans[i] / m) * 100)
-    mcs_reductions.append(100 - (mcs_makespans[i] / m) * 100)
-
-preferences = {"DYNAMIC" : ["-", "o"], "HYBRID" : ["-", "s"], "MCS": ["-", "D"]}
-             
-fig1 = plt.figure(dpi=400) 
-ax1 = fig1.add_subplot(111)
-ax1.set_xlabel("NUMBER OF TASKS", labelpad=10) 
-ax1.set_ylabel("MEAN REDUCTION VS DYNAMIC (%)", labelpad=10)  
-plt.xscale('log')
-#plt.yscale('log')
-ax1.plot(n_tasks, static_reductions, linestyle=preferences["STATIC"][0], marker=preferences["STATIC"][1], label="STATIC")
-ax1.plot(n_tasks, mixed_reductions, linestyle=preferences["HYBRID"][0], marker=preferences["HYBRID"][1], label="HYBRID")
-ax1.plot(n_tasks, mcs_reductions, linestyle=preferences["MCS"][0], marker=preferences["MCS"][1], label="MCS")
-ax1.set_ylim(bottom=0)
-plt.yticks(np.arange(0, 50, 10.0)) # Make it look nicer.
-ax1.legend(handlelength=1.8, handletextpad=0.4, loc='upper left', fancybox=True)  
-plt.savefig('plots/{}_cholesky_nb{}'.format(env.name, nb), bbox_inches='tight') 
+#
+#with open('results/static_mkspans.dill', 'rb') as file:
+#    static_mkspans = dill.load(file)    
+#with open('results/dynamic_mkspans.dill', 'rb') as file:
+#    dynamic_mkspans = dill.load(file)
+#with open('results/mixed_mkspans.dill', 'rb') as file:
+#    mixed_mkspans = dill.load(file)
+#with open('results/mcs_mkspans.dill', 'rb') as file:
+#    mcs_mkspans = dill.load(file)    
+#
+#n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480]
+#nb = 128
+#env = multiple
+#
+#dynamic_makespans, static_makespans, mixed_makespans, mcs_makespans = [], [], [], [] 
+#
+#for i in range(0, 80, 10):
+#    dynamic_makespans.append(np.mean(dynamic_mkspans[env.name][nb][i:i+10]))
+#    static_makespans.append(np.mean(static_mkspans[env.name][nb][i:i+10]))
+#    mixed_makespans.append(np.mean(mixed_mkspans[env.name][nb][i:i+10]))
+#    mcs_makespans.append(np.mean(mcs_mkspans[env.name][nb][i:i+10]))
+#    
+#static_reductions, mixed_reductions, mcs_reductions = [], [], []
+#for i, m in enumerate(dynamic_makespans):
+#    static_reductions.append(100 - (static_makespans[i] / m) * 100)
+#    mixed_reductions.append(100 - (mixed_makespans[i] / m) * 100)
+#    mcs_reductions.append(100 - (mcs_makespans[i] / m) * 100)
+#
+#preferences = {"DYNAMIC" : ["-", "o"], "HYBRID" : ["-", "s"], "MCS": ["-", "D"]}
+#             
+#fig1 = plt.figure(dpi=400) 
+#ax1 = fig1.add_subplot(111)
+#ax1.set_xlabel("NUMBER OF TASKS", labelpad=10) 
+#ax1.set_ylabel("MEAN REDUCTION VS DYNAMIC (%)", labelpad=10)  
+#plt.xscale('log')
+##plt.yscale('log')
+#ax1.plot(n_tasks, static_reductions, linestyle=preferences["STATIC"][0], marker=preferences["STATIC"][1], label="STATIC")
+#ax1.plot(n_tasks, mixed_reductions, linestyle=preferences["HYBRID"][0], marker=preferences["HYBRID"][1], label="HYBRID")
+#ax1.plot(n_tasks, mcs_reductions, linestyle=preferences["MCS"][0], marker=preferences["MCS"][1], label="MCS")
+#ax1.set_ylim(bottom=0)
+#plt.yticks(np.arange(0, 50, 10.0)) # Make it look nicer.
+#ax1.legend(handlelength=1.8, handletextpad=0.4, loc='upper left', fancybox=True)  
+#plt.savefig('plots/{}_cholesky_nb{}'.format(env.name, nb), bbox_inches='tight') 

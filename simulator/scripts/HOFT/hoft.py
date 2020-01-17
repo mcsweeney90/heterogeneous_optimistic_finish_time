@@ -14,8 +14,8 @@ import dill
 from collections import defaultdict 
 from timeit import default_timer as timer
 import sys
-sys.path.append('../../') # Quick fix to let us import modules from main directory. 
-import Environment    # Node classes and functions.
+sys.path.append('../../') 
+import Environment    
 from Heuristics import HEFT, HOFT
 
 # Set some parameters for plots.
@@ -87,7 +87,7 @@ for nb in [128, 1024]:
                     print("Speedup (%) over HEFT: {}\n".format(sp), file=dest)     
                 print("--------------------------------------------------------\n", file=dest)                  
     
-# Save speedups and makespans so can plot later.
+# Save speedups and makespans so can use later.
 with open('results/chol_mkspans.dill'.format(nb), 'wb') as handle:
     dill.dump(chol_mkspans, handle)
 with open('results/chol_speedups.dill'.format(nb), 'wb') as handle:
@@ -170,7 +170,7 @@ for env in [single, multiple]:
 elapsed = timer() - start
 print("This took {} minutes".format(elapsed / 60))
 
-# Save makespans, speedups and CCRs so can plot later.
+# Save makespans, speedups and CCRs so can use later.
 with open('results/rand_mkspans.dill', 'wb') as handle:
     dill.dump(rand_mkspans, handle)
 with open('results/rand_speedups.dill', 'wb') as handle:

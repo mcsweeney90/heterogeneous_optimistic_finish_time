@@ -79,7 +79,7 @@ for nb in [128, 1024]:
                     print("{} makespan: {}\n".format(h, mkspan), file=dest)       
                 print("--------------------------------------------------------\n", file=dest)                  
     
-# Save the makespans so can plot later.
+# Save the makespans so can use later.
 with open('results/chol_mkspans.dill'.format(nb), 'wb') as handle:
     dill.dump(chol_mkspans, handle)
         
@@ -139,7 +139,7 @@ for env in [single, multiple]:
                     print("Mean makespan: {}.".format(mean_makespan), file=dest)  
                     print("Number of best occurences: {}.\n".format(bests[h]), file=dest)                
 
-# Save the reductions so can plot later.
+# Save the reductions so can use later.
 with open('results/rand_mkspans.dill', 'wb') as handle:
     dill.dump(rand_mkspans, handle)
     

@@ -20,10 +20,10 @@ def HEFT(dag, platform, priority_list=None, weighting="HEFT", return_schedule=Fa
     Parameters
     ------------------------    
     dag - DAG object (see Graph.py module)
-    The DAG to which the task belongs.
+    Represents the task DAG to be scheduled.
           
     platform - Node object (see Environment.py module)
-    The Node to which the Worker belongs. 
+    Represents the target platform.  
     
     priority_list - None/list
     If not None, an ordered list which gives the order in which tasks are to be scheduled. 
@@ -34,7 +34,7 @@ def HEFT(dag, platform, priority_list=None, weighting="HEFT", return_schedule=Fa
     See platform.approximate_comm_cost and task.approximate_execution_cost for other options.
     
     return_schedule - bool
-    If True, return the schedule as well.
+    If True, return the schedule computed by the heuristic.
              
     schedule_dest - None/string
     Path to save schedule. 
@@ -42,7 +42,7 @@ def HEFT(dag, platform, priority_list=None, weighting="HEFT", return_schedule=Fa
     Returns
     ------------------------
     mkspan - float
-    The makespan of the schedule produced by HEFT. 
+    The makespan of the schedule produced by the heuristic.
     
     If return_schedule == True:
     pi - defaultdict(int)
@@ -97,10 +97,10 @@ def HBMCT(dag, platform, priority_list=None, batch_policy="bmct", bmct_initial_a
     Parameters
     ------------------------    
     dag - DAG object (see Graph.py module)
-    The DAG to which the task belongs.
+    Represents the task DAG to be scheduled.
           
     platform - Node object (see Environment.py module)
-    The Node to which the Worker belongs. 
+    Represents the target platform. 
     
     priority_list - None/list
     If not None, an ordered list which gives the order in which tasks are to be scheduled. 
@@ -111,7 +111,7 @@ def HBMCT(dag, platform, priority_list=None, batch_policy="bmct", bmct_initial_a
     The above 3 parameters are all options for platform.schedule_batch; see that method for more details.
     
     return_schedule - bool
-    If True, return the schedule as well.
+    If True, return the schedule computed by the heuristic.
              
     schedule_dest - None/string
     Path to save schedule. 
@@ -119,7 +119,7 @@ def HBMCT(dag, platform, priority_list=None, batch_policy="bmct", bmct_initial_a
     Returns
     ------------------------
     mkspan - float
-    The makespan of the schedule produced by HBMCT. 
+    The makespan of the schedule produced by the heuristic.
     
     If return_schedule == True:
     pi - defaultdict(int)
@@ -184,16 +184,16 @@ def PEFT(dag, platform, priority_list=None, return_schedule=False, schedule_dest
     Parameters
     ------------------------    
     dag - DAG object (see Graph.py module)
-    The DAG to which the task belongs.
+    Represents the task DAG to be scheduled.
           
     platform - Node object (see Environment.py module)
-    The Node to which the Worker belongs. 
+    Represents the target platform. 
     
     priority_list - None/list
     If not None, an ordered list which gives the order in which tasks are to be scheduled. 
         
     return_schedule - bool
-    If True, return the schedule as well.
+    If True, return the schedule computed by the heuristic.
              
     schedule_dest - None/string
     Path to save schedule. 
@@ -201,7 +201,7 @@ def PEFT(dag, platform, priority_list=None, return_schedule=False, schedule_dest
     Returns
     ------------------------
     mkspan - float
-    The makespan of the schedule produced by PEFT. 
+    The makespan of the schedule produced by the heuristic.
     
     If return_schedule == True:
     pi - defaultdict(int)
@@ -271,13 +271,13 @@ def PETS(dag, platform, return_schedule=False, schedule_dest=None):
     Parameters
     ------------------------    
     dag - DAG object (see Graph.py module)
-    The DAG to which the task belongs.
+    Represents the task DAG to be scheduled.
           
     platform - Node object (see Environment.py module)
-    The Node to which the Worker belongs. 
+    Represents the target platform. 
             
     return_schedule - bool
-    If True, return the schedule as well.
+    If True, return the schedule computed by the heuristic.
              
     schedule_dest - None/string
     Path to save schedule. 
@@ -285,7 +285,7 @@ def PETS(dag, platform, return_schedule=False, schedule_dest=None):
     Returns
     ------------------------
     mkspan - float
-    The makespan of the schedule produced by PETS. 
+    The makespan of the schedule produced by the heuristic.
     
     If return_schedule == True:
     pi - defaultdict(int)
@@ -360,13 +360,13 @@ def HCPT(dag, platform, return_schedule=False, schedule_dest=None):
     Parameters
     ------------------------    
     dag - DAG object (see Graph.py module)
-    The DAG to which the task belongs.
+    Represents the task DAG to be scheduled.
           
     platform - Node object (see Environment.py module)
-    The Node to which the Worker belongs. 
+    Represents the target platform. 
             
     return_schedule - bool
-    If True, return the schedule as well.
+    If True, return the schedule computed by the heuristic.
              
     schedule_dest - None/string
     Path to save schedule. 
@@ -374,7 +374,7 @@ def HCPT(dag, platform, return_schedule=False, schedule_dest=None):
     Returns
     ------------------------
     mkspan - float
-    The makespan of the schedule produced by PETS. 
+    The makespan of the schedule produced by the heuristic. 
     
     If return_schedule == True:
     pi - defaultdict(int)
@@ -466,10 +466,10 @@ def HEFT_L(dag, platform, priority_list=None, weighted_average=False, child_samp
     Parameters
     ------------------------    
     dag - DAG object (see Graph.py module)
-    The DAG to which the task belongs.
+    Represents the task DAG to be scheduled.
           
     platform - Node object (see Environment.py module)
-    The Node to which the Worker belongs. 
+    Represents the target platform. 
     
     priority_list - None/list
     If not None, an ordered list which gives the order in which tasks are to be scheduled. 
@@ -493,7 +493,7 @@ def HEFT_L(dag, platform, priority_list=None, weighted_average=False, child_samp
     The number of GPU Workers to sample.     
     
     return_schedule - bool
-    If True, return the schedule as well.
+    If True, return the schedule computed by the heuristic.
              
     schedule_dest - None/string
     Path to save schedule. 
@@ -501,7 +501,7 @@ def HEFT_L(dag, platform, priority_list=None, weighted_average=False, child_samp
     Returns
     ------------------------
     mkspan - float
-    The makespan of the schedule produced by HEFT. 
+    The makespan of the schedule produced by the heuristic. 
     
     If return_schedule == True:
     pi - defaultdict(int)
@@ -591,10 +591,10 @@ def HOFT(dag, platform, table=None, priority_list=None, return_schedule=False, s
     Parameters
     ------------------------    
     dag - DAG object (see Graph.py module)
-    The DAG to which the task belongs.
+    Represents the task DAG to be scheduled.
           
     platform - Node object (see Environment.py module)
-    The Node to which the Worker belongs. 
+    Represents the target platform. 
     
     table - None/Nested defaultdict
     The optimistic finish time table in the form {Task 1: {Worker 1 : c1, Worker 2 : c2, ...}, ...}.
@@ -610,7 +610,7 @@ def HOFT(dag, platform, table=None, priority_list=None, return_schedule=False, s
     See platform.approximate_comm_cost and task.approximate_execution_cost for other options.
     
     return_schedule - bool
-    If True, return the schedule as well.
+    If True, return the schedule computed by the heuristic.
              
     schedule_dest - None/string
     Path to save schedule. 
@@ -618,7 +618,7 @@ def HOFT(dag, platform, table=None, priority_list=None, return_schedule=False, s
     Returns
     ------------------------
     mkspan - float
-    The makespan of the schedule produced by HEFT. 
+    The makespan of the schedule produced by the heuristic.
     
     If return_schedule == True:
     pi - defaultdict(int)
