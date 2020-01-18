@@ -38,7 +38,7 @@ class Worker:
         self.load = [] # Tasks scheduled on the processor.
         self.idle = True # True if no tasks currently scheduled on the processor. 
                 
-    def earliest_start_time(self, task, dag, platform, insertion=True, comm_estimates=None, comp_estimates=None):
+    def earliest_start_time(self, task, dag, platform, insertion=True):
         """
         Returns the estimated earliest start time for a task on the Worker.
         
@@ -52,14 +52,11 @@ class Worker:
               
         platform - Node object
         The Node object to which the Worker belongs.
-        Needed for calculating communication costs, although this is a bit unconventional.
+        Needed for calculating communication costs.
         
         insertion - bool
         If True, use insertion-based scheduling policy - i.e., task can be scheduled 
         between two already scheduled tasks, if permitted by dependencies.
-                 
-        comm_estimates - dict
-        TODO: Might remove this, check! Ditto below.
         
         Returns
         ------------------------
@@ -71,20 +68,17 @@ class Worker:
             if task.entry: # If an entry task...
                 return 0   
             else:
-                return max(p.AFT + platform.comm_cost(p, task, p.where_scheduled, self.ID, estimates=comm_estimates) 
+                return max(p.AFT + platform.comm_cost(p, task, p.where_scheduled, self.ID) 
                                     for p in dag.DAG.predecessors(task))  
                 
         # Find earliest time all task predecessors have finished and the task can theoretically start.     
         est = 0
         if not task.entry:                    
             predecessors = dag.DAG.predecessors(task) 
-            est += max(p.AFT + platform.comm_cost(p, task, p.where_scheduled, self.ID, estimates=comm_estimates) 
+            est += max(p.AFT + platform.comm_cost(p, task, p.where_scheduled, self.ID) 
                                     for p in predecessors)
             
-        if comp_estimates:
-            processing_time = comp_estimates["CPU"][task.ID] if self.CPU else comp_estimates["GPU"][task.ID]
-        else:
-            processing_time = task.CPU_time if self.CPU else task.GPU_time   
+        processing_time = task.CPU_time if self.CPU else task.GPU_time            
         
         # At least one task already scheduled on processor... 
         # Check if it can be scheduled before any task.
@@ -101,7 +95,7 @@ class Worker:
         # No valid gap found.
         return max(self.load[-1].AFT, est)    
         
-    def earliest_finish_time(self, task, dag, platform, insertion=True, start_time=None, comm_estimates=None, comp_estimates=None): 
+    def earliest_finish_time(self, task, dag, platform, insertion=True, start_time=None): 
         """
         Returns the estimated earliest finish time for a task on the Worker.
         
@@ -115,7 +109,7 @@ class Worker:
               
         platform - Node object
         The Node to which the Worker belongs. 
-        Needed for calculating communication costs, although this is a bit unconventional.
+        Needed for calculating communication costs.
         
         insertion - bool
         If True, use insertion-based scheduling policy - i.e., task can be scheduled 
@@ -123,26 +117,20 @@ class Worker:
         
         start_time - float
         If not None, taken to be task's actual start time. Validity is checked with valid_start_time which raises
-        ValueError if it fails. Should be used very carefully!
-                 
-        comm_estimates - dict
-        TODO: Might remove this, check! Ditto below.
+        ValueError if it fails. Should be used very carefully!              
         
         Returns
         ------------------------
         float 
         The earliest finish time for task on Worker. 
-        """                
-        if comp_estimates:
-            processing_time = comp_estimates["CPU"][task.ID] if self.CPU else comp_estimates["GPU"][task.ID]
-        else:
-            processing_time = task.CPU_time if self.CPU else task.GPU_time 
+        """   
+        processing_time = task.CPU_time if self.CPU else task.GPU_time  
         # If start_time, make sure it is valid.
         if start_time: 
             if not self.valid_start_time(task, start_time, dag, platform):
                 raise ValueError('Invalid input start time! Processor ID: {}, task ID, attempted start time: {}'.format(self.ID, task.ID, start_time))
             return processing_time + start_time
-        return processing_time + self.earliest_start_time(task, dag, platform, insertion=insertion, comm_estimates=comm_estimates, comp_estimates=comp_estimates)      
+        return processing_time + self.earliest_start_time(task, dag, platform, insertion=insertion)      
 
     def valid_start_time(self, task, start_time, dag, platform, insertion=True):
         """
@@ -442,7 +430,7 @@ class Node:
                     return False            
         return True  
     
-    def comm_cost(self, parent, child, source_id, target_id, estimates=None):   
+    def comm_cost(self, parent, child, source_id, target_id):   
         """
         Compute the communication time from a parent task to a child.
         
@@ -459,9 +447,6 @@ class Node:
         
         target_id - int
         The ID of the Worker on which child may be scheduled.
-                         
-        estimates - dict
-        TODO: Might remove this, check!
         
         Returns
         ------------------------
@@ -475,9 +460,6 @@ class Node:
         
         source_type = "G" if source_id > self.n_CPUs - 1 else "C"
         target_type = "G" if target_id > self.n_CPUs - 1 else "C"
-        
-        if estimates:
-            return estimates["{}".format(source_type + target_type)][parent.ID][child.ID]
         
         if self.adt:
             parent_comp_time = parent.GPU_time if source_type == "G" else parent.CPU_time
