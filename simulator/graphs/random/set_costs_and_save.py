@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu May 23 16:52:19 2019
-
 Read DAG objects from topologies folder, set computation and communication costs and save.
-
-@author: Tom
 """
 
 import os
@@ -13,8 +9,8 @@ import sys
 import networkx as nx
 import numpy as np
 from timeit import default_timer as timer
-sys.path.append('../../') # Quick fix to let us import modules from main directory.
-import Environment    # Node classes and functions.
+sys.path.append('../../') 
+import Environment    
 
 # Target platforms (needed to ensure CCR is correct)  
 single = Environment.Node(7, 1, name="Single_GPU")
@@ -27,7 +23,7 @@ for orig in os.listdir('topologies/'):
     for env in [single, multiple]:  
         for acc in ["low_acc", "high_acc"]:
             s = 5 if acc == "low_acc" else 50 # Acceleration values based on BLAS/LAPACK kernels with nb = 128 or 1024.
-            for comm in [(0, 10), (10, 20), (20, 50)]: # CCR intervals chosen based on range for Cholesky DAGs but extended to cover other applications.
+            for comm in [(0, 10), (10, 20), (20, 50)]: # CCR intervals chosen based on range for Cholesky DAGs.
                 dag = nx.read_gpickle('topologies/{}'.format(orig))  
                 dag.set_costs(platform=env, target_ccr=np.random.uniform(comm[0], comm[1]), ratio_dist=("gamma", s))     
                 nx.write_gpickle(dag, '{}/{}/CCR_{}_{}/{}.gpickle'.format(env.name, acc, comm[0], comm[1], dag.app))         

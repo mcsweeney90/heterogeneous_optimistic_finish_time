@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed May 22 16:04:52 2019
-
 Read .stg files, construct and save corresponding DAG topologies (without computation and communication costs).
-
-@author: Tom
 """
 
 import os

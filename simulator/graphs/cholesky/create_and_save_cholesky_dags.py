@@ -1,18 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul 29 17:15:20 2019
-
-Create and store Cholesky DAGs with computation and communication costs given by sample means of real timings on CSF3 node. 
-
-@author: Tom
+Create and store Cholesky DAGs with computation and communication costs given by sample means of real 
+timings from a single heterogeneous node from the CSF3. 
 """
 
 import numpy as np
 import networkx as nx
 from collections import defaultdict
 from timeit import default_timer as timer
-# Quick fix to let us import modules from main directory...
 import sys
 sys.path.append('../../') 
 import Environment    
@@ -20,7 +16,20 @@ from Graph import Task, DAG
 
 def cholesky(num_tiles, draw=False):
     """
-    Returns a DAG object representing a tiled Cholesky factorization.
+    Create a DAG object representing a tiled Cholesky factorization of a matrix.
+    
+    Parameters
+    ------------------------    
+    num_tiles - int
+    The number of tiles along each axis of the matrix.  
+    
+    draw - bool
+    If True, save an image of the DAG using dag.draw_graph (see Graph.py module). 
+    
+    Returns
+    ------------------------
+    dag - DAG object (see Graph.py module)
+    Represents the Cholesky factorization task DAG.   
     """
     
     last_acted_on = {} # Useful for keeping track of things...
@@ -108,9 +117,9 @@ def cholesky(num_tiles, draw=False):
             t.exit = True
         t.ID = n # Give each task an ID number.
         n += 1    
-    dag.num_tasks = n   # Number of tasks in DAG, often useful. 
+    dag.num_tasks = n  
     dag.num_edges = dag.DAG.number_of_edges()     
-    max_edges = (n * (n - 1)) / 2 # Maximum number of edges for DAG with n vertices.
+    max_edges = (n * (n - 1)) / 2 
     dag.edge_density = dag.num_edges / max_edges  
     if draw:
         dag.draw_graph()    
@@ -215,8 +224,8 @@ print("Time taken to compute and save DAG info: {} minutes.".format(elapsed / 60
 """Draw small DAGs to get an idea of the topology."""
 
 # # Choose tile size nb and number of tiles nt. (Tile size not relevant for drawing unless labels are defined.)
-# nb, nt = 128, 220
-# # Load the DAG.
-# cholesky = nx.read_gpickle('nb{}/{}tasks.gpickle'.format(nb, nt))
-# # Draw the DAG.
-# cholesky.draw_graph(filepath="images")
+nb, nt = 128, 220
+# Load the DAG.
+cholesky = nx.read_gpickle('nb{}/{}tasks.gpickle'.format(nb, nt))
+# Draw the DAG.
+cholesky.draw_graph(filepath="images")

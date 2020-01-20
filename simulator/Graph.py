@@ -818,7 +818,8 @@ def convert_from_dot(dot_path, app=None):
     Notes
     ------------------------                          
     1. This is very slow so isn't recommended for even medium-sized DAGs. The vast majority of the time 
-       seems to be taken by read_dot (from Networkx) itself so think there may be a bug somewhere.       
+       seems to be taken by read_dot (from Networkx) itself, which surely shouldn't be so slow, so I may
+       investigate this further in the future.       
     """  
     # Use read_dot from Networkx to load the graph.        
     graph = nx.DiGraph(read_dot(dot_path))

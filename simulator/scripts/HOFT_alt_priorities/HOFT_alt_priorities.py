@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 
-TODO: run this, random DAGs as well?
+TODO: run this again.
 
 An alternative task prioritization phase for HOFT, using the Optimistic Cost Table from the PEFT heuristic
 by Arabnejad and Barbosa (2014) instead.
@@ -124,7 +124,8 @@ def OCT_priorities(dag):
 
 start = timer()
 n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
-chol_speedups, chol_mkspans = defaultdict(lambda: defaultdict(lambda: defaultdict(list))), defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+chol_speedups = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+chol_mkspans = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 for nb in [128, 1024]:
     print("\nStarting tile size {}...".format(nb))
     for env in [single, multiple]:

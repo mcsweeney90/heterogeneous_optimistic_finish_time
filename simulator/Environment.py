@@ -809,7 +809,7 @@ class Node:
     def estimate_finish_times(self, dag, batch, policy="EFT", where_scheduled=False, cpu_samples=None, gpu_samples=None):
         """
         Estimate the finish times of all tasks in batch. 
-        Effectively a helper function for HEFT_L (HEFT with lookahead).
+        Effectively a helper function for HEFT_L function in Heuristics.py module.
         Assumes that all tasks in batch are independent and that they are ready to schedule,
         so in particular disregards any unscheduled parents.
         

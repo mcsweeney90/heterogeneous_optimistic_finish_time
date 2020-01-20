@@ -31,7 +31,7 @@ start = timer()
 with open('../HOFT/results/rand_mkspans.dill', 'rb') as file:
     rand_mkspans = dill.load(file)
 
-# Just "1P" option considered here but results for others are similar.
+# Just "1P" option shown here since this is quite slow but results for others are similar.
 samplings = ["1P"] 
 n_dags = 180
 rand_speedups = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))

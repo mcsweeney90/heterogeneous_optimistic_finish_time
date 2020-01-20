@@ -602,12 +602,7 @@ def HOFT(dag, platform, table=None, priority_list=None, return_schedule=False, s
     Included as parameter because often useful to avoid computing same OFT many times.
     
     priority_list - None/list
-    If not None, an ordered list which gives the order in which tasks are to be scheduled. 
-    
-    weighting - string
-    How the tasks and edges should be weighted in dag.sort_by_upward_rank.
-    Default is "HEFT" which is mean values over all processors as in the original paper. 
-    See platform.approximate_comm_cost and task.approximate_execution_cost for other options.
+    If not None, an ordered list which gives the order in which tasks are to be scheduled.   
     
     return_schedule - bool
     If True, return the schedule computed by the heuristic.
