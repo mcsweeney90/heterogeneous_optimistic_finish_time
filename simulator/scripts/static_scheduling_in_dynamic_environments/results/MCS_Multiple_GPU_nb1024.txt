@@ -1,8 +1,8 @@
 --------------------------------------------------------
 NODE INFO
 --------------------------------------------------------
-Name: Single_GPU
-7 CPUs, 1 GPUs
+Name: Multiple_GPU
+28 CPUs, 4 GPUs
 Communication: True
 Asynchronous data transfer: False
 --------------------------------------------------------
@@ -17,16 +17,16 @@ Average number of task predecessors: 1.7142857142857142
 Number of edges: 60
 Edge density: 0.10084033613445378
 --------------------------------------------------------
-Static HEFT makespan of original DAG: 23743.28876
-Dynamic HEFT makespan of original DAG: 41846.98378400001
-Mixed HEFT makespan of original DAG: 41846.98378400001
-MCS makespan of original DAG: 23743.28876
+Static HEFT makespan of original DAG: 22940.679088
+Dynamic HEFT makespan of original DAG: 40874.003392000006
+Mixed HEFT makespan of original DAG: 39786.64736000001
+MCS makespan of original DAG: 20755.432632
 
 
 Number of runs: 10
-Mean dynamic makespan: 41710.42639999998
-Mean static makespan: 23746.353
-Mean mixed makespan: 41706.50559999999
-Mean MCS makespan: 23746.353
+Mean dynamic makespan: 42009.030199999994
+Mean static makespan: 22972.2102
+Mean mixed makespan: 40415.71139999999
+Mean MCS makespan: 20755.6526
 --------------------------------------------------------
 

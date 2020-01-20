@@ -3,7 +3,6 @@
 """
 TODO: Re-run this, will need to leave overnight!
 Comparison of five existing static scheduling heuristics - HEFT, HBMCT, PEFT, PETS and HCPT. 
-
 """
 
 import os
@@ -14,8 +13,8 @@ import dill
 from collections import defaultdict 
 from timeit import default_timer as timer
 import sys
-sys.path.append('../../') # Quick fix to let us import modules from main directory. 
-import Environment    # Node classes and functions.
+sys.path.append('../../') 
+import Environment    
 from Heuristics import HEFT, HBMCT, PEFT, PETS, HCPT
 
 # Set some parameters for plots.
@@ -139,7 +138,7 @@ for env in [single, multiple]:
                     print("Mean makespan: {}.".format(mean_makespan), file=dest)  
                     print("Number of best occurences: {}.\n".format(bests[h]), file=dest)                
 
-# Save the reductions so can use later.
+# Save the makespans so can use later.
 with open('results/rand_mkspans.dill', 'wb') as handle:
     dill.dump(rand_mkspans, handle)
     

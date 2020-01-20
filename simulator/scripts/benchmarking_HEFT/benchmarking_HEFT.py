@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Benchmarking the performance of HEFT. See Section 4.1 of paper.
-
 """
 
 import os

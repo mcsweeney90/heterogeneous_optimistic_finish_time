@@ -24,7 +24,7 @@ HEFT makespan: 1073.248552
 HOFT makespan: 1093.2258560000002
 Speedup (%) over HEFT: -1.8613865318311014
 
-POFT makespan: 1093.2258560000002
+alt_HOFT makespan: 1093.2258560000002
 Speedup (%) over HEFT: -1.8613865318311014
 
 --------------------------------------------------------
@@ -46,7 +46,7 @@ HEFT makespan: 2345.070104
 HOFT makespan: 2393.9468560000005
 Speedup (%) over HEFT: -2.084234152174446
 
-POFT makespan: 2432.4876879999997
+alt_HOFT makespan: 2432.4876879999997
 Speedup (%) over HEFT: -3.727717301537851
 
 --------------------------------------------------------
@@ -68,7 +68,7 @@ HEFT makespan: 3527.269095999999
 HOFT makespan: 3638.7480240000004
 Speedup (%) over HEFT: -3.160488325838841
 
-POFT makespan: 3654.019855999998
+alt_HOFT makespan: 3654.019855999998
 Speedup (%) over HEFT: -3.593453080847638
 
 --------------------------------------------------------
@@ -90,7 +90,7 @@ HEFT makespan: 4820.382848
 HOFT makespan: 5207.09972
 Speedup (%) over HEFT: -8.022534396006549
 
-POFT makespan: 4962.100864
+alt_HOFT makespan: 4962.100864
 Speedup (%) over HEFT: -2.93997428147847
 
 --------------------------------------------------------
@@ -112,7 +112,7 @@ HEFT makespan: 7438.174768000005
 HOFT makespan: 7071.200784000004
 Speedup (%) over HEFT: 4.933656380040588
 
-POFT makespan: 7137.280136
+alt_HOFT makespan: 7137.280136
 Speedup (%) over HEFT: 4.045275102898799
 
 --------------------------------------------------------
@@ -134,7 +134,7 @@ HEFT makespan: 10577.106176000012
 HOFT makespan: 10134.224600000025
 Speedup (%) over HEFT: 4.18717150637012
 
-POFT makespan: 10233.12568000004
+alt_HOFT makespan: 10233.12568000004
 Speedup (%) over HEFT: 3.2521229368055486
 
 --------------------------------------------------------
@@ -156,7 +156,7 @@ HEFT makespan: 14735.733703999871
 HOFT makespan: 14252.873951999927
 Speedup (%) over HEFT: 3.2767947745206243
 
-POFT makespan: 14247.716191999898
+alt_HOFT makespan: 14247.716191999898
 Speedup (%) over HEFT: 3.3117964928173507
 
 --------------------------------------------------------
@@ -178,7 +178,7 @@ HEFT makespan: 20103.15029599957
 HOFT makespan: 19824.3495839996
 Speedup (%) over HEFT: 1.3868508561837274
 
-POFT makespan: 19788.0426399996
+alt_HOFT makespan: 19788.0426399996
 Speedup (%) over HEFT: 1.5674541122178027
 
 --------------------------------------------------------
@@ -200,7 +200,7 @@ HEFT makespan: 27088.388023999196
 HOFT makespan: 26745.037711999223
 Speedup (%) over HEFT: 1.2675184351899418
 
-POFT makespan: 26915.13330399921
+alt_HOFT makespan: 26915.13330399921
 Speedup (%) over HEFT: 0.6395903656079156
 
 --------------------------------------------------------
@@ -222,7 +222,7 @@ HEFT makespan: 36183.07405599877
 HOFT makespan: 35517.5731679988
 Speedup (%) over HEFT: 1.839260221422876
 
-POFT makespan: 35847.1036799988
+alt_HOFT makespan: 35847.1036799988
 Speedup (%) over HEFT: 0.9285291113740186
 
 --------------------------------------------------------

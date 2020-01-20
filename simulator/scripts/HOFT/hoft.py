@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-
 Comparison of HOFT with HEFT and HEFT-WM. See Section 6 of paper.
-
 """
 
 import os

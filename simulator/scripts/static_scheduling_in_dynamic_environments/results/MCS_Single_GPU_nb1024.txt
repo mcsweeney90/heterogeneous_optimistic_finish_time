@@ -24,9 +24,9 @@ MCS makespan of original DAG: 23743.28876
 
 
 Number of runs: 10
-Mean dynamic makespan: 41710.42639999998
-Mean static makespan: 23746.353
-Mean mixed makespan: 41706.50559999999
-Mean MCS makespan: 23746.353
+Mean dynamic makespan: 41889.362599999986
+Mean static makespan: 23744.4032
+Mean mixed makespan: 41890.27699999999
+Mean MCS makespan: 23744.4032
 --------------------------------------------------------
 

@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-
 Sampling-based lookahead for low CCR/high-data DAGs. 
 Referred to in the conclusion of paper but this was not promising so we didn't pursue it very far.  
-
 """
 
 import os

@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 
-TODO: run this again.
-
 An alternative task prioritization phase for HOFT, using the Optimistic Cost Table from the PEFT heuristic
 by Arabnejad and Barbosa (2014) instead.
 
@@ -23,9 +21,7 @@ were typically worse than the OFT-based one, although this may be worth consider
 
 """
 
-import os
 import networkx as nx
-import numpy as np
 import matplotlib.pyplot as plt 
 import dill
 from collections import defaultdict 
@@ -168,16 +164,14 @@ with open('results/chol_speedups.dill'.format(nb), 'wb') as handle:
 elapsed = timer() - start
 print("Cholesky part took {} minutes".format(elapsed / 60))
 
-
-"""Plotting..."""
+"""Plotting."""
 try:
     chol_speedups
 except NameError:
-     with open('results/chol_speedups.dill', 'rb') as file:
-         chol_speedups = dill.load(file)
+      with open('results/chol_speedups.dill', 'rb') as file:
+          chol_speedups = dill.load(file)
          
 n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
-
 titles = {"Single_GPU" : "1 GPU, 1 CPU", "Multiple_GPU" : "4 GPUs, 4 CPUs"}
 heuristics = ["HOFT", "alt_HOFT"]
 preferences = {"HOFT" : [":", "o"], "alt_HOFT" : ["--", "s"]}
