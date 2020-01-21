@@ -3,6 +3,8 @@
 """
 TODO: Re-run this, will need to leave overnight!
 Comparison of five existing static scheduling heuristics - HEFT, HBMCT, PEFT, PETS and HCPT. 
+
+Estimated runtime: ~5 hours on a machine with an Intel i7.
 """
 
 import os

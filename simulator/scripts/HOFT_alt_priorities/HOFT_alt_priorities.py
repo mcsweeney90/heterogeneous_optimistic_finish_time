@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-
 An alternative task prioritization phase for HOFT, using the Optimistic Cost Table from the PEFT heuristic
 by Arabnejad and Barbosa (2014) instead.
 
@@ -19,6 +18,7 @@ the OFT anyway for the processor selection in HOFT, it seems sensible to use the
 (Alternatively, the OCT could be used as the basis for alternative processor selection phases but all the options we tried
 were typically worse than the OFT-based one, although this may be worth considering again in the future.)
 
+Estimated runtime: ~2.5 hours on a machine with an Intel i7.
 """
 
 import networkx as nx

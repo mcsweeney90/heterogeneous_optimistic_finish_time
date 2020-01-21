@@ -9,6 +9,7 @@ Zhao and Sakellariou (2004), and schedule them according to the classic min-min 
 corresponds to HEFT with a different task priority list and consistently improved on the original but the gains were only
 minor and the additional computational cost significant so we ultimately elected not to include this in the paper.
 
+Estimated runtime: ~5 hours on a machine with an Intel i7.
 """
 
 import os

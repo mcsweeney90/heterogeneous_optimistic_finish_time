@@ -3,6 +3,8 @@
 """
 Sampling-based lookahead for low CCR/high-data DAGs. 
 Referred to in the conclusion of paper but this was not promising so we didn't pursue it very far.  
+
+Estimated runtime: ~5 hours on a machine with an Intel i7.
 """
 
 import os

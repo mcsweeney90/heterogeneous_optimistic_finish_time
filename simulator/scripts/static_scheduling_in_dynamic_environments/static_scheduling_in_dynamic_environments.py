@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+A motivating example which simulates actual executions of task DAGs to establish how useful static scheduling
+actually is for real (i.e., dynamic) environments.
 
-TODO: re-run this (forgot MCS initially so ran it separately but should re-run so all results are saved to the same place.)
-Expensive so maybe do it in stages...
-
-A motivating example which considers how useful static scheduling actually is for dynamic environments through simulation.
+Estimated runtime: ~5 hours on a machine with an Intel i7.
 """
 
 import networkx as nx
@@ -35,7 +34,7 @@ plt.rcParams['ytick.labelsize'] = 8
 plt.rcParams['legend.fontsize'] = 16
 plt.rcParams['figure.titlesize'] = 12
 plt.rcParams["figure.figsize"] = (9.6,4)
-#plt.ioff() # Uncomment to suppress plots.
+plt.ioff() # Uncomment to suppress plots.
 
 ####################################################################################################
 
@@ -577,59 +576,53 @@ elapsed = timer() - start
 print("This took {} minutes".format(elapsed / 60))
     
 
-"""Plot the mean makespans."""  
-# try:
-#     static_mkspans
-# except NameError:
-#     with open('results/static_mkspans.dill', 'rb') as file:
-#         static_mkspans = dill.load(file)  
-# try:
-#     dynamic_mkspans
-# except NameError:
-#     with open('results/dynamic_mkspans.dill', 'rb') as file:
-#         dynamic_mkspans = dill.load(file)
-# try:
-#     mixed_mkspans
-# except NameError:
-#     with open('results/mixed_mkspans.dill', 'rb') as file:
-#         mixed_mkspans = dill.load(file)
-# try:
-#     mcs_mkspans
-# except NameError:
-#     with open('results/mcs_mkspans.dill', 'rb') as file:
-#         mcs_mkspans = dill.load(file)    
+"""Plot the average makespan reductions compared to "dynamic" scheduling."""  
+try:
+    static_mkspans
+except NameError:
+    with open('results/static_mkspans.dill', 'rb') as file:
+        static_mkspans = dill.load(file)  
+try:
+    dynamic_mkspans
+except NameError:
+    with open('results/dynamic_mkspans.dill', 'rb') as file:
+        dynamic_mkspans = dill.load(file)
+try:
+    mixed_mkspans
+except NameError:
+    with open('results/mixed_mkspans.dill', 'rb') as file:
+        mixed_mkspans = dill.load(file)
+try:
+    mcs_mkspans
+except NameError:
+    with open('results/mcs_mkspans.dill', 'rb') as file:
+        mcs_mkspans = dill.load(file)    
 
-# n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480]
-
-# # Choose nb and platform to plot for...
-# nb = 128
-# env = multiple
-
-# dynamic_makespans, static_makespans, mixed_makespans, mcs_makespans = [], [], [], [] 
-
-# for i in range(0, 80, 10):
-#     dynamic_makespans.append(np.mean(dynamic_mkspans[env.name][nb][i:i+10]))
-#     static_makespans.append(np.mean(static_mkspans[env.name][nb][i:i+10]))
-#     mixed_makespans.append(np.mean(mixed_mkspans[env.name][nb][i:i+10]))
-#     mcs_makespans.append(np.mean(mcs_mkspans[env.name][nb][i:i+10]))
-    
-# static_reductions, mixed_reductions, mcs_reductions = [], [], []
-# for i, m in enumerate(dynamic_makespans):
-#     static_reductions.append(100 - (static_makespans[i] / m) * 100)
-#     mixed_reductions.append(100 - (mixed_makespans[i] / m) * 100)
-#     mcs_reductions.append(100 - (mcs_makespans[i] / m) * 100)
-
-# preferences = {"DYNAMIC" : ["-", "o"], "HYBRID" : ["-", "s"], "MCS": ["-", "D"]}             
-# fig1 = plt.figure(dpi=400) 
-# ax1 = fig1.add_subplot(111)
-# ax1.set_xlabel("NUMBER OF TASKS", labelpad=10) 
-# ax1.set_ylabel("MEAN REDUCTION VS DYNAMIC (%)", labelpad=10)  
-# plt.xscale('log')
-# #plt.yscale('log')
-# ax1.plot(n_tasks, static_reductions, linestyle=preferences["STATIC"][0], marker=preferences["STATIC"][1], label="STATIC")
-# ax1.plot(n_tasks, mixed_reductions, linestyle=preferences["HYBRID"][0], marker=preferences["HYBRID"][1], label="HYBRID")
-# ax1.plot(n_tasks, mcs_reductions, linestyle=preferences["MCS"][0], marker=preferences["MCS"][1], label="MCS")
-# ax1.set_ylim(bottom=0)
-# plt.yticks(np.arange(0, 50, 10.0)) # Make it look nicer.
-# ax1.legend(handlelength=1.8, handletextpad=0.4, loc='upper left', fancybox=True)  
-# plt.savefig('plots/{}_cholesky_nb{}'.format(env.name, nb), bbox_inches='tight') 
+n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480]
+preferences = {"STATIC" : ["-", "o"], "HYBRID" : ["-", "s"], "MCS": ["-", "D"]}    
+for nb in [128, 1024]:
+    for env in [single, multiple]: 
+        dynamic_makespans, static_makespans, mixed_makespans, mcs_makespans = [], [], [], [] 
+        for i in range(0, 80, 10):
+            dynamic_makespans.append(np.mean(dynamic_mkspans[env.name][nb][i:i+10]))
+            static_makespans.append(np.mean(static_mkspans[env.name][nb][i:i+10]))
+            mixed_makespans.append(np.mean(mixed_mkspans[env.name][nb][i:i+10]))
+            mcs_makespans.append(np.mean(mcs_mkspans[env.name][nb][i:i+10]))    
+        static_reductions, mixed_reductions, mcs_reductions = [], [], []
+        for i, m in enumerate(dynamic_makespans):
+            static_reductions.append(100 - (static_makespans[i] / m) * 100)
+            mixed_reductions.append(100 - (mixed_makespans[i] / m) * 100)
+            mcs_reductions.append(100 - (mcs_makespans[i] / m) * 100)
+               
+        fig1 = plt.figure(dpi=400) 
+        ax1 = fig1.add_subplot(111)
+        ax1.set_xlabel("NUMBER OF TASKS", labelpad=10) 
+        ax1.set_ylabel("MEAN REDUCTION VS DYNAMIC (%)", labelpad=10)  
+        plt.xscale('log')
+        #plt.yscale('log')
+        ax1.plot(n_tasks, static_reductions, linestyle=preferences["STATIC"][0], marker=preferences["STATIC"][1], label="STATIC")
+        ax1.plot(n_tasks, mixed_reductions, linestyle=preferences["HYBRID"][0], marker=preferences["HYBRID"][1], label="HYBRID")
+        ax1.plot(n_tasks, mcs_reductions, linestyle=preferences["MCS"][0], marker=preferences["MCS"][1], label="MCS")
+        ax1.legend(handlelength=1.8, handletextpad=0.4, loc='best', fancybox=True)  
+        plt.savefig('plots/{}_cholesky_nb{}'.format(env.name, nb), bbox_inches='tight') 
+        plt.close(fig1)

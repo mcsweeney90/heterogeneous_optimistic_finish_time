@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Comparison of HOFT with HEFT and HEFT-WM. See Section 6 of paper.
+
+Estimated runtime: ~3 hours on a machine with an Intel i7.
 """
 
 import os

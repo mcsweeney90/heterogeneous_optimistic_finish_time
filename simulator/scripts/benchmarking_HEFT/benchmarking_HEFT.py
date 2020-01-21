@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Benchmarking the performance of HEFT. See Section 4.1 of paper.
+
+Estimated runtime: ~3 hours on a machine with an Intel i7.
 """
 
 import os
