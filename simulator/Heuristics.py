@@ -223,7 +223,7 @@ def PEFT(dag, platform, priority_list=None, return_schedule=False, schedule_dest
             if return_schedule:
                 pi[task] = p
     else:            
-        task_weights = {t.ID : np.mean(OCT[task].values()) for t in dag.DAG}    
+        task_weights = {t.ID : np.mean(list(OCT[t].values())) for t in dag.DAG}    
         ready_tasks = list(t for t in dag.DAG if t.entry)    
         while len(ready_tasks):          
             task = max(ready_tasks, key = lambda t : task_weights[t.ID]) 

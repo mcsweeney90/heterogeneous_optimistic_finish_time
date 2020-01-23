@@ -53,7 +53,7 @@ heuristics = ["HEFT", "HBMCT", "PEFT", "PETS", "HCPT"]
 #######################################################################
 
 start = timer()
-n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
+n_tasks = [35]#, 220, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
 chol_mkspans = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 for nb in [128, 1024]:
     for env in [single, multiple]:
@@ -106,6 +106,8 @@ for env in [single, multiple]:
                 count = 0
                 for app in os.listdir('../../graphs/random/{}/{}/CCR_{}'.format(env.name, acc, ccr)):
                     count += 1
+                    if count > 1:
+                        break
                     print("Starting DAG number {}...".format(count))
                     dag = nx.read_gpickle('../../graphs/random/{}/{}/CCR_{}/{}'.format(env.name, acc, ccr, app))
                     dag.print_info(platform=env, filepath=dest) 
