@@ -31,7 +31,7 @@ multiple = Environment.Node(28, 4, name="Multiple_GPU")
 
 ####################################################################################################
 
-weightings = ["HEFT", "HEFT-WM"]
+avg_types = ["HEFT", "HEFT-WM"]
 
 #######################################################################
 
@@ -54,10 +54,10 @@ for nb in [128, 1024]:
                             
                 table = dag.optimistic_finish_times()   
     
-                for w in weightings:
-                    task_list = dag.sort_by_upward_rank(platform=env, weighting=w)
+                for w in avg_types:
+                    task_list = dag.sort_by_upward_rank(platform=env, avg_type=w)
                     mkspan = HEFT(dag, platform=env, priority_list=task_list)                
-                    print("{} weighting makespan: {}".format(w, mkspan), file=dest) 
+                    print("{} avg_type makespan: {}".format(w, mkspan), file=dest) 
                     
                     mm_mkspan = HBMCT(dag, platform=env, priority_list=task_list, batch_policy="min-min")
                     print("HBMCT-MM makespan: {}".format(mm_mkspan), file=dest)
@@ -72,10 +72,10 @@ for nb in [128, 1024]:
             print("SUMMARY", file=dest)
             print("--------------------------------------------------------", file=dest)   
             n_dags = len(n_tasks)      
-            for w in weightings:
+            for w in avg_types:
                 mean_reduction = np.mean(chol_reductions[env.name][nb][w])
                 best, worst = max(chol_reductions[env.name][nb][w]), min(chol_reductions[env.name][nb][w])
-                print("Weighting: {}.".format(w), file=dest)
+                print("avg_type: {}.".format(w), file=dest)
                 print("Mean reduction: {}.".format(mean_reduction), file=dest)
                 print("Best reduction: {}".format(best), file=dest)  
                 print("Worst reduction: {}\n".format(worst), file=dest) 
@@ -106,10 +106,10 @@ for env in [single, multiple]:
                     dag = nx.read_gpickle('../../graphs/random/{}/{}/CCR_{}/{}'.format(env.name, acc, ccr, app))
                     dag.print_info(platform=env, filepath=dest)                                       
                                   
-                    for w in weightings:
-                        task_list = dag.sort_by_upward_rank(platform=env, weighting=w)                                 
+                    for w in avg_types:
+                        task_list = dag.sort_by_upward_rank(platform=env, avg_type=w)                                 
                         mkspan = HEFT(dag, platform=env, priority_list=task_list)                
-                        print("{} weighting makespan: {}".format(w, mkspan), file=dest) 
+                        print("{} avg_type makespan: {}".format(w, mkspan), file=dest) 
                         
                         mm_mkspan = HBMCT(dag, platform=env, priority_list=task_list, batch_policy="min-min")
                         print("HBMCT-MM makespan: {}".format(mm_mkspan), file=dest)
@@ -122,10 +122,10 @@ for env in [single, multiple]:
                 print("--------------------------------------------------------", file=dest)
                 print("SUMMARY", file=dest)
                 print("--------------------------------------------------------", file=dest)            
-                for w in weightings:
+                for w in avg_types:
                     mean_reduction = np.mean(rand_reductions[env.name][acc][ccr][w])
                     best, worst = max(rand_reductions[env.name][acc][ccr][w]), min(rand_reductions[env.name][acc][ccr][w])
-                    print("Weighting: {}.".format(w), file=dest)
+                    print("avg_type: {}.".format(w), file=dest)
                     print("Mean reduction: {}.".format(mean_reduction), file=dest)
                     print("Best reduction: {}".format(best), file=dest)  
                     print("Worst reduction: {}\n".format(worst), file=dest)            

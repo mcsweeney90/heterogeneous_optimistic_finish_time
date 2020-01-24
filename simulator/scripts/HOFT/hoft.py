@@ -73,12 +73,12 @@ for nb in [128, 1024]:
                 
                 for h in heuristics:
                     if h == "HEFT-WM":
-                        task_list = dag.sort_by_upward_rank(platform=env, weighting="HEFT-WM")
+                        task_list = dag.sort_by_upward_rank(platform=env, avg_type="HEFT-WM")
                         mkspan = HEFT(dag, platform=env, priority_list=task_list)
                     elif h == "HOFT":
                         mkspan = HOFT(dag, platform=env, table=OFT)
                     elif h == "HOFT-WM":
-                        task_list = dag.sort_by_upward_rank(platform=env, weighting="HEFT-WM")
+                        task_list = dag.sort_by_upward_rank(platform=env, avg_type="HEFT-WM")
                         mkspan = HOFT(dag, platform=env, table=OFT, priority_list=task_list) 
                     chol_mkspans[env.name][nb][h].append(mkspan)  
                     sp = 100 - (mkspan / heft_mkspan) * 100
@@ -135,12 +135,12 @@ for env in [single, multiple]:
                     best = float('inf')                
                     for h in heuristics:
                         if h == "HEFT-WM":
-                            task_list = dag.sort_by_upward_rank(platform=env, weighting="HEFT-WM")
+                            task_list = dag.sort_by_upward_rank(platform=env, avg_type="HEFT-WM")
                             mkspan = HEFT(dag, platform=env, priority_list=task_list)
                         elif h == "HOFT":
                             mkspan = HOFT(dag, platform=env, table=OFT)  
                         elif h == "HOFT-WM":
-                            task_list = dag.sort_by_upward_rank(platform=env, weighting="HEFT-WM")
+                            task_list = dag.sort_by_upward_rank(platform=env, avg_type="HEFT-WM")
                             mkspan = HOFT(dag, platform=env, table=OFT, priority_list=task_list)  
                         rand_mkspans[env.name][acc][ccr][h].append(mkspan)
                         sp = 100 - (mkspan / heft_mkspan) * 100

@@ -11,7 +11,7 @@ import numpy as np
 import networkx as nx
 from collections import defaultdict 
     
-def HEFT(dag, platform, priority_list=None, weighting="HEFT", return_schedule=False, schedule_dest=None):
+def HEFT(dag, platform, priority_list=None, avg_type="HEFT", return_schedule=False, schedule_dest=None):
     """
     Heterogeneous Earliest Finish Time.
     'Performance-effective and low-complexity task scheduling for heterogeneous computing',
@@ -28,10 +28,10 @@ def HEFT(dag, platform, priority_list=None, weighting="HEFT", return_schedule=Fa
     priority_list - None/list
     If not None, an ordered list which gives the order in which tasks are to be scheduled. 
     
-    weighting - string
+    avg_type - string
     How the tasks and edges should be weighted in dag.sort_by_upward_rank.
     Default is "HEFT" which is mean values over all processors as in the original paper. 
-    See platform.approximate_comm_cost and task.approximate_execution_cost for other options.
+    See platform.average_comm_cost and task.average_execution_cost for other options.
     
     return_schedule - bool
     If True, return the schedule computed by the heuristic.
@@ -54,7 +54,7 @@ def HEFT(dag, platform, priority_list=None, weighting="HEFT", return_schedule=Fa
     
     # List all tasks by upward rank unless alternative is specified.
     if priority_list is None:
-        priority_list = dag.sort_by_upward_rank(platform, weighting=weighting)   
+        priority_list = dag.sort_by_upward_rank(platform, avg_type=avg_type)   
     
     # Schedule the tasks.
     for t in priority_list:    
@@ -316,9 +316,9 @@ def PETS(dag, platform, return_schedule=False, schedule_dest=None):
         # Go through the DAG level by level and compute the priorities. 
         acc = {}
         for task in levels[current_level]:
-            acc[task] = task.approximate_execution_cost(platform)
+            acc[task] = task.average_execution_cost(platform)
             rpt = max(rank[p] for p in dag.DAG.predecessors(task)) if not task.entry else 0      
-            dtc = sum(platform.approximate_comm_cost(task, c) for c in dag.DAG.successors(task))                        
+            dtc = sum(platform.average_comm_cost(task, c) for c in dag.DAG.successors(task))                        
             rank[task] = round(acc[task] + dtc + rpt)            
             
         # Sort all tasks at current level by rank (largest first) with ties broken by acc (smallest first).
@@ -393,7 +393,7 @@ def HCPT(dag, platform, return_schedule=False, schedule_dest=None):
     for t in forward_traversal:
         AEST[t] = 0 
         try:
-            AEST[t] += max(AEST[p] + p.approximate_execution_cost(platform) + platform.approximate_comm_cost(parent=p, child=t) for p in dag.DAG.predecessors(t))
+            AEST[t] += max(AEST[p] + p.average_execution_cost(platform) + platform.average_comm_cost(parent=p, child=t) for p in dag.DAG.predecessors(t))
         except ValueError:
             pass 
         
@@ -404,7 +404,7 @@ def HCPT(dag, platform, return_schedule=False, schedule_dest=None):
             ALST[t] = AEST[t]
             continue
         try:
-            ALST[t] = min(ALST[s] - platform.approximate_comm_cost(parent=t, child=s) for s in dag.DAG.successors(t)) - t.approximate_execution_cost(platform)
+            ALST[t] = min(ALST[s] - platform.average_comm_cost(parent=t, child=s) for s in dag.DAG.successors(t)) - t.average_execution_cost(platform)
         except ValueError:
             pass
     

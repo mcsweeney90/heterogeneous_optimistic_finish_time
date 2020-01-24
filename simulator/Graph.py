@@ -101,9 +101,9 @@ class Task:
         self.scheduled = False
         self.where_scheduled = None           
         
-    def approximate_execution_cost(self, platform, weighting="HEFT"):
+    def average_execution_cost(self, platform, avg_type="HEFT"):
         """
-        Compute the "approximate" computation time of the Task. 
+        Compute the "average" computation time of the Task. 
         Usually used for setting priorities in HEFT and similar heuristics.
         
         Parameters
@@ -111,8 +111,8 @@ class Task:
         platform - Node object (see Environment.py module)
         The target platform.
                 
-        weighting - string
-        How the approximation should be computed. 
+        avg_type - string
+        How the average should be computed. 
         Options:
             - "HEFT", use mean values over all processors as in HEFT.
             - "median", use median values over all processors. 
@@ -128,7 +128,7 @@ class Task:
         Returns
         ------------------------
         float 
-        The approximate computation cost of the Task. 
+        The average computation cost of the Task. 
         
         Notes
         ------------------------
@@ -136,32 +136,32 @@ class Task:
         2. "PS", "D" and "SFB" are from Shetti, Fahmy and Bretschneider (2013).
         """
         
-        if weighting == "HEFT" or weighting == "mean" or weighting == "MEAN" or weighting == "M":
+        if avg_type == "HEFT" or avg_type == "mean" or avg_type == "MEAN" or avg_type == "M":
             return (self.CPU_time * platform.n_CPUs + self.GPU_time * platform.n_GPUs) / platform.n_workers
-        elif weighting == "median" or weighting == "MEDIAN":
+        elif avg_type == "median" or avg_type == "MEDIAN":
             execution_costs = [self.CPU_time for _ in range(platform.n_CPUs)] + [self.GPU_time for _ in range(platform.n_GPUs)]
             return median(execution_costs)
-        elif weighting == "worst" or weighting == "W" or weighting == "simple worst" or weighting == "SW":
+        elif avg_type == "worst" or avg_type == "W" or avg_type == "simple worst" or avg_type == "SW":
             return max(self.CPU_time, self.GPU_time)
-        elif weighting == "best" or weighting == "B" or weighting == "simple best" or weighting == "sb":
+        elif avg_type == "best" or avg_type == "B" or avg_type == "simple best" or avg_type == "sb":
             return min(self.CPU_time, self.GPU_time)   
-        elif weighting == "HEFT-WM" or weighting == "WM":
+        elif avg_type == "HEFT-WM" or avg_type == "WM":
             r = self.acceleration_ratio
             return (self.CPU_time * platform.n_CPUs + r * self.GPU_time * platform.n_GPUs) / (platform.n_CPUs + r * platform.n_GPUs)         
-        elif weighting == "PS" or weighting == "ps":
+        elif avg_type == "PS" or avg_type == "ps":
             fastest, slowest = min(self.CPU_time, self.GPU_time), max(self.CPU_time, self.GPU_time)
             if not fastest:
                 return 0
             return slowest / fastest
-        elif weighting == "D" or weighting == "d":
+        elif avg_type == "D" or avg_type == "d":
             fastest, slowest = min(self.CPU_time, self.GPU_time), max(self.CPU_time, self.GPU_time)
             return slowest - fastest
-        elif weighting == "SFB" or weighting == "sfb":
+        elif avg_type == "SFB" or avg_type == "sfb":
             fastest, slowest = min(self.CPU_time, self.GPU_time), max(self.CPU_time, self.GPU_time)
             if not fastest:
                 return 0
             return (slowest - fastest) / (slowest / fastest)             
-        raise ValueError('No weighting, e.g., "mean" or "median", specified for approximate_execution_cost.')   
+        raise ValueError('No avg_type, e.g., "mean" or "median", specified for average_execution_cost.')   
 
     def ready_to_schedule(self, dag):
         """
@@ -496,7 +496,7 @@ class DAG:
         # Compute the sum of all CPU-GPU comm costs, for all tasks. 
         total_cg_comm = expected_comm * platform.n_workers**2   
         total_cg_comm /= (2 * platform.n_CPUs * platform.n_GPUs + platform.n_GPUs * (platform.n_GPUs - 1))
-        # Assume that gc_comm and gg_comm are approximately the same.
+        # Assume that gc_comm and gg_comm are roughly the same.
         
         comm_per_task = total_cg_comm / self.num_tasks        
         for task in self.DAG:
@@ -564,7 +564,7 @@ class DAG:
             return max(t.AFT for t in self.DAG if t.exit)  
         return max(t.AFT for t in self.DAG)    
                    
-    def sort_by_upward_rank(self, platform, weighting="HEFT", return_rank_values=False, verbose=False):
+    def sort_by_upward_rank(self, platform, avg_type="HEFT", return_rank_values=False, verbose=False):
         """
         Sorts all tasks in the DAG by decreasing/non-increasing order of upward rank.
         
@@ -573,8 +573,8 @@ class DAG:
         platform - Node object (see Environment.py module)
         The target platform.
         
-        Weighting - string
-        How the tasks and edges should be weighted in platform.approximate_comm_cost and task.approximate_execution_cost.
+        avg_type - string
+        How the tasks and edges should be weighted in platform.average_comm_cost and task.average_execution_cost.
         Default is "HEFT" which is mean values over all processors. See referenced methods for more options.
         
         return_rank_values - bool
@@ -602,9 +602,9 @@ class DAG:
         # Compute the upward rank of all tasks recursively.
         task_ranks = {}
         for t in backward_traversal:
-            task_ranks[t] = t.approximate_execution_cost(platform, weighting=weighting) 
+            task_ranks[t] = t.average_execution_cost(platform, avg_type=avg_type) 
             try:
-                task_ranks[t] += max(platform.approximate_comm_cost(parent=t, child=s, weighting=weighting) + task_ranks[s] for s in self.DAG.successors(t))
+                task_ranks[t] += max(platform.average_comm_cost(parent=t, child=s, avg_type=avg_type) + task_ranks[s] for s in self.DAG.successors(t))
             except ValueError:
                 pass          
         priority_list = list(reversed(sorted(task_ranks, key=task_ranks.get)))
@@ -617,7 +617,7 @@ class DAG:
             return priority_list, task_ranks
         return priority_list  
     
-    def sort_by_downward_rank(self, platform, weighting="HEFT", return_rank_values=False, verbose=False):
+    def sort_by_downward_rank(self, platform, avg_type="HEFT", return_rank_values=False, verbose=False):
         """
         Sorts all tasks in the DAG by increasing/non-decreasing order of downward rank.
         
@@ -626,8 +626,8 @@ class DAG:
         platform - Node object (see Environment.py module)
         The target platform.
         
-        Weighting - string
-        How the tasks and edges should be weighted in platform.approximate_comm_cost and task.approximate_execution_cost.
+        avg_type - string
+        How the tasks and edges should be weighted in platform.average_comm_cost and task.average_execution_cost.
         Default is "HEFT" which is mean values over all processors. See referenced methods for more options.
         
         return_rank_values - bool
@@ -657,7 +657,7 @@ class DAG:
         for t in forward_traversal:
             task_ranks[t] = 0
             try:
-                task_ranks[t] += max(p.approximate_execution_cost(platform, weighting) + platform.approximate_comm_cost(parent=p, child=t, weighting=weighting) +
+                task_ranks[t] += max(p.average_execution_cost(platform, avg_type) + platform.average_comm_cost(parent=p, child=t, avg_type=avg_type) +
                           task_ranks[p] for p in self.DAG.predecessors(t))
             except ValueError:
                 pass          
@@ -701,10 +701,10 @@ class DAG:
                 for child in self.DAG.successors(task):
                     # Calculate OCT(child, pw) + w(child, pw) for all processors pw.
                     proc_values = list(OCT[child][pw] + child.CPU_time if pw < platform.n_CPUs else OCT[child][pw] + child.GPU_time for pw in range(platform.n_workers))
-                    # Add the (approximate) communication cost to the processor value unless pw == p.
+                    # Add the average communication cost to the processor value unless pw == p.
                     for pw in range(platform.n_workers):
                         if pw != p: 
-                            proc_values[pw] += platform.approximate_comm_cost(task, child)
+                            proc_values[pw] += platform.average_comm_cost(task, child)
                     # Calculate the minimum value over all processors.
                     child_values.append(min(proc_values))
                 # OCT is the maximum of these processor minimums over all the child tasks.

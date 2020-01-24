@@ -8,7 +8,7 @@ The OFT table used in HOFT is extremely similar to the OCT table but traverses t
 Conceptually, the difference between the OFT and OCT values is like that between upward and downward rank: the former
 is the optimal distance from the entry task to the current task (inclusive), whereas the OCT is the optimal distance 
 from the task to an exit task (excluding the task itself). 
-(There's another minor difference in that the OFT doesn't use approximate communication costs because of the
+(There's another minor difference in that the OFT doesn't use average communication costs because of the
 less general assumptions made about communication costs - i.e., that they depend only on the communicating Worker types.)   
 
 In many ways the OCT alternative is actually much more intuitive since comparing the OCT value of a task on CPU and GPU 
@@ -75,7 +75,7 @@ def OCT_priorities(dag):
     ------------------------ 
     1. Rather than using dag.optimistic_cost_table we use a slightly simpler version here similar to the 
        OFT that assumes comm costs from processors of the same type are always zero, rather than using
-       platform.approximate_comm_cost. 
+       platform.average_comm_cost. 
            
     """ 
     # Compute the OCT table - see Note 1.

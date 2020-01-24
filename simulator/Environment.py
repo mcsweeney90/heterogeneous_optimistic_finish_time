@@ -458,9 +458,9 @@ class Node:
         return parent.comm_costs["{}".format(source_type + target_type)][child.ID]    
                 
     
-    def approximate_comm_cost(self, parent, child, weighting="HEFT"): 
+    def average_comm_cost(self, parent, child, avg_type="HEFT"): 
         """
-        Compute the "approximate" communication time from parent to child tasks. 
+        Compute the "average" communication time from parent to child tasks. 
         Usually used for setting priorities in HEFT and similar heuristics.
         
         Parameters
@@ -471,8 +471,8 @@ class Node:
         child - Task object (see Graph.py module)
         The child task that is receiving data.
         
-        weighting - string
-        How the approximation should be computed. 
+        avg_type - string
+        How the average should be computed. 
         Options:
             - "HEFT", use mean values over all processors as in HEFT.
             - "median", use median values over all processors. 
@@ -481,14 +481,14 @@ class Node:
             - "best", assume each task is on its fastest processor type and compute corresponding communication cost.
             - "simple best", always use smallest possible communication cost.
             - "HEFT-WM", compute mean over all processors, weighted by task acceleration ratios.
-            - "PS", "D", "SFB" - speedup-based weightings from Shetti, Fahmy and Bretschneider (2013). 
-               Returns zero in all three cases so definitions can be found in approximate_execution_cost
+            - "PS", "D", "SFB" - speedup-based avg_types from Shetti, Fahmy and Bretschneider (2013). 
+               Returns zero in all three cases so definitions can be found in average_execution_cost
                method in the Task class in Graph.py.
                                          
         Returns
         ------------------------
         float 
-        The approximate communication cost between parent and child. 
+        The average communication cost between parent and child. 
         
         Notes
         ------------------------
@@ -498,7 +498,7 @@ class Node:
         if not self.communication:
             return 0
         
-        if weighting == "HEFT" or weighting == "mean" or weighting == "MEAN" or weighting == "M":            
+        if avg_type == "HEFT" or avg_type == "mean" or avg_type == "MEAN" or avg_type == "M":            
             c_bar = self.n_CPUs * (self.n_CPUs - 1) * parent.comm_costs["CC"][child.ID] 
             c_bar += self.n_CPUs * self.n_GPUs * parent.comm_costs["CG"][child.ID]
             c_bar += self.n_CPUs * self.n_GPUs * parent.comm_costs["GC"][child.ID]
@@ -506,7 +506,7 @@ class Node:
             c_bar /= (self.n_workers**2)
             return c_bar            
             
-        elif weighting == "median" or weighting == "MEDIAN":
+        elif avg_type == "median" or avg_type == "MEDIAN":
             costs = self.n_CPUs * (self.n_CPUs - 1) * [parent.comm_costs["CC"][child.ID]] 
             costs += self.n_CPUs * self.n_GPUs * [parent.comm_costs["CG"][child.ID]]
             costs += self.n_CPUs * self.n_GPUs * [parent.comm_costs["GC"][child.ID]]
@@ -514,7 +514,7 @@ class Node:
             costs += self.n_workers * [0]
             return median(costs)
         
-        elif weighting == "worst" or weighting == "WORST":
+        elif avg_type == "worst" or avg_type == "WORST":
             parent_worst_proc = "C" if parent.CPU_time > parent.GPU_time else "G"
             child_worst_proc = "C" if child.CPU_time > child.GPU_time else "G"
             if parent_worst_proc == "C" and child_worst_proc == "C" and self.n_CPUs == 1:
@@ -523,20 +523,20 @@ class Node:
                 return 0
             return parent.comm_costs["{}".format(parent_worst_proc + child_worst_proc)][child.ID]
         
-        elif weighting == "simple worst" or weighting == "SW":
+        elif avg_type == "simple worst" or avg_type == "SW":
             return max(parent.comm_costs["CC"][child.ID], parent.comm_costs["CG"][child.ID], parent.comm_costs["GC"][child.ID], parent.comm_costs["GG"][child.ID])
         
-        elif weighting == "best" or weighting == "BEST":
+        elif avg_type == "best" or avg_type == "BEST":
             parent_best_proc = "G" if parent.CPU_time > parent.GPU_time else "C"
             child_best_proc = "G" if child.CPU_time > child.GPU_time else "C"
             if parent_best_proc == child_best_proc:
                 return 0
             return parent.comm_costs["{}".format(parent_best_proc + child_best_proc)][child.ID]
         
-        elif weighting == "simple best" or weighting == "sb":
+        elif avg_type == "simple best" or avg_type == "sb":
             return min(parent.comm_costs["CC"][child.ID], parent.comm_costs["CG"][child.ID], parent.comm_costs["GC"][child.ID], parent.comm_costs["GG"][child.ID])         
                 
-        elif weighting == "HEFT-WM" or weighting == "WM":
+        elif avg_type == "HEFT-WM" or avg_type == "WM":
             A, B = parent.acceleration_ratio, child.acceleration_ratio
             c_bar = self.n_CPUs * (self.n_CPUs - 1) * parent.comm_costs["CC"][child.ID] 
             c_bar += self.n_CPUs * B * self.n_GPUs * parent.comm_costs["CG"][child.ID]
@@ -545,10 +545,10 @@ class Node:
             c_bar /= ((self.n_CPUs + A * self.n_GPUs) * (self.n_CPUs + B * self.n_GPUs))
             return c_bar              
             
-        elif weighting == "PS" or weighting == "ps" or weighting == "D" or weighting == "d" or weighting == "SFB" or weighting == "sfb": 
+        elif avg_type == "PS" or avg_type == "ps" or avg_type == "D" or avg_type == "d" or avg_type == "SFB" or avg_type == "sfb": 
             return 0
         
-        raise ValueError('No weighting (e.g., "mean" or "median") specified for approximate_comm_cost.')
+        raise ValueError('No avg_type (e.g., "mean" or "median") specified for average_comm_cost.')
         
     def fastest_processor_of_type(self, task, dag, gpu=False):
         """
@@ -611,13 +611,13 @@ class Node:
         Which Worker each task should be scheduled on.
         
         batch_sort - None/string
-        Optional, how to weight each task to compute priorities. Can use any weighting defined in task.approximate_execution_cost (see Graph.py).        
+        Optional, how to weight each task to compute priorities. Can use any avg_type defined in task.average_execution_cost (see Graph.py).        
         """ 
         
         if batch_sort:
             weight = {}
             for task in batch:
-                weight[task.ID] = task.approximate_execution_cost(self, weighting=batch_sort) 
+                weight[task.ID] = task.average_execution_cost(self, avg_type=batch_sort) 
             batch = list(reversed(sorted(batch, key=lambda t : weight[t.ID]))) # Descending order.            
     
         if policy == "eft":  
