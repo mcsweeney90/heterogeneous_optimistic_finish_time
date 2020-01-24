@@ -3,7 +3,12 @@
 Python framework for simulating the scheduling of user-defined task DAGs on user-defined CPU-GPU target platforms.
 
 ## Prerequisites
-To install all relevant python packages:
+
+This has only been tested for versions of Python **>= 3.6** so performance for older versions cannot be guaranteed.
+
+In particular there may be issues caused because it is often implicitly assumed that `dict` (and therefore `defaultdict` from the `collections` package) data types are ordered by insertion time. The obvious solution to this is to replace all such occurences with `OrderedDict` data types (also from the `collections` package), which I will happily do if this proves to be a critical problem for anybody.  
+
+To install all relevant Python packages:
 ```
 pip install -r requirements.txt
 ```

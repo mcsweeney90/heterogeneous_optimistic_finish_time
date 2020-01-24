@@ -19,15 +19,15 @@ Edge density: 0.1284204817138949
 Mean task CPU time: 246.80182169184056, standard deviation: 293.59699999553965
 Mean task GPU time: 50.41317365269461, standard deviation: 29.062513427684053
 Mean task acceleration ratio: 5.004672127631883, standard deviation: 4.731379471147594
-Mean task execution time: 222.25324068694732
+Mean task execution time on Multiple_GPU platform: 222.25324068694732
 Computation-to-communication ratio: 28.380729128807666
 Minimal serial time: 50514
 --------------------------------------------------------
 HEFT makespan: 8512.801345061396
 
-HBMCT makespan: 10168.216375159695
+HBMCT makespan: 10150.700816513281
 
-PEFT makespan: 8752.922149356737
+PEFT makespan: 8714.824487456153
 
 PETS makespan: 9121.046724531372
 
@@ -47,15 +47,15 @@ Edge density: 0.010524405733986572
 Mean task CPU time: 265.5885887359457, standard deviation: 334.85881666078603
 Mean task GPU time: 49.063872255489024, standard deviation: 29.176247280363505
 Mean task acceleration ratio: 5.281294565724967, standard deviation: 5.03255868449422
-Mean task execution time: 238.5229991758886
+Mean task execution time on Multiple_GPU platform: 238.5229991758886
 Computation-to-communication ratio: 43.1863190665496
 Minimal serial time: 49162
 --------------------------------------------------------
 HEFT makespan: 4075.7039188633526
 
-HBMCT makespan: 5096.066081681432
+HBMCT makespan: 4941.00559455816
 
-PEFT makespan: 4179.1061245285755
+PEFT makespan: 4246.885698907108
 
 PETS makespan: 4824.907053794067
 
@@ -75,15 +75,15 @@ Edge density: 0.1613635865132871
 Mean task CPU time: 244.40653099021094, standard deviation: 328.8265240800661
 Mean task GPU time: 49.62674650698603, standard deviation: 28.59079460458156
 Mean task acceleration ratio: 4.97890560845271, standard deviation: 5.319742471370991
-Mean task execution time: 220.05905792980784
+Mean task execution time on Multiple_GPU platform: 220.05905792980784
 Computation-to-communication ratio: 43.49757867334121
 Minimal serial time: 49726
 --------------------------------------------------------
 HEFT makespan: 12706.889222391683
 
-HBMCT makespan: 13929.490092617798
+HBMCT makespan: 13917.240217977995
 
-PEFT makespan: 12605.035708765901
+PEFT makespan: 12591.039172754026
 
 PETS makespan: 13374.789592394009
 
@@ -103,15 +103,15 @@ Edge density: 0.008255217836056159
 Mean task CPU time: 248.48734660238833, standard deviation: 329.49014004883446
 Mean task GPU time: 51.10778443113772, standard deviation: 28.249571372252802
 Mean task acceleration ratio: 4.953431145601149, standard deviation: 5.135017428297141
-Mean task execution time: 223.81490133098202
+Mean task execution time on Multiple_GPU platform: 223.81490133098202
 Computation-to-communication ratio: 34.76534457442755
 Minimal serial time: 51210
 --------------------------------------------------------
 HEFT makespan: 4051.9707954265214
 
-HBMCT makespan: 4606.210830677825
+HBMCT makespan: 4734.44195352445
 
-PEFT makespan: 3840.415762274206
+PEFT makespan: 3868.740490482209
 
 PETS makespan: 4212.869382596522
 
@@ -131,15 +131,15 @@ Edge density: 0.034251177963752814
 Mean task CPU time: 237.68705226899561, standard deviation: 306.5229639167333
 Mean task GPU time: 49.18662674650699, standard deviation: 28.205867454851337
 Mean task acceleration ratio: 4.895973504623393, standard deviation: 5.109704702936649
-Mean task execution time: 214.12449907868455
+Mean task execution time on Multiple_GPU platform: 214.12449907868455
 Computation-to-communication ratio: 26.577135966569227
 Minimal serial time: 49285
 --------------------------------------------------------
 HEFT makespan: 5652.624232195934
 
-HBMCT makespan: 7404.971892069678
+HBMCT makespan: 7475.0886784576405
 
-PEFT makespan: 5781.432457619119
+PEFT makespan: 5789.336354326029
 
 PETS makespan: 7136.499370107571
 
@@ -159,15 +159,15 @@ Edge density: 0.14304059214238854
 Mean task CPU time: 246.98326204042112, standard deviation: 306.69072109811646
 Mean task GPU time: 51.28842315369261, standard deviation: 28.527180821408695
 Mean task acceleration ratio: 4.851987393069861, standard deviation: 4.615015389732483
-Mean task execution time: 222.52140717958005
+Mean task execution time on Multiple_GPU platform: 222.52140717958005
 Computation-to-communication ratio: 29.460967552340698
 Minimal serial time: 51391
 --------------------------------------------------------
 HEFT makespan: 8532.654411723039
 
-HBMCT makespan: 10087.584212170463
+HBMCT makespan: 10344.561961607831
 
-PEFT makespan: 8489.777089967007
+PEFT makespan: 8497.186484480242
 
 PETS makespan: 9026.563042338616
 
@@ -187,15 +187,15 @@ Edge density: 0.1825878712106257
 Mean task CPU time: 270.98364979950776, standard deviation: 349.2926165087127
 Mean task GPU time: 51.909181636726544, standard deviation: 27.72607554268985
 Mean task acceleration ratio: 5.10584054498915, standard deviation: 5.339114162743966
-Mean task execution time: 243.59934127916011
+Mean task execution time on Multiple_GPU platform: 243.59934127916011
 Computation-to-communication ratio: 40.15771552337634
 Minimal serial time: 52013
 --------------------------------------------------------
 HEFT makespan: 8982.860584616197
 
-HBMCT makespan: 10288.634051975016
+HBMCT makespan: 10303.07489190409
 
-PEFT makespan: 9256.857219172887
+PEFT makespan: 9169.025854094465
 
 PETS makespan: 9423.601523584402
 
@@ -215,15 +215,15 @@ Edge density: 0.09139363630381594
 Mean task CPU time: 228.59941143849414, standard deviation: 297.3332273601838
 Mean task GPU time: 49.47604790419162, standard deviation: 28.28871545873178
 Mean task acceleration ratio: 4.808844600352503, standard deviation: 4.98792535817063
-Mean task execution time: 206.20899099670632
+Mean task execution time on Multiple_GPU platform: 206.20899099670632
 Computation-to-communication ratio: 29.06133377252532
 Minimal serial time: 49575
 --------------------------------------------------------
 HEFT makespan: 8694.670150333768
 
-HBMCT makespan: 10266.988499353773
+HBMCT makespan: 10270.673433652904
 
-PEFT makespan: 8696.105206301989
+PEFT makespan: 8727.398960413431
 
 PETS makespan: 9755.078606163808
 
@@ -243,15 +243,15 @@ Edge density: 0.008442655149241975
 Mean task CPU time: 266.6843218772185, standard deviation: 352.6258602428167
 Mean task GPU time: 51.23652694610779, standard deviation: 28.433115534457016
 Mean task acceleration ratio: 5.219151264791464, standard deviation: 5.451034326796747
-Mean task execution time: 239.75334751082966
+Mean task execution time on Multiple_GPU platform: 239.75334751082966
 Computation-to-communication ratio: 40.49419796091267
 Minimal serial time: 51339
 --------------------------------------------------------
 HEFT makespan: 3902.258213884648
 
-HBMCT makespan: 4873.30259622429
+HBMCT makespan: 4804.964460422332
 
-PEFT makespan: 4025.171002790405
+PEFT makespan: 4033.6938488988835
 
 PETS makespan: 4503.794104602025
 
@@ -271,15 +271,15 @@ Edge density: 0.01789627538130532
 Mean task CPU time: 245.7004595339283, standard deviation: 335.0701505914388
 Mean task GPU time: 50.224550898203596, standard deviation: 28.70742488557242
 Mean task acceleration ratio: 4.9592957491074, standard deviation: 5.266983357715371
-Mean task execution time: 221.26597095446272
+Mean task execution time on Multiple_GPU platform: 221.26597095446272
 Computation-to-communication ratio: 24.369555133120084
 Minimal serial time: 50325
 --------------------------------------------------------
 HEFT makespan: 4408.4039786235235
 
-HBMCT makespan: 6174.836608288797
+HBMCT makespan: 6064.578287449167
 
-PEFT makespan: 4614.008949386628
+PEFT makespan: 4473.325980620427
 
 PETS makespan: 5682.520187032453
 
@@ -299,15 +299,15 @@ Edge density: 0.12606555121525181
 Mean task CPU time: 253.797218148203, standard deviation: 311.13749249862576
 Mean task GPU time: 51.446107784431135, standard deviation: 28.97313763491169
 Mean task acceleration ratio: 4.984186209023595, standard deviation: 4.894638729205215
-Mean task execution time: 228.50332935273153
+Mean task execution time on Multiple_GPU platform: 228.50332935273153
 Computation-to-communication ratio: 44.40752331094498
 Minimal serial time: 51549
 --------------------------------------------------------
 HEFT makespan: 8588.287710103297
 
-HBMCT makespan: 9900.67218096595
+HBMCT makespan: 10135.80776714443
 
-PEFT makespan: 8878.293088922328
+PEFT makespan: 8720.23268836325
 
 PETS makespan: 9165.605990209164
 
@@ -327,15 +327,15 @@ Edge density: 0.028157471271243725
 Mean task CPU time: 251.2783656163143, standard deviation: 318.06887177502205
 Mean task GPU time: 48.72654690618762, standard deviation: 28.548503284283573
 Mean task acceleration ratio: 5.218311097923239, standard deviation: 5.270609304691915
-Mean task execution time: 225.95938827754847
+Mean task execution time on Multiple_GPU platform: 225.95938827754847
 Computation-to-communication ratio: 36.89672261363408
 Minimal serial time: 48824
 --------------------------------------------------------
 HEFT makespan: 5437.745263306157
 
-HBMCT makespan: 7126.152329297759
+HBMCT makespan: 6896.500482041841
 
-PEFT makespan: 5485.245894357663
+PEFT makespan: 5455.105609977784
 
 PETS makespan: 6684.564805473642
 
@@ -355,15 +355,15 @@ Edge density: 0.12352318340342293
 Mean task CPU time: 262.0592659072901, standard deviation: 321.4465852439604
 Mean task GPU time: 50.669660678642714, standard deviation: 28.864430480968256
 Mean task acceleration ratio: 5.112203818299432, standard deviation: 4.979618922841258
-Mean task execution time: 235.6355652537092
+Mean task execution time on Multiple_GPU platform: 235.6355652537092
 Computation-to-communication ratio: 21.830134520155827
 Minimal serial time: 50771
 --------------------------------------------------------
 HEFT makespan: 10692.037591942848
 
-HBMCT makespan: 12121.823744912803
+HBMCT makespan: 12238.605230137178
 
-PEFT makespan: 10717.747385102202
+PEFT makespan: 10773.492629637109
 
 PETS makespan: 11770.77515832507
 
@@ -383,15 +383,15 @@ Edge density: 0.07733583781487974
 Mean task CPU time: 259.2280951153395, standard deviation: 338.10059168517716
 Mean task GPU time: 51.32834331337325, standard deviation: 28.103369482987365
 Mean task acceleration ratio: 4.922295061518932, standard deviation: 4.892057343744215
-Mean task execution time: 233.24062614009372
+Mean task execution time on Multiple_GPU platform: 233.24062614009372
 Computation-to-communication ratio: 37.975833253388636
 Minimal serial time: 51431
 --------------------------------------------------------
 HEFT makespan: 7469.428997704568
 
-HBMCT makespan: 8998.708736681589
+HBMCT makespan: 8918.048714553051
 
-PEFT makespan: 7522.811749424492
+PEFT makespan: 7581.274713481375
 
 PETS makespan: 8260.602476947592
 
@@ -411,15 +411,15 @@ Edge density: 0.034504417737950675
 Mean task CPU time: 264.8328330349562, standard deviation: 349.6974876656868
 Mean task GPU time: 49.37624750499002, standard deviation: 28.50907959671296
 Mean task acceleration ratio: 5.237587622071172, standard deviation: 5.209685237060067
-Mean task execution time: 237.90075984371043
+Mean task execution time on Multiple_GPU platform: 237.90075984371043
 Computation-to-communication ratio: 33.60777501939943
 Minimal serial time: 49475
 --------------------------------------------------------
 HEFT makespan: 6033.226260752897
 
-HBMCT makespan: 7592.825489970503
+HBMCT makespan: 7651.4733813510275
 
-PEFT makespan: 6166.318982257291
+PEFT makespan: 6160.528262102711
 
 PETS makespan: 7525.76274628317
 
@@ -439,15 +439,15 @@ Edge density: 0.012281132041611083
 Mean task CPU time: 248.96875721335877, standard deviation: 316.7900543240677
 Mean task GPU time: 50.99800399201597, standard deviation: 28.505698488466358
 Mean task acceleration ratio: 4.927735567502551, standard deviation: 4.959506549799163
-Mean task execution time: 224.22241306069094
+Mean task execution time on Multiple_GPU platform: 224.22241306069094
 Computation-to-communication ratio: 47.72961432141116
 Minimal serial time: 51100
 --------------------------------------------------------
 HEFT makespan: 4007.3704721535337
 
-HBMCT makespan: 5202.327765163131
+HBMCT makespan: 5169.75201527986
 
-PEFT makespan: 4193.307822517989
+PEFT makespan: 4186.065024558963
 
 PETS makespan: 4999.6760717848165
 
@@ -467,15 +467,15 @@ Edge density: 0.03199993619155296
 Mean task CPU time: 237.54882748846202, standard deviation: 296.3294215069143
 Mean task GPU time: 49.818363273453095, standard deviation: 28.616309262449622
 Mean task acceleration ratio: 4.85496237723497, standard deviation: 4.826451430814951
-Mean task execution time: 214.08251946158592
+Mean task execution time on Multiple_GPU platform: 214.08251946158592
 Computation-to-communication ratio: 38.44784067188931
 Minimal serial time: 49918
 --------------------------------------------------------
 HEFT makespan: 5366.003765901052
 
-HBMCT makespan: 6955.534890329086
+HBMCT makespan: 6760.156871989176
 
-PEFT makespan: 5580.987772453368
+PEFT makespan: 5547.607217929999
 
 PETS makespan: 6446.374432500779
 
@@ -495,15 +495,15 @@ Edge density: 0.0037168420401953338
 Mean task CPU time: 248.05836780067327, standard deviation: 318.44775831908476
 Mean task GPU time: 48.96806387225549, standard deviation: 28.486453306789745
 Mean task acceleration ratio: 5.110581067732489, standard deviation: 5.131971566282366
-Mean task execution time: 223.17207980962104
+Mean task execution time on Multiple_GPU platform: 223.17207980962104
 Computation-to-communication ratio: 30.462685236852096
 Minimal serial time: 49066
 --------------------------------------------------------
 HEFT makespan: 3885.46116971455
 
-HBMCT makespan: 3930.303432537401
+HBMCT makespan: 4030.265215355341
 
-PEFT makespan: 3748.741390312959
+PEFT makespan: 3758.374335389974
 
 PETS makespan: 4035.167274362768
 
@@ -523,15 +523,15 @@ Edge density: 0.09638265925691075
 Mean task CPU time: 247.2279834078145, standard deviation: 313.8419255780757
 Mean task GPU time: 51.08083832335329, standard deviation: 28.6747618675289
 Mean task acceleration ratio: 4.862291171312427, standard deviation: 5.106997472307235
-Mean task execution time: 222.70959027225683
+Mean task execution time on Multiple_GPU platform: 222.70959027225683
 Computation-to-communication ratio: 22.560279430768844
 Minimal serial time: 51183
 --------------------------------------------------------
 HEFT makespan: 7702.161649947838
 
-HBMCT makespan: 9544.029485676152
+HBMCT makespan: 9607.066733111527
 
-PEFT makespan: 8086.163438207097
+PEFT makespan: 8003.855740754687
 
 PETS makespan: 8633.487072905009
 
@@ -551,15 +551,15 @@ Edge density: 0.014334966430774814
 Mean task CPU time: 242.60915797171364, standard deviation: 295.07370496006035
 Mean task GPU time: 48.862275449101794, standard deviation: 28.325788487262376
 Mean task acceleration ratio: 5.186831545942946, standard deviation: 5.155227737906821
-Mean task execution time: 218.39079765638718
+Mean task execution time on Multiple_GPU platform: 218.39079765638718
 Computation-to-communication ratio: 49.46620435756586
 Minimal serial time: 48960
 --------------------------------------------------------
 HEFT makespan: 3988.347034435972
 
-HBMCT makespan: 5285.6261035463
+HBMCT makespan: 5130.8973845882
 
-PEFT makespan: 4065.4206329233116
+PEFT makespan: 4093.299544830073
 
 PETS makespan: 4674.592608193891
 
@@ -579,15 +579,15 @@ Edge density: 0.16253008468577332
 Mean task CPU time: 246.1832250188741, standard deviation: 316.538362804211
 Mean task GPU time: 50.26447105788423, standard deviation: 29.105234680346843
 Mean task acceleration ratio: 4.852191025625422, standard deviation: 4.94354023081703
-Mean task execution time: 221.6933807737504
+Mean task execution time on Multiple_GPU platform: 221.6933807737504
 Computation-to-communication ratio: 29.332437938755668
 Minimal serial time: 50365
 --------------------------------------------------------
 HEFT makespan: 8559.987978174542
 
-HBMCT makespan: 10263.403328213366
+HBMCT makespan: 10070.1894350677
 
-PEFT makespan: 8648.425198757626
+PEFT makespan: 8664.536054012266
 
 PETS makespan: 8933.15092281212
 
@@ -607,15 +607,15 @@ Edge density: 0.012193395426928362
 Mean task CPU time: 264.9681112138732, standard deviation: 316.3736955356877
 Mean task GPU time: 51.06586826347306, standard deviation: 28.41206015708595
 Mean task acceleration ratio: 5.269238321370589, standard deviation: 5.073768971659791
-Mean task execution time: 238.23033084507318
+Mean task execution time on Multiple_GPU platform: 238.23033084507318
 Computation-to-communication ratio: 27.020757201424825
 Minimal serial time: 51168
 --------------------------------------------------------
 HEFT makespan: 4185.73217391707
 
-HBMCT makespan: 5362.4321150562755
+HBMCT makespan: 5484.608547980703
 
-PEFT makespan: 4363.326705395125
+PEFT makespan: 4364.198524094272
 
 PETS makespan: 4786.831591499835
 
@@ -635,15 +635,15 @@ Edge density: 0.03174869043132516
 Mean task CPU time: 269.55007558025676, standard deviation: 383.2632241918813
 Mean task GPU time: 51.01596806387226, standard deviation: 28.822115048677805
 Mean task acceleration ratio: 5.383502774641316, standard deviation: 5.7733682884737565
-Mean task execution time: 242.23331214070868
+Mean task execution time on Multiple_GPU platform: 242.23331214070868
 Computation-to-communication ratio: 48.84142787610572
 Minimal serial time: 51118
 --------------------------------------------------------
 HEFT makespan: 5853.24716917197
 
-HBMCT makespan: 7337.997388451838
+HBMCT makespan: 7590.195183956554
 
-PEFT makespan: 6078.830035762501
+PEFT makespan: 6039.960812340838
 
 PETS makespan: 7416.082660534275
 
@@ -663,15 +663,15 @@ Edge density: 0.006721821093078578
 Mean task CPU time: 236.5146695448874, standard deviation: 319.84028186164807
 Mean task GPU time: 49.82934131736527, standard deviation: 29.049922914228603
 Mean task acceleration ratio: 4.7983923723667825, standard deviation: 4.969696718332037
-Mean task execution time: 213.17900351644712
+Mean task execution time on Multiple_GPU platform: 213.17900351644712
 Computation-to-communication ratio: 43.51820766626189
 Minimal serial time: 49929
 --------------------------------------------------------
 HEFT makespan: 3648.9493177265545
 
-HBMCT makespan: 4079.327922049985
+HBMCT makespan: 4001.202531189213
 
-PEFT makespan: 3650.1539895964515
+PEFT makespan: 3671.05779548806
 
 PETS makespan: 3746.875000028895
 
@@ -691,15 +691,15 @@ Edge density: 0.029848395117856197
 Mean task CPU time: 255.1668323549983, standard deviation: 333.1326721031429
 Mean task GPU time: 50.21756487025948, standard deviation: 28.544823645354594
 Mean task acceleration ratio: 4.948839725480356, standard deviation: 5.006231991206982
-Mean task execution time: 229.54817391940594
+Mean task execution time on Multiple_GPU platform: 229.54817391940594
 Computation-to-communication ratio: 44.0089154239245
 Minimal serial time: 50318
 --------------------------------------------------------
 HEFT makespan: 5175.080549202481
 
-HBMCT makespan: 6804.01024730086
+HBMCT makespan: 6656.716984956156
 
-PEFT makespan: 5557.837285245165
+PEFT makespan: 5546.755462401206
 
 PETS makespan: 6694.153915203754
 
@@ -719,15 +719,15 @@ Edge density: 0.1597524232254771
 Mean task CPU time: 259.697528167747, standard deviation: 354.5246373956507
 Mean task GPU time: 49.4560878243513, standard deviation: 28.787066149735594
 Mean task acceleration ratio: 5.258305882963194, standard deviation: 5.507206664675566
-Mean task execution time: 233.41734812482255
+Mean task execution time on Multiple_GPU platform: 233.41734812482255
 Computation-to-communication ratio: 48.94823176312394
 Minimal serial time: 49555
 --------------------------------------------------------
 HEFT makespan: 13013.860584450837
 
-HBMCT makespan: 14290.09451610038
+HBMCT makespan: 14380.130162294527
 
-PEFT makespan: 12776.359528746714
+PEFT makespan: 12798.21625734833
 
 PETS makespan: 13448.198301760907
 
@@ -747,15 +747,15 @@ Edge density: 0.11166877035140509
 Mean task CPU time: 259.1978713368301, standard deviation: 330.3086227423452
 Mean task GPU time: 51.24151696606786, standard deviation: 28.349148214456836
 Mean task acceleration ratio: 5.060230435020359, standard deviation: 5.003524294269692
-Mean task execution time: 233.2033270404848
+Mean task execution time on Multiple_GPU platform: 233.2033270404848
 Computation-to-communication ratio: 33.97471299783472
 Minimal serial time: 51344
 --------------------------------------------------------
 HEFT makespan: 10207.495435995625
 
-HBMCT makespan: 11519.315397697543
+HBMCT makespan: 11601.98534213891
 
-PEFT makespan: 9998.386059913379
+PEFT makespan: 9921.309191772469
 
 PETS makespan: 11037.744139029332
 
@@ -775,15 +775,15 @@ Edge density: 0.1573675825172831
 Mean task CPU time: 256.0435873028252, standard deviation: 320.31767367261114
 Mean task GPU time: 50.955089820359284, standard deviation: 28.19894710456941
 Mean task acceleration ratio: 5.10443201649209, standard deviation: 5.09656456384686
-Mean task execution time: 230.40752511751694
+Mean task execution time on Multiple_GPU platform: 230.40752511751694
 Computation-to-communication ratio: 44.06782004692439
 Minimal serial time: 51057
 --------------------------------------------------------
 HEFT makespan: 8617.620818177136
 
-HBMCT makespan: 10061.883351540944
+HBMCT makespan: 10505.73155272789
 
-PEFT makespan: 8824.344818792148
+PEFT makespan: 8821.547314866324
 
 PETS makespan: 9130.333768588365
 
@@ -803,15 +803,15 @@ Edge density: 0.02389426940325144
 Mean task CPU time: 248.37628433311272, standard deviation: 313.95918080596203
 Mean task GPU time: 49.691616766467064, standard deviation: 28.773458009235178
 Mean task acceleration ratio: 5.059420230829295, standard deviation: 5.1346740606146435
-Mean task execution time: 223.54070088728201
+Mean task execution time on Multiple_GPU platform: 223.54070088728201
 Computation-to-communication ratio: 26.220352197137657
 Minimal serial time: 49791
 --------------------------------------------------------
 HEFT makespan: 4881.398913963342
 
-HBMCT makespan: 6545.003746876493
+HBMCT makespan: 6783.789058185856
 
-PEFT makespan: 5168.641937281228
+PEFT makespan: 5094.42488684736
 
 PETS makespan: 5853.735749632461
 
@@ -831,15 +831,15 @@ Edge density: 0.15496678969732863
 Mean task CPU time: 255.93043918909655, standard deviation: 325.25766938317804
 Mean task GPU time: 50.03093812375249, standard deviation: 27.909249157601526
 Mean task acceleration ratio: 5.12939413842516, standard deviation: 5.1087556200651125
-Mean task execution time: 230.19300155592856
+Mean task execution time on Multiple_GPU platform: 230.19300155592856
 Computation-to-communication ratio: 33.59313591179134
 Minimal serial time: 50131
 --------------------------------------------------------
 HEFT makespan: 11454.049173271893
 
-HBMCT makespan: 12665.386885755706
+HBMCT makespan: 12940.167993773684
 
-PEFT makespan: 11368.280479894314
+PEFT makespan: 11372.734082176969
 
 PETS makespan: 12100.563438485131
 
@@ -859,15 +859,15 @@ Edge density: 0.014251217844032216
 Mean task CPU time: 254.78845617629753, standard deviation: 310.3067932887539
 Mean task GPU time: 50.69261477045908, standard deviation: 29.010207532300885
 Mean task acceleration ratio: 5.095343182655209, standard deviation: 5.136552655227617
-Mean task execution time: 229.27647600056773
+Mean task execution time on Multiple_GPU platform: 229.27647600056773
 Computation-to-communication ratio: 42.533860678309566
 Minimal serial time: 50794
 --------------------------------------------------------
 HEFT makespan: 4362.404232647382
 
-HBMCT makespan: 5803.817349558088
+HBMCT makespan: 6060.588163407154
 
-PEFT makespan: 4415.528793422021
+PEFT makespan: 4367.27059500654
 
 PETS makespan: 5101.959599378847
 
@@ -887,15 +887,15 @@ Edge density: 0.0036829438027042817
 Mean task CPU time: 249.90604455355376, standard deviation: 319.8996778749195
 Mean task GPU time: 50.427145708582835, standard deviation: 28.690814835498777
 Mean task acceleration ratio: 4.931809026342794, standard deviation: 5.029799309650991
-Mean task execution time: 224.9711821979324
+Mean task execution time on Multiple_GPU platform: 224.9711821979324
 Computation-to-communication ratio: 37.403426991829015
 Minimal serial time: 50528
 --------------------------------------------------------
 HEFT makespan: 3945.140705509043
 
-HBMCT makespan: 4196.506971524099
+HBMCT makespan: 4179.186539574048
 
-PEFT makespan: 3872.2317731611643
+PEFT makespan: 3849.5752169727107
 
 PETS makespan: 4163.078529346585
 
@@ -915,15 +915,15 @@ Edge density: 0.0037068719703450244
 Mean task CPU time: 243.58807955781532, standard deviation: 298.7620957481617
 Mean task GPU time: 50.68562874251497, standard deviation: 28.326721778568928
 Mean task acceleration ratio: 4.80771017321918, standard deviation: 4.7175000061519
-Mean task execution time: 219.4752732059028
+Mean task execution time on Multiple_GPU platform: 219.4752732059028
 Computation-to-communication ratio: 34.81246993446472
 Minimal serial time: 50787
 --------------------------------------------------------
 HEFT makespan: 3892.641751732581
 
-HBMCT makespan: 4136.183016543518
+HBMCT makespan: 4186.504945846629
 
-PEFT makespan: 3821.8609171568683
+PEFT makespan: 3898.4726109094563
 
 PETS makespan: 4144.646316296785
 
@@ -943,15 +943,15 @@ Edge density: 0.07344352254531895
 Mean task CPU time: 253.2108461494431, standard deviation: 333.65705603209454
 Mean task GPU time: 49.446107784431135, standard deviation: 27.29789807552362
 Mean task acceleration ratio: 5.041697305135955, standard deviation: 5.410157556574435
-Mean task execution time: 227.74025385381663
+Mean task execution time on Multiple_GPU platform: 227.74025385381663
 Computation-to-communication ratio: 47.896035687812926
 Minimal serial time: 49545
 --------------------------------------------------------
 HEFT makespan: 8513.573451154214
 
-HBMCT makespan: 10272.756337658078
+HBMCT makespan: 10102.89083430791
 
-PEFT makespan: 8466.71385366708
+PEFT makespan: 8520.0573755626
 
 PETS makespan: 9786.317814771186
 
@@ -971,15 +971,15 @@ Edge density: 0.012434671117305849
 Mean task CPU time: 247.7052985216179, standard deviation: 311.29202548566326
 Mean task GPU time: 50.67365269461078, standard deviation: 28.70144140898208
 Mean task acceleration ratio: 4.872812082665873, standard deviation: 4.807356481345809
-Mean task execution time: 223.07634279324202
+Mean task execution time on Multiple_GPU platform: 223.07634279324202
 Computation-to-communication ratio: 37.247210039207125
 Minimal serial time: 50775
 --------------------------------------------------------
 HEFT makespan: 3817.83258053795
 
-HBMCT makespan: 5125.340818441489
+HBMCT makespan: 5225.129692595066
 
-PEFT makespan: 4006.0891106915665
+PEFT makespan: 3972.3645771735287
 
 PETS makespan: 4392.6212047183435
 
@@ -999,15 +999,15 @@ Edge density: 0.03865794883758956
 Mean task CPU time: 267.2378228472954, standard deviation: 327.2437370009687
 Mean task GPU time: 50.88622754491018, standard deviation: 27.76144150923684
 Mean task acceleration ratio: 5.0927271856038185, standard deviation: 5.026036497995329
-Mean task execution time: 240.19387343449722
+Mean task execution time on Multiple_GPU platform: 240.19387343449722
 Computation-to-communication ratio: 31.974337714237908
 Minimal serial time: 50988
 --------------------------------------------------------
 HEFT makespan: 6521.530655048402
 
-HBMCT makespan: 8172.677904409317
+HBMCT makespan: 8427.485957276966
 
-PEFT makespan: 6641.358643456919
+PEFT makespan: 6707.727571992383
 
 PETS makespan: 7753.370480935727
 
@@ -1027,15 +1027,15 @@ Edge density: 0.09573859274458077
 Mean task CPU time: 253.83429039091757, standard deviation: 313.1669999581119
 Mean task GPU time: 50.21057884231537, standard deviation: 28.21486152796407
 Mean task acceleration ratio: 5.010664035672298, standard deviation: 4.875374487583852
-Mean task execution time: 228.38132644734227
+Mean task execution time on Multiple_GPU platform: 228.38132644734227
 Computation-to-communication ratio: 25.06675544572554
 Minimal serial time: 50311
 --------------------------------------------------------
 HEFT makespan: 7897.876405746766
 
-HBMCT makespan: 9503.877422719446
+HBMCT makespan: 9353.935991103872
 
-PEFT makespan: 8000.696072330569
+PEFT makespan: 7945.345732289612
 
 PETS makespan: 8741.320028315353
 
@@ -1055,15 +1055,15 @@ Edge density: 0.15064177339626442
 Mean task CPU time: 244.92860930435273, standard deviation: 309.59272682024255
 Mean task GPU time: 50.11077844311377, standard deviation: 28.494925548749148
 Mean task acceleration ratio: 4.93947287313381, standard deviation: 4.766675532947994
-Mean task execution time: 220.57638044669787
+Mean task execution time on Multiple_GPU platform: 220.57638044669787
 Computation-to-communication ratio: 30.936509937733284
 Minimal serial time: 50211
 --------------------------------------------------------
 HEFT makespan: 8300.633103351029
 
-HBMCT makespan: 9917.366522760467
+HBMCT makespan: 9805.082907594622
 
-PEFT makespan: 8572.571326116435
+PEFT makespan: 8475.724273453685
 
 PETS makespan: 8992.309340914786
 
@@ -1083,15 +1083,15 @@ Edge density: 0.18617510234276702
 Mean task CPU time: 252.36996487447084, standard deviation: 329.1732140284502
 Mean task GPU time: 49.62674650698603, standard deviation: 28.93199410044797
 Mean task acceleration ratio: 5.006691116635529, standard deviation: 5.012422733620912
-Mean task execution time: 227.02706257853524
+Mean task execution time on Multiple_GPU platform: 227.02706257853524
 Computation-to-communication ratio: 39.756982664083196
 Minimal serial time: 49726
 --------------------------------------------------------
 HEFT makespan: 13995.186842468573
 
-HBMCT makespan: 14810.348778052477
+HBMCT makespan: 14869.997656807162
 
-PEFT makespan: 13997.886177891722
+PEFT makespan: 14003.70120637647
 
 PETS makespan: 14410.753577622947
 
@@ -1111,15 +1111,15 @@ Edge density: 0.02447851549647957
 Mean task CPU time: 270.8489470102908, standard deviation: 332.4642839813267
 Mean task GPU time: 50.464071856287426, standard deviation: 28.933767138504034
 Mean task acceleration ratio: 5.344951525418534, standard deviation: 5.0469119707502745
-Mean task execution time: 243.30083761604033
+Mean task execution time on Multiple_GPU platform: 243.30083761604033
 Computation-to-communication ratio: 38.105354520899134
 Minimal serial time: 50565
 --------------------------------------------------------
 HEFT makespan: 5227.789283812906
 
-HBMCT makespan: 6827.915220060271
+HBMCT makespan: 6743.090485209393
 
-PEFT makespan: 5363.82164780873
+PEFT makespan: 5377.726574236233
 
 PETS makespan: 6477.253640242336
 
@@ -1139,15 +1139,15 @@ Edge density: 0.16440645183160152
 Mean task CPU time: 259.9406903573542, standard deviation: 320.2662626094261
 Mean task GPU time: 49.72754491017964, standard deviation: 29.44741617056129
 Mean task acceleration ratio: 5.233835573910286, standard deviation: 4.884204253999963
-Mean task execution time: 233.66404717645736
+Mean task execution time on Multiple_GPU platform: 233.66404717645736
 Computation-to-communication ratio: 24.739324380496537
 Minimal serial time: 49827
 --------------------------------------------------------
 HEFT makespan: 8722.74259579408
 
-HBMCT makespan: 10115.110539543068
+HBMCT makespan: 10316.982641008064
 
-PEFT makespan: 8754.164590124545
+PEFT makespan: 8774.510579009393
 
 PETS makespan: 9045.21347780787
 
@@ -1167,15 +1167,15 @@ Edge density: 0.09796391233516982
 Mean task CPU time: 253.50513740925035, standard deviation: 346.5898709683586
 Mean task GPU time: 49.39121756487026, standard deviation: 28.258618926396885
 Mean task acceleration ratio: 5.106701767256003, standard deviation: 5.571514464232026
-Mean task execution time: 227.99089742870282
+Mean task execution time on Multiple_GPU platform: 227.99089742870282
 Computation-to-communication ratio: 22.141340368190892
 Minimal serial time: 49490
 --------------------------------------------------------
 HEFT makespan: 9168.942182861352
 
-HBMCT makespan: 10924.969170448034
+HBMCT makespan: 10872.2956934167
 
-PEFT makespan: 9228.940769866338
+PEFT makespan: 9220.465832880578
 
 PETS makespan: 10553.006525721046
 
@@ -1195,15 +1195,15 @@ Edge density: 0.004959112743543881
 Mean task CPU time: 250.88033211545206, standard deviation: 311.75748475701135
 Mean task GPU time: 50.08083832335329, standard deviation: 28.86866212331683
 Mean task acceleration ratio: 5.039439867495607, standard deviation: 5.01485246577656
-Mean task execution time: 225.7803953914397
+Mean task execution time on Multiple_GPU platform: 225.7803953914397
 Computation-to-communication ratio: 37.9587357542673
 Minimal serial time: 50181
 --------------------------------------------------------
 HEFT makespan: 3737.656451592994
 
-HBMCT makespan: 4163.959078869018
+HBMCT makespan: 3972.009382425545
 
-PEFT makespan: 3809.456756886872
+PEFT makespan: 3816.796409691989
 
 PETS makespan: 4074.8260356156193
 
@@ -1223,15 +1223,15 @@ Edge density: 0.1171223985595243
 Mean task CPU time: 245.29106917124747, standard deviation: 308.1966350934542
 Mean task GPU time: 50.80339321357285, standard deviation: 28.892053698711265
 Mean task acceleration ratio: 4.9515319735345935, standard deviation: 4.9299063973442925
-Mean task execution time: 220.98010967653815
+Mean task execution time on Multiple_GPU platform: 220.98010967653815
 Computation-to-communication ratio: 22.9352324933032
 Minimal serial time: 50905
 --------------------------------------------------------
 HEFT makespan: 11156.299888288202
 
-HBMCT makespan: 12724.093440020966
+HBMCT makespan: 12786.590713808822
 
-PEFT makespan: 11070.232129703423
+PEFT makespan: 10987.730775081242
 
 PETS makespan: 12063.120726264267
 
@@ -1251,15 +1251,15 @@ Edge density: 0.05377855677256875
 Mean task CPU time: 258.0221968926746, standard deviation: 344.42937554690036
 Mean task GPU time: 49.30139720558882, standard deviation: 28.37936224865934
 Mean task acceleration ratio: 5.243283882374207, standard deviation: 5.38860369478327
-Mean task execution time: 231.93209693178883
+Mean task execution time on Multiple_GPU platform: 231.93209693178883
 Computation-to-communication ratio: 47.319796617333424
 Minimal serial time: 49400
 --------------------------------------------------------
 HEFT makespan: 7364.220962658276
 
-HBMCT makespan: 8726.731375105135
+HBMCT makespan: 8609.36883944261
 
-PEFT makespan: 7341.605502311417
+PEFT makespan: 7341.727936821898
 
 PETS makespan: 8406.21954274312
 
@@ -1279,15 +1279,15 @@ Edge density: 0.18836253566792488
 Mean task CPU time: 235.2386710524731, standard deviation: 299.94570619771497
 Mean task GPU time: 49.383233532934135, standard deviation: 29.024128552755197
 Mean task acceleration ratio: 4.694292806789371, standard deviation: 4.707244769186825
-Mean task execution time: 212.00674136253073
+Mean task execution time on Multiple_GPU platform: 212.00674136253073
 Computation-to-communication ratio: 39.450645704951604
 Minimal serial time: 49482
 --------------------------------------------------------
 HEFT makespan: 8795.59946445656
 
-HBMCT makespan: 10089.598569860385
+HBMCT makespan: 9920.00412937896
 
-PEFT makespan: 8738.0037849413
+PEFT makespan: 8719.545655326556
 
 PETS makespan: 9065.492854142589
 
@@ -1307,15 +1307,15 @@ Edge density: 0.17143335706209958
 Mean task CPU time: 236.08497104745578, standard deviation: 285.52188192543935
 Mean task GPU time: 50.39121756487026, standard deviation: 27.400202563367007
 Mean task acceleration ratio: 4.617395393483193, standard deviation: 4.556840690060762
-Mean task execution time: 212.87325186213258
+Mean task execution time on Multiple_GPU platform: 212.87325186213258
 Computation-to-communication ratio: 20.70505540079432
 Minimal serial time: 50492
 --------------------------------------------------------
 HEFT makespan: 8529.859388758216
 
-HBMCT makespan: 10096.900598935788
+HBMCT makespan: 10316.67740046944
 
-PEFT makespan: 8676.068848490328
+PEFT makespan: 8648.114802016278
 
 PETS makespan: 9330.615412757892
 
@@ -1335,15 +1335,15 @@ Edge density: 0.12061391702110265
 Mean task CPU time: 244.22603656709109, standard deviation: 320.03307216723033
 Mean task GPU time: 49.78043912175649, standard deviation: 28.58554581860021
 Mean task acceleration ratio: 4.928284833506151, standard deviation: 5.007211974534151
-Mean task execution time: 219.92033688642425
+Mean task execution time on Multiple_GPU platform: 219.92033688642425
 Computation-to-communication ratio: 39.09750291757156
 Minimal serial time: 49880
 --------------------------------------------------------
 HEFT makespan: 7837.5295181819465
 
-HBMCT makespan: 9347.077133766417
+HBMCT makespan: 9260.880615656026
 
-PEFT makespan: 8125.166597828783
+PEFT makespan: 8150.729312616297
 
 PETS makespan: 8537.805039283085
 
@@ -1363,15 +1363,15 @@ Edge density: 0.19819302454032994
 Mean task CPU time: 259.5051430977316, standard deviation: 325.0298061714758
 Mean task GPU time: 50.7185628742515, standard deviation: 28.232154109794394
 Mean task acceleration ratio: 4.994009814621399, standard deviation: 4.714195375009268
-Mean task execution time: 233.4068205697966
+Mean task execution time on Multiple_GPU platform: 233.4068205697966
 Computation-to-communication ratio: 35.635104226851496
 Minimal serial time: 50820
 --------------------------------------------------------
 HEFT makespan: 15850.523424743695
 
-HBMCT makespan: 16625.667954890363
+HBMCT makespan: 16650.891586821872
 
-PEFT makespan: 15752.300914126434
+PEFT makespan: 15763.275172045627
 
 PETS makespan: 16222.405804550704
 
@@ -1391,15 +1391,15 @@ Edge density: 0.036061742648569
 Mean task CPU time: 260.1099846812689, standard deviation: 335.02879731947564
 Mean task GPU time: 51.253493013972054, standard deviation: 28.801017612983127
 Mean task acceleration ratio: 4.928069285008817, standard deviation: 4.875042391344716
-Mean task execution time: 234.00292322285677
+Mean task execution time on Multiple_GPU platform: 234.00292322285677
 Computation-to-communication ratio: 25.71160507072518
 Minimal serial time: 51356
 --------------------------------------------------------
 HEFT makespan: 6460.268665855413
 
-HBMCT makespan: 8174.578929353746
+HBMCT makespan: 8171.195516773184
 
-PEFT makespan: 6701.178562602421
+PEFT makespan: 6617.360301141104
 
 PETS makespan: 7834.019357591687
 
@@ -1419,15 +1419,15 @@ Edge density: 0.017966065870257487
 Mean task CPU time: 231.4799884865886, standard deviation: 291.85537269794264
 Mean task GPU time: 49.35429141716567, standard deviation: 28.790301554858136
 Mean task acceleration ratio: 4.711492017264469, standard deviation: 4.633380683275151
-Mean task execution time: 208.71427635291076
+Mean task execution time on Multiple_GPU platform: 208.71427635291076
 Computation-to-communication ratio: 38.81623750953935
 Minimal serial time: 49453
 --------------------------------------------------------
 HEFT makespan: 4185.178805734044
 
-HBMCT makespan: 5897.621825603004
+HBMCT makespan: 5672.806008725548
 
-PEFT makespan: 4228.380085919869
+PEFT makespan: 4201.467126317441
 
 PETS makespan: 4844.705751433305
 
@@ -1447,15 +1447,15 @@ Edge density: 0.17228878905525613
 Mean task CPU time: 253.24614338349465, standard deviation: 317.6738883131625
 Mean task GPU time: 49.47205588822355, standard deviation: 28.461510893839595
 Mean task acceleration ratio: 5.17107702142407, standard deviation: 5.09190903124083
-Mean task execution time: 227.77438244658578
+Mean task execution time on Multiple_GPU platform: 227.77438244658578
 Computation-to-communication ratio: 40.20888666101563
 Minimal serial time: 49571
 --------------------------------------------------------
 HEFT makespan: 13473.57570593228
 
-HBMCT makespan: 14774.741594439958
+HBMCT makespan: 14800.790200357087
 
-PEFT makespan: 13393.202641670454
+PEFT makespan: 13363.111350293579
 
 PETS makespan: 13871.040589056955
 
@@ -1475,15 +1475,15 @@ Edge density: 0.03195806189818166
 Mean task CPU time: 253.28293456504247, standard deviation: 339.0580399135068
 Mean task GPU time: 50.58483033932136, standard deviation: 28.772548901350337
 Mean task acceleration ratio: 4.910569190787134, standard deviation: 4.9634106713925785
-Mean task execution time: 227.94567153682732
+Mean task execution time on Multiple_GPU platform: 227.94567153682732
 Computation-to-communication ratio: 42.570313296673525
 Minimal serial time: 50686
 --------------------------------------------------------
 HEFT makespan: 5558.382794315839
 
-HBMCT makespan: 7275.685605926634
+HBMCT makespan: 6781.249851843981
 
-PEFT makespan: 5664.413905048372
+PEFT makespan: 5650.5859931070645
 
 PETS makespan: 6856.631001248792
 
@@ -1503,15 +1503,15 @@ Edge density: 0.0037347881659258904
 Mean task CPU time: 254.5623986118337, standard deviation: 323.206344159136
 Mean task GPU time: 50.849301397205586, standard deviation: 28.58974462138384
 Mean task acceleration ratio: 5.0450182085069395, standard deviation: 5.080216132132661
-Mean task execution time: 229.09826146000518
+Mean task execution time on Multiple_GPU platform: 229.09826146000518
 Computation-to-communication ratio: 43.84855914504004
 Minimal serial time: 50951
 --------------------------------------------------------
 HEFT makespan: 3797.0623165616485
 
-HBMCT makespan: 4028.4449753487497
+HBMCT makespan: 4136.006492765198
 
-PEFT makespan: 3907.6496468744517
+PEFT makespan: 3856.9044325024734
 
 PETS makespan: 4080.435925111319
 
@@ -1531,15 +1531,15 @@ Edge density: 0.10939958245347467
 Mean task CPU time: 256.5813228116549, standard deviation: 317.8325955285489
 Mean task GPU time: 50.93712574850299, standard deviation: 28.577223858786656
 Mean task acceleration ratio: 4.899036847075459, standard deviation: 4.938651042561779
-Mean task execution time: 230.8757981787609
+Mean task execution time on Multiple_GPU platform: 230.8757981787609
 Computation-to-communication ratio: 45.44654609131478
 Minimal serial time: 51039
 --------------------------------------------------------
 HEFT makespan: 10172.344469363756
 
-HBMCT makespan: 11518.291299397359
+HBMCT makespan: 11942.85909123119
 
-PEFT makespan: 10109.30024995374
+PEFT makespan: 10127.81775031097
 
 PETS makespan: 11477.590981059071
 
@@ -1559,15 +1559,15 @@ Edge density: 0.0037188360541653954
 Mean task CPU time: 240.35430767944624, standard deviation: 291.17604672847165
 Mean task GPU time: 50.90419161676647, standard deviation: 27.773190349522828
 Mean task acceleration ratio: 4.876781955071056, standard deviation: 4.831002267683019
-Mean task execution time: 216.67304317161125
+Mean task execution time on Multiple_GPU platform: 216.67304317161125
 Computation-to-communication ratio: 43.25652171688005
 Minimal serial time: 51006
 --------------------------------------------------------
 HEFT makespan: 3802.4712179010253
 
-HBMCT makespan: 4039.8095370734127
+HBMCT makespan: 4031.348555061302
 
-PEFT makespan: 3761.72463871219
+PEFT makespan: 3773.8815268069666
 
 PETS makespan: 3971.079147615365
 
@@ -1587,15 +1587,15 @@ Edge density: 0.010460597286944592
 Mean task CPU time: 252.91907957076987, standard deviation: 326.1927809086602
 Mean task GPU time: 49.228542914171655, standard deviation: 28.136583463786526
 Mean task acceleration ratio: 5.140680652800832, standard deviation: 4.95832513233464
-Mean task execution time: 227.4577624886951
+Mean task execution time on Multiple_GPU platform: 227.4577624886951
 Computation-to-communication ratio: 36.99498279551946
 Minimal serial time: 49327
 --------------------------------------------------------
 HEFT makespan: 3828.0686395988896
 
-HBMCT makespan: 4658.3087352157345
+HBMCT makespan: 4810.59344347596
 
-PEFT makespan: 3948.982661324174
+PEFT makespan: 3980.49042007657
 
 PETS makespan: 4277.520077635373
 
@@ -1615,15 +1615,15 @@ Edge density: 0.05925212512038859
 Mean task CPU time: 249.81150904348254, standard deviation: 319.48083943196315
 Mean task GPU time: 48.79141716566866, standard deviation: 28.75173180912026
 Mean task acceleration ratio: 5.119884193509303, standard deviation: 4.945465837014496
-Mean task execution time: 224.6839975587558
+Mean task execution time on Multiple_GPU platform: 224.6839975587558
 Computation-to-communication ratio: 20.68340438657212
 Minimal serial time: 48889
 --------------------------------------------------------
 HEFT makespan: 6884.893322727199
 
-HBMCT makespan: 8389.96380089128
+HBMCT makespan: 8625.959969170315
 
-PEFT makespan: 6795.508849124918
+PEFT makespan: 6910.814479165333
 
 PETS makespan: 7711.5207656178845
 
@@ -1643,15 +1643,15 @@ Edge density: 0.010400776867842736
 Mean task CPU time: 266.74279565772343, standard deviation: 361.6139999083501
 Mean task GPU time: 49.98003992015968, standard deviation: 28.026569956940868
 Mean task acceleration ratio: 5.057290285199416, standard deviation: 5.145822138152424
-Mean task execution time: 239.64745119052796
+Mean task execution time on Multiple_GPU platform: 239.64745119052796
 Computation-to-communication ratio: 20.47616050326304
 Minimal serial time: 50080
 --------------------------------------------------------
 HEFT makespan: 4202.87754858352
 
-HBMCT makespan: 5618.99550929074
+HBMCT makespan: 5202.047288890571
 
-PEFT makespan: 4196.054906289154
+PEFT makespan: 4094.467860878607
 
 PETS makespan: 4583.697818018703
 
@@ -1671,15 +1671,15 @@ Edge density: 0.1427554481446697
 Mean task CPU time: 250.67283553250888, standard deviation: 316.5812500976243
 Mean task GPU time: 49.616766467065865, standard deviation: 28.452026337642764
 Mean task acceleration ratio: 4.977187564912779, standard deviation: 4.669728619024246
-Mean task execution time: 225.5408268993285
+Mean task execution time on Multiple_GPU platform: 225.5408268993285
 Computation-to-communication ratio: 31.600855697295327
 Minimal serial time: 49716
 --------------------------------------------------------
 HEFT makespan: 12392.02637794752
 
-HBMCT makespan: 13812.516297970727
+HBMCT makespan: 13656.62294138993
 
-PEFT makespan: 12219.26450887792
+PEFT makespan: 12216.974146832243
 
 PETS makespan: 13240.765990374817
 
@@ -1699,15 +1699,15 @@ Edge density: 0.13593392635308804
 Mean task CPU time: 250.04394565299927, standard deviation: 328.10536088556154
 Mean task GPU time: 50.39620758483034, standard deviation: 28.36769735249333
 Mean task acceleration ratio: 4.880557512422621, standard deviation: 5.030676987820638
-Mean task execution time: 225.08797839447814
+Mean task execution time on Multiple_GPU platform: 225.08797839447814
 Computation-to-communication ratio: 24.63697509936271
 Minimal serial time: 50497
 --------------------------------------------------------
 HEFT makespan: 12142.98659618672
 
-HBMCT makespan: 13335.334533626115
+HBMCT makespan: 13514.72953314393
 
-PEFT makespan: 12102.768503620597
+PEFT makespan: 12079.696575420585
 
 PETS makespan: 13033.842043957193
 
@@ -1727,15 +1727,15 @@ Edge density: 0.021966057894201606
 Mean task CPU time: 251.67475131895355, standard deviation: 346.7486370774191
 Mean task GPU time: 48.691616766467064, standard deviation: 28.773943593483956
 Mean task acceleration ratio: 5.073170523559958, standard deviation: 5.354274669281488
-Mean task execution time: 226.30185949989277
+Mean task execution time on Multiple_GPU platform: 226.30185949989277
 Computation-to-communication ratio: 29.300910381900735
 Minimal serial time: 48789
 --------------------------------------------------------
 HEFT makespan: 4482.093635501528
 
-HBMCT makespan: 6029.812265605763
+HBMCT makespan: 5873.380285837605
 
-PEFT makespan: 4563.432305323997
+PEFT makespan: 4509.972889046563
 
 PETS makespan: 5149.759799110737
 
@@ -1755,15 +1755,15 @@ Edge density: 0.030420677127263953
 Mean task CPU time: 251.28568007351424, standard deviation: 321.19861041370837
 Mean task GPU time: 49.0439121756487, standard deviation: 27.64499189203805
 Mean task acceleration ratio: 5.141204515882876, standard deviation: 5.1726022801415095
-Mean task execution time: 226.00545908628106
+Mean task execution time on Multiple_GPU platform: 226.00545908628106
 Computation-to-communication ratio: 41.436189895728674
 Minimal serial time: 49142
 --------------------------------------------------------
 HEFT makespan: 5276.299192517401
 
-HBMCT makespan: 6744.343258195707
+HBMCT makespan: 6618.6112167112515
 
-PEFT makespan: 5505.858610283424
+PEFT makespan: 5466.219239095393
 
 PETS makespan: 6343.419213170689
 
@@ -1783,15 +1783,15 @@ Edge density: 0.03209764287608599
 Mean task CPU time: 252.2078852525349, standard deviation: 334.68207191270545
 Mean task GPU time: 49.75748502994012, standard deviation: 28.438399808971067
 Mean task acceleration ratio: 4.941721158379588, standard deviation: 5.035779748659824
-Mean task execution time: 226.90158522471057
+Mean task execution time on Multiple_GPU platform: 226.90158522471057
 Computation-to-communication ratio: 45.772198464624346
 Minimal serial time: 49857
 --------------------------------------------------------
 HEFT makespan: 5717.776800373596
 
-HBMCT makespan: 7319.712482403927
+HBMCT makespan: 7284.768065274987
 
-PEFT makespan: 5669.330813065934
+PEFT makespan: 5692.036642626547
 
 PETS makespan: 6885.988675803231
 
@@ -1811,15 +1811,15 @@ Edge density: 0.02658618826283497
 Mean task CPU time: 244.57133845671544, standard deviation: 309.03547468892936
 Mean task GPU time: 52.1497005988024, standard deviation: 28.118574580467357
 Mean task acceleration ratio: 4.694759772497491, standard deviation: 4.785494355060881
-Mean task execution time: 220.5186337244763
+Mean task execution time on Multiple_GPU platform: 220.5186337244763
 Computation-to-communication ratio: 27.023434337760555
 Minimal serial time: 52254
 --------------------------------------------------------
 HEFT makespan: 5371.775205220703
 
-HBMCT makespan: 7005.953560360447
+HBMCT makespan: 6953.475264349729
 
-PEFT makespan: 5505.455649227839
+PEFT makespan: 5463.2120754693115
 
 PETS makespan: 6329.632098354923
 
@@ -1839,15 +1839,15 @@ Edge density: 0.052310962490603206
 Mean task CPU time: 243.10856928543737, standard deviation: 320.93736602671936
 Mean task GPU time: 49.321357285429144, standard deviation: 28.152715183613687
 Mean task acceleration ratio: 4.854995891645863, standard deviation: 4.828522506278615
-Mean task execution time: 218.88516778543635
+Mean task execution time on Multiple_GPU platform: 218.88516778543635
 Computation-to-communication ratio: 37.820525205323335
 Minimal serial time: 49420
 --------------------------------------------------------
 HEFT makespan: 6130.228394247978
 
-HBMCT makespan: 7906.355270684108
+HBMCT makespan: 7756.851252177471
 
-PEFT makespan: 6345.910881038455
+PEFT makespan: 6413.957773062953
 
 PETS makespan: 7364.190316329594
 
@@ -1867,15 +1867,15 @@ Edge density: 0.19671745420248415
 Mean task CPU time: 259.1891125273872, standard deviation: 351.30561039362476
 Mean task GPU time: 49.986027944111775, standard deviation: 28.925187492016725
 Mean task acceleration ratio: 5.139621269375155, standard deviation: 5.274543230648844
-Mean task execution time: 233.03872695447777
+Mean task execution time on Multiple_GPU platform: 233.03872695447777
 Computation-to-communication ratio: 26.30946781995937
 Minimal serial time: 50086
 --------------------------------------------------------
 HEFT makespan: 14732.604794360112
 
-HBMCT makespan: 15496.397076414578
+HBMCT makespan: 15585.143431485922
 
-PEFT makespan: 14628.488601428026
+PEFT makespan: 14625.549017965735
 
 PETS makespan: 15033.578228570928
 
@@ -1895,15 +1895,15 @@ Edge density: 0.17865368164769363
 Mean task CPU time: 244.56849721562648, standard deviation: 319.7123471703613
 Mean task GPU time: 50.99800399201597, standard deviation: 28.141536983618774
 Mean task acceleration ratio: 4.911494061610402, standard deviation: 4.993308857854908
-Mean task execution time: 220.37218556267518
+Mean task execution time on Multiple_GPU platform: 220.37218556267518
 Computation-to-communication ratio: 45.95370256596585
 Minimal serial time: 51100
 --------------------------------------------------------
 HEFT makespan: 13879.150858639374
 
-HBMCT makespan: 14763.934462631381
+HBMCT makespan: 14585.846350321794
 
-PEFT makespan: 13801.01451910062
+PEFT makespan: 13795.136034102841
 
 PETS makespan: 14367.35126776217
 
@@ -1923,15 +1923,15 @@ Edge density: 0.14202763304559712
 Mean task CPU time: 247.1263887693061, standard deviation: 320.21409309688744
 Mean task GPU time: 50.25848303393214, standard deviation: 28.39822414562153
 Mean task acceleration ratio: 4.788933433951133, standard deviation: 4.8376948276543
-Mean task execution time: 222.51790055238436
+Mean task execution time on Multiple_GPU platform: 222.51790055238436
 Computation-to-communication ratio: 34.801832331239865
 Minimal serial time: 50359
 --------------------------------------------------------
 HEFT makespan: 12076.510298087876
 
-HBMCT makespan: 13228.213058134406
+HBMCT makespan: 13293.66005250096
 
-PEFT makespan: 11942.344772689708
+PEFT makespan: 11944.515254962113
 
 PETS makespan: 12923.831777252437
 
@@ -1951,15 +1951,15 @@ Edge density: 0.016303058219225883
 Mean task CPU time: 253.64081199885945, standard deviation: 337.7490916670123
 Mean task GPU time: 49.47005988023952, standard deviation: 28.562946591002934
 Mean task acceleration ratio: 5.201874995504503, standard deviation: 5.273033494065611
-Mean task execution time: 228.11946798403196
+Mean task execution time on Multiple_GPU platform: 228.11946798403196
 Computation-to-communication ratio: 37.90756234733691
 Minimal serial time: 49569
 --------------------------------------------------------
 HEFT makespan: 4240.398323300504
 
-HBMCT makespan: 5489.402950556964
+HBMCT makespan: 5413.256223549035
 
-PEFT makespan: 4258.037023474719
+PEFT makespan: 4284.955075533288
 
 PETS makespan: 4680.998933602588
 
@@ -1979,15 +1979,15 @@ Edge density: 0.11720016510435673
 Mean task CPU time: 260.2734415644952, standard deviation: 330.00820023103455
 Mean task GPU time: 50.78343313373254, standard deviation: 28.542016599513186
 Mean task acceleration ratio: 5.172325352244984, standard deviation: 5.094786793526092
-Mean task execution time: 234.0871905106499
+Mean task execution time on Multiple_GPU platform: 234.0871905106499
 Computation-to-communication ratio: 39.66231842256959
 Minimal serial time: 50885
 --------------------------------------------------------
 HEFT makespan: 10386.575948040652
 
-HBMCT makespan: 11731.396283212896
+HBMCT makespan: 11982.216336279687
 
-PEFT makespan: 9985.178740132782
+PEFT makespan: 10084.465389786934
 
 PETS makespan: 11114.04043441123
 
@@ -2007,15 +2007,15 @@ Edge density: 0.03822524780608613
 Mean task CPU time: 232.90604389879542, standard deviation: 285.0582463572358
 Mean task GPU time: 49.43313373253493, standard deviation: 28.74854886488024
 Mean task acceleration ratio: 4.728191518269897, standard deviation: 4.6455319346274395
-Mean task execution time: 209.97193012801287
+Mean task execution time on Multiple_GPU platform: 209.97193012801287
 Computation-to-communication ratio: 41.81901977833474
 Minimal serial time: 49532
 --------------------------------------------------------
 HEFT makespan: 6080.183614555314
 
-HBMCT makespan: 8053.241423803004
+HBMCT makespan: 7644.958832905072
 
-PEFT makespan: 6307.19836948383
+PEFT makespan: 6297.902883386785
 
 PETS makespan: 7488.335743516584
 
@@ -2035,15 +2035,15 @@ Edge density: 0.13926592369706142
 Mean task CPU time: 245.09056391933643, standard deviation: 336.08864519973685
 Mean task GPU time: 49.61477045908184, standard deviation: 29.321558516040486
 Mean task acceleration ratio: 4.834724398847341, standard deviation: 4.866062638315759
-Mean task execution time: 220.6560897368046
+Mean task execution time on Multiple_GPU platform: 220.6560897368046
 Computation-to-communication ratio: 46.72268213766823
 Minimal serial time: 49714
 --------------------------------------------------------
 HEFT makespan: 8013.986389850672
 
-HBMCT makespan: 9776.263664551538
+HBMCT makespan: 9804.247265737155
 
-PEFT makespan: 8225.05043772381
+PEFT makespan: 8192.299748541207
 
 PETS makespan: 8676.1102966824
 
@@ -2063,15 +2063,15 @@ Edge density: 0.064937058949035
 Mean task CPU time: 277.59417310701224, standard deviation: 366.91416786913595
 Mean task GPU time: 51.41616766467066, standard deviation: 28.341611883510108
 Mean task acceleration ratio: 5.19334081498512, standard deviation: 5.304900149275966
-Mean task execution time: 249.32192242671954
+Mean task execution time on Multiple_GPU platform: 249.32192242671954
 Computation-to-communication ratio: 36.378460748306004
 Minimal serial time: 51519
 --------------------------------------------------------
 HEFT makespan: 7153.717356523456
 
-HBMCT makespan: 8842.242011017144
+HBMCT makespan: 8772.804400527082
 
-PEFT makespan: 7357.571931562674
+PEFT makespan: 7331.866131306794
 
 PETS makespan: 8354.928921725685
 
@@ -2091,15 +2091,15 @@ Edge density: 0.019848415057995897
 Mean task CPU time: 266.3744258500208, standard deviation: 331.24072755345446
 Mean task GPU time: 52.492015968063875, standard deviation: 28.13022958482129
 Mean task acceleration ratio: 5.032543977178318, standard deviation: 5.231355761905213
-Mean task execution time: 239.63912461477622
+Mean task execution time on Multiple_GPU platform: 239.63912461477622
 Computation-to-communication ratio: 49.79654085381305
 Minimal serial time: 52597
 --------------------------------------------------------
 HEFT makespan: 4803.797738872391
 
-HBMCT makespan: 6605.3949601509485
+HBMCT makespan: 6634.837534876418
 
-PEFT makespan: 5005.819079265124
+PEFT makespan: 4937.329777233489
 
 PETS makespan: 6329.457234210571
 
@@ -2119,15 +2119,15 @@ Edge density: 0.024283102127413504
 Mean task CPU time: 250.30178264571626, standard deviation: 343.93331784322817
 Mean task GPU time: 50.32834331337325, standard deviation: 28.613275519904118
 Mean task acceleration ratio: 4.894419184818177, standard deviation: 5.093391446570997
-Mean task execution time: 225.3051027291734
+Mean task execution time on Multiple_GPU platform: 225.3051027291734
 Computation-to-communication ratio: 44.548247935789995
 Minimal serial time: 50429
 --------------------------------------------------------
 HEFT makespan: 4951.798088263005
 
-HBMCT makespan: 6603.319770452129
+HBMCT makespan: 6648.134151074622
 
-PEFT makespan: 4990.786772878423
+PEFT makespan: 4946.234766265259
 
 PETS makespan: 6534.249377897939
 
@@ -2147,15 +2147,15 @@ Edge density: 0.17224093271997465
 Mean task CPU time: 255.10726580704105, standard deviation: 337.67377568282456
 Mean task GPU time: 49.82235528942116, standard deviation: 29.1077628053146
 Mean task acceleration ratio: 5.175447064656143, standard deviation: 5.44251681604579
-Mean task execution time: 229.44665199233856
+Mean task execution time on Multiple_GPU platform: 229.44665199233856
 Computation-to-communication ratio: 26.266944908820346
 Minimal serial time: 49922
 --------------------------------------------------------
 HEFT makespan: 13547.64678135083
 
-HBMCT makespan: 14560.205566922106
+HBMCT makespan: 14350.763915435922
 
-PEFT makespan: 13486.824272614343
+PEFT makespan: 13469.420104303052
 
 PETS makespan: 14123.687094944542
 
@@ -2175,15 +2175,15 @@ Edge density: 0.07992007992007992
 Mean task CPU time: 263.855867605524, standard deviation: 311.25586376882444
 Mean task GPU time: 50.23652694610779, standard deviation: 28.01380724430598
 Mean task acceleration ratio: 5.217254526798123, standard deviation: 5.104035263584505
-Mean task execution time: 237.15345002309695
+Mean task execution time on Multiple_GPU platform: 237.15345002309695
 Computation-to-communication ratio: 34.87319240178535
 Minimal serial time: 50337
 --------------------------------------------------------
 HEFT makespan: 8692.902675749543
 
-HBMCT makespan: 10221.536642732706
+HBMCT makespan: 10272.533172480133
 
-PEFT makespan: 8748.620861236146
+PEFT makespan: 8699.05882462613
 
 PETS makespan: 10234.77617008209
 
@@ -2203,15 +2203,15 @@ Edge density: 0.07962695986648083
 Mean task CPU time: 262.33507218553024, standard deviation: 344.41295968081045
 Mean task GPU time: 51.59580838323353, standard deviation: 28.93797659506236
 Mean task acceleration ratio: 5.056562641149793, standard deviation: 5.229342216284472
-Mean task execution time: 235.99266421024316
+Mean task execution time on Multiple_GPU platform: 235.99266421024316
 Computation-to-communication ratio: 38.199201245949816
 Minimal serial time: 51699
 --------------------------------------------------------
 HEFT makespan: 8749.16879681387
 
-HBMCT makespan: 10145.898424205352
+HBMCT makespan: 10204.284294005518
 
-PEFT makespan: 8687.944291474505
+PEFT makespan: 8730.594026351142
 
 PETS makespan: 10063.986259664083
 
@@ -2231,15 +2231,15 @@ Edge density: 0.006658012646036598
 Mean task CPU time: 228.14035286734406, standard deviation: 307.01823586909694
 Mean task GPU time: 49.430139720558884, standard deviation: 28.72871267419767
 Mean task acceleration ratio: 4.637985235332667, standard deviation: 4.827130139423691
-Mean task execution time: 205.8015762239959
+Mean task execution time on Multiple_GPU platform: 205.8015762239959
 Computation-to-communication ratio: 39.02631703568943
 Minimal serial time: 49529
 --------------------------------------------------------
 HEFT makespan: 3486.7498972466105
 
-HBMCT makespan: 3877.8365220959568
+HBMCT makespan: 4059.1298625177774
 
-PEFT makespan: 3501.9716298756234
+PEFT makespan: 3501
 
 PETS makespan: 3631.264773669179
 
@@ -2259,15 +2259,15 @@ Edge density: 0.18547919146721542
 Mean task CPU time: 259.9182806398286, standard deviation: 377.7443175567374
 Mean task GPU time: 49.25748502994012, standard deviation: 28.58582289040552
 Mean task acceleration ratio: 5.1549927726031175, standard deviation: 5.369907297588556
-Mean task execution time: 233.58568118859256
+Mean task execution time on Multiple_GPU platform: 233.58568118859256
 Computation-to-communication ratio: 43.45321148321039
 Minimal serial time: 49356
 --------------------------------------------------------
 HEFT makespan: 13857.377978351591
 
-HBMCT makespan: 14925.263062876671
+HBMCT makespan: 14909.057494766126
 
-PEFT makespan: 13759.284693402831
+PEFT makespan: 13775.953433149967
 
 PETS makespan: 14230.863923713106
 
@@ -2287,15 +2287,15 @@ Edge density: 0.14604158316733168
 Mean task CPU time: 261.6939718091826, standard deviation: 326.6715678936346
 Mean task GPU time: 50.464071856287426, standard deviation: 28.284998220578874
 Mean task acceleration ratio: 5.2216402236245845, standard deviation: 5.150548506066458
-Mean task execution time: 235.29023431507068
+Mean task execution time on Multiple_GPU platform: 235.29023431507068
 Computation-to-communication ratio: 36.42866727856238
 Minimal serial time: 50565
 --------------------------------------------------------
 HEFT makespan: 8630.12054154739
 
-HBMCT makespan: 10204.581158604124
+HBMCT makespan: 10380.219601773375
 
-PEFT makespan: 8705.437272827647
+PEFT makespan: 8734.698845241537
 
 PETS makespan: 9131.773473012108
 
@@ -2315,15 +2315,15 @@ Edge density: 0.18250611663785316
 Mean task CPU time: 257.5366211694078, standard deviation: 308.6336933120076
 Mean task GPU time: 51.358283433133735, standard deviation: 28.619682105848508
 Mean task acceleration ratio: 4.981781512891609, standard deviation: 4.830522909709271
-Mean task execution time: 231.76432895237355
+Mean task execution time on Multiple_GPU platform: 231.76432895237355
 Computation-to-communication ratio: 42.86304345888926
 Minimal serial time: 51461
 --------------------------------------------------------
 HEFT makespan: 9132.799680715538
 
-HBMCT makespan: 10420.498385229172
+HBMCT makespan: 10509.025582026821
 
-PEFT makespan: 9105.148610980472
+PEFT makespan: 9159.872184946413
 
 PETS makespan: 9517.153620799658
 
@@ -2343,15 +2343,15 @@ Edge density: 0.0339640399520639
 Mean task CPU time: 250.73244391851165, standard deviation: 322.44930897446375
 Mean task GPU time: 50.35728542914172, standard deviation: 28.41424560163699
 Mean task acceleration ratio: 5.003273152175337, standard deviation: 4.943015733630086
-Mean task execution time: 225.6855491073404
+Mean task execution time on Multiple_GPU platform: 225.6855491073404
 Computation-to-communication ratio: 35.94175119649323
 Minimal serial time: 50458
 --------------------------------------------------------
 HEFT makespan: 5945.322490271718
 
-HBMCT makespan: 7649.819646140995
+HBMCT makespan: 7585.308937705952
 
-PEFT makespan: 5944.375407432214
+PEFT makespan: 5928.886050449803
 
 PETS makespan: 7215.048460168022
 
@@ -2371,15 +2371,15 @@ Edge density: 0.08317032269128077
 Mean task CPU time: 234.53656079514417, standard deviation: 314.89048157299214
 Mean task GPU time: 49.647704590818364, standard deviation: 28.102333664764345
 Mean task acceleration ratio: 4.7494765989825165, standard deviation: 4.828702000559506
-Mean task execution time: 211.42545376960345
+Mean task execution time on Multiple_GPU platform: 211.42545376960345
 Computation-to-communication ratio: 46.650699990447066
 Minimal serial time: 49747
 --------------------------------------------------------
 HEFT makespan: 7081.42872492204
 
-HBMCT makespan: 8766.151624909819
+HBMCT makespan: 8541.142019526513
 
-PEFT makespan: 7488.573597970462
+PEFT makespan: 7402.909108635618
 
 PETS makespan: 7937.219378952381
 
@@ -2399,15 +2399,15 @@ Edge density: 0.060059700778263655
 Mean task CPU time: 257.6335595000381, standard deviation: 312.6554998121902
 Mean task GPU time: 51.96007984031936, standard deviation: 29.13894724763083
 Mean task acceleration ratio: 4.972282192294945, standard deviation: 4.735163883156655
-Mean task execution time: 231.92437454257325
+Mean task execution time on Multiple_GPU platform: 231.92437454257325
 Computation-to-communication ratio: 28.37267485833223
 Minimal serial time: 52064
 --------------------------------------------------------
 HEFT makespan: 7406.149702252797
 
-HBMCT makespan: 8635.149502205588
+HBMCT makespan: 8795.918818803118
 
-PEFT makespan: 7233.6473263340995
+PEFT makespan: 7229.312970245366
 
 PETS makespan: 8296.021987640157
 
@@ -2427,15 +2427,15 @@ Edge density: 0.09813938556453526
 Mean task CPU time: 254.2973765581387, standard deviation: 336.1254384003282
 Mean task GPU time: 49.59281437125748, standard deviation: 28.09599790125523
 Mean task acceleration ratio: 5.280859995759562, standard deviation: 5.594270789197171
-Mean task execution time: 228.70930628477853
+Mean task execution time on Multiple_GPU platform: 228.70930628477853
 Computation-to-communication ratio: 38.113522808990936
 Minimal serial time: 49692
 --------------------------------------------------------
 HEFT makespan: 9300.7033362514
 
-HBMCT makespan: 10529.630696114573
+HBMCT makespan: 10836.2653271795
 
-PEFT makespan: 9186.887942194602
+PEFT makespan: 9204.457223603138
 
 PETS makespan: 10399.836844535155
 
@@ -2455,15 +2455,15 @@ Edge density: 0.029952083844299413
 Mean task CPU time: 250.4900529280088, standard deviation: 325.5708529076789
 Mean task GPU time: 49.952095808383234, standard deviation: 28.502857310261092
 Mean task acceleration ratio: 4.988999307407341, standard deviation: 4.995344670070186
-Mean task execution time: 225.42280828805562
+Mean task execution time on Multiple_GPU platform: 225.42280828805562
 Computation-to-communication ratio: 25.255804051565715
 Minimal serial time: 50052
 --------------------------------------------------------
 HEFT makespan: 5244.513859759782
 
-HBMCT makespan: 7013.1471308820555
+HBMCT makespan: 6937.9480208213
 
-PEFT makespan: 5357.0926262832945
+PEFT makespan: 5273.851645061899
 
 PETS makespan: 6072.43899540763
 
@@ -2483,15 +2483,15 @@ Edge density: 0.027776614602961908
 Mean task CPU time: 235.20610359671818, standard deviation: 288.6801029138185
 Mean task GPU time: 49.06487025948104, standard deviation: 28.342198626556115
 Mean task acceleration ratio: 4.817438465423064, standard deviation: 4.535462857863183
-Mean task execution time: 211.93844942956355
+Mean task execution time on Multiple_GPU platform: 211.93844942956355
 Computation-to-communication ratio: 34.22297701754365
 Minimal serial time: 49163
 --------------------------------------------------------
 HEFT makespan: 5426.245046700449
 
-HBMCT makespan: 6709.870940001378
+HBMCT makespan: 6824.19354967799
 
-PEFT makespan: 5397.619150740531
+PEFT makespan: 5449.517360636923
 
 PETS makespan: 6663.768304813306
 
@@ -2511,15 +2511,15 @@ Edge density: 0.06638670710526998
 Mean task CPU time: 240.1118001520775, standard deviation: 298.55922150555637
 Mean task GPU time: 50.67165668662675, standard deviation: 28.956864041185483
 Mean task acceleration ratio: 4.8485298658510825, standard deviation: 4.856575136427061
-Mean task execution time: 216.43178221889616
+Mean task execution time on Multiple_GPU platform: 216.43178221889616
 Computation-to-communication ratio: 44.29925962522632
 Minimal serial time: 50773
 --------------------------------------------------------
 HEFT makespan: 8011.879306499251
 
-HBMCT makespan: 9995.940149298756
+HBMCT makespan: 9989.05884687561
 
-PEFT makespan: 8270.091948304156
+PEFT makespan: 8240.02924679286
 
 PETS makespan: 9573.32218951783
 
@@ -2539,15 +2539,15 @@ Edge density: 0.10225303638477291
 Mean task CPU time: 255.11791095050904, standard deviation: 344.93197027962856
 Mean task GPU time: 49.597804391217565, standard deviation: 28.692062426342
 Mean task acceleration ratio: 4.97846464303259, standard deviation: 5.131817760368891
-Mean task execution time: 229.4278976305976
+Mean task execution time on Multiple_GPU platform: 229.4278976305976
 Computation-to-communication ratio: 41.57365083807342
 Minimal serial time: 49697
 --------------------------------------------------------
 HEFT makespan: 7914.68927815404
 
-HBMCT makespan: 9245.897200790901
+HBMCT makespan: 9410.080434972193
 
-PEFT makespan: 7940.237838222375
+PEFT makespan: 7930.631139575005
 
 PETS makespan: 8673.836856993048
 
@@ -2567,15 +2567,15 @@ Edge density: 0.005012951120735552
 Mean task CPU time: 250.9275190718457, standard deviation: 322.2454296678171
 Mean task GPU time: 49.86127744510978, standard deviation: 28.850459606838477
 Mean task acceleration ratio: 5.090779517620518, standard deviation: 5.3438815583168395
-Mean task execution time: 225.79423886850373
+Mean task execution time on Multiple_GPU platform: 225.79423886850373
 Computation-to-communication ratio: 49.31836606754213
 Minimal serial time: 49961
 --------------------------------------------------------
 HEFT makespan: 3750.8176477210886
 
-HBMCT makespan: 4090.503098830744
+HBMCT makespan: 4019.3702121893507
 
-PEFT makespan: 3850
+PEFT makespan: 3811
 
 PETS makespan: 3986.900331766809
 
@@ -2595,15 +2595,15 @@ Edge density: 0.02980851483845496
 Mean task CPU time: 228.78110105275533, standard deviation: 297.22687371728597
 Mean task GPU time: 50.08183632734531, standard deviation: 28.09342997580656
 Mean task acceleration ratio: 4.484197840609615, standard deviation: 4.397270546097357
-Mean task execution time: 206.4436929620791
+Mean task execution time on Multiple_GPU platform: 206.4436929620791
 Computation-to-communication ratio: 20.6379642006868
 Minimal serial time: 50182
 --------------------------------------------------------
 HEFT makespan: 5424.181417538981
 
-HBMCT makespan: 7154.197563836268
+HBMCT makespan: 7177.551236790781
 
-PEFT makespan: 5566.869403338185
+PEFT makespan: 5521.292130041821
 
 PETS makespan: 6695.290089553581
 
@@ -2623,15 +2623,15 @@ Edge density: 0.03441668112326795
 Mean task CPU time: 245.38088216608142, standard deviation: 338.87286493344055
 Mean task GPU time: 50.28443113772455, standard deviation: 28.40184162884387
 Mean task acceleration ratio: 5.117364071057116, standard deviation: 5.343268520656145
-Mean task execution time: 220.99382578753682
+Mean task execution time on Multiple_GPU platform: 220.99382578753682
 Computation-to-communication ratio: 39.60403648918284
 Minimal serial time: 50385
 --------------------------------------------------------
 HEFT makespan: 5908.0305627582475
 
-HBMCT makespan: 7813.431577981472
+HBMCT makespan: 7947.943999703921
 
-PEFT makespan: 5920.761044269729
+PEFT makespan: 5919.832779094285
 
 PETS makespan: 7282.1691514806525
 
@@ -2651,15 +2651,15 @@ Edge density: 0.15401763904757917
 Mean task CPU time: 253.5215082004071, standard deviation: 338.9515392512312
 Mean task GPU time: 49.98003992015968, standard deviation: 29.18369792109464
 Mean task acceleration ratio: 4.943883294197511, standard deviation: 5.150869920082586
-Mean task execution time: 228.07882466537617
+Mean task execution time on Multiple_GPU platform: 228.07882466537617
 Computation-to-communication ratio: 45.06420450431094
 Minimal serial time: 50080
 --------------------------------------------------------
 HEFT makespan: 12340.302489748074
 
-HBMCT makespan: 13781.981643023617
+HBMCT makespan: 13477.098641870125
 
-PEFT makespan: 12128.79187611891
+PEFT makespan: 12118.96721344399
 
 PETS makespan: 12774.951242423753
 
@@ -2679,15 +2679,15 @@ Edge density: 0.028195357536674903
 Mean task CPU time: 253.5561047237331, standard deviation: 340.99827268057834
 Mean task GPU time: 49.74550898203593, standard deviation: 28.85790269051147
 Mean task acceleration ratio: 5.082348617977409, standard deviation: 5.221213760341935
-Mean task execution time: 228.07978025602097
+Mean task execution time on Multiple_GPU platform: 228.07978025602097
 Computation-to-communication ratio: 30.62165322517073
 Minimal serial time: 49845
 --------------------------------------------------------
 HEFT makespan: 5409.4780663490255
 
-HBMCT makespan: 6823.89737092299
+HBMCT makespan: 7196.2344685495145
 
-PEFT makespan: 5410.697875365557
+PEFT makespan: 5330.309022264457
 
 PETS makespan: 6698.66514494987
 
@@ -2707,15 +2707,15 @@ Edge density: 0.027956075860267476
 Mean task CPU time: 247.34245895939682, standard deviation: 317.89663703574456
 Mean task GPU time: 50.287425149700596, standard deviation: 28.271305031436473
 Mean task acceleration ratio: 4.9629702284714226, standard deviation: 5.078362077551881
-Mean task execution time: 222.71057973318477
+Mean task execution time on Multiple_GPU platform: 222.71057973318477
 Computation-to-communication ratio: 28.92323470329354
 Minimal serial time: 50388
 --------------------------------------------------------
 HEFT makespan: 5337.752563280868
 
-HBMCT makespan: 6954.629279209199
+HBMCT makespan: 6803.538954878447
 
-PEFT makespan: 5498.260221908507
+PEFT makespan: 5438.397408850995
 
 PETS makespan: 6744.913562879595
 
@@ -2735,15 +2735,15 @@ Edge density: 0.01796805988422755
 Mean task CPU time: 250.66498741855952, standard deviation: 340.83958013232194
 Mean task GPU time: 48.04890219560878, standard deviation: 28.844524447651978
 Mean task acceleration ratio: 5.116894336419254, standard deviation: 5.3222283658448415
-Mean task execution time: 225.33797676569068
+Mean task execution time on Multiple_GPU platform: 225.33797676569068
 Computation-to-communication ratio: 37.50476016317004
 Minimal serial time: 48145
 --------------------------------------------------------
 HEFT makespan: 4177.0170884705385
 
-HBMCT makespan: 5562.421467976602
+HBMCT makespan: 5801.353157306346
 
-PEFT makespan: 4319.59786581864
+PEFT makespan: 4374.656226569932
 
 PETS makespan: 4870.909556874538
 
@@ -2763,15 +2763,15 @@ Edge density: 0.06778650491225341
 Mean task CPU time: 244.69188738240697, standard deviation: 321.74638764328836
 Mean task GPU time: 48.1187624750499, standard deviation: 28.303439682655704
 Mean task acceleration ratio: 5.11734500518121, standard deviation: 5.025789397121037
-Mean task execution time: 220.12024676898733
+Mean task execution time on Multiple_GPU platform: 220.12024676898733
 Computation-to-communication ratio: 34.14200738418129
 Minimal serial time: 48215
 --------------------------------------------------------
 HEFT makespan: 7728.424857958374
 
-HBMCT makespan: 8983.511867553669
+HBMCT makespan: 9400.062844986596
 
-PEFT makespan: 7865.396108054507
+PEFT makespan: 7888.831897902734
 
 PETS makespan: 9154.44342888804
 
@@ -2791,15 +2791,15 @@ Edge density: 0.034117579027758665
 Mean task CPU time: 239.83355924764678, standard deviation: 306.20505659771857
 Mean task GPU time: 48.69760479041916, standard deviation: 28.35843740947098
 Mean task acceleration ratio: 4.97610414284239, standard deviation: 4.812322564833405
-Mean task execution time: 215.94156494049332
+Mean task execution time on Multiple_GPU platform: 215.94156494049332
 Computation-to-communication ratio: 28.282943092248118
 Minimal serial time: 48795
 --------------------------------------------------------
 HEFT makespan: 5464.021160354558
 
-HBMCT makespan: 7080.977307162485
+HBMCT makespan: 7039.262146232128
 
-PEFT makespan: 5363.143671159958
+PEFT makespan: 5371.3280614093
 
 PETS makespan: 6386.4115844786575
 
@@ -2819,15 +2819,15 @@ Edge density: 0.07066984911296288
 Mean task CPU time: 232.9545681744782, standard deviation: 297.3518892074641
 Mean task GPU time: 48.59880239520958, standard deviation: 28.39816555605267
 Mean task acceleration ratio: 4.824904627548645, standard deviation: 4.858215697078998
-Mean task execution time: 209.9100974520696
+Mean task execution time on Multiple_GPU platform: 209.9100974520696
 Computation-to-communication ratio: 40.03109420607673
 Minimal serial time: 48696
 --------------------------------------------------------
 HEFT makespan: 6767.782790408714
 
-HBMCT makespan: 8279.7592937817
+HBMCT makespan: 8397.72237335077
 
-PEFT makespan: 6860.175140041644
+PEFT makespan: 6789.448889793749
 
 PETS makespan: 7728.571335480759
 
@@ -2847,15 +2847,15 @@ Edge density: 0.15360687216974642
 Mean task CPU time: 254.62456024552526, standard deviation: 320.3970372151689
 Mean task GPU time: 49.77644710578842, standard deviation: 29.157633459760568
 Mean task acceleration ratio: 5.038114956285343, standard deviation: 5.123337266956112
-Mean task execution time: 229.01854610305816
+Mean task execution time on Multiple_GPU platform: 229.01854610305816
 Computation-to-communication ratio: 43.65621484305771
 Minimal serial time: 49876
 --------------------------------------------------------
 HEFT makespan: 13170.842467210558
 
-HBMCT makespan: 14224.849368930532
+HBMCT makespan: 14345.888475289044
 
-PEFT makespan: 12934.305869265576
+PEFT makespan: 12904.235126848567
 
 PETS makespan: 13791.644337820517
 
@@ -2875,15 +2875,15 @@ Edge density: 0.028197351550644963
 Mean task CPU time: 264.66158099225197, standard deviation: 357.68256324586724
 Mean task GPU time: 49.71157684630739, standard deviation: 29.109875917919496
 Mean task acceleration ratio: 5.288694201358804, standard deviation: 5.631400654246622
-Mean task execution time: 237.79283047400892
+Mean task execution time on Multiple_GPU platform: 237.79283047400892
 Computation-to-communication ratio: 41.316229949003684
 Minimal serial time: 49811
 --------------------------------------------------------
 HEFT makespan: 5133.056719221957
 
-HBMCT makespan: 6847.046121213616
+HBMCT makespan: 7015.827972848152
 
-PEFT makespan: 5165.167366043611
+PEFT makespan: 5200.344542181033
 
 PETS makespan: 6106.583611369004
 
@@ -2903,15 +2903,15 @@ Edge density: 0.058366782917681125
 Mean task CPU time: 262.9776876185099, standard deviation: 340.8065650693044
 Mean task GPU time: 49.26646706586826, standard deviation: 28.544531398289188
 Mean task acceleration ratio: 5.293824506321855, standard deviation: 5.28896584135285
-Mean task execution time: 236.26378504942969
+Mean task execution time on Multiple_GPU platform: 236.26378504942969
 Computation-to-communication ratio: 45.7349327599149
 Minimal serial time: 49365
 --------------------------------------------------------
 HEFT makespan: 6700.585304433291
 
-HBMCT makespan: 8530.957930778874
+HBMCT makespan: 8528.228501425134
 
-PEFT makespan: 6930.629403830781
+PEFT makespan: 6923.955766023709
 
 PETS makespan: 7855.999665615023
 
@@ -2931,15 +2931,15 @@ Edge density: 0.1328292466017017
 Mean task CPU time: 245.13866896738168, standard deviation: 324.53597186572813
 Mean task GPU time: 50.53393213572854, standard deviation: 28.602607014943285
 Mean task acceleration ratio: 4.854749221857704, standard deviation: 4.8417297470993
-Mean task execution time: 220.81307686342504
+Mean task execution time on Multiple_GPU platform: 220.81307686342504
 Computation-to-communication ratio: 42.325456472610064
 Minimal serial time: 50635
 --------------------------------------------------------
 HEFT makespan: 8330.684933894458
 
-HBMCT makespan: 9857.43540022204
+HBMCT makespan: 9731.808143104894
 
-PEFT makespan: 8425.832327681288
+PEFT makespan: 8342.03619450989
 
 PETS makespan: 8677.183008375823
 
@@ -2959,15 +2959,15 @@ Edge density: 0.18813920610327797
 Mean task CPU time: 257.87030214440665, standard deviation: 327.3279033987707
 Mean task GPU time: 50.308383233532936, standard deviation: 28.825334512565778
 Mean task acceleration ratio: 5.189211528518925, standard deviation: 5.129810524100144
-Mean task execution time: 231.92506228054742
+Mean task execution time on Multiple_GPU platform: 231.92506228054742
 Computation-to-communication ratio: 43.84466560398682
 Minimal serial time: 50409
 --------------------------------------------------------
 HEFT makespan: 8740.952908605641
 
-HBMCT makespan: 10364.181008328967
+HBMCT makespan: 10609.161288609097
 
-PEFT makespan: 8960.515373006663
+PEFT makespan: 8892.636063181
 
 PETS makespan: 9208.41039298245
 
@@ -2987,15 +2987,15 @@ Edge density: 0.006632090464425794
 Mean task CPU time: 254.25315956209639, standard deviation: 313.4820815954664
 Mean task GPU time: 50.87824351297405, standard deviation: 28.702429979622153
 Mean task acceleration ratio: 4.891088056204244, standard deviation: 4.74557586148997
-Mean task execution time: 228.83129505595608
+Mean task execution time on Multiple_GPU platform: 228.83129505595608
 Computation-to-communication ratio: 24.476967308928845
 Minimal serial time: 50980
 --------------------------------------------------------
 HEFT makespan: 3906.012435573102
 
-HBMCT makespan: 4542.72083094426
+HBMCT makespan: 4398.379069358651
 
-PEFT makespan: 4106.901071088749
+PEFT makespan: 4003.872428707407
 
 PETS makespan: 4226.60990426146
 
@@ -3015,15 +3015,15 @@ Edge density: 0.019962073854289424
 Mean task CPU time: 261.9398242814881, standard deviation: 324.2147765404855
 Mean task GPU time: 50.74151696606786, standard deviation: 28.08043857977554
 Mean task acceleration ratio: 5.10974914010799, standard deviation: 5.023322510596667
-Mean task execution time: 235.54003586706054
+Mean task execution time on Multiple_GPU platform: 235.54003586706054
 Computation-to-communication ratio: 25.668979097579378
 Minimal serial time: 50843
 --------------------------------------------------------
 HEFT makespan: 4730.035079366148
 
-HBMCT makespan: 6457.48975721802
+HBMCT makespan: 6445.2458266006015
 
-PEFT makespan: 4825.520836525077
+PEFT makespan: 4849.101227636509
 
 PETS makespan: 6093.422653030726
 
@@ -3043,15 +3043,15 @@ Edge density: 0.03162306755121126
 Mean task CPU time: 246.7884423516774, standard deviation: 309.11759782355443
 Mean task GPU time: 50.27944111776447, standard deviation: 28.600729937906546
 Mean task acceleration ratio: 4.927648971097296, standard deviation: 4.892092643933877
-Mean task execution time: 222.22481719743828
+Mean task execution time on Multiple_GPU platform: 222.22481719743828
 Computation-to-communication ratio: 21.387348156865336
 Minimal serial time: 50380
 --------------------------------------------------------
 HEFT makespan: 5483.132673628433
 
-HBMCT makespan: 7294.840157657971
+HBMCT makespan: 7084.333824702907
 
-PEFT makespan: 5828.152060073626
+PEFT makespan: 5770.564040326775
 
 PETS makespan: 6905.922059726415
 
@@ -3071,15 +3071,15 @@ Edge density: 0.02833294450060917
 Mean task CPU time: 244.51571449797822, standard deviation: 312.6667164435746
 Mean task GPU time: 49.709580838323355, standard deviation: 28.499824701354502
 Mean task acceleration ratio: 5.0872064198756215, standard deviation: 5.323102291942021
-Mean task execution time: 220.16494779052135
+Mean task execution time on Multiple_GPU platform: 220.16494779052135
 Computation-to-communication ratio: 39.142896528779936
 Minimal serial time: 49809
 --------------------------------------------------------
 HEFT makespan: 5399.2695635061755
 
-HBMCT makespan: 7099.6191802490075
+HBMCT makespan: 7225.343261665654
 
-PEFT makespan: 5511.194157068855
+PEFT makespan: 5529.466518803872
 
 PETS makespan: 6747.705041539311
 
@@ -3099,15 +3099,15 @@ Edge density: 0.0847794919651207
 Mean task CPU time: 259.32255357676104, standard deviation: 330.94402627044116
 Mean task GPU time: 49.65469061876247, standard deviation: 28.29126599307832
 Mean task acceleration ratio: 5.214408614316986, standard deviation: 5.318567095943814
-Mean task execution time: 233.11407070701122
+Mean task execution time on Multiple_GPU platform: 233.11407070701122
 Computation-to-communication ratio: 26.518857565535505
 Minimal serial time: 49754
 --------------------------------------------------------
 HEFT makespan: 7383.376727200209
 
-HBMCT makespan: 8972.752214959028
+HBMCT makespan: 8857.147798791215
 
-PEFT makespan: 7550.167858312045
+PEFT makespan: 7689.500381967208
 
 PETS makespan: 8208.616392725304
 
@@ -3127,15 +3127,15 @@ Edge density: 0.1791043288049276
 Mean task CPU time: 249.13390479388508, standard deviation: 351.58505917386924
 Mean task GPU time: 49.62774451097805, standard deviation: 28.263942538276233
 Mean task acceleration ratio: 5.041746692714193, standard deviation: 5.3895859033790785
-Mean task execution time: 224.19563475852172
+Mean task execution time on Multiple_GPU platform: 224.19563475852172
 Computation-to-communication ratio: 46.4668820072674
 Minimal serial time: 49727
 --------------------------------------------------------
 HEFT makespan: 13903.225601165323
 
-HBMCT makespan: 14879.428487005829
+HBMCT makespan: 14892.285514255023
 
-PEFT makespan: 13814.47597887402
+PEFT makespan: 13815.0032879212
 
 PETS makespan: 14439.729225843716
 
@@ -3155,15 +3155,15 @@ Edge density: 0.024338934518575238
 Mean task CPU time: 251.0026505879854, standard deviation: 322.21033760033777
 Mean task GPU time: 48.721556886227546, standard deviation: 27.632448497217087
 Mean task acceleration ratio: 5.118936935219476, standard deviation: 5.218754748829091
-Mean task execution time: 225.71751387526567
+Mean task execution time on Multiple_GPU platform: 225.71751387526567
 Computation-to-communication ratio: 34.81313958845426
 Minimal serial time: 48819
 --------------------------------------------------------
 HEFT makespan: 4676.285412881406
 
-HBMCT makespan: 6409.5501436526065
+HBMCT makespan: 6373.4665650802535
 
-PEFT makespan: 5039.572612671423
+PEFT makespan: 5081.815566336657
 
 PETS makespan: 5973.365626649539
 
@@ -3183,15 +3183,15 @@ Edge density: 0.010368872644321746
 Mean task CPU time: 267.62774881032027, standard deviation: 339.362700504097
 Mean task GPU time: 50.647704590818364, standard deviation: 28.975532381080157
 Mean task acceleration ratio: 5.317840373616694, standard deviation: 5.118506620211974
-Mean task execution time: 240.50524328288253
+Mean task execution time on Multiple_GPU platform: 240.50524328288253
 Computation-to-communication ratio: 21.551274116244013
 Minimal serial time: 50749
 --------------------------------------------------------
 HEFT makespan: 4045.871050451544
 
-HBMCT makespan: 4816.017012233211
+HBMCT makespan: 4876.390838718169
 
-PEFT makespan: 4136.844119237024
+PEFT makespan: 4089.5199392161003
 
 PETS makespan: 4549.316495155092
 
@@ -3211,15 +3211,15 @@ Edge density: 0.0105543159435375
 Mean task CPU time: 251.63194042576097, standard deviation: 329.60009269023766
 Mean task GPU time: 49.786427145708586, standard deviation: 28.986029662201506
 Mean task acceleration ratio: 5.0568692998567135, standard deviation: 4.853026947900667
-Mean task execution time: 226.4012512657544
+Mean task execution time on Multiple_GPU platform: 226.4012512657544
 Computation-to-communication ratio: 47.33175159736992
 Minimal serial time: 49886
 --------------------------------------------------------
 HEFT makespan: 3940.755097007191
 
-HBMCT makespan: 4961.231154701935
+HBMCT makespan: 5067.60861766287
 
-PEFT makespan: 4036.186257009471
+PEFT makespan: 4037.386261998963
 
 PETS makespan: 4233.223702316745
 
@@ -3239,15 +3239,15 @@ Edge density: 0.017936155660706558
 Mean task CPU time: 252.63354602398684, standard deviation: 322.71688064127346
 Mean task GPU time: 50.39021956087824, standard deviation: 28.604893711796418
 Mean task acceleration ratio: 5.193685057661853, standard deviation: 5.45893203213144
-Mean task execution time: 227.35313021609826
+Mean task execution time on Multiple_GPU platform: 227.35313021609826
 Computation-to-communication ratio: 40.40275452918482
 Minimal serial time: 50491
 --------------------------------------------------------
 HEFT makespan: 4607.387274255574
 
-HBMCT makespan: 6307.202771144079
+HBMCT makespan: 6098.975990911315
 
-PEFT makespan: 4761.8817783314835
+PEFT makespan: 4720.684644526025
 
 PETS makespan: 5992.675582720603
 
@@ -3267,15 +3267,15 @@ Edge density: 0.003664997676973725
 Mean task CPU time: 274.40255673732634, standard deviation: 348.1348143104309
 Mean task GPU time: 51.4251497005988, standard deviation: 28.555735433975336
 Mean task acceleration ratio: 5.151545696184044, standard deviation: 5.106357681244098
-Mean task execution time: 246.53038085773537
+Mean task execution time on Multiple_GPU platform: 246.53038085773537
 Computation-to-communication ratio: 26.41040488614821
 Minimal serial time: 51528
 --------------------------------------------------------
 HEFT makespan: 4176.502443876453
 
-HBMCT makespan: 4370.592316004999
+HBMCT makespan: 4414.0489571498265
 
-PEFT makespan: 4133.284082984115
+PEFT makespan: 4118.374520439428
 
 PETS makespan: 4311.379089705818
 
@@ -3295,15 +3295,15 @@ Edge density: 0.01639677687581879
 Mean task CPU time: 255.80978173931786, standard deviation: 343.2196929525815
 Mean task GPU time: 50.49301397205589, standard deviation: 28.62289138565938
 Mean task acceleration ratio: 5.079340534560831, standard deviation: 5.284652920618494
-Mean task execution time: 230.1451857684101
+Mean task execution time on Multiple_GPU platform: 230.1451857684101
 Computation-to-communication ratio: 33.386565780971836
 Minimal serial time: 50594
 --------------------------------------------------------
 HEFT makespan: 4352.144649828037
 
-HBMCT makespan: 5924.072777263566
+HBMCT makespan: 5813.3683141287875
 
-PEFT makespan: 4453.593265230093
+PEFT makespan: 4414.147864540006
 
 PETS makespan: 5082.839393333332
 
@@ -3323,15 +3323,15 @@ Edge density: 0.1672738439205505
 Mean task CPU time: 259.2751375549266, standard deviation: 334.02619445112646
 Mean task GPU time: 51.2814371257485, standard deviation: 28.355996009858597
 Mean task acceleration ratio: 4.899083540423559, standard deviation: 4.745229383715844
-Mean task execution time: 233.27592500127932
+Mean task execution time on Multiple_GPU platform: 233.27592500127932
 Computation-to-communication ratio: 49.53765034306399
 Minimal serial time: 51384
 --------------------------------------------------------
 HEFT makespan: 12998.147746480048
 
-HBMCT makespan: 14496.39913552546
+HBMCT makespan: 14139.52607144388
 
-PEFT makespan: 12972.230449264865
+PEFT makespan: 12924.981630774291
 
 PETS makespan: 13674.988056446648
 
@@ -3351,15 +3351,15 @@ Edge density: 0.004971076827364252
 Mean task CPU time: 242.99126464319815, standard deviation: 310.79550814419366
 Mean task GPU time: 50.29441117764471, standard deviation: 28.776483050385025
 Mean task acceleration ratio: 4.766466714382394, standard deviation: 4.769724532953313
-Mean task execution time: 218.90415796000397
+Mean task execution time on Multiple_GPU platform: 218.90415796000397
 Computation-to-communication ratio: 42.39522605398948
 Minimal serial time: 50395
 --------------------------------------------------------
 HEFT makespan: 3684.275032049819
 
-HBMCT makespan: 4013.1653081690797
+HBMCT makespan: 4066.847418097619
 
-PEFT makespan: 3727.785373657609
+PEFT makespan: 3761.303493781005
 
 PETS makespan: 3881.4841963036633
 
@@ -3379,15 +3379,15 @@ Edge density: 0.12136765430178603
 Mean task CPU time: 260.2998411014857, standard deviation: 338.91189755720154
 Mean task GPU time: 49.08083832335329, standard deviation: 28.93737563564553
 Mean task acceleration ratio: 5.145460024384797, standard deviation: 4.946118332539088
-Mean task execution time: 233.89746575421913
+Mean task execution time on Multiple_GPU platform: 233.89746575421913
 Computation-to-communication ratio: 41.06068702253756
 Minimal serial time: 49179
 --------------------------------------------------------
 HEFT makespan: 8135.46476145942
 
-HBMCT makespan: 9811.900796796648
+HBMCT makespan: 9559.639903427114
 
-PEFT makespan: 8374.025724952044
+PEFT makespan: 8398.953658595576
 
 PETS makespan: 8799.7081085811
 
@@ -3407,15 +3407,15 @@ Edge density: 0.14623699653639774
 Mean task CPU time: 264.3496243759899, standard deviation: 354.05610584451705
 Mean task GPU time: 50.971057884231534, standard deviation: 29.112627338279992
 Mean task acceleration ratio: 5.177739629988911, standard deviation: 5.259100158283265
-Mean task execution time: 237.67730356452012
+Mean task execution time on Multiple_GPU platform: 237.67730356452012
 Computation-to-communication ratio: 25.14179246116629
 Minimal serial time: 51073
 --------------------------------------------------------
 HEFT makespan: 8683.560183895792
 
-HBMCT makespan: 10384.347809505061
+HBMCT makespan: 10205.575554529409
 
-PEFT makespan: 8746.697040987297
+PEFT makespan: 8663.103774150552
 
 PETS makespan: 9293.409520852883
 
@@ -3435,15 +3435,15 @@ Edge density: 0.015924195564914128
 Mean task CPU time: 246.49984000363833, standard deviation: 321.66741989802273
 Mean task GPU time: 48.44710578842315, standard deviation: 27.850034967866087
 Mean task acceleration ratio: 5.09846327989858, standard deviation: 5.0374199510054005
-Mean task execution time: 221.74324822673643
+Mean task execution time on Multiple_GPU platform: 221.74324822673643
 Computation-to-communication ratio: 41.369208188513326
 Minimal serial time: 48544
 --------------------------------------------------------
 HEFT makespan: 4214.699656078616
 
-HBMCT makespan: 5660.352922574969
+HBMCT makespan: 5464.10131502078
 
-PEFT makespan: 4234.735699577228
+PEFT makespan: 4210.487690104519
 
 PETS makespan: 5172.89108414381
 
@@ -3463,15 +3463,15 @@ Edge density: 0.014235265732271721
 Mean task CPU time: 269.94076019608303, standard deviation: 361.0573087721494
 Mean task GPU time: 50.349301397205586, standard deviation: 28.641805781656117
 Mean task acceleration ratio: 5.173731357755686, standard deviation: 5.31556153118061
-Mean task execution time: 242.49182784622337
+Mean task execution time on Multiple_GPU platform: 242.49182784622337
 Computation-to-communication ratio: 45.82617750506469
 Minimal serial time: 50450
 --------------------------------------------------------
 HEFT makespan: 4220.896142497742
 
-HBMCT makespan: 5773.1537774931385
+HBMCT makespan: 5980.897291483793
 
-PEFT makespan: 4305.60939706259
+PEFT makespan: 4287.330705934268
 
 PETS makespan: 4856.918713786363
 
@@ -3491,15 +3491,15 @@ Edge density: 0.021985998033902224
 Mean task CPU time: 246.58598306087396, standard deviation: 314.0981284745912
 Mean task GPU time: 49.10878243512974, standard deviation: 28.724431357312692
 Mean task acceleration ratio: 4.902628100149548, standard deviation: 4.74458746841567
-Mean task execution time: 221.90133298265593
+Mean task execution time on Multiple_GPU platform: 221.90133298265593
 Computation-to-communication ratio: 47.216128065704005
 Minimal serial time: 49207
 --------------------------------------------------------
 HEFT makespan: 5128.275865159518
 
-HBMCT makespan: 6794.337419516101
+HBMCT makespan: 6727.689870119663
 
-PEFT makespan: 5235.5313815692025
+PEFT makespan: 5215.631155203263
 
 PETS makespan: 6342.17141955625
 
@@ -3519,15 +3519,15 @@ Edge density: 0.008540361833775007
 Mean task CPU time: 257.96222995465473, standard deviation: 349.5412915490712
 Mean task GPU time: 48.9750499001996, standard deviation: 28.84265208141107
 Mean task acceleration ratio: 5.190839927466135, standard deviation: 5.235165002427885
-Mean task execution time: 231.83883244784784
+Mean task execution time on Multiple_GPU platform: 231.83883244784784
 Computation-to-communication ratio: 47.582192408572496
 Minimal serial time: 49073
 --------------------------------------------------------
 HEFT makespan: 3758.7832685794406
 
-HBMCT makespan: 4571.753671897757
+HBMCT makespan: 4469.582880325075
 
-PEFT makespan: 3771.1612708369776
+PEFT makespan: 3763.97278988535
 
 PETS makespan: 4036.9259997977697
 
@@ -3547,15 +3547,15 @@ Edge density: 0.02020334954466691
 Mean task CPU time: 255.41506343575537, standard deviation: 333.03753038642583
 Mean task GPU time: 50.408183632734534, standard deviation: 28.836071418702
 Mean task acceleration ratio: 5.003614396669121, standard deviation: 5.029448433256085
-Mean task execution time: 229.78920346037776
+Mean task execution time on Multiple_GPU platform: 229.78920346037776
 Computation-to-communication ratio: 42.829414831104266
 Minimal serial time: 50509
 --------------------------------------------------------
 HEFT makespan: 4651.447400555965
 
-HBMCT makespan: 6238.653046198319
+HBMCT makespan: 6093.57068867235
 
-PEFT makespan: 4744.8611061892025
+PEFT makespan: 4691.233513246774
 
 PETS makespan: 5607.819740142285
 
@@ -3575,15 +3575,15 @@ Edge density: 0.006715839051168393
 Mean task CPU time: 271.2135839661003, standard deviation: 357.9105951621937
 Mean task GPU time: 51.18263473053892, standard deviation: 27.934761070969035
 Mean task acceleration ratio: 5.245268630755548, standard deviation: 5.193435996330783
-Mean task execution time: 243.70971531165515
+Mean task execution time on Multiple_GPU platform: 243.70971531165515
 Computation-to-communication ratio: 25.36371319160498
 Minimal serial time: 51285
 --------------------------------------------------------
 HEFT makespan: 3964.6001005618923
 
-HBMCT makespan: 4440.2646443408175
+HBMCT makespan: 4280.552461894067
 
-PEFT makespan: 4004.00560247979
+PEFT makespan: 3974.969963277901
 
 PETS makespan: 4228.000685006612
 
@@ -3603,15 +3603,15 @@ Edge density: 0.03653432395947366
 Mean task CPU time: 236.40762391618026, standard deviation: 286.5586494369009
 Mean task GPU time: 50.532934131736525, standard deviation: 27.979736986076773
 Mean task acceleration ratio: 4.691895059386908, standard deviation: 4.484489100415082
-Mean task execution time: 213.1732876931248
+Mean task execution time on Multiple_GPU platform: 213.1732876931248
 Computation-to-communication ratio: 23.628680107278047
 Minimal serial time: 50634
 --------------------------------------------------------
 HEFT makespan: 5980.042713622502
 
-HBMCT makespan: 7398.23508399579
+HBMCT makespan: 7422.8513430753555
 
-PEFT makespan: 6092.33424045749
+PEFT makespan: 6062.148893213235
 
 PETS makespan: 6809.69442495324
 
@@ -3631,15 +3631,15 @@ Edge density: 0.010328992364920509
 Mean task CPU time: 242.67325205607844, standard deviation: 313.1410334693343
 Mean task GPU time: 49.77245508982036, standard deviation: 28.55016455238992
 Mean task acceleration ratio: 4.862053949446739, standard deviation: 4.846253128580853
-Mean task execution time: 218.5606524352962
+Mean task execution time on Multiple_GPU platform: 218.5606524352962
 Computation-to-communication ratio: 25.72904445929996
 Minimal serial time: 49872
 --------------------------------------------------------
 HEFT makespan: 3872.417867311852
 
-HBMCT makespan: 4849.602603592143
+HBMCT makespan: 4559.48919923828
 
-PEFT makespan: 3899.7902520663743
+PEFT makespan: 3893.5301316633
 
 PETS makespan: 4521.715804992838
 
@@ -3659,15 +3659,15 @@ Edge density: 0.08531588172306735
 Mean task CPU time: 239.10185224917916, standard deviation: 293.16966194675877
 Mean task GPU time: 49.53393213572854, standard deviation: 29.133619937900153
 Mean task acceleration ratio: 4.893121016032444, standard deviation: 4.983578867825149
-Mean task execution time: 215.40586223499784
+Mean task execution time on Multiple_GPU platform: 215.40586223499784
 Computation-to-communication ratio: 38.40055855203998
 Minimal serial time: 49633
 --------------------------------------------------------
 HEFT makespan: 8592.032093979702
 
-HBMCT makespan: 10117.58707347959
+HBMCT makespan: 10165.019426519326
 
-PEFT makespan: 8700.547339640598
+PEFT makespan: 8601.070604569375
 
 PETS makespan: 9715.633569705942
 
@@ -3687,15 +3687,15 @@ Edge density: 0.1013118617909037
 Mean task CPU time: 258.1944957859695, standard deviation: 323.5699158834191
 Mean task GPU time: 49.32335329341317, standard deviation: 28.89217399395104
 Mean task acceleration ratio: 5.148651826947902, standard deviation: 5.021725287162531
-Mean task execution time: 232.08560297439993
+Mean task execution time on Multiple_GPU platform: 232.08560297439993
 Computation-to-communication ratio: 33.92586379473442
 Minimal serial time: 49422
 --------------------------------------------------------
 HEFT makespan: 7870.746954784849
 
-HBMCT makespan: 9279.680581812941
+HBMCT makespan: 9342.125319759716
 
-PEFT makespan: 8084.752058114861
+PEFT makespan: 8062.866172575643
 
 PETS makespan: 8565.305463254037
 
@@ -3715,15 +3715,15 @@ Edge density: 0.06664792293534809
 Mean task CPU time: 241.70046957360285, standard deviation: 321.64596887452075
 Mean task GPU time: 50.13572854291417, standard deviation: 29.452006714638742
 Mean task acceleration ratio: 4.759292382509892, standard deviation: 4.7545760324127535
-Mean task execution time: 217.75487694476678
+Mean task execution time on Multiple_GPU platform: 217.75487694476678
 Computation-to-communication ratio: 29.144561899439932
 Minimal serial time: 50236
 --------------------------------------------------------
 HEFT makespan: 7058.6479171583405
 
-HBMCT makespan: 8659.444986100765
+HBMCT makespan: 8479.567458593561
 
-PEFT makespan: 6908.15339239101
+PEFT makespan: 6967.488413255812
 
 PETS makespan: 7889.044765129321
 
@@ -3743,15 +3743,15 @@ Edge density: 0.0159780339421058
 Mean task CPU time: 254.20984449961458, standard deviation: 329.5229328013289
 Mean task GPU time: 49.53393213572854, standard deviation: 28.727874351887394
 Mean task acceleration ratio: 5.234292476256368, standard deviation: 5.21249706578998
-Mean task execution time: 228.62535545412882
+Mean task execution time on Multiple_GPU platform: 228.62535545412882
 Computation-to-communication ratio: 32.69227580442401
 Minimal serial time: 49633
 --------------------------------------------------------
 HEFT makespan: 4213.973747056158
 
-HBMCT makespan: 5527.6331714198905
+HBMCT makespan: 5839.597832451093
 
-PEFT makespan: 4328.074200971866
+PEFT makespan: 4342.421762669269
 
 PETS makespan: 5327.510062645399
 
@@ -3771,15 +3771,15 @@ Edge density: 0.12055808462994091
 Mean task CPU time: 242.82958133577642, standard deviation: 305.10788190423085
 Mean task GPU time: 50.51197604790419, standard deviation: 28.30551098960518
 Mean task acceleration ratio: 4.647014036339673, standard deviation: 4.517254013275824
-Mean task execution time: 218.7898806747924
+Mean task execution time on Multiple_GPU platform: 218.7898806747924
 Computation-to-communication ratio: 21.749040177804794
 Minimal serial time: 50613
 --------------------------------------------------------
 HEFT makespan: 8148.264732546446
 
-HBMCT makespan: 9934.29046671629
+HBMCT makespan: 9768.06493055162
 
-PEFT makespan: 8265.393849378692
+PEFT makespan: 8263.369694049195
 
 PETS makespan: 8885.323282822246
 
@@ -3799,15 +3799,15 @@ Edge density: 0.061122510224306634
 Mean task CPU time: 226.47676384049203, standard deviation: 284.5211454211454
 Mean task GPU time: 49.01297405189621, standard deviation: 28.962788972183443
 Mean task acceleration ratio: 4.626878948073656, standard deviation: 4.496789030923551
-Mean task execution time: 204.29379011691756
+Mean task execution time on Multiple_GPU platform: 204.29379011691756
 Computation-to-communication ratio: 42.78896884505694
 Minimal serial time: 49111
 --------------------------------------------------------
 HEFT makespan: 7240.366008426533
 
-HBMCT makespan: 8680.301577990636
+HBMCT makespan: 8705.829339394897
 
-PEFT makespan: 7389.898821606761
+PEFT makespan: 7378.849732654558
 
 PETS makespan: 8704.820687120498
 
@@ -3827,15 +3827,15 @@ Edge density: 0.020025882301331403
 Mean task CPU time: 244.48162808950784, standard deviation: 292.301114290302
 Mean task GPU time: 51.99101796407186, standard deviation: 28.237143033039654
 Mean task acceleration ratio: 4.930439333284281, standard deviation: 4.846606094861021
-Mean task execution time: 220.42030182382834
+Mean task execution time on Multiple_GPU platform: 220.42030182382834
 Computation-to-communication ratio: 41.91462359593119
 Minimal serial time: 52095
 --------------------------------------------------------
 HEFT makespan: 4518.927502801913
 
-HBMCT makespan: 6152.68591827169
+HBMCT makespan: 5964.73836677765
 
-PEFT makespan: 4654.780314257015
+PEFT makespan: 4666.152980766857
 
 PETS makespan: 5948.839697426447
 
@@ -3855,15 +3855,15 @@ Edge density: 0.036356856716138156
 Mean task CPU time: 242.75783351517015, standard deviation: 318.81881632780676
 Mean task GPU time: 50.36726546906188, standard deviation: 29.190352737189425
 Mean task acceleration ratio: 4.856205103412768, standard deviation: 4.938402338942103
-Mean task execution time: 218.70901250940662
+Mean task execution time on Multiple_GPU platform: 218.70901250940662
 Computation-to-communication ratio: 25.255008857452243
 Minimal serial time: 50468
 --------------------------------------------------------
 HEFT makespan: 5991.547225135668
 
-HBMCT makespan: 7420.037791615911
+HBMCT makespan: 7735.21179020702
 
-PEFT makespan: 6150.809773306944
+PEFT makespan: 6088.344501258836
 
 PETS makespan: 7537.944544187211
 
@@ -3883,15 +3883,15 @@ Edge density: 0.08599982851479858
 Mean task CPU time: 240.69024879097196, standard deviation: 318.49135902930385
 Mean task GPU time: 49.26147704590819, standard deviation: 29.57964810220486
 Mean task acceleration ratio: 4.8110556240688025, standard deviation: 4.776149356636156
-Mean task execution time: 216.76165232283898
+Mean task execution time on Multiple_GPU platform: 216.76165232283898
 Computation-to-communication ratio: 40.67273228866362
 Minimal serial time: 49360
 --------------------------------------------------------
 HEFT makespan: 8738.956431997101
 
-HBMCT makespan: 10455.927637621724
+HBMCT makespan: 10070.692985947357
 
-PEFT makespan: 8776.932872964557
+PEFT makespan: 8792.417531380343
 
 PETS makespan: 10218.783355896008
 
@@ -3911,15 +3911,15 @@ Edge density: 0.026041822449008076
 Mean task CPU time: 257.24315978901814, standard deviation: 323.12412469671983
 Mean task GPU time: 50.63373253493014, standard deviation: 28.39296143979483
 Mean task acceleration ratio: 5.083572585120513, standard deviation: 5.113675257344163
-Mean task execution time: 231.41698138225715
+Mean task execution time on Multiple_GPU platform: 231.41698138225715
 Computation-to-communication ratio: 45.212381771537416
 Minimal serial time: 50735
 --------------------------------------------------------
 HEFT makespan: 5333.087372687614
 
-HBMCT makespan: 7017.372127569818
+HBMCT makespan: 7072.408505887692
 
-PEFT makespan: 5490.694062481556
+PEFT makespan: 5433.582181453294
 
 PETS makespan: 6792.838248634047
 
@@ -3939,15 +3939,15 @@ Edge density: 0.012125598951946258
 Mean task CPU time: 263.7052986445817, standard deviation: 333.53774433236856
 Mean task GPU time: 48.92614770459082, standard deviation: 28.03708933134451
 Mean task acceleration ratio: 5.348455040213872, standard deviation: 5.2452343378822555
-Mean task execution time: 236.85790477708287
+Mean task execution time on Multiple_GPU platform: 236.85790477708287
 Computation-to-communication ratio: 33.175151084002486
 Minimal serial time: 49024
 --------------------------------------------------------
 HEFT makespan: 4136.923001266868
 
-HBMCT makespan: 5565.825028332309
+HBMCT makespan: 5533.980151140483
 
-PEFT makespan: 4375.325780995895
+PEFT makespan: 4271.3785834264745
 
 PETS makespan: 4890.469218352062
 
@@ -3967,15 +3967,15 @@ Edge density: 0.129455374964357
 Mean task CPU time: 243.4610527268948, standard deviation: 313.90972874925865
 Mean task GPU time: 49.44111776447106, standard deviation: 28.907399579471157
 Mean task acceleration ratio: 5.004795576669407, standard deviation: 5.243271817792928
-Mean task execution time: 219.20856085659182
+Mean task execution time on Multiple_GPU platform: 219.20856085659182
 Computation-to-communication ratio: 42.74995439443897
 Minimal serial time: 49540
 --------------------------------------------------------
 HEFT makespan: 11097.683718144166
 
-HBMCT makespan: 12285.633488248961
+HBMCT makespan: 12578.61291945495
 
-PEFT makespan: 11064.24841526992
+PEFT makespan: 11085.556635463176
 
 PETS makespan: 11993.47482861822
 
@@ -3995,15 +3995,15 @@ Edge density: 0.16431273317500864
 Mean task CPU time: 255.493524806721, standard deviation: 317.15133814011665
 Mean task GPU time: 52.96007984031936, standard deviation: 28.014118254025266
 Mean task acceleration ratio: 4.777459200147291, standard deviation: 4.764429708294787
-Mean task execution time: 230.1768441859208
+Mean task execution time on Multiple_GPU platform: 230.1768441859208
 Computation-to-communication ratio: 42.54602651689753
 Minimal serial time: 53066
 --------------------------------------------------------
 HEFT makespan: 9096.93464584266
 
-HBMCT makespan: 10501.349901788479
+HBMCT makespan: 10696.967165720254
 
-PEFT makespan: 9201.523883645756
+PEFT makespan: 9186.846783318404
 
 PETS makespan: 9411.344544252617
 
@@ -4023,15 +4023,15 @@ Edge density: 0.07769874835743099
 Mean task CPU time: 255.9174460942912, standard deviation: 342.9904467307519
 Mean task GPU time: 50.52395209580838, standard deviation: 28.90375530978086
 Mean task acceleration ratio: 5.112427353178944, standard deviation: 5.259578283948322
-Mean task execution time: 230.24325934448086
+Mean task execution time on Multiple_GPU platform: 230.24325934448086
 Computation-to-communication ratio: 30.66162938614671
 Minimal serial time: 50625
 --------------------------------------------------------
 HEFT makespan: 7280.234210949014
 
-HBMCT makespan: 8918.658169666445
+HBMCT makespan: 8664.956254259385
 
-PEFT makespan: 7403.097336867684
+PEFT makespan: 7413.25717954409
 
 PETS makespan: 7998.902502507953
 
@@ -4051,15 +4051,15 @@ Edge density: 0.037601121433456765
 Mean task CPU time: 248.57249947896, standard deviation: 325.31102241886634
 Mean task GPU time: 50.40319361277445, standard deviation: 28.946214659161406
 Mean task acceleration ratio: 4.946708221190319, standard deviation: 5.20058042822643
-Mean task execution time: 223.8013362456868
+Mean task execution time on Multiple_GPU platform: 223.8013362456868
 Computation-to-communication ratio: 35.79447006383013
 Minimal serial time: 50504
 --------------------------------------------------------
 HEFT makespan: 5493.069466604872
 
-HBMCT makespan: 7436.764745466276
+HBMCT makespan: 7319.69680059377
 
-PEFT makespan: 5704.975587122735
+PEFT makespan: 5663.534259536843
 
 PETS makespan: 6569.335988262877
 
@@ -4079,15 +4079,15 @@ Edge density: 0.08990410786817972
 Mean task CPU time: 234.43232928753991, standard deviation: 307.4704080763884
 Mean task GPU time: 48.94311377245509, standard deviation: 29.00237029140877
 Mean task acceleration ratio: 4.83758790026902, standard deviation: 4.807647893741394
-Mean task execution time: 211.2461773481543
+Mean task execution time on Multiple_GPU platform: 211.2461773481543
 Computation-to-communication ratio: 20.785119633771153
 Minimal serial time: 49041
 --------------------------------------------------------
 HEFT makespan: 7488.17836708006
 
-HBMCT makespan: 8888.01201486163
+HBMCT makespan: 9055.973471676783
 
-PEFT makespan: 7485.017247619409
+PEFT makespan: 7521.823551224591
 
 PETS makespan: 8242.414478997653
 
@@ -4107,15 +4107,15 @@ Edge density: 0.1934193550960018
 Mean task CPU time: 245.32553109334978, standard deviation: 312.5149196058448
 Mean task GPU time: 51.003992015968066, standard deviation: 28.147813152382074
 Mean task acceleration ratio: 4.780049434472633, standard deviation: 4.660049431521378
-Mean task execution time: 221.03533870867707
+Mean task execution time on Multiple_GPU platform: 221.03533870867707
 Computation-to-communication ratio: 27.70796090158287
 Minimal serial time: 51106
 --------------------------------------------------------
 HEFT makespan: 9095.057033145436
 
-HBMCT makespan: 10672.962251024539
+HBMCT makespan: 10688.865679250017
 
-PEFT makespan: 9094.37118744848
+PEFT makespan: 9228.04462978517
 
 PETS makespan: 9350.715932652069
 
@@ -4135,15 +4135,15 @@ Edge density: 0.008442655149241975
 Mean task CPU time: 238.12997061352104, standard deviation: 299.5463871393091
 Mean task GPU time: 49.16467065868263, standard deviation: 28.666710114760463
 Mean task acceleration ratio: 4.729071513392993, standard deviation: 4.4384586305823
-Mean task execution time: 214.50930811916623
+Mean task execution time on Multiple_GPU platform: 214.50930811916623
 Computation-to-communication ratio: 23.379939446374173
 Minimal serial time: 49263
 --------------------------------------------------------
 HEFT makespan: 3847.9248219210126
 
-HBMCT makespan: 4575.59383881189
+HBMCT makespan: 4613.651512893197
 
-PEFT makespan: 3855.0524997952593
+PEFT makespan: 3839.9656092874125
 
 PETS makespan: 4098.624309058113
 
@@ -4163,15 +4163,15 @@ Edge density: 0.11338162835168823
 Mean task CPU time: 251.0359599438753, standard deviation: 309.2701819563484
 Mean task GPU time: 50.86027944111776, standard deviation: 29.24994564919386
 Mean task acceleration ratio: 5.19543823889907, standard deviation: 5.206858320020101
-Mean task execution time: 226.0139998810306
+Mean task execution time on Multiple_GPU platform: 226.0139998810306
 Computation-to-communication ratio: 25.390084766411903
 Minimal serial time: 50962
 --------------------------------------------------------
 HEFT makespan: 8461.527602682218
 
-HBMCT makespan: 10055.238025778483
+HBMCT makespan: 10005.959181071445
 
-PEFT makespan: 8331.316235563909
+PEFT makespan: 8289.899678051068
 
 PETS makespan: 8887.659480007356
 
@@ -4191,15 +4191,15 @@ Edge density: 0.018165467267263674
 Mean task CPU time: 251.5547101868196, standard deviation: 311.34832763101286
 Mean task GPU time: 49.19261477045908, standard deviation: 28.498972656297152
 Mean task acceleration ratio: 4.996604770870855, standard deviation: 4.662805722158711
-Mean task execution time: 226.25944825977453
+Mean task execution time on Multiple_GPU platform: 226.25944825977453
 Computation-to-communication ratio: 23.92134256871373
 Minimal serial time: 49291
 --------------------------------------------------------
 HEFT makespan: 4563.6575333371065
 
-HBMCT makespan: 6316.199724702737
+HBMCT makespan: 6483.2468732284715
 
-PEFT makespan: 4787.630834765214
+PEFT makespan: 4820.080298429436
 
 PETS makespan: 5824.53471098905
 
@@ -4219,15 +4219,15 @@ Edge density: 0.07320424086891153
 Mean task CPU time: 266.02034554763594, standard deviation: 340.956054879799
 Mean task GPU time: 50.4251497005988, standard deviation: 28.160271384676456
 Mean task acceleration ratio: 5.090629682855439, standard deviation: 5.11422930373422
-Mean task execution time: 239.07094606675628
+Mean task execution time on Multiple_GPU platform: 239.07094606675628
 Computation-to-communication ratio: 22.494388759083595
 Minimal serial time: 50526
 --------------------------------------------------------
 HEFT makespan: 8179.852338681814
 
-HBMCT makespan: 10089.946853039148
+HBMCT makespan: 10002.32875737703
 
-PEFT makespan: 8147.787760898053
+PEFT makespan: 8134.758783465167
 
 PETS makespan: 9792.520451950282
 
@@ -4247,15 +4247,15 @@ Edge density: 0.17494282164940847
 Mean task CPU time: 246.47057055830606, standard deviation: 327.7739696293735
 Mean task GPU time: 49.36626746506986, standard deviation: 29.48605983158035
 Mean task acceleration ratio: 4.845171513987798, standard deviation: 4.8184590967356975
-Mean task execution time: 221.83253267165153
+Mean task execution time on Multiple_GPU platform: 221.83253267165153
 Computation-to-communication ratio: 45.40340057966763
 Minimal serial time: 49465
 --------------------------------------------------------
 HEFT makespan: 9062.404435279419
 
-HBMCT makespan: 10687.284453698947
+HBMCT makespan: 10812.608296760834
 
-PEFT makespan: 9008.380494257866
+PEFT makespan: 8981.537509792317
 
 PETS makespan: 9476.712813439553
 
@@ -4275,15 +4275,15 @@ Edge density: 0.03403582445498613
 Mean task CPU time: 230.84635336526853, standard deviation: 271.20908339791333
 Mean task GPU time: 49.424151696606785, standard deviation: 27.847760054425287
 Mean task acceleration ratio: 4.80650451207296, standard deviation: 4.75252586253068
-Mean task execution time: 208.1685781566858
+Mean task execution time on Multiple_GPU platform: 208.1685781566858
 Computation-to-communication ratio: 38.51746637350091
 Minimal serial time: 49523
 --------------------------------------------------------
 HEFT makespan: 5549.27310013472
 
-HBMCT makespan: 6860.114047063693
+HBMCT makespan: 7222.259446400298
 
-PEFT makespan: 5763.916097746315
+PEFT makespan: 5686.935193518103
 
 PETS makespan: 6673.728633080846
 
@@ -4303,15 +4303,15 @@ Edge density: 0.038378786881780896
 Mean task CPU time: 245.4010235174522, standard deviation: 326.4884457382756
 Mean task GPU time: 50.18562874251497, standard deviation: 28.741491373989103
 Mean task acceleration ratio: 4.949255438467004, standard deviation: 4.972007710368041
-Mean task execution time: 220.99909917058505
+Mean task execution time on Multiple_GPU platform: 220.99909917058505
 Computation-to-communication ratio: 37.82571924768398
 Minimal serial time: 50286
 --------------------------------------------------------
 HEFT makespan: 5507.580060835782
 
-HBMCT makespan: 7136.6362695019725
+HBMCT makespan: 6976.620313166554
 
-PEFT makespan: 5538.753873832544
+PEFT makespan: 5515.648717434021
 
 PETS makespan: 6681.630807931107
 
@@ -4331,15 +4331,15 @@ Edge density: 0.005082741609687718
 Mean task CPU time: 254.65229406842067, standard deviation: 334.2998263968473
 Mean task GPU time: 50.58782435129741, standard deviation: 29.32515714831787
 Mean task acceleration ratio: 5.0596363527136425, standard deviation: 5.020244157416012
-Mean task execution time: 229.1442353537803
+Mean task execution time on Multiple_GPU platform: 229.1442353537803
 Computation-to-communication ratio: 28.825451459012633
 Minimal serial time: 50689
 --------------------------------------------------------
 HEFT makespan: 3837.8081317425385
 
-HBMCT makespan: 4304.038139943321
+HBMCT makespan: 4346.523949940672
 
-PEFT makespan: 4045.281989353451
+PEFT makespan: 3940.3752447466713
 
 PETS makespan: 4322.244582956759
 
@@ -4359,15 +4359,15 @@ Edge density: 0.0256170974733849
 Mean task CPU time: 250.29103793761593, standard deviation: 308.7389941903074
 Mean task GPU time: 51.097804391217565, standard deviation: 28.169475969865452
 Mean task acceleration ratio: 4.761076763432603, standard deviation: 4.636187135023691
-Mean task execution time: 225.39188374431612
+Mean task execution time on Multiple_GPU platform: 225.39188374431612
 Computation-to-communication ratio: 43.77876747009951
 Minimal serial time: 51200
 --------------------------------------------------------
 HEFT makespan: 4866.2413001155555
 
-HBMCT makespan: 6573.223015601814
+HBMCT makespan: 6808.320910975492
 
-PEFT makespan: 5074.939079503299
+PEFT makespan: 5035.130386868408
 
 PETS makespan: 6351.631299845381
 
@@ -4387,15 +4387,15 @@ Edge density: 0.024177419387000226
 Mean task CPU time: 253.90183854624894, standard deviation: 329.2717432486243
 Mean task GPU time: 50.13972055888224, standard deviation: 28.658677560604765
 Mean task acceleration ratio: 4.899502849346018, standard deviation: 4.745742946144938
-Mean task execution time: 228.43157379782812
+Mean task execution time on Multiple_GPU platform: 228.43157379782812
 Computation-to-communication ratio: 34.805677737885055
 Minimal serial time: 50240
 --------------------------------------------------------
 HEFT makespan: 5142.38526103233
 
-HBMCT makespan: 7087.396649983046
+HBMCT makespan: 6875.127324039437
 
-PEFT makespan: 5314.881145458962
+PEFT makespan: 5309.557435971282
 
 PETS makespan: 6566.445895592389
 
@@ -4415,15 +4415,15 @@ Edge density: 0.1352599496312071
 Mean task CPU time: 247.24719699711164, standard deviation: 312.52479962645
 Mean task GPU time: 49.44011976047904, standard deviation: 28.011740253001516
 Mean task acceleration ratio: 4.984596963423174, standard deviation: 4.952435621243382
-Mean task execution time: 222.52131234253258
+Mean task execution time on Multiple_GPU platform: 222.52131234253258
 Computation-to-communication ratio: 24.721813214579218
 Minimal serial time: 49539
 --------------------------------------------------------
 HEFT makespan: 11318.126944711696
 
-HBMCT makespan: 12452.23836588256
+HBMCT makespan: 12432.350298074682
 
-PEFT makespan: 11296.729021792687
+PEFT makespan: 11272.497220228637
 
 PETS makespan: 12234.898400925618
 
@@ -4443,15 +4443,15 @@ Edge density: 0.12849426023078717
 Mean task CPU time: 254.73568067096915, standard deviation: 301.8076942158555
 Mean task GPU time: 51.21556886227545, standard deviation: 28.628033612330608
 Mean task acceleration ratio: 5.086130657536878, standard deviation: 4.899822860478553
-Mean task execution time: 229.29566669488244
+Mean task execution time on Multiple_GPU platform: 229.29566669488244
 Computation-to-communication ratio: 47.331174966624594
 Minimal serial time: 51318
 --------------------------------------------------------
 HEFT makespan: 11583.061151462956
 
-HBMCT makespan: 12708.807602767869
+HBMCT makespan: 12537.76009701792
 
-PEFT makespan: 11353.27513460167
+PEFT makespan: 11377.037457149336
 
 PETS makespan: 12383.450563575996
 
@@ -4471,15 +4471,15 @@ Edge density: 0.01425520587197234
 Mean task CPU time: 237.41150926610584, standard deviation: 295.4443693690072
 Mean task GPU time: 49.703592814371255, standard deviation: 29.303337623453746
 Mean task acceleration ratio: 4.8105206147269355, standard deviation: 4.750856636128012
-Mean task execution time: 213.948019709639
+Mean task execution time on Multiple_GPU platform: 213.948019709639
 Computation-to-communication ratio: 40.90504978054277
 Minimal serial time: 49803
 --------------------------------------------------------
 HEFT makespan: 4026.881220673858
 
-HBMCT makespan: 5383.585427206113
+HBMCT makespan: 5266.499456914433
 
-PEFT makespan: 4211.767274285457
+PEFT makespan: 4253.549897236992
 
 PETS makespan: 4787.671244392647
 
@@ -4499,15 +4499,15 @@ Edge density: 0.03798397211570864
 Mean task CPU time: 237.07241593781822, standard deviation: 313.15618333018415
 Mean task GPU time: 50.6936127744511, standard deviation: 28.44262598944418
 Mean task acceleration ratio: 4.678741447389212, standard deviation: 4.869226279690228
-Mean task execution time: 213.77506554239733
+Mean task execution time on Multiple_GPU platform: 213.77506554239733
 Computation-to-communication ratio: 36.02020545320913
 Minimal serial time: 50795
 --------------------------------------------------------
 HEFT makespan: 5620.957579964488
 
-HBMCT makespan: 7167.847635942528
+HBMCT makespan: 7409.838910807121
 
-PEFT makespan: 5626.4676395770775
+PEFT makespan: 5596.705346079555
 
 PETS makespan: 6733.259452096874
 
@@ -4527,15 +4527,15 @@ Edge density: 0.02222727372427971
 Mean task CPU time: 256.93075190744383, standard deviation: 315.28153586811436
 Mean task GPU time: 50.67065868263473, standard deviation: 28.597476916561764
 Mean task acceleration ratio: 5.078435659171525, standard deviation: 4.827388802212354
-Mean task execution time: 231.14824025434268
+Mean task execution time on Multiple_GPU platform: 231.14824025434268
 Computation-to-communication ratio: 20.98208894317122
 Minimal serial time: 50772
 --------------------------------------------------------
 HEFT makespan: 4995.871696955515
 
-HBMCT makespan: 6651.213587556959
+HBMCT makespan: 6535.200086943378
 
-PEFT makespan: 4909.727109824462
+PEFT makespan: 4968.851048303709
 
 PETS makespan: 6079.822616630798
 
@@ -4555,15 +4555,15 @@ Edge density: 0.16640445382960353
 Mean task CPU time: 262.00076610366443, standard deviation: 340.532576850998
 Mean task GPU time: 50.41916167664671, standard deviation: 28.617407989120483
 Mean task acceleration ratio: 5.055003945147471, standard deviation: 5.18405502015843
-Mean task execution time: 235.55306555028724
+Mean task execution time on Multiple_GPU platform: 235.55306555028724
 Computation-to-communication ratio: 32.65169905819814
 Minimal serial time: 50520
 --------------------------------------------------------
 HEFT makespan: 12275.524546425193
 
-HBMCT makespan: 13628.431542017808
+HBMCT makespan: 13545.76717068415
 
-PEFT makespan: 12232.321453839022
+PEFT makespan: 12252.831286144828
 
 PETS makespan: 13054.910465844769
 
@@ -4583,15 +4583,15 @@ Edge density: 0.012416724991575291
 Mean task CPU time: 241.5357330944054, standard deviation: 312.6233150265312
 Mean task GPU time: 48.849301397205586, standard deviation: 27.989737292863808
 Mean task acceleration ratio: 4.90383658982373, standard deviation: 4.892219072825454
-Mean task execution time: 217.44992913225542
+Mean task execution time on Multiple_GPU platform: 217.44992913225542
 Computation-to-communication ratio: 37.090045577126446
 Minimal serial time: 48947
 --------------------------------------------------------
 HEFT makespan: 3849.03733034461
 
-HBMCT makespan: 5340.194928444711
+HBMCT makespan: 5545.407300332052
 
-PEFT makespan: 4037.3017554269336
+PEFT makespan: 4058.544481235248
 
 PETS makespan: 4820.12472348231
 
@@ -4611,15 +4611,15 @@ Edge density: 0.10812341351263507
 Mean task CPU time: 260.25659263149504, standard deviation: 326.32603083233283
 Mean task GPU time: 50.97005988023952, standard deviation: 28.631443949461314
 Mean task acceleration ratio: 5.289296556719866, standard deviation: 5.083302478719943
-Mean task execution time: 234.09577603758808
+Mean task execution time on Multiple_GPU platform: 234.09577603758808
 Computation-to-communication ratio: 32.549369285840484
 Minimal serial time: 51072
 --------------------------------------------------------
 HEFT makespan: 8335.389461875218
 
-HBMCT makespan: 9939.516178339814
+HBMCT makespan: 9778.86826080779
 
-PEFT makespan: 8292.275830158003
+PEFT makespan: 8287.602178718744
 
 PETS makespan: 8957.209723032096
 
@@ -4639,15 +4639,15 @@ Edge density: 0.17007144552054732
 Mean task CPU time: 258.68925869708426, standard deviation: 334.2571377542429
 Mean task GPU time: 50.32435129740519, standard deviation: 28.9770641255747
 Mean task acceleration ratio: 5.074691111079864, standard deviation: 4.907306054027389
-Mean task execution time: 232.64364527212436
+Mean task execution time on Multiple_GPU platform: 232.64364527212436
 Computation-to-communication ratio: 41.99417312108825
 Minimal serial time: 50425
 --------------------------------------------------------
 HEFT makespan: 9017.272471548304
 
-HBMCT makespan: 10496.24026206312
+HBMCT makespan: 10541.46935229127
 
-PEFT makespan: 8980.255657666705
+PEFT makespan: 8972.888827218487
 
 PETS makespan: 9313.94996870686
 
@@ -4667,15 +4667,15 @@ Edge density: 0.12337961439757847
 Mean task CPU time: 251.19743856412143, standard deviation: 327.195934535501
 Mean task GPU time: 50.43413173652694, standard deviation: 28.458993728635555
 Mean task acceleration ratio: 5.039576485224891, standard deviation: 4.974378201105947
-Mean task execution time: 226.1020252106721
+Mean task execution time on Multiple_GPU platform: 226.1020252106721
 Computation-to-communication ratio: 28.602943778365578
 Minimal serial time: 50535
 --------------------------------------------------------
 HEFT makespan: 11233.715723212063
 
-HBMCT makespan: 12349.209702122136
+HBMCT makespan: 12679.511404013132
 
-PEFT makespan: 11196.829671842284
+PEFT makespan: 11241.262908992716
 
 PETS makespan: 12134.047417592481
 
@@ -4695,15 +4695,15 @@ Edge density: 0.02583045696818152
 Mean task CPU time: 245.18408597375236, standard deviation: 314.93885817601836
 Mean task GPU time: 48.36127744510978, standard deviation: 28.817950465409865
 Mean task acceleration ratio: 5.08077416089636, standard deviation: 4.965869132750246
-Mean task execution time: 220.58123490767204
+Mean task execution time on Multiple_GPU platform: 220.58123490767204
 Computation-to-communication ratio: 35.928724092206835
 Minimal serial time: 48458
 --------------------------------------------------------
 HEFT makespan: 4832.206283797267
 
-HBMCT makespan: 6421.096391994461
+HBMCT makespan: 6703.863236605716
 
-PEFT makespan: 4919.508322823886
+PEFT makespan: 4933.771499706491
 
 PETS makespan: 5896.914765180121
 
@@ -4723,15 +4723,15 @@ Edge density: 0.008428697051451543
 Mean task CPU time: 267.12844094616236, standard deviation: 333.5570958062858
 Mean task GPU time: 52.060878243512974, standard deviation: 28.60902538989447
 Mean task acceleration ratio: 5.094744874236026, standard deviation: 5.052089998188862
-Mean task execution time: 240.24499560833118
+Mean task execution time on Multiple_GPU platform: 240.24499560833118
 Computation-to-communication ratio: 36.80752760134548
 Minimal serial time: 52165
 --------------------------------------------------------
 HEFT makespan: 3961.3240030528923
 
-HBMCT makespan: 4494.263459819529
+HBMCT makespan: 4833.490365726033
 
-PEFT makespan: 4120.049856754371
+PEFT makespan: 4125.713083169298
 
 PETS makespan: 4480.906606487197
 
@@ -4751,15 +4751,15 @@ Edge density: 0.006665988701916845
 Mean task CPU time: 240.3467826548421, standard deviation: 301.40535080395756
 Mean task GPU time: 49.740518962075846, standard deviation: 28.820986042417516
 Mean task acceleration ratio: 4.868185659241614, standard deviation: 4.8244830328433626
-Mean task execution time: 216.5209996932463
+Mean task execution time on Multiple_GPU platform: 216.5209996932463
 Computation-to-communication ratio: 24.695224498864707
 Minimal serial time: 49840
 --------------------------------------------------------
 HEFT makespan: 3848.7139294218396
 
-HBMCT makespan: 4383.491941209733
+HBMCT makespan: 4288.282037023288
 
-PEFT makespan: 3840.6890512010937
+PEFT makespan: 3810.385451131882
 
 PETS makespan: 4051.027791156974
 
@@ -4779,15 +4779,15 @@ Edge density: 0.1918081918081918
 Mean task CPU time: 238.00062294828757, standard deviation: 301.29146798256403
 Mean task GPU time: 49.23053892215569, standard deviation: 28.081499324295013
 Mean task acceleration ratio: 4.861014109349178, standard deviation: 4.659675209715679
-Mean task execution time: 214.4043624450211
+Mean task execution time on Multiple_GPU platform: 214.4043624450211
 Computation-to-communication ratio: 34.87092864309365
 Minimal serial time: 49329
 --------------------------------------------------------
 HEFT makespan: 15379.002763365821
 
-HBMCT makespan: 16372.916129283494
+HBMCT makespan: 16461.992253843924
 
-PEFT makespan: 15360.977589007098
+PEFT makespan: 15354.292777197341
 
 PETS makespan: 15758.097622560703
 
@@ -4807,15 +4807,15 @@ Edge density: 0.02205379450888433
 Mean task CPU time: 236.22455691806582, standard deviation: 291.30436968919025
 Mean task GPU time: 49.27644710578842, standard deviation: 28.49404504358419
 Mean task acceleration ratio: 4.821004712441835, standard deviation: 4.628299460400995
-Mean task execution time: 212.85604319153114
+Mean task execution time on Multiple_GPU platform: 212.85604319153114
 Computation-to-communication ratio: 39.59928900205421
 Minimal serial time: 49375
 --------------------------------------------------------
 HEFT makespan: 4706.099971726846
 
-HBMCT makespan: 6348.689884512216
+HBMCT makespan: 6221.899342187032
 
-PEFT makespan: 4900.198647112221
+PEFT makespan: 4932.501903656572
 
 PETS makespan: 6203.796380350958
 
@@ -4835,15 +4835,15 @@ Edge density: 0.10146141283865835
 Mean task CPU time: 244.85827193954742, standard deviation: 316.0428377262859
 Mean task GPU time: 49.08882235528942, standard deviation: 28.418512822951218
 Mean task acceleration ratio: 5.0199827542157465, standard deviation: 4.733552736447237
-Mean task execution time: 220.38709074151518
+Mean task execution time on Multiple_GPU platform: 220.38709074151518
 Computation-to-communication ratio: 46.11066108986827
 Minimal serial time: 49187
 --------------------------------------------------------
 HEFT makespan: 7543.384991884575
 
-HBMCT makespan: 8988.971154263927
+HBMCT makespan: 8843.976025651404
 
-PEFT makespan: 7839.011940593495
+PEFT makespan: 7786.230400448183
 
 PETS makespan: 8242.497713178214
 
@@ -4863,15 +4863,15 @@ Edge density: 0.0914793789045286
 Mean task CPU time: 229.85980822589516, standard deviation: 294.065534834335
 Mean task GPU time: 49.069860279441116, standard deviation: 28.50771352318175
 Mean task acceleration ratio: 4.787461598421933, standard deviation: 4.911014037728828
-Mean task execution time: 207.2610647325884
+Mean task execution time on Multiple_GPU platform: 207.2610647325884
 Computation-to-communication ratio: 20.699396589813773
 Minimal serial time: 49168
 --------------------------------------------------------
 HEFT makespan: 8623.145386762868
 
-HBMCT makespan: 9956.291857870148
+HBMCT makespan: 10198.239393291806
 
-PEFT makespan: 8805.609610810727
+PEFT makespan: 8748.83262396328
 
 PETS makespan: 9979.105686099998
 
@@ -4891,15 +4891,15 @@ Edge density: 0.13973052895208585
 Mean task CPU time: 271.67688530061827, standard deviation: 348.14796492535794
 Mean task GPU time: 50.746506986027946, standard deviation: 28.431477537134118
 Mean task acceleration ratio: 5.219129096659524, standard deviation: 5.2572176054622
-Mean task execution time: 244.06058801129447
+Mean task execution time on Multiple_GPU platform: 244.06058801129447
 Computation-to-communication ratio: 40.56205973725288
 Minimal serial time: 50848
 --------------------------------------------------------
 HEFT makespan: 8545.614056938824
 
-HBMCT makespan: 10071.002370337486
+HBMCT makespan: 10307.85686430587
 
-PEFT makespan: 8697.459689460657
+PEFT makespan: 8695.572517114037
 
 PETS makespan: 8952.10377207928
 
@@ -4919,15 +4919,15 @@ Edge density: 0.05556718730371425
 Mean task CPU time: 243.34264805177975, standard deviation: 331.13329505109084
 Mean task GPU time: 48.6936127744511, standard deviation: 28.53948029048977
 Mean task acceleration ratio: 5.004515666091918, standard deviation: 5.17720745195982
-Mean task execution time: 219.01151864211369
+Mean task execution time on Multiple_GPU platform: 219.01151864211369
 Computation-to-communication ratio: 46.343386551631454
 Minimal serial time: 48791
 --------------------------------------------------------
 HEFT makespan: 6890.747482550196
 
-HBMCT makespan: 8787.709319284077
+HBMCT makespan: 8492.401086230266
 
-PEFT makespan: 6991.260507629858
+PEFT makespan: 6997.980256995885
 
 PETS makespan: 8179.128754975127
 
@@ -4947,15 +4947,15 @@ Edge density: 0.11003966093786453
 Mean task CPU time: 243.8801415498234, standard deviation: 319.00001198125625
 Mean task GPU time: 50.41017964071856, standard deviation: 29.003310709356228
 Mean task acceleration ratio: 4.845113896475018, standard deviation: 4.833511170887028
-Mean task execution time: 219.6963963111853
+Mean task execution time on Multiple_GPU platform: 219.6963963111853
 Computation-to-communication ratio: 44.76614081001243
 Minimal serial time: 50511
 --------------------------------------------------------
 HEFT makespan: 8039.649743603736
 
-HBMCT makespan: 9689.497345438973
+HBMCT makespan: 9427.752292951427
 
-PEFT makespan: 8021.650242069068
+PEFT makespan: 7898.496941929951
 
 PETS makespan: 8720.572399883964
 
@@ -4975,15 +4975,15 @@ Edge density: 0.18923790780078206
 Mean task CPU time: 260.07070605304875, standard deviation: 340.0323978516188
 Mean task GPU time: 49.883233532934135, standard deviation: 28.76443208577078
 Mean task acceleration ratio: 5.240298727562608, standard deviation: 5.223621864891334
-Mean task execution time: 233.79727198803442
+Mean task execution time on Multiple_GPU platform: 233.79727198803442
 Computation-to-communication ratio: 42.45096115536434
 Minimal serial time: 49983
 --------------------------------------------------------
 HEFT makespan: 8741.257544131273
 
-HBMCT makespan: 10107.886484631477
+HBMCT makespan: 10171.644459820534
 
-PEFT makespan: 8763.432281338428
+PEFT makespan: 8681.508195395476
 
 PETS makespan: 8967.216356829284
 
@@ -5003,15 +5003,15 @@ Edge density: 0.10426898450850547
 Mean task CPU time: 280.5886622894173, standard deviation: 354.05983946701406
 Mean task GPU time: 50.22055888223553, standard deviation: 28.01137237841056
 Mean task acceleration ratio: 5.47563364575153, standard deviation: 5.3862140115010435
-Mean task execution time: 251.7926493635196
+Mean task execution time on Multiple_GPU platform: 251.7926493635196
 Computation-to-communication ratio: 26.272619676983965
 Minimal serial time: 50321
 --------------------------------------------------------
 HEFT makespan: 10099.130231535744
 
-HBMCT makespan: 11525.188621446807
+HBMCT makespan: 11592.49686291505
 
-PEFT makespan: 9884.071351520963
+PEFT makespan: 9921.206095548165
 
 PETS makespan: 11376.06062701603
 
@@ -5031,15 +5031,15 @@ Edge density: 0.14819312424102843
 Mean task CPU time: 256.95755803488714, standard deviation: 322.6569278437762
 Mean task GPU time: 50.17065868263473, standard deviation: 28.126209308492662
 Mean task acceleration ratio: 5.1826828410272725, standard deviation: 5.058430103067401
-Mean task execution time: 231.10919561585558
+Mean task execution time on Multiple_GPU platform: 231.10919561585558
 Computation-to-communication ratio: 33.588804079970835
 Minimal serial time: 50271
 --------------------------------------------------------
 HEFT makespan: 12292.876608157063
 
-HBMCT makespan: 13512.650280824633
+HBMCT makespan: 13377.193547634934
 
-PEFT makespan: 12163.93593961043
+PEFT makespan: 12146.666824707492
 
 PETS makespan: 12999.576447113745
 
@@ -5052,15 +5052,15 @@ SUMMARY
 --------------------------------------------------------
 Heuristic: HEFT.
 Mean makespan: 7138.910326847483.
-Number of best occurences: 121.
+Number of best occurences: 122.
 
 Heuristic: HBMCT.
-Mean makespan: 8504.888900236656.
+Mean makespan: 8511.40683643692.
 Number of best occurences: 0.
 
 Heuristic: PEFT.
-Mean makespan: 7203.371367162308.
-Number of best occurences: 59.
+Mean makespan: 7191.369395534783.
+Number of best occurences: 58.
 
 Heuristic: PETS.
 Mean makespan: 7976.502037695484.

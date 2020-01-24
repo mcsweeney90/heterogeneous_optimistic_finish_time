@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-
 This module contains classes which create a framework for describing task DAGs.  
-
 """
 
 import numpy as np
@@ -16,7 +14,7 @@ from collections import defaultdict
 
 class Task:
     """
-    Represents static tasks.
+    Represent static tasks.
     """         
     def __init__(self, task_type=None):
         """
@@ -134,8 +132,8 @@ class Task:
         
         Notes
         ------------------------
-        1. "median", "worst", "simple worst", "best", "simple best" were all considered by Zhao and Sakellariou, 2003. 
-        2. "PS", "D" and "SFB" are from Shetti, Fahmy and Bretschneider, 2013.
+        1. "median", "worst", "simple worst", "best", "simple best" were all considered by Zhao and Sakellariou (2003). 
+        2. "PS", "D" and "SFB" are from Shetti, Fahmy and Bretschneider (2013).
         """
         
         if weighting == "HEFT" or weighting == "mean" or weighting == "MEAN" or weighting == "M":
@@ -173,7 +171,7 @@ class Task:
         Parameters
         ------------------------
         dag - DAG object
-        The DAG to which the task belongs.                
+        The DAG to which the Task belongs.                
                                          
         Returns
         ------------------------
@@ -184,6 +182,7 @@ class Task:
         ------------------------
         1. Returns False if Task has already been scheduled.
         """
+        
         if self.scheduled:
             return False  
         if self.entry: 
@@ -195,7 +194,7 @@ class Task:
 
 class DAG:
     """
-    Represents an application task DAG.   
+    Represents a task DAG.   
     """
     def __init__(self, app="Random"): 
         """
@@ -241,7 +240,8 @@ class DAG:
         ------------------------
         1. It seems a little strange to make the CCR a dict but it avoided having to compute it over 
            and over again for the same platforms in some scripts.
-        """   
+        """  
+        
         self.app = app 
         self.DAG = nx.DiGraph()
         self.num_tasks = 0  
@@ -280,13 +280,15 @@ class DAG:
             
     def compute_CCR(self, platform):
         """
-        Compute the computation-to-communication ratio (CCR) for the DAG on the target platform.
+        Compute and set the computation-to-communication ratio (CCR) for the DAG on the 
+        target platform.
         
         Parameters
         ------------------------
         platform - Node object (see Environment.py module)
         The target platform.           
         """
+        
         cpu_times = list(task.CPU_time for task in self.DAG)
         gpu_times = list(task.GPU_time for task in self.DAG)
         mean_compute = sum(cpu_times) * platform.n_CPUs + sum(gpu_times) * platform.n_GPUs
@@ -323,6 +325,7 @@ class DAG:
         filepath - string
         Destination for txt file.                           
         """
+        
         print("--------------------------------------------------------", file=filepath)
         print("DAG INFO", file=filepath)
         print("--------------------------------------------------------", file=filepath)   
@@ -358,8 +361,7 @@ class DAG:
                     print("Minimal serial time on {} platform: {}".format(p.name, mst), file=filepath)
             else:
                 task_mu = (platform.n_GPUs * gpu_mu + platform.n_CPUs * cpu_mu) / platform.n_workers
-                print("Mean task execution time on {} platform: {}".format(platform.name, task_mu), file=filepath)            
-                # Compute the CCR if not already set.
+                print("Mean task execution time on {} platform: {}".format(platform.name, task_mu), file=filepath)   
                 try:
                     ccr = self.CCR[platform.name]
                 except KeyError:                 
@@ -382,10 +384,9 @@ class DAG:
                     print("CPU time: {}".format(task.CPU_time), file=filepath)
                     print("GPU time: {}".format(task.GPU_time), file=filepath)
                     print("Acceleration ratio: {}".format(task.acceleration_ratio), file=filepath)               
-        print("--------------------------------------------------------", file=filepath)        
-            
+        print("--------------------------------------------------------", file=filepath)    
         
-    def draw_graph(self, filepath="graphs/images"):
+    def draw_graph(self, filepath="graphs"):
         """
         Draws the DAG and saves the image.
         
@@ -556,6 +557,7 @@ class DAG:
         int/float
         The makespan of the (possibly incomplete) DAG.        
         """ 
+        
         if not partial:
             if not self.all_tasks_scheduled():
                 raise ValueError('Error! There are tasks in the DAG which are not scheduled yet!')
@@ -597,7 +599,7 @@ class DAG:
         
         # Traverse the DAG starting from the exit task.
         backward_traversal = list(reversed(list(nx.topological_sort(self.DAG))))        
-        # Compute the upward rank of all tasks recursively, starting with the exit task.
+        # Compute the upward rank of all tasks recursively.
         task_ranks = {}
         for t in backward_traversal:
             task_ranks[t] = t.approximate_execution_cost(platform, weighting=weighting) 
@@ -648,9 +650,9 @@ class DAG:
         1. "Downward rank" is also called "top-level".        
         """ 
         
-        # Traverse the DAG starting from the exit task.
+        # Traverse the DAG starting from the entry task.
         forward_traversal = list(nx.topological_sort(self.DAG))        
-        # Compute the downward rank of all tasks, starting with the entry task.
+        # Compute the downward rank of all tasks recursively.
         task_ranks = {}
         for t in forward_traversal:
             task_ranks[t] = 0
@@ -683,7 +685,8 @@ class DAG:
         ------------------------                          
         OCT - Nested defaultdict
         The optimistic cost table in the form {Task 1: {Worker 1 : c1, Worker 2 : c2, ...}, ...}.             
-        """   
+        """  
+        
         OCT = defaultdict(lambda: defaultdict(float))  
         # Traverse the DAG starting from the exit task(s).
         backward_traversal = list(reversed(list(nx.topological_sort(self.DAG))))
@@ -757,7 +760,8 @@ class DAG:
            Likewise, task.comm_costs is assumed to be set for all tasks. 
         2. There are alternative ways to compute the critical path but unlike some others this approach takes
            communication costs into account.
-        """        
+        """    
+        
         OFT = self.optimistic_finish_times()
         cp = max(min(OFT[task][processor] for processor in OFT[task]) for task in OFT if task.exit)                                
         return cp    
@@ -821,6 +825,7 @@ def convert_from_dot(dot_path, app=None):
        seems to be taken by read_dot (from Networkx) itself, which surely shouldn't be so slow, so I may
        investigate this further in the future.       
     """  
+    
     # Use read_dot from Networkx to load the graph.        
     graph = nx.DiGraph(read_dot(dot_path))
     # Check if it's actually a DAG and make the graph directed if it isn't already.
@@ -901,6 +906,7 @@ def convert_from_nx_graph(graph, app="Random", single_exit=False):
     dag - DAG object
     Converted version of the graph.           
     """ 
+    
     # Make the graph directed if it isn't already.
     if graph.is_directed():
         G = graph

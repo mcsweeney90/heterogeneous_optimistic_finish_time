@@ -116,8 +116,9 @@ def expected_earliest_finish_time(worker, task, dag, platform, comm_estimates, c
     The expected earliest finish time for the task on the worker.        
     """        
     
-    if worker.idle:   # If no tasks scheduled on processor...
-        if task.entry: # If an entry task...
+    # If no tasks scheduled on processor...
+    if worker.idle:  
+        if task.entry: 
             return 0   
         else:
             target_type = "C" if worker.CPU else "G"
@@ -127,6 +128,8 @@ def expected_earliest_finish_time(worker, task, dag, platform, comm_estimates, c
                 data_ready_time_estimates.append(p.AFT + comm_estimates["{}".format(source_type + target_type)][p.ID][task.ID]) 
             processing_time = comp_estimates["CPU"][task.ID] if worker.CPU else comp_estimates["GPU"][task.ID] 
             return max(data_ready_time_estimates)+ processing_time
+        
+    # At least one task already scheduled on processor... 
             
     # Find earliest time all task predecessors have finished and the task can theoretically start.     
     est = 0
@@ -137,10 +140,9 @@ def expected_earliest_finish_time(worker, task, dag, platform, comm_estimates, c
         for p in predecessors:
             source_type = "C" if p.where_scheduled < platform.n_CPUs else "G"
             data_ready_time_estimates.append(p.AFT + comm_estimates["{}".format(source_type + target_type)][p.ID][task.ID])
-        est += max(data_ready_time_estimates)  
-        
-    processing_time = comp_estimates["CPU"][task.ID] if worker.CPU else comp_estimates["GPU"][task.ID]        
-    # At least one task already scheduled on processor... 
+        est += max(data_ready_time_estimates)          
+    processing_time = comp_estimates["CPU"][task.ID] if worker.CPU else comp_estimates["GPU"][task.ID] 
+    
     # Check if it can be scheduled before any task.
     prev_finish_time = 0
     for t in worker.load:

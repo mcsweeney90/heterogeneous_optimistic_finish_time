@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TODO: Re-run this, will need to leave overnight!
 Comparison of five existing static scheduling heuristics - HEFT, HBMCT, PEFT, PETS and HCPT. 
 
-Estimated runtime: ~5 hours on a machine with an Intel i7.
+Estimated runtime: ~22 hours on a machine with an Intel i7. (SO might be a good idea to run in parts!)
 """
 
 import os
@@ -53,7 +52,7 @@ heuristics = ["HEFT", "HBMCT", "PEFT", "PETS", "HCPT"]
 #######################################################################
 
 start = timer()
-n_tasks = [35]#, 220, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
+n_tasks = [35, 220, 680, 1540, 2925, 4960, 7770, 11480, 16215, 22100]
 chol_mkspans = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 for nb in [128, 1024]:
     for env in [single, multiple]:
@@ -97,17 +96,19 @@ start = timer()
 n_dags = 180
 rand_mkspans = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(list))))
 for env in [single, multiple]:
-    env.print_info()
+    print("\nStarting environment: {}".format(env.name))
     for acc in ["low_acc", "high_acc"]:
+        print("\nStarting {} DAGs...".format(acc))
         for ccr in ["0_10", "10_20", "20_50"]:
+            print("\nStarting CCR interval {}...".format(ccr))
             with open("results/{}/{}_CCR_{}.txt".format(env.name, acc, ccr), "w") as dest:            
                 env.print_info(filepath=dest)
                 bests = defaultdict(int)
                 count = 0
                 for app in os.listdir('../../graphs/random/{}/{}/CCR_{}'.format(env.name, acc, ccr)):
                     count += 1
-                    if count > 1:
-                        break
+                    # if count > 1:
+                    #     break
                     print("Starting DAG number {}...".format(count))
                     dag = nx.read_gpickle('../../graphs/random/{}/{}/CCR_{}/{}'.format(env.name, acc, ccr, app))
                     dag.print_info(platform=env, filepath=dest) 
