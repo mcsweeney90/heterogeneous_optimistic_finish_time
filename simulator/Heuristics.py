@@ -205,7 +205,7 @@ def PEFT(dag, platform, priority_list=None, return_schedule=False, schedule_dest
     
     If return_schedule == True:
     pi - defaultdict(int)
-    The schedule in the form {task : ID of Worker it is scheduled on}.    
+    The schedule in the form {Task : ID of Worker it is scheduled on}.    
     """ 
     
     if return_schedule:
