@@ -624,10 +624,7 @@ def HOFT(dag, platform, table=None, priority_list=None, return_schedule=False, s
         pi = defaultdict(int) 
     
     # Compute OFT table if necessary.
-    if table:
-        OFT = table
-    else:
-        OFT = dag.optimistic_finish_times() 
+    OFT = table if table is not None else dag.optimistic_finish_times()
     
     # Compute the priority list if not input.
     if priority_list is None:
