@@ -19,11 +19,11 @@ Edge density: 0.10084033613445378
 --------------------------------------------------------
 Minimal serial time: 23743.288760000003
 
-HEFT weighting makespan: 22940.679088
+HEFT avg_type makespan: 22940.679088
 HBMCT-MM makespan: 21174.451448
 Reduction: 7.699107917532814
 
-HEFT-WM weighting makespan: 19185.356792
+HEFT-WM avg_type makespan: 19185.356792
 HBMCT-MM makespan: 20308.208312
 Reduction: -5.852648622454666
 
@@ -41,11 +41,11 @@ Edge density: 0.02054794520547945
 --------------------------------------------------------
 Minimal serial time: 125515.55272000007
 
-HEFT weighting makespan: 67056.670784
+HEFT avg_type makespan: 67056.670784
 HBMCT-MM makespan: 64488.09608000001
 Reduction: 3.830453665488065
 
-HEFT-WM weighting makespan: 49800.047488
+HEFT-WM avg_type makespan: 49800.047488
 HBMCT-MM makespan: 47689.22292
 Reduction: 4.238599508381242
 
@@ -63,26 +63,180 @@ Edge density: 0.0072771376591873865
 --------------------------------------------------------
 Minimal serial time: 361114.4198800024
 
-HEFT weighting makespan: 120452.94603200004
+HEFT avg_type makespan: 120452.94603200004
 HBMCT-MM makespan: 118899.80260800003
 Reduction: 1.2894192090473098
 
-HEFT-WM weighting makespan: 110936.69108000008
+HEFT-WM avg_type makespan: 110936.69108000008
 HBMCT-MM makespan: 106730.78274400011
 Reduction: 3.7912689616521362
 
 --------------------------------------------------------
 
 --------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 1024)
+Number of tasks: 1540
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.590909090909091
+Number of edges: 3990
+Edge density: 0.003367003367003367
+--------------------------------------------------------
+Minimal serial time: 786337.5182399977
+
+HEFT avg_type makespan: 220255.6335280007
+HBMCT-MM makespan: 217570.06298400066
+Reduction: 1.2192970962800018
+
+HEFT-WM avg_type makespan: 209712.3204560004
+HBMCT-MM makespan: 206423.3183360004
+Reduction: 1.5683399586864226
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 1024)
+Number of tasks: 2925
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.6666666666666665
+Number of edges: 7800
+Edge density: 0.001823985408116735
+--------------------------------------------------------
+Minimal serial time: 1456982.4758000022
+
+HEFT avg_type makespan: 375988.4476720018
+HBMCT-MM makespan: 373192.5746560018
+Reduction: 0.7436060956955259
+
+HEFT-WM avg_type makespan: 362241.3399840019
+HBMCT-MM makespan: 362263.6372000018
+Reduction: -0.006155348255106219
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 1024)
+Number of tasks: 4960
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.71875
+Number of edges: 13485
+Edge density: 0.0010964912280701754
+--------------------------------------------------------
+Minimal serial time: 2428846.9205599157
+
+HEFT avg_type makespan: 601236.7020720013
+HBMCT-MM makespan: 598185.0731520015
+Reduction: 0.5075586552655835
+
+HEFT-WM avg_type makespan: 592029.1577600027
+HBMCT-MM makespan: 588386.1168960028
+Reduction: 0.6153482165952084
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 1024)
+Number of tasks: 7770
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7567567567567566
+Number of edges: 21420
+Edge density: 0.0007096812348453487
+--------------------------------------------------------
+Minimal serial time: 3757728.4805194084
+
+HEFT avg_type makespan: 910660.2423039987
+HBMCT-MM makespan: 888818.3064479985
+Reduction: 2.3984725412783376
+
+HEFT-WM avg_type makespan: 905431.0632799994
+HBMCT-MM makespan: 897459.997968
+Reduction: 0.8803613698787416
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 1024)
+Number of tasks: 11480
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.7857142857142856
+Number of edges: 31980
+Edge density: 0.0004853583562530335
+--------------------------------------------------------
+Minimal serial time: 5499424.78367961
+
+HEFT avg_type makespan: 1302472.3042080025
+HBMCT-MM makespan: 1263958.3332080033
+Reduction: 2.9569896323759792
+
+HEFT-WM avg_type makespan: 1310923.1797680066
+HBMCT-MM makespan: 1289372.199104006
+Reduction: 1.6439545044748058
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 1024)
+Number of tasks: 16215
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.8085106382978724
+Number of edges: 45540
+Edge density: 0.0003464303242010451
+--------------------------------------------------------
+Minimal serial time: 7709733.458040551
+
+HEFT avg_type makespan: 1782381.3214560056
+HBMCT-MM makespan: 1743472.9209600124
+Reduction: 2.1829448069063773
+
+HEFT-WM avg_type makespan: 1821967.5602400103
+HBMCT-MM makespan: 1775358.430992013
+Reduction: 2.5581755825475483
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+DAG INFO
+--------------------------------------------------------
+Application: Cholesky (nb 1024)
+Number of tasks: 22100
+Maximum number of task predecessors: 3
+Average number of task predecessors: 2.826923076923077
+Number of edges: 62475
+Edge density: 0.0002558417192563534
+--------------------------------------------------------
+Minimal serial time: 10444452.131598257
+
+HEFT avg_type makespan: 2403747.490695923
+HBMCT-MM makespan: 2341045.508295952
+Reduction: 2.6085095311661917
+
+HEFT-WM avg_type makespan: 2428041.859159869
+HBMCT-MM makespan: 2361497.242503911
+Reduction: 2.740670075555599
+
+--------------------------------------------------------
+
+--------------------------------------------------------
 SUMMARY
 --------------------------------------------------------
-Weighting: HEFT.
-Mean reduction: 4.272993597356063.
+avg_type: HEFT.
+Mean reduction: 2.5436359151036187.
 Best reduction: 7.699107917532814
-Worst reduction: 1.2894192090473098
+Worst reduction: 0.5075586552655835
 
-Weighting: HEFT-WM.
-Mean reduction: 0.7257399491929041.
+avg_type: HEFT-WM.
+Mean reduction: 1.217791420706193.
 Best reduction: 4.238599508381242
 Worst reduction: -5.852648622454666
 
