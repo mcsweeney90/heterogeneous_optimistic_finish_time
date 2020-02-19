@@ -222,8 +222,7 @@ and for each edge (say, between tasks $t_i$ and $t_j$) the estimated communicati
 \label{eq.avg_comm_wm}
 \overline{c_{ij}} = \frac{A_{CC} \cdot c_{ij}(C, C) + A_{CG}\big(r_ic_{ij}(G, C) + r_jc_{ij}(C, G)\big) + r_ir_j A_{GG} \cdot c_{ij}(G, G) }{(r_iP_G + P_C) \cdot (r_jP_G + P_C)}. 
 \end{equation}
-We call the modified heuristic which follows Algorithm \ref{alg.HEFT} but uses \eqref{eq.avg_comp_wm} instead of \eqref{eq.avg_comp} and \eqref{eq.avg_comm_wm} instead of \eqref{eq.avg_comm} HEFT-WM (for {\em Weighted Mean}). We were unable to find any explicit references to this modification in the literature but given its simplicity we do not think it is a novel idea and suspect it has surely been used before in practice.  
-% TODO: Am sure I have seen a reference to weighting HEFT by the power of each processor somewhere but haven't been able to find it again.  
+We call the modified heuristic which follows Algorithm \ref{alg.HEFT} but uses \eqref{eq.avg_comp_wm} instead of \eqref{eq.avg_comp} and \eqref{eq.avg_comm_wm} instead of \eqref{eq.avg_comm} HEFT-WM (for {\em Weighted Mean}). We were unable to find any explicit references to this modification in the literature but given its simplicity we do not think it is a novel idea and suspect it has surely been used before in practice.    
 
 
 \section{HOFT}
