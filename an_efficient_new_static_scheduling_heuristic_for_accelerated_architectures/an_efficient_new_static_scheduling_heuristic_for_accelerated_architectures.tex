@@ -64,6 +64,7 @@ A fundamental distinction is made between {\em static} and {\em dynamic} schedul
 In this paper we therefore focus on the problem of finding good static schedules for multicore and GPU platforms. To facilitate this investigation, we developed an open-source software simulator which allows users to simulate the static scheduling of arbitrary task DAGs on arbitrary CPU-GPU platforms, without worrying about the time or energy usage constraints imposed by real systems. 
 %Using this, we evaluate and optimize HEFT for these environments.  
 % we therefore focus on... "with the understanding that these can be used as a basis for better dynamic schedules in practice."
+% something like e.g., "This is an idealized version but allows the comparison of scheduling algorithms in the best-case..."?
 
 The popular HEFT scheduling heuristic comprises two phases: a {\em task prioritization} phase in which the order tasks are to be scheduled is determined and a {\em processor selection} phase in which they are actually assigned to the processing resources. In this article we introduce HOFT, which follows the HEFT framework but modifies both phases, without significantly increasing the complexity of the algorithm. HOFT works by first computing a table of {\em optimistic} estimates of the earliest possible times all tasks can be completed on both processor types and using this to guide both phases. Simulations with real and randomly-generated DAGs on both single and multiple GPU target platforms suggest that HOFT is always at least competitive with HEFT and frequently superior.          
 
@@ -77,6 +78,9 @@ The remainder of this paper is structured as follows. In Section \ref{sect.lit_r
 \section{Related work}
 \label{sect.lit_review}
 
+% Comment along the lines of "the issue with only applying the existing HEFT algorithm is that it is not optimized for accelerated environments in particular..."
+% Maybe rewrite the entire first part?
+
 Broadly, static scheduling methods can be divided into three categories: {\em mathematical programming}, {\em guided-random search} and {\em heuristics}. The first is based on formulating the scheduling problem as a mathematical program; see, for example, Kumar's constraint programming formulation in \cite{kumar:tel-01538516}. However solving these is usually so expensive that they are restricted to small task graphs. Guided-random search is a term used for any method that generates a large population of potential schedules and then selects the best among them. Typically these are more general optimization schemes such as genetic algorithms which are refined for the task scheduling problem. As a rule, such methods tend to find very high-quality schedules but take a long time to do so \cite{BRAUN2001810}. 
 %for example, a comparison by Braun et al. found that genetic algorithms usually obtained superior schedules to all other alternatives considered but were up to 300 times as expensive (then the citation).
 
@@ -87,6 +91,7 @@ Heuristics are the most popular approach in practice as they are often competiti
 Many modifications of HEFT have been proposed in the literature, such as HEFT {\em with lookahead} from Bittencourt, Sakellariou and Madeira \cite{bittencourt10}, which has the same task prioritization phase but schedules all tasks on the resources estimated to minimize the completion time of their {\em children}. This has the effect of increasing the time complexity of the algorithm so, in an attempt to incorporate a degree of lookahead into the HEFT framework without increasing the cost, Arabnejad and Barbosa proposed {\em Predict Earliest Finish Time} (PEFT) \cite{arabnejad14}. The main innovation is that rather than just minimizing the completion time of a task during processor selection, we also try to minimize an {\em optimistic} estimate of the time it will take to execute the remaining unscheduled tasks in the DAG. %Conceptually, our new HOFT heuristic is similar to PEFT but also differs in several key aspects. 
 
 The majority of existing methods for static DAG scheduling in heterogeneous computing were originally intended for clusters with diverse nodes but are usually also applicable to CPU-GPU platforms, albeit perhaps with different behavior. Agullo et al. \cite{agullo2016} considered static scheduling for individual machines with multicore CPUs and GPUs. After extensive experimentation on real systems they concluded that static schedules can be stable even when the estimates used to compute them are inaccurate. Furthermore, they found that incorporating static analysis into dynamic schedules often improved their performance. 
+% Find somewhere else for the last two sentences, then add something emphasizing that we need to take advantage of the binary heterogenity of accelerated platforms in order to save computational effort.
 
 The most similar previous work to this is by Shetti, Fahmy and Bretschneider \cite{shetti2013optimization}, in which they propose the HEFT-NC ({\em No Cross}) heuristic as an optimization of HEFT for CPU-GPU environments. Although this is also our aim, the new HOFT heuristic differs significantly from HEFT-NC in both the task prioritization and processor selection phases of the algorithm. 
 % HOFT and HEFT-NC can be viewed as similar but HOFT uses ratio of OFT values instead of execution times to rank tasks as this incorporates information from the rest of the DAG, not just the current task. Processor selection phase of HOFT uses OFT table for lookahead to restrict what SFB call "crossover".  
@@ -103,17 +108,22 @@ All code used to generate results presented in this paper is available in the fo
 
 To build the simulation model we gathered data from a single heterogeneous node of a local computing cluster. This comprises four octacore Intel (Skylake) Xeon Gold 6130 CPUs running at 2.10GHz with 192GB RAM and four Nvidia V100-SXM2-16GB (Volta) GPUs, each with 16GB GPU global memory, 5120 CUDA Cores and NVLink interconnect. We used {\em Basic Linear Algebra Subroutine} (BLAS) \cite{Dongarra:1990:SLB:77626.79170} and {\em Linear Algebra PACKage} (LAPACK) \cite{laug} kernels for this data-gathering as they are widely-used in scientific computing applications.
 
+% Emphasize that the simulator is more abstract and for comparing the heuristics in the ideal case so doesn't simulate e.g., cache misses, other more complex behaviour. It is simply a framework for comparing alternative heuristics themselves. 
+
 \subsection{Mathematical model}
 \label{subsect.mathematical_model}
 
 The simulator software implements the following mathematical model of the problem. Suppose we have a task DAG $G$ consisting of $n$ tasks and $e$ edges that we wish to execute on a target platform $H$ comprising $P$ processing resources of two types, $P_C$ CPU resources and $P - P_C = P_G$ GPU resources. In keeping with much of the related literature and based on current programming practices, we consider CPU cores individually but regard entire GPUs as discrete \cite{agullo2016}. For example, a node comprising 4 GPUs and 4 octacore CPUs would be viewed as 4 GPU resources and $4 \times 8 = 32$ CPU resources.   
 
 We assume that all tasks $t_1, \dots, t_n$ are atomic and cannot be divided across multiple resources or aggregated to form larger tasks. Further, all resources can only execute a single task at any one time and can in principle execute all tasks, albeit with different processing times. In our experiments, we found that the spread of kernel processing times was usually tight, with the standard deviation often being two orders of magnitude smaller than the mean. Thus we assume that all task execution times on all processing resources of a single type are identical. In particular, this means that each task has only two possible {\em computation costs}: a CPU execution time $w_C(t_i)$ and a GPU execution time $w_G(t_i)$. When necessary, we denote by $w_{im}$ the processing time of task $t_i$ on the specific resource $p_m$.
+% "can execute all tasks" : not always realistic ofc but in some cases (e.g., Cholesky example), can be.
 
 The {\em communication cost} between task $t_i$ and its child $t_j$ is the length of time between when execution of $t_i$ is complete and execution of $t_j$ can begin, including all relevant latency and data transfer times. Since this depends on where each task is executed, we view this as a function $c_{ij}(p_m, p_n)$. We assume that the communication cost is always zero when $m = n$ and that there are only four possible communication costs between tasks $t_i$ and $t_j$ when this isn't the case: $c_{ij}(C, C)$, from a CPU to a different CPU; $c_{ij}(C, G)$, from CPU to GPU; $c_{ij}(P, C)$, from GPU to CPU; and $c_{ij}(G, G)$ from GPU to a different GPU.  
 %Of course, these assumptions are not representative of all possible CPU-GPU memory architectures but are intended to be reasonable for a typical heterogeneous HPC node today. 
 
 A {\em schedule} is a mapping from tasks to processing resources, as well as the precise time at which their execution should begin. Our goal is to find a schedule which minimizes the {\em makespan} of the task graph, the total execution time of the application it represents. Although we assume that all computation and communication costs represent time, they could be any other cost we wish to minimize, such as energy consumption, so long as this is done consistently. We do not however consider the simultaneous optimization of two or more different types of costs. A task with no successors is called an {\em exit} task. Once all tasks have been scheduled, the makespan is easily computed as the earliest time all exit tasks will be completed.
+% Maybe more emphasis on the energy consumption part, per referee comments.
+
 
 \subsection{Testing environments}
 \label{subsect.testing_environment}
@@ -330,6 +340,8 @@ HOFT achieved smaller makespans than HEFT on average for the set of randomly-gen
 	\end{center}	
 \end{table}
 
+% More detail for this table: worst and best cases too? 
+
   
 
 
@@ -341,6 +353,8 @@ Overall our simulations suggest that HOFT is often superior to---and always comp
 Although the number of failures HOFT recorded for DAGs with low CCRs was slightly smaller than for HEFT, the failure probability was still unacceptably high. Using the lookahead processor selection from \cite{bittencourt10} instead reduced the probability of failure further but it was still nonzero and the additional computational cost was considerable. We investigated cheaper {\em sampling-based} selection phases that consider only a small sample of the child tasks, selected either at random or based on priorities. These did reduce the failure probability in some cases but the improvement was usually minor. Alternatives to lookahead that we intend to consider in future are the duplication \cite{duplication} or aggregation of tasks.
 
 Static schedules for multicore and GPU are most useful in practice as a foundation for superior dynamic schedules \cite{agullo2016}, or when their robustness is reinforced using statistical analysis \cite{ZHENG20131673}. This paper was concerned with computing the initial static schedules; the natural next step is to consider their extension to real---i.e., dynamic---environments. This is often called {\em stochastic} scheduling, since the costs are usually modeled as random variables from some---possibly unknown---distribution. The goal is typically to find methods that bound variation in the schedule makespan, which is notoriously difficult \cite{hagstrom88}. Experimentation with existing stochastic scheduling heuristics, such as {\em Monte Carlo Scheduling} \cite{ZHENG20131673}, suggested to us that the main issue with adapting such methods for multicore and GPU is their cost, which can be much greater than computing the static schedule itself. Hence in future work we intend to investigate cheaper ways to make effective use of static schedules for real platforms.  
+
+% more emphasis here: say we want to implement them in practice too. 
 
 
 
