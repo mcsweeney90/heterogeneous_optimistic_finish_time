@@ -322,30 +322,27 @@ Figure \ref{plot.hoft_cholesky} shows the reduction in schedule makespan, as a p
 	\label{plot.hoft_cholesky}
 \end{figure} 
 
-HOFT achieved smaller makespans than HEFT on average for the set of randomly-generated DAGs, especially for those with high acceleration, but was slightly inferior to HEFT-WM, as can be seen from Table \ref{tb.hoft_random_DAGs}. However also included in the table is HOFT-WM, the heuristic obtained by using the HEFT-WM task prioritization with the HOFT processor selection. HOFT-WM was identical to HEFT-WM for the Cholesky DAGs but improved on both heuristics for the randomly-generated DAG set, suggesting that the HOFT processor selection phase is generally more effective than HEFT's, no matter which task ranking is used. The alternative processor selection also reduced the failure rate for DAGs with very low CCR by about half on the single GPU platform, although it made little difference on the multiple GPU platform.     
-
+HOFT achieved smaller makespans than HEFT on average for the set of randomly-generated DAGs, especially for those with high acceleration, but was slightly inferior to HEFT-WM, as can be seen from Table \ref{tb.hoft_random_DAGs}. However also included in the table is HOFT-WM, the heuristic obtained by using the HEFT-WM task prioritization with the HOFT processor selection. HOFT-WM was identical to HEFT-WM for the Cholesky DAGs but improved on both heuristics for the randomly-generated DAG set, suggesting that the HOFT processor selection phase is generally more effective than HEFT's, no matter which task ranking is used. The alternative processor selection also reduced the failure rate for DAGs with very low CCR by about half on the single GPU platform, although it made little difference on the multiple GPU platform.
 
 \begin{table}
-	\caption{Average makespan reduction (\%) vs. HEFT.} 
+	\caption{Makespan reduction vs. HEFT. Shown are both the average percentage reduction and the percentage of ($540$) DAGs for which each heuristic improved on the HEFT schedule (i.e., the reduction was positive).} 
 	\begin{center}	
-		\begin{tabular}{c c c c c c}
+		\begin{tabular}{c c c c c c c c c c c c}
 			\toprule
-			& \multicolumn{2}{c}{Single GPU} && \multicolumn{2}{c}{Multiple GPU}\\
-			\cmidrule{2-3} \cmidrule{5-6}
-			Heuristic & Low acc. & High acc. && Low acc. & High acc.\\
-			\cmidrule{1-6}
-			HEFT-WM & $0.8$ & $2.3$ && $1.6$ & $2.4$ \\
-			HOFT & $-0.2$ & $3.8$ && $1.4$ & $2.3$\\
-			HOFT-WM & $0.8$ & $4.6$ && $1.4$ & $3.7$\\ 
+			& \multicolumn{5}{c}{Single GPU} && \multicolumn{5}{c}{Multiple GPU}\\
+			\cmidrule{2-6} \cmidrule{8-12}
+			& \multicolumn{2}{c}{Low acc.} && \multicolumn{2}{c}{High acc.} && \multicolumn{2}{c}{Low acc.} && \multicolumn{2}{c}{High acc.}\\
+			\cmidrule{2-3} \cmidrule{5-6} \cmidrule{8-9} \cmidrule{11-12}
+			Heuristic & {\em Avg.} & {\em Better} && {\em Avg.} & {\em Better} && {\em Avg.} & {\em Better} && {\em Avg.} & {\em Better}\\
+			\cmidrule{1-12}
+			HEFT-WM & $0.8$ & 74.8 && $2.3$ & 69.6 && $1.6$ & 84.8 && $2.4$ & 79.8\\
+			HOFT & $-0.2$ & 50.3 && $3.8$ & 83.1 && $1.4$ & 69.2 && $2.3$ & 76.5\\
+			HOFT-WM & $0.8$ & 70.9 && $4.6$ & 76.9 && $1.4$ & 78.1 && $3.7$ & 81.1\\ 
 			\bottomrule			
 		\end{tabular}
 		\label{tb.hoft_random_DAGs}
 	\end{center}	
 \end{table}
-
-% More detail for this table: worst and best cases too? 
-
-  
 
 
 \section{Conclusions}

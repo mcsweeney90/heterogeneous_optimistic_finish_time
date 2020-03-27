@@ -1,14 +1,46 @@
 Platform: Single GPU
 
+
 LOW ACCELERATION
-HEFT-WM mean speedup: 0.8033677344326728
-HOFT mean speedup: -0.19461690043600852
-HOFT-WM mean speedup: 0.7602771610588802
+
+HEURISTIC: HEFT-WM
+Mean speedup: 0.8033677344326728
+Best speedup: 13.984064844981077
+Worst speedup: -37.51011034516981
+Number of times better than HEFT: 404/540
+
+HEURISTIC: HOFT
+Mean speedup: -0.19461690043600852
+Best speedup: 31.212735977029467
+Worst speedup: -34.72262414044451
+Number of times better than HEFT: 272/540
+
+HEURISTIC: HOFT-WM
+Mean speedup: 0.7602771610588802
+Best speedup: 34.93559705523934
+Worst speedup: -22.992552827731515
+Number of times better than HEFT: 383/540
+
 
 HIGH ACCELERATION
-HEFT-WM mean speedup: 2.317243083742241
-HOFT mean speedup: 3.77534248598399
-HOFT-WM mean speedup: 4.5658637148517816
+
+HEURISTIC: HEFT-WM
+Mean speedup: 2.317243083742241
+Best speedup: 58.040806968775954
+Worst speedup: -37.01038812127851
+Number of times better than HEFT: 376/540
+
+HEURISTIC: HOFT
+Mean speedup: 3.77534248598399
+Best speedup: 66.89939351618133
+Worst speedup: -15.16595596663251
+Number of times better than HEFT: 449/540
+
+HEURISTIC: HOFT-WM
+Mean speedup: 4.5658637148517816
+Best speedup: 73.59478245782054
+Worst speedup: -13.740392068953653
+Number of times better than HEFT: 415/540
 
 
 
@@ -17,15 +49,47 @@ HOFT-WM mean speedup: 4.5658637148517816
 
 Platform: Multiple GPU
 
+
 LOW ACCELERATION
-HEFT-WM mean speedup: 1.5698613759488378
-HOFT mean speedup: 0.8345224450726402
-HOFT-WM mean speedup: 1.3700468832608719
+
+HEURISTIC: HEFT-WM
+Mean speedup: 1.5698613759488378
+Best speedup: 16.77574380700068
+Worst speedup: -30.764980187554244
+Number of times better than HEFT: 458/540
+
+HEURISTIC: HOFT
+Mean speedup: 0.8345224450726402
+Best speedup: 30.932850330053355
+Worst speedup: -17.50566694526121
+Number of times better than HEFT: 374/540
+
+HEURISTIC: HOFT-WM
+Mean speedup: 1.3700468832608719
+Best speedup: 29.583911814026166
+Worst speedup: -37.764705455507965
+Number of times better than HEFT: 422/540
+
 
 HIGH ACCELERATION
-HEFT-WM mean speedup: 2.430856017982474
-HOFT mean speedup: 2.2961904222674314
-HOFT-WM mean speedup: 3.714018267464734
+
+HEURISTIC: HEFT-WM
+Mean speedup: 2.430856017982474
+Best speedup: 61.4689045813546
+Worst speedup: -52.387191337328375
+Number of times better than HEFT: 431/540
+
+HEURISTIC: HOFT
+Mean speedup: 2.2961904222674314
+Best speedup: 72.3940567120207
+Worst speedup: -36.836937965209756
+Number of times better than HEFT: 413/540
+
+HEURISTIC: HOFT-WM
+Mean speedup: 3.714018267464734
+Best speedup: 68.35805619162214
+Worst speedup: -35.06039592623969
+Number of times better than HEFT: 438/540
 
 
 
