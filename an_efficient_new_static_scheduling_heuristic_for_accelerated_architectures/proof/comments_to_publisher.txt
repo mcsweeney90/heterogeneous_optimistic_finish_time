@@ -1,0 +1,24 @@
+Hi there,
+
+The only issue I can see since the paper submission concerns reference number 14. The link at the end is missing the visible "https://" at the start and seems to default to "http://" instead, which no longer directs to the correct address when clicked - i.e., the link should read/be
+
+https://tel.archives-ouvertes.fr/tel-01538516/file/KUMAR_SURAL_2017.pdf   
+
+which is the correct address, but in the proof it reads as just
+
+tel.archives-ouvertes.fr/tel-01538516/file/KUMAR_SURAL_2017.pdf 
+
+and the hyperlink itself seems to be using the http:// prefix instead of https:// so doesn't work. I'm not sure what the cause of this issue is but it isn't apparent in, for example, the downloadable pdf for the paper on Easychair which was compiled at submission.
+
+In addition, there are two typos I have found since the original submission (see below). Would it be possible to correct these at this stage? I understand if this is not possible of course.
+
+The typos in question, and the corrections, are:
+
+1. The last line of page 4 reads "assumption THAT it once may have been". The second word should be "than" instead.
+
+2. The last line of the 2nd paragraph on page 5 starts with "c_ij(P, C) from GPU to CPU"; the capital P in the parentheses should be a capital G - i.e., "c_ij(G, C)".   
+
+Again, I understand if you can't correct these now - fortunately they aren't critical, just annoying! 
+
+All the best,
+Tom McSweeney 
