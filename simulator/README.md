@@ -4,9 +4,7 @@ Python framework for simulating the scheduling of user-defined task DAGs on user
 
 ## Prerequisites
 
-This has only been tested for versions of Python **>= 3.6** so performance for older versions cannot be guaranteed.
-
-In particular there may be issues caused because it is often implicitly assumed that `dict` (and therefore `defaultdict` from the `collections` package) data types are ordered by insertion time. The obvious solution to this is to replace all such occurences with `OrderedDict` data types (also from the `collections` package), which I will happily do if this proves to be a critical problem for anybody.  
+This has only been tested for Python **>= 3.6** so performance for older versions cannot be guaranteed. In particular, I imagine there may be issues since it is often implicitly assumed that `dict` data types (and therefore also `defaultdicts` from the `collections` package) are ordered by insertion time. 
 
 To install all relevant Python packages:
 ```
